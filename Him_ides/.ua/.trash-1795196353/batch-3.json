@@ -1,0 +1,293 @@
+{
+ "nodes": [
+  {
+   "id": "document:gmt/files/all_stations.txt",
+   "type": "document",
+   "name": "all_stations.txt",
+   "filePath": "gmt/files/all_stations.txt",
+   "summary": "Combined list of seismic stations across all networks (IC, IN, XA, XF, etc.) with coordinates, elevation and operating dates, used for the overall station map.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:gmt/files/sta_BSN.txt",
+   "type": "document",
+   "name": "sta_BSN.txt",
+   "filePath": "gmt/files/sta_BSN.txt",
+   "summary": "Station list for the BSN network; contains only header comments and no station entries.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_EVN.txt",
+   "type": "document",
+   "name": "sta_EVN.txt",
+   "filePath": "gmt/files/sta_EVN.txt",
+   "summary": "Single-entry station file for the IO network station EVN at the EvK2CNR Pyramid Laboratory near Mount Everest.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_GANSSER.txt",
+   "type": "document",
+   "name": "sta_GANSSER.txt",
+   "filePath": "gmt/files/sta_GANSSER.txt",
+   "summary": "Station list for the Gansser temporary network (XA, BHE stations) in Bhutan, from the SED data center.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:gmt/files/sta_HIMNT.txt",
+   "type": "document",
+   "name": "sta_HIMNT.txt",
+   "filePath": "gmt/files/sta_HIMNT.txt",
+   "summary": "Station list for the Himalayan Nepal Tibet (YL) experiment, 2001-2002 deployment.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_HiCLIMB.txt",
+   "type": "document",
+   "name": "sta_HiCLIMB.txt",
+   "filePath": "gmt/files/sta_HiCLIMB.txt",
+   "summary": "Station list for HiCLIMB (XF) broadband stations across Nepal and southern Tibet used in the study.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:gmt/files/sta_HiCLIMB_not_used.txt",
+   "type": "document",
+   "name": "sta_HiCLIMB_not_used.txt",
+   "filePath": "gmt/files/sta_HiCLIMB_not_used.txt",
+   "summary": "HiCLIMB (XF) stations that were not used in the analysis, retained for reference.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:gmt/files/sta_HiKNet.txt",
+   "type": "document",
+   "name": "sta_HiKNet.txt",
+   "filePath": "gmt/files/sta_HiKNet.txt",
+   "summary": "Station list for the HiKNet (ZO) network in western Nepal, 2014-2016.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_IC.txt",
+   "type": "document",
+   "name": "sta_IC.txt",
+   "filePath": "gmt/files/sta_IC.txt",
+   "summary": "Station list for the IC network; header comments only, no station entries.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_IN.txt",
+   "type": "document",
+   "name": "sta_IN.txt",
+   "filePath": "gmt/files/sta_IN.txt",
+   "summary": "Station list for the IN network; header comments only, no station entries.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_NAMASTE.txt",
+   "type": "document",
+   "name": "sta_NAMASTE.txt",
+   "filePath": "gmt/files/sta_NAMASTE.txt",
+   "summary": "Station list for the NAMASTE (XQ) network in Nepal, 2015-2016 deployment.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:gmt/files/sta_NCS.txt",
+   "type": "document",
+   "name": "sta_NCS.txt",
+   "filePath": "gmt/files/sta_NCS.txt",
+   "summary": "Single-entry station file for NK network station KKN at Kakani, Nepal.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_NQ.txt",
+   "type": "document",
+   "name": "sta_NQ.txt",
+   "filePath": "gmt/files/sta_NQ.txt",
+   "summary": "Station list for the NQ network in Nepal, including Kanti Path in Kathmandu.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:gmt/files/sta_bhutan_pilot.txt",
+   "type": "document",
+   "name": "sta_bhutan_pilot.txt",
+   "filePath": "gmt/files/sta_bhutan_pilot.txt",
+   "summary": "Station list for the 2002-2003 Bhutan pilot (XA PASSCAL) deployment.",
+   "tags": [
+    "station-list",
+    "seismology",
+    "data",
+    "gmt-input"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_BSN.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_EVN.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_GANSSER.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_HIMNT.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_HiCLIMB.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_HiCLIMB_not_used.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_HiKNet.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_IC.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_IN.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_NAMASTE.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_NCS.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_NQ.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/files/all_stations.txt",
+   "target": "document:gmt/files/sta_bhutan_pilot.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

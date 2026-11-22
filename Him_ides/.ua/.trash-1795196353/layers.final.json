@@ -1,0 +1,130 @@
+[
+  {
+    "id": "layer:python-figures",
+    "name": "Python Figure Scripts",
+    "description": "Python scripts (Figure_10, Figures_5-9, migration and temporal plots) that analyze the earthquake catalog and render the study figures with Matplotlib and ObsPy.",
+    "nodeIds": [
+      "file:python/Figures_5-9.py",
+      "file:python/migration_plots.py",
+      "file:python/temporal_plots.py",
+      "file:python/Figure_10.py"
+    ]
+  },
+  {
+    "id": "layer:supporting-analysis",
+    "name": "Supporting Analysis",
+    "description": "Auxiliary Python scripts for plotting 1D velocity models and catalog details used as supplementary material.",
+    "nodeIds": [
+      "file:python/supporting_material/plot_1D_velocity_models.py",
+      "file:python/supporting_material/plot_catalog_details.py"
+    ]
+  },
+  {
+    "id": "layer:gmt-figures",
+    "name": "GMT Figure Scripts",
+    "description": "Shell scripts that drive GMT to draw the map-based figures (Figures 1, 2, 3AB, 3CD) from stations, catalogs and faults.",
+    "nodeIds": [
+      "file:gmt/Figure_1.sh",
+      "file:gmt/Figure_2.sh",
+      "file:gmt/Figure_3AB.sh",
+      "file:gmt/Figure_3CD.sh"
+    ]
+  },
+  {
+    "id": "layer:geodata",
+    "name": "Geospatial Input Data",
+    "description": "Station lists, earthquake catalogs, focal mechanism notes, Himalayan fault traces and the colour palette consumed by the GMT scripts.",
+    "nodeIds": [
+      "document:gmt/files/all_stations.txt",
+      "document:gmt/files/sta_BSN.txt",
+      "document:gmt/files/sta_EVN.txt",
+      "document:gmt/files/sta_GANSSER.txt",
+      "document:gmt/files/sta_HIMNT.txt",
+      "document:gmt/files/sta_HiCLIMB.txt",
+      "document:gmt/files/sta_HiCLIMB_not_used.txt",
+      "document:gmt/files/sta_HiKNet.txt",
+      "document:gmt/files/sta_IC.txt",
+      "document:gmt/files/sta_IN.txt",
+      "document:gmt/files/sta_NAMASTE.txt",
+      "document:gmt/files/sta_NCS.txt",
+      "document:gmt/files/sta_NQ.txt",
+      "document:gmt/files/sta_bhutan_pilot.txt",
+      "document:gmt/files/catalogs/GANSSER_cat.txt",
+      "document:gmt/files/catalogs/HIMNT_cat.txt",
+      "document:gmt/files/catalogs/ISC_catalog.txt",
+      "file:gmt/files/catalogs/focal_mechanisms/README",
+      "document:gmt/files/him/README.txt",
+      "file:gmt/files/him/dextral_faults.gmt",
+      "file:gmt/files/him/normal_faults.gmt",
+      "file:gmt/files/him/sinistral_faults.gmt",
+      "file:gmt/files/him/thrusts.gmt",
+      "file:gmt/him.cpt"
+    ],
+    "containerLabels": [
+      {
+        "name": "HiCLIMB stations",
+        "nodeIds": [
+          "document:gmt/files/sta_HiCLIMB.txt",
+          "document:gmt/files/sta_HiCLIMB_not_used.txt",
+          "document:gmt/files/sta_HiKNet.txt",
+          "document:gmt/files/sta_NAMASTE.txt"
+        ]
+      },
+      {
+        "name": "Nepal Tibet stations",
+        "nodeIds": [
+          "document:gmt/files/sta_HIMNT.txt",
+          "document:gmt/files/sta_NQ.txt",
+          "document:gmt/files/sta_NCS.txt",
+          "document:gmt/files/sta_EVN.txt"
+        ]
+      },
+      {
+        "name": "Bhutan stations",
+        "nodeIds": [
+          "document:gmt/files/sta_GANSSER.txt",
+          "document:gmt/files/sta_bhutan_pilot.txt"
+        ]
+      },
+      {
+        "name": "Global network lists",
+        "nodeIds": [
+          "document:gmt/files/all_stations.txt",
+          "document:gmt/files/sta_BSN.txt",
+          "document:gmt/files/sta_IC.txt",
+          "document:gmt/files/sta_IN.txt"
+        ]
+      },
+      {
+        "name": "Earthquake catalogs",
+        "nodeIds": [
+          "document:gmt/files/catalogs/GANSSER_cat.txt",
+          "document:gmt/files/catalogs/HIMNT_cat.txt",
+          "document:gmt/files/catalogs/ISC_catalog.txt",
+          "file:gmt/files/catalogs/focal_mechanisms/README"
+        ]
+      },
+      {
+        "name": "Active fault traces",
+        "nodeIds": [
+          "document:gmt/files/him/README.txt",
+          "file:gmt/files/him/dextral_faults.gmt",
+          "file:gmt/files/him/normal_faults.gmt",
+          "file:gmt/files/him/sinistral_faults.gmt",
+          "file:gmt/files/him/thrusts.gmt"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "layer:config-docs",
+    "name": "Environment and Documentation",
+    "description": "Conda environment spec for GMT and READMEs describing the project, GMT and Python workflows.",
+    "nodeIds": [
+      "document:gmt/README.md",
+      "config:gmt/gmt5.yml",
+      "document:README.md",
+      "document:python/README.md"
+    ]
+  }
+]

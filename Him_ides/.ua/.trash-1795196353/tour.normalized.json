@@ -1,0 +1,116 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview",
+    "description": "The README introduces the study of intermediate-depth seismicity beneath the Himalayas and explains that this repository holds Python and GMT scripts that reproduce the manuscript's figures. It also points to the QuakeML catalog on Zenodo and splits the instructions into a Python path and a GMT path, which structures the rest of this tour.",
+    "nodeIds": [
+      "document:README.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Running the Python Scripts",
+    "description": "The Python README explains how to run the figure scripts, so it is the entry to the analysis half of the project. Reading it first tells you what environment and data the drivers expect before you open the code.",
+    "nodeIds": [
+      "document:python/README.md"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Figures 5-9 Driver",
+    "description": "Figures_5-9.py is the main Python driver. It reads the Himalayan QuakeML catalog, defines study sub-regions, and calls into two plotting modules to produce the temporal and migration figures. It is the hub that the next steps fan out from.",
+    "nodeIds": [
+      "file:python/Figures_5-9.py"
+    ],
+    "languageLesson": "The driver imports helper modules and calls their functions in sequence, a simple script-as-orchestrator pattern common in scientific Python."
+  },
+  {
+    "order": 4,
+    "title": "Temporal and Migration Plots",
+    "description": "Building on the driver from Step 3, temporal_plots.py handles magnitude vs time, cumulative counts, inter-event times and frequency-magnitude analysis. migration_plots.py handles migration of seismicity along strike and dip cross-sections. Together they hold the analysis logic that Figures_5-9.py invokes.",
+    "nodeIds": [
+      "file:python/temporal_plots.py",
+      "file:python/migration_plots.py"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "3D Hypocenters: Figure 10",
+    "description": "Figure_10.py is the second, independent Python driver. It renders 3D plots of earthquake hypocenters and stations using ObsPy, complementing the 2D and temporal views from the previous step.",
+    "nodeIds": [
+      "file:python/Figure_10.py"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Supporting Analysis",
+    "description": "These auxiliary scripts plot the 1D velocity models used for earthquake location and summarize catalog details such as depth histograms. They provide the context for judging how reliable the catalog behind the main figures is.",
+    "nodeIds": [
+      "file:python/supporting_material/plot_1D_velocity_models.py",
+      "file:python/supporting_material/plot_catalog_details.py"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "GMT Environment and Setup",
+    "description": "The second half of the project builds map-based figures with GMT. The GMT README gives short setup and run instructions, and gmt5.yml pins the conda environment (GMT 6.0.0 with GDAL, GEOS and Ghostscript) so the shell scripts behave reproducibly.",
+    "nodeIds": [
+      "document:gmt/README.md",
+      "config:gmt/gmt5.yml"
+    ],
+    "languageLesson": "A conda environment YAML pins package versions so that others can recreate the same toolchain."
+  },
+  {
+    "order": 8,
+    "title": "Study-Area Maps",
+    "description": "Figure_1.sh draws the overview map of the Himalayan region with topography, and Figure_2.sh maps the deep earthquake events. These scripts show the basic GMT pattern of building a map from layered data, which the cross-section scripts then reuse.",
+    "nodeIds": [
+      "file:gmt/Figure_1.sh",
+      "file:gmt/Figure_2.sh"
+    ],
+    "languageLesson": "GMT scripts are shell scripts that chain gmt commands such as basemap, grdimage and plot, each adding a layer to one PostScript figure."
+  },
+  {
+    "order": 9,
+    "title": "Depth Cross-Sections",
+    "description": "Figure_3AB.sh and Figure_3CD.sh project NLL and HypoDD hypocenter locations onto depth cross-sections. Comparing the two location methods shows how relocation sharpens the picture of intermediate-depth seismicity.",
+    "nodeIds": [
+      "file:gmt/Figure_3AB.sh",
+      "file:gmt/Figure_3CD.sh"
+    ]
+  },
+  {
+    "order": 10,
+    "title": "Station Lists",
+    "description": "The GMT scripts plot seismic stations read from text files. all_stations.txt combines all networks, and the per-network files (for example HiCLIMB, HIMNT, NAMASTE and HiKNet) record the deployments used in the study.",
+    "nodeIds": [
+      "document:gmt/files/all_stations.txt",
+      "document:gmt/files/sta_HiCLIMB.txt",
+      "document:gmt/files/sta_HIMNT.txt",
+      "document:gmt/files/sta_NAMASTE.txt"
+    ]
+  },
+  {
+    "order": 11,
+    "title": "Earthquake and Focal Catalogs",
+    "description": "Complementary catalogs give the maps context. These include relocated events from the Gansser network, HIMNT events, the ISC catalogue, and a listing of focal mechanism catalogs.",
+    "nodeIds": [
+      "document:gmt/files/catalogs/GANSSER_cat.txt",
+      "document:gmt/files/catalogs/HIMNT_cat.txt",
+      "document:gmt/files/catalogs/ISC_catalog.txt",
+      "file:gmt/files/catalogs/focal_mechanisms/README"
+    ]
+  },
+  {
+    "order": 12,
+    "title": "Faults and Color Palette",
+    "description": "Himalayan fault traces from HimaTibetMap come as GMT multisegment files for thrust, normal, dextral and sinistral faults, documented by their README. The him.cpt palette maps elevation to topographic colors for the maps.",
+    "nodeIds": [
+      "document:gmt/files/him/README.txt",
+      "file:gmt/files/him/thrusts.gmt",
+      "file:gmt/files/him/normal_faults.gmt",
+      "file:gmt/him.cpt"
+    ],
+    "languageLesson": "GMT multisegment files separate line segments with '>' header lines, and a CPT file maps data values to colors."
+  }
+]

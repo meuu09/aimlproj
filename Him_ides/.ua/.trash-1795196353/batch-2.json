@@ -1,0 +1,139 @@
+{
+ "nodes": [
+  {
+   "id": "file:gmt/Figure_1.sh",
+   "type": "file",
+   "name": "Figure_1.sh",
+   "filePath": "gmt/Figure_1.sh",
+   "summary": "GMT shell script that draws the manuscript's Figure 1 map of the Himalayan region with topography, fault traces, seismic stations and deep earthquake catalogs (HIMNT, NSC candidates).",
+   "tags": [
+    "gmt",
+    "map-plotting",
+    "figure",
+    "shell-script",
+    "seismology"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Chains GMT commands with -K/-O and heredocs to build a layered PostScript, then converts it to PDF."
+  },
+  {
+   "id": "file:gmt/Figure_2.sh",
+   "type": "file",
+   "name": "Figure_2.sh",
+   "filePath": "gmt/Figure_2.sh",
+   "summary": "GMT shell script that produces Figure 2, a map of deep earthquake events with topography, faults, country labels, cluster boxes and station symbols.",
+   "tags": [
+    "gmt",
+    "map-plotting",
+    "figure",
+    "shell-script",
+    "seismology"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Layered GMT PostScript map built with -K/-O appends and inline heredoc data."
+  },
+  {
+   "id": "file:gmt/Figure_3AB.sh",
+   "type": "file",
+   "name": "Figure_3AB.sh",
+   "filePath": "gmt/Figure_3AB.sh",
+   "summary": "GMT script producing Figure 3A-B depth cross-sections of seismicity, projecting NLL and HypoDD locations onto two swaths of 50 km half-width.",
+   "tags": [
+    "gmt",
+    "cross-section",
+    "figure",
+    "shell-script",
+    "seismology"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:gmt/Figure_3CD.sh",
+   "type": "file",
+   "name": "Figure_3CD.sh",
+   "filePath": "gmt/Figure_3CD.sh",
+   "summary": "GMT script producing Figure 3C-D cross-sections, projecting NLL and HypoDD locations with error bars along two profiles and cleaning temporary files.",
+   "tags": [
+    "gmt",
+    "cross-section",
+    "figure",
+    "shell-script",
+    "seismology"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:gmt/README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "gmt/README.md",
+   "summary": "Short instructions for creating the gmt5 conda environment and running Figure_1.sh to build the first manuscript map.",
+   "tags": [
+    "documentation",
+    "gmt",
+    "setup",
+    "conda"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:gmt/gmt5.yml",
+   "type": "config",
+   "name": "gmt5.yml",
+   "filePath": "gmt/gmt5.yml",
+   "summary": "Conda environment specification pinning GMT 6.0.0 with GDAL, GEOS, Ghostscript and other native dependencies needed by the GMT scripts.",
+   "tags": [
+    "configuration",
+    "conda",
+    "environment",
+    "gmt",
+    "dependencies"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:gmt/README.md",
+   "target": "file:gmt/Figure_1.sh",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:gmt/README.md",
+   "target": "config:gmt/gmt5.yml",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:gmt/gmt5.yml",
+   "target": "file:gmt/Figure_1.sh",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:gmt/gmt5.yml",
+   "target": "file:gmt/Figure_2.sh",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:gmt/gmt5.yml",
+   "target": "file:gmt/Figure_3AB.sh",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:gmt/gmt5.yml",
+   "target": "file:gmt/Figure_3CD.sh",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  }
+ ]
+}

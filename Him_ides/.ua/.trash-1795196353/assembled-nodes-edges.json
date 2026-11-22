@@ -1,0 +1,1422 @@
+{
+  "nodes": [
+    {
+      "id": "file:python/Figures_5-9.py",
+      "type": "file",
+      "name": "Figures_5-9.py",
+      "filePath": "python/Figures_5-9.py",
+      "summary": "Driver script that reads the Himalayan QuakeML catalog, defines study sub-regions, and produces Figures 5-9 (magnitude-time, interevent times, MFDs, migration analysis) via the temporal and migration plotting modules.",
+      "tags": [
+        "entry-point",
+        "script",
+        "visualization",
+        "seismology"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:python/migration_plots.py",
+      "type": "file",
+      "name": "migration_plots.py",
+      "filePath": "python/migration_plots.py",
+      "summary": "Plotting module for earthquake migration analysis along strike and dip cross-sections, including a geographic distance helper.",
+      "tags": [
+        "visualization",
+        "seismology",
+        "migration",
+        "matplotlib"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:python/temporal_plots.py",
+      "type": "file",
+      "name": "temporal_plots.py",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Plotting module for temporal catalog analysis: magnitude vs time with cumulative counts, interevent time distributions, and b-value magnitude-frequency plots for sub-regions.",
+      "tags": [
+        "visualization",
+        "seismology",
+        "time-series",
+        "b-value"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:python/migration_plots.py:dist_calc",
+      "type": "function",
+      "name": "dist_calc",
+      "filePath": "python/migration_plots.py",
+      "summary": "Computes distance between two lon/lat locations.",
+      "tags": [
+        "utility",
+        "geodesy"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        29,
+        52
+      ]
+    },
+    {
+      "id": "function:python/migration_plots.py:plot_migration",
+      "type": "function",
+      "name": "plot_migration",
+      "filePath": "python/migration_plots.py",
+      "summary": "Plots earthquake migration along strike and dip profiles within a swath, with map inset and time-colored events.",
+      "tags": [
+        "visualization",
+        "migration",
+        "cross-section"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        55,
+        162
+      ]
+    },
+    {
+      "id": "function:python/temporal_plots.py:get_cat_details",
+      "type": "function",
+      "name": "get_cat_details",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Extracts origin times, coordinates, depths and magnitudes from a catalog, split by region.",
+      "tags": [
+        "utility",
+        "catalog",
+        "data-extraction"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        19,
+        43
+      ]
+    },
+    {
+      "id": "function:python/temporal_plots.py:cut_cat",
+      "type": "function",
+      "name": "cut_cat",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Selects events from a catalog falling inside a polygon of coordinates.",
+      "tags": [
+        "utility",
+        "catalog",
+        "spatial-filter"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        46,
+        66
+      ]
+    },
+    {
+      "id": "function:python/temporal_plots.py:create_lines",
+      "type": "function",
+      "name": "create_lines",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Builds a line collection connecting event times to magnitudes for stem-style plotting.",
+      "tags": [
+        "utility",
+        "plotting"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        69,
+        78
+      ]
+    },
+    {
+      "id": "function:python/temporal_plots.py:interevent_times_single_cluster",
+      "type": "function",
+      "name": "interevent_times_single_cluster",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Generates the interevent time figure for several sub-catalogs and saves it.",
+      "tags": [
+        "visualization",
+        "interevent-times",
+        "seismology"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        81,
+        215
+      ]
+    },
+    {
+      "id": "function:python/temporal_plots.py:mag_vs_time_plus_cumulative",
+      "type": "function",
+      "name": "mag_vs_time_plus_cumulative",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Creates magnitude-versus-time plot with cumulative event counts for sub-regions (Figure 5).",
+      "tags": [
+        "visualization",
+        "time-series",
+        "cumulative"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        218,
+        334
+      ]
+    },
+    {
+      "id": "function:python/temporal_plots.py:calc_bvalues",
+      "type": "function",
+      "name": "calc_bvalues",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Computes b-value fit and fit function from magnitude frequency data above completeness.",
+      "tags": [
+        "utility",
+        "b-value",
+        "statistics"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        336,
+        346
+      ]
+    },
+    {
+      "id": "function:python/temporal_plots.py:multi_mfd_plot",
+      "type": "function",
+      "name": "multi_mfd_plot",
+      "filePath": "python/temporal_plots.py",
+      "summary": "Plots magnitude-frequency distributions with b-value fits for multiple catalogs (Figure 7).",
+      "tags": [
+        "visualization",
+        "mfd",
+        "b-value"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        349,
+        442
+      ]
+    },
+    {
+      "id": "file:gmt/Figure_1.sh",
+      "type": "file",
+      "name": "Figure_1.sh",
+      "filePath": "gmt/Figure_1.sh",
+      "summary": "GMT shell script that draws the manuscript's Figure 1 map of the Himalayan region with topography, fault traces, seismic stations and deep earthquake catalogs (HIMNT, NSC candidates).",
+      "tags": [
+        "gmt",
+        "map-plotting",
+        "figure",
+        "shell-script",
+        "seismology"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Chains GMT commands with -K/-O and heredocs to build a layered PostScript, then converts it to PDF."
+    },
+    {
+      "id": "file:gmt/Figure_2.sh",
+      "type": "file",
+      "name": "Figure_2.sh",
+      "filePath": "gmt/Figure_2.sh",
+      "summary": "GMT shell script that produces Figure 2, a map of deep earthquake events with topography, faults, country labels, cluster boxes and station symbols.",
+      "tags": [
+        "gmt",
+        "map-plotting",
+        "figure",
+        "shell-script",
+        "seismology"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Layered GMT PostScript map built with -K/-O appends and inline heredoc data."
+    },
+    {
+      "id": "file:gmt/Figure_3AB.sh",
+      "type": "file",
+      "name": "Figure_3AB.sh",
+      "filePath": "gmt/Figure_3AB.sh",
+      "summary": "GMT script producing Figure 3A-B depth cross-sections of seismicity, projecting NLL and HypoDD locations onto two swaths of 50 km half-width.",
+      "tags": [
+        "gmt",
+        "cross-section",
+        "figure",
+        "shell-script",
+        "seismology"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:gmt/Figure_3CD.sh",
+      "type": "file",
+      "name": "Figure_3CD.sh",
+      "filePath": "gmt/Figure_3CD.sh",
+      "summary": "GMT script producing Figure 3C-D cross-sections, projecting NLL and HypoDD locations with error bars along two profiles and cleaning temporary files.",
+      "tags": [
+        "gmt",
+        "cross-section",
+        "figure",
+        "shell-script",
+        "seismology"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "gmt/README.md",
+      "summary": "Short instructions for creating the gmt5 conda environment and running Figure_1.sh to build the first manuscript map.",
+      "tags": [
+        "documentation",
+        "gmt",
+        "setup",
+        "conda"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:gmt/gmt5.yml",
+      "type": "config",
+      "name": "gmt5.yml",
+      "filePath": "gmt/gmt5.yml",
+      "summary": "Conda environment specification pinning GMT 6.0.0 with GDAL, GEOS, Ghostscript and other native dependencies needed by the GMT scripts.",
+      "tags": [
+        "configuration",
+        "conda",
+        "environment",
+        "gmt",
+        "dependencies"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/all_stations.txt",
+      "type": "document",
+      "name": "all_stations.txt",
+      "filePath": "gmt/files/all_stations.txt",
+      "summary": "Combined list of seismic stations across all networks (IC, IN, XA, XF, etc.) with coordinates, elevation and operating dates, used for the overall station map.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/sta_BSN.txt",
+      "type": "document",
+      "name": "sta_BSN.txt",
+      "filePath": "gmt/files/sta_BSN.txt",
+      "summary": "Station list for the BSN network; contains only header comments and no station entries.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_EVN.txt",
+      "type": "document",
+      "name": "sta_EVN.txt",
+      "filePath": "gmt/files/sta_EVN.txt",
+      "summary": "Single-entry station file for the IO network station EVN at the EvK2CNR Pyramid Laboratory near Mount Everest.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_GANSSER.txt",
+      "type": "document",
+      "name": "sta_GANSSER.txt",
+      "filePath": "gmt/files/sta_GANSSER.txt",
+      "summary": "Station list for the Gansser temporary network (XA, BHE stations) in Bhutan, from the SED data center.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/sta_HIMNT.txt",
+      "type": "document",
+      "name": "sta_HIMNT.txt",
+      "filePath": "gmt/files/sta_HIMNT.txt",
+      "summary": "Station list for the Himalayan Nepal Tibet (YL) experiment, 2001-2002 deployment.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_HiCLIMB.txt",
+      "type": "document",
+      "name": "sta_HiCLIMB.txt",
+      "filePath": "gmt/files/sta_HiCLIMB.txt",
+      "summary": "Station list for HiCLIMB (XF) broadband stations across Nepal and southern Tibet used in the study.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/sta_HiCLIMB_not_used.txt",
+      "type": "document",
+      "name": "sta_HiCLIMB_not_used.txt",
+      "filePath": "gmt/files/sta_HiCLIMB_not_used.txt",
+      "summary": "HiCLIMB (XF) stations that were not used in the analysis, retained for reference.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/sta_HiKNet.txt",
+      "type": "document",
+      "name": "sta_HiKNet.txt",
+      "filePath": "gmt/files/sta_HiKNet.txt",
+      "summary": "Station list for the HiKNet (ZO) network in western Nepal, 2014-2016.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_IC.txt",
+      "type": "document",
+      "name": "sta_IC.txt",
+      "filePath": "gmt/files/sta_IC.txt",
+      "summary": "Station list for the IC network; header comments only, no station entries.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_IN.txt",
+      "type": "document",
+      "name": "sta_IN.txt",
+      "filePath": "gmt/files/sta_IN.txt",
+      "summary": "Station list for the IN network; header comments only, no station entries.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_NAMASTE.txt",
+      "type": "document",
+      "name": "sta_NAMASTE.txt",
+      "filePath": "gmt/files/sta_NAMASTE.txt",
+      "summary": "Station list for the NAMASTE (XQ) network in Nepal, 2015-2016 deployment.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/sta_NCS.txt",
+      "type": "document",
+      "name": "sta_NCS.txt",
+      "filePath": "gmt/files/sta_NCS.txt",
+      "summary": "Single-entry station file for NK network station KKN at Kakani, Nepal.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_NQ.txt",
+      "type": "document",
+      "name": "sta_NQ.txt",
+      "filePath": "gmt/files/sta_NQ.txt",
+      "summary": "Station list for the NQ network in Nepal, including Kanti Path in Kathmandu.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/sta_bhutan_pilot.txt",
+      "type": "document",
+      "name": "sta_bhutan_pilot.txt",
+      "filePath": "gmt/files/sta_bhutan_pilot.txt",
+      "summary": "Station list for the 2002-2003 Bhutan pilot (XA PASSCAL) deployment.",
+      "tags": [
+        "station-list",
+        "seismology",
+        "data",
+        "gmt-input"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/catalogs/GANSSER_cat.txt",
+      "type": "document",
+      "name": "GANSSER_cat.txt",
+      "filePath": "gmt/files/catalogs/GANSSER_cat.txt",
+      "summary": "Whitespace-delimited relocated earthquake catalog for the Gansser seismic network (about 900 events, 2013 onward) with event ID, hypocenter, location errors, origin time, local magnitude, RMS, azimuthal gap and station counts.",
+      "tags": [
+        "data",
+        "earthquake-catalog",
+        "seismology",
+        "himalaya"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/catalogs/HIMNT_cat.txt",
+      "type": "document",
+      "name": "HIMNT_cat.txt",
+      "filePath": "gmt/files/catalogs/HIMNT_cat.txt",
+      "summary": "Simple earthquake catalog from the HIMNT experiment (about 1600 events from 2001) listing origin time, latitude, longitude and depth in kilometres.",
+      "tags": [
+        "data",
+        "earthquake-catalog",
+        "seismology",
+        "himalaya"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:gmt/files/catalogs/ISC_catalog.txt",
+      "type": "document",
+      "name": "ISC_catalog.txt",
+      "filePath": "gmt/files/catalogs/ISC_catalog.txt",
+      "summary": "International Seismological Centre event catalogue export (about 5700 lines) with comma-separated origin date/time, location, depth and multiple agency magnitude estimates, preceded by a commented ISC header.",
+      "tags": [
+        "data",
+        "earthquake-catalog",
+        "isc",
+        "seismology"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Top-level project overview describing the Himalayan intermediate-depth seismicity study, the Zenodo QuakeML catalog, and pointers to Python and GMT run instructions.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "overview"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:gmt/files/catalogs/focal_mechanisms/README",
+      "type": "file",
+      "name": "README",
+      "filePath": "gmt/files/catalogs/focal_mechanisms/README",
+      "summary": "Plain-text listing of focal mechanism catalog files (Baranowski, Chen, Harvard CMT, Holt, Molnar, NEI) with source references and date ranges.",
+      "tags": [
+        "documentation",
+        "focal-mechanisms",
+        "catalog"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:gmt/files/him/README.txt",
+      "type": "document",
+      "name": "README.txt",
+      "filePath": "gmt/files/him/README.txt",
+      "summary": "Manual for HimaTibetMap-1.0 active fault data, explaining KML, GMT and shapefile formats, plotting with psxy, and structure kinematics.",
+      "tags": [
+        "documentation",
+        "fault-data",
+        "gis",
+        "reference"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:gmt/files/him/dextral_faults.gmt",
+      "type": "file",
+      "name": "dextral_faults.gmt",
+      "filePath": "gmt/files/him/dextral_faults.gmt",
+      "summary": "GMT multisegment file of dextral (right-lateral strike-slip) fault traces in the Himalaya-Tibet region from HimaTibetMap, used for map plotting.",
+      "tags": [
+        "fault-data",
+        "gmt",
+        "geospatial",
+        "plotting-data"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:gmt/files/him/normal_faults.gmt",
+      "type": "file",
+      "name": "normal_faults.gmt",
+      "filePath": "gmt/files/him/normal_faults.gmt",
+      "summary": "GMT multisegment file of normal fault traces in the Himalaya-Tibet region from HimaTibetMap, used for map plotting.",
+      "tags": [
+        "fault-data",
+        "gmt",
+        "geospatial",
+        "plotting-data"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:gmt/files/him/sinistral_faults.gmt",
+      "type": "file",
+      "name": "sinistral_faults.gmt",
+      "filePath": "gmt/files/him/sinistral_faults.gmt",
+      "summary": "GMT multisegment file of sinistral (left-lateral strike-slip) fault traces in the Himalaya-Tibet region from HimaTibetMap, used for map plotting.",
+      "tags": [
+        "fault-data",
+        "gmt",
+        "geospatial",
+        "plotting-data"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:gmt/files/him/thrusts.gmt",
+      "type": "file",
+      "name": "thrusts.gmt",
+      "filePath": "gmt/files/him/thrusts.gmt",
+      "summary": "GMT multisegment file of thrust fault traces in the Himalaya-Tibet region from HimaTibetMap, used for map plotting.",
+      "tags": [
+        "fault-data",
+        "gmt",
+        "geospatial",
+        "plotting-data"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:gmt/him.cpt",
+      "type": "file",
+      "name": "him.cpt",
+      "filePath": "gmt/him.cpt",
+      "summary": "GMT color palette table mapping elevation 0-8000 m to topographic colors, adapted from a France topographic map palette.",
+      "tags": [
+        "color-palette",
+        "gmt",
+        "topography",
+        "visualization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:python/Figure_10.py",
+      "type": "file",
+      "name": "Figure_10.py",
+      "filePath": "python/Figure_10.py",
+      "summary": "Reproduces manuscript Figure 10: 3D plots of earthquake hypocenters and stations using ObsPy catalogs, with polygon-based catalog cutting.",
+      "tags": [
+        "visualization",
+        "seismology",
+        "3d-plot",
+        "figure"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:python/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "python/README.md",
+      "summary": "Instructions for running the Python scripts that reproduce the manuscript figures.",
+      "tags": [
+        "documentation",
+        "python",
+        "instructions"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:python/supporting_material/plot_1D_velocity_models.py",
+      "type": "file",
+      "name": "plot_1D_velocity_models.py",
+      "filePath": "python/supporting_material/plot_1D_velocity_models.py",
+      "summary": "Script plotting 1D seismic velocity models used for earthquake location.",
+      "tags": [
+        "visualization",
+        "velocity-model",
+        "seismology",
+        "script"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:python/supporting_material/plot_catalog_details.py",
+      "type": "file",
+      "name": "plot_catalog_details.py",
+      "filePath": "python/supporting_material/plot_catalog_details.py",
+      "summary": "Plots catalog statistics such as hypocentral depth histograms and catalog detail summaries from a QuakeML catalog.",
+      "tags": [
+        "visualization",
+        "catalog",
+        "seismology",
+        "statistics"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:python/Figure_10.py:cut_cat",
+      "type": "function",
+      "name": "cut_cat",
+      "filePath": "python/Figure_10.py",
+      "summary": "Filters a catalog to events inside a polygon using shapely.",
+      "tags": [
+        "visualization",
+        "filtering",
+        "geospatial"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        27,
+        46
+      ]
+    },
+    {
+      "id": "function:python/Figure_10.py:_finalise_figure",
+      "type": "function",
+      "name": "_finalise_figure",
+      "filePath": "python/Figure_10.py",
+      "summary": "Shows or saves a figure according to keyword arguments.",
+      "tags": [
+        "visualization",
+        "plotting",
+        "helper"
+      ],
+      "complexity": "simple",
+      "lineRange": [
+        49,
+        74
+      ]
+    },
+    {
+      "id": "function:python/Figure_10.py:obspy_3d_plot",
+      "type": "function",
+      "name": "obspy_3d_plot",
+      "filePath": "python/Figure_10.py",
+      "summary": "Builds 3D scatter of events and stations from ObsPy objects.",
+      "tags": [
+        "visualization",
+        "3d-plot",
+        "obspy"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        77,
+        137
+      ]
+    },
+    {
+      "id": "function:python/Figure_10.py:threeD_seismplot",
+      "type": "function",
+      "name": "threeD_seismplot",
+      "filePath": "python/Figure_10.py",
+      "summary": "Draws a 3D seismicity plot of stations and event nodes.",
+      "tags": [
+        "visualization",
+        "3d-plot",
+        "matplotlib"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        139,
+        199
+      ]
+    },
+    {
+      "id": "function:python/Figure_10.py:obspy_3d_plot_2cats",
+      "type": "function",
+      "name": "obspy_3d_plot_2cats",
+      "filePath": "python/Figure_10.py",
+      "summary": "Prepares 3D plot for two event catalogs plus a remainder set.",
+      "tags": [
+        "visualization",
+        "3d-plot",
+        "obspy"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        201,
+        237
+      ]
+    },
+    {
+      "id": "function:python/Figure_10.py:threeD_seismplot_2cats",
+      "type": "function",
+      "name": "threeD_seismplot_2cats",
+      "filePath": "python/Figure_10.py",
+      "summary": "Draws 3D seismicity plot distinguishing multiple event groups and stations.",
+      "tags": [
+        "visualization",
+        "3d-plot",
+        "matplotlib"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        239,
+        337
+      ]
+    },
+    {
+      "id": "function:python/supporting_material/plot_catalog_details.py:plot_depth_histos",
+      "type": "function",
+      "name": "plot_depth_histos",
+      "filePath": "python/supporting_material/plot_catalog_details.py",
+      "summary": "Plots histograms of hypocentral depths.",
+      "tags": [
+        "visualization",
+        "histogram"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        33,
+        60
+      ]
+    },
+    {
+      "id": "function:python/supporting_material/plot_catalog_details.py:plot_cat_details",
+      "type": "function",
+      "name": "plot_cat_details",
+      "filePath": "python/supporting_material/plot_catalog_details.py",
+      "summary": "Creates multi-panel summary plot of catalog magnitude, depth and time details.",
+      "tags": [
+        "visualization",
+        "catalog-summary"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        62,
+        165
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:python/migration_plots.py",
+      "target": "function:python/migration_plots.py:dist_calc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/migration_plots.py",
+      "target": "function:python/migration_plots.py:dist_calc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/migration_plots.py",
+      "target": "function:python/migration_plots.py:plot_migration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/migration_plots.py",
+      "target": "function:python/migration_plots.py:plot_migration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:get_cat_details",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:get_cat_details",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:cut_cat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:cut_cat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:create_lines",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:create_lines",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:interevent_times_single_cluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:interevent_times_single_cluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:mag_vs_time_plus_cumulative",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:mag_vs_time_plus_cumulative",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:calc_bvalues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:calc_bvalues",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:multi_mfd_plot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/temporal_plots.py",
+      "target": "function:python/temporal_plots.py:multi_mfd_plot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/Figures_5-9.py",
+      "target": "file:python/migration_plots.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:python/Figures_5-9.py",
+      "target": "file:python/temporal_plots.py",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:python/Figures_5-9.py",
+      "target": "function:python/temporal_plots.py:mag_vs_time_plus_cumulative",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/Figures_5-9.py",
+      "target": "function:python/temporal_plots.py:interevent_times_single_cluster",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/Figures_5-9.py",
+      "target": "function:python/temporal_plots.py:cut_cat",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/Figures_5-9.py",
+      "target": "function:python/temporal_plots.py:multi_mfd_plot",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:python/Figures_5-9.py",
+      "target": "function:python/migration_plots.py:plot_migration",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:python/temporal_plots.py:interevent_times_single_cluster",
+      "target": "function:python/temporal_plots.py:cut_cat",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:python/temporal_plots.py:interevent_times_single_cluster",
+      "target": "function:python/temporal_plots.py:get_cat_details",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:python/temporal_plots.py:mag_vs_time_plus_cumulative",
+      "target": "function:python/temporal_plots.py:cut_cat",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:python/temporal_plots.py:mag_vs_time_plus_cumulative",
+      "target": "function:python/temporal_plots.py:get_cat_details",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:python/temporal_plots.py:mag_vs_time_plus_cumulative",
+      "target": "function:python/temporal_plots.py:create_lines",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:python/temporal_plots.py:multi_mfd_plot",
+      "target": "function:python/temporal_plots.py:calc_bvalues",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "document:gmt/README.md",
+      "target": "file:gmt/Figure_1.sh",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/README.md",
+      "target": "config:gmt/gmt5.yml",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:gmt/gmt5.yml",
+      "target": "file:gmt/Figure_1.sh",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:gmt/gmt5.yml",
+      "target": "file:gmt/Figure_2.sh",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:gmt/gmt5.yml",
+      "target": "file:gmt/Figure_3AB.sh",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:gmt/gmt5.yml",
+      "target": "file:gmt/Figure_3CD.sh",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_BSN.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_EVN.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_GANSSER.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_HIMNT.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_HiCLIMB.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_HiCLIMB_not_used.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_HiKNet.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_IC.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_IN.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_NAMASTE.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_NCS.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_NQ.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/all_stations.txt",
+      "target": "document:gmt/files/sta_bhutan_pilot.txt",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:python/Figure_10.py",
+      "target": "function:python/Figure_10.py:cut_cat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/Figure_10.py",
+      "target": "function:python/Figure_10.py:_finalise_figure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/Figure_10.py",
+      "target": "function:python/Figure_10.py:obspy_3d_plot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/Figure_10.py",
+      "target": "function:python/Figure_10.py:threeD_seismplot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/Figure_10.py",
+      "target": "function:python/Figure_10.py:obspy_3d_plot_2cats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/Figure_10.py",
+      "target": "function:python/Figure_10.py:threeD_seismplot_2cats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/supporting_material/plot_catalog_details.py",
+      "target": "function:python/supporting_material/plot_catalog_details.py:plot_depth_histos",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:python/supporting_material/plot_catalog_details.py",
+      "target": "function:python/supporting_material/plot_catalog_details.py:plot_cat_details",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "document:README.md",
+      "target": "document:python/README.md",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:python/Figure_10.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:python/README.md",
+      "target": "file:python/Figure_10.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/him/README.txt",
+      "target": "file:gmt/files/him/thrusts.gmt",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/him/README.txt",
+      "target": "file:gmt/files/him/normal_faults.gmt",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/him/README.txt",
+      "target": "file:gmt/files/him/dextral_faults.gmt",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:gmt/files/him/README.txt",
+      "target": "file:gmt/files/him/sinistral_faults.gmt",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "document:gmt/files/sta_HiCLIMB.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "document:gmt/files/sta_HiCLIMB_not_used.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "document:gmt/files/sta_HIMNT.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "document:gmt/files/sta_bhutan_pilot.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "document:gmt/files/sta_IC.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "file:gmt/files/him/thrusts.gmt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "file:gmt/files/him/normal_faults.gmt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "file:gmt/files/him/dextral_faults.gmt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "file:gmt/files/him/sinistral_faults.gmt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "document:gmt/files/catalogs/HIMNT_cat.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_1.sh",
+      "target": "file:gmt/him.cpt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "document:gmt/files/sta_HIMNT.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "document:gmt/files/sta_HiCLIMB.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "document:gmt/files/sta_HiCLIMB_not_used.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "document:gmt/files/sta_bhutan_pilot.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "document:gmt/files/sta_IC.txt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "file:gmt/files/him/thrusts.gmt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "file:gmt/files/him/normal_faults.gmt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "file:gmt/files/him/dextral_faults.gmt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:gmt/Figure_2.sh",
+      "target": "file:gmt/him.cpt",
+      "type": "reads_from",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

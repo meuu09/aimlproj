@@ -1,0 +1,33 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 0,
+  "filesSkipped": [
+    "gmt/files/all_stations.txt",
+    "gmt/files/sta_BSN.txt",
+    "gmt/files/sta_EVN.txt",
+    "gmt/files/sta_GANSSER.txt",
+    "gmt/files/sta_HIMNT.txt",
+    "gmt/files/sta_HiCLIMB.txt",
+    "gmt/files/sta_HiCLIMB_not_used.txt",
+    "gmt/files/sta_HiKNet.txt",
+    "gmt/files/sta_IC.txt",
+    "gmt/files/sta_IN.txt",
+    "gmt/files/sta_NAMASTE.txt",
+    "gmt/files/sta_NCS.txt",
+    "gmt/files/sta_NQ.txt",
+    "gmt/files/sta_bhutan_pilot.txt"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 0,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": []
+}

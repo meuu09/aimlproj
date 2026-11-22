@@ -1,0 +1,31 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'document:gmt/files/catalogs/GANSSER_cat.txt' has no edges (orphan)",
+    "Node 'document:gmt/files/catalogs/ISC_catalog.txt' has no edges (orphan)",
+    "Node 'file:gmt/files/catalogs/focal_mechanisms/README' has no edges (orphan)",
+    "Node 'file:python/supporting_material/plot_1D_velocity_models.py' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 55,
+    "totalEdges": 85,
+    "totalLayers": 5,
+    "tourSteps": 12,
+    "nodeTypes": {
+      "file": 16,
+      "function": 17,
+      "document": 21,
+      "config": 1
+    },
+    "edgeTypes": {
+      "contains": 17,
+      "exports": 9,
+      "imports": 2,
+      "calls": 11,
+      "documents": 9,
+      "configures": 4,
+      "related": 13,
+      "reads_from": 20
+    }
+  }
+}

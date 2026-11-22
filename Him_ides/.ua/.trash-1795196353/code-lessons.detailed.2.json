@@ -1,0 +1,426 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-20T17:37:23.637459Z",
+ "files": {
+  "gmt/Figure_3AB.sh": {
+   "overview": "GMT shell script that draws Figure 3AB of the manuscript: two stacked depth cross-sections of Himalayan seismicity (A-A' and B-B'). It projects both the NonLinLoc (NLL) and double-difference (HDD) locations onto each profile line and overlays them with error bars. Note it reads files/NLL_locations.dat and files/HDD_locations.dat, which are not in the detailed list.",
+   "sections": [
+    {
+     "title": "Header and output name",
+     "lineRange": [
+      1,
+      11
+     ],
+     "explanation": "Banner comments describe the script (cross-sections of seismicity, by Konstantinos Michailos) and set the output EPS file name used by every later redirect.",
+     "tourOrder": 9
+    },
+    {
+     "title": "GMT defaults and base canvas",
+     "lineRange": [
+      12,
+      19
+     ],
+     "explanation": "Sets GMT map formats and fonts, then creates an empty 18x20 cm portrait basemap with -K so later layers can be appended to the same PostScript file.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Profile A projection",
+     "lineRange": [
+      21,
+      30
+     ],
+     "explanation": "Defines start/end coordinates and a swath half-width of 50 km, then uses awk to extract the first five columns of the NLL and HDD location files and runs gmt project (-Fpz: distance along profile and depth) into temporary projection files. The -Q flag gives distances in km.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Profile B projection",
+     "lineRange": [
+      31,
+      40
+     ],
+     "explanation": "Same procedure for the second, roughly perpendicular profile with a swath half-width of 60 km, producing projection2*.dat.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Upper cross-section panel",
+     "lineRange": [
+      41,
+      47
+     ],
+     "explanation": "Plots HDD events as circles scaled by magnitude (-i0,1,2s0.025) on a depth axis flipped by -JX15/-5, adds dashed light-gray vertical error bars (column 4 scaled by 1.455), then draws the NLL events in black with red error bars on top. The -Y/-X offsets position the panel.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Upper panel labels",
+     "lineRange": [
+      48,
+      55
+     ],
+     "explanation": "Adds the profile endpoint labels and the swath-width annotation with pstext heredocs.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Lower cross-section panel",
+     "lineRange": [
+      56,
+      62
+     ],
+     "explanation": "Repeats the plotting recipe for the second profile, shifting down with -Y-7 and using its own distance range and width.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Lower panel labels",
+     "lineRange": [
+      63,
+      70
+     ],
+     "explanation": "Endpoint labels and swath annotation for the second profile.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Finalize and clean up",
+     "lineRange": [
+      71,
+      77
+     ],
+     "explanation": "Closes the PostScript with an empty -T layer, converts it to PDF via psconvert, opens it with evince, and deletes the EPS and temporary projection files.",
+     "tourOrder": 9
+    }
+   ]
+  },
+  "gmt/Figure_3CD.sh": {
+   "overview": "GMT shell script that draws Figure 3CD of the manuscript: two stacked depth cross-sections of Himalayan seismicity (C-C' and D-D'). It projects both the NonLinLoc (NLL) and double-difference (HDD) locations onto each profile line and overlays them with error bars. It is structurally identical to Figure_3AB.sh, differing only in profile coordinates, labels and panel widths (the lower panel uses -JX11.31/-5).",
+   "sections": [
+    {
+     "title": "Header and output name",
+     "lineRange": [
+      1,
+      11
+     ],
+     "explanation": "Banner comments describe the script (cross-sections of seismicity, by Konstantinos Michailos) and set the output EPS file name used by every later redirect.",
+     "tourOrder": 9
+    },
+    {
+     "title": "GMT defaults and base canvas",
+     "lineRange": [
+      12,
+      19
+     ],
+     "explanation": "Sets GMT map formats and fonts, then creates an empty 18x20 cm portrait basemap with -K so later layers can be appended to the same PostScript file.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Profile A projection",
+     "lineRange": [
+      21,
+      30
+     ],
+     "explanation": "Defines start/end coordinates and a swath half-width of 50 km, then uses awk to extract the first five columns of the NLL and HDD location files and runs gmt project (-Fpz: distance along profile and depth) into temporary projection files. The -Q flag gives distances in km.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Profile B projection",
+     "lineRange": [
+      31,
+      40
+     ],
+     "explanation": "Same procedure for the second profile (D-D') with a 50 km half-width, producing projection2*.dat.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Upper cross-section panel",
+     "lineRange": [
+      41,
+      47
+     ],
+     "explanation": "Plots HDD events as circles scaled by magnitude (-i0,1,2s0.025) on a depth axis flipped by -JX15/-5, adds dashed light-gray vertical error bars (column 4 scaled by 1.455), then draws the NLL events in black with red error bars on top. The -Y/-X offsets position the panel.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Upper panel labels",
+     "lineRange": [
+      48,
+      55
+     ],
+     "explanation": "Adds the profile endpoint labels and the swath-width annotation with pstext heredocs.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Lower cross-section panel",
+     "lineRange": [
+      56,
+      62
+     ],
+     "explanation": "Repeats the plotting recipe for the second profile, shifting down with -Y-7 and using its own distance range and width.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Lower panel labels",
+     "lineRange": [
+      63,
+      70
+     ],
+     "explanation": "Endpoint labels and swath annotation for the second profile.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Finalize and clean up",
+     "lineRange": [
+      71,
+      77
+     ],
+     "explanation": "Closes the PostScript with an empty -T layer, converts it to PDF via psconvert, opens it with evince, and deletes the EPS and temporary projection files.",
+     "tourOrder": 9
+    }
+   ]
+  },
+  "gmt/files/all_stations.txt": {
+   "overview": "Merged station list for all seismic networks used in the study, one station per line with network, code, latitude, longitude, elevation, site name and operating period. It supplies the station triangles for the GMT maps and is the union of the per-network sta_*.txt files.",
+   "sections": [
+    {
+     "title": "Header",
+     "lineRange": [
+      1,
+      2
+     ],
+     "explanation": "Column description and the IRIS DMC data center comment. Lines starting with # are comments.",
+     "tourOrder": 10
+    },
+    {
+     "title": "Station records",
+     "lineRange": [
+      3,
+      282
+     ],
+     "explanation": "Whitespace-separated records such as 'IC LSA 29.7031 91.127 3660.0 Tibet, China ...'. Start/end times use ISO format; open-ended stations end at 2599-12-31. Site names contain spaces and commas, so only the first columns are safe to parse for plotting.",
+     "tourOrder": 10
+    }
+   ]
+  },
+  "gmt/files/sta_HiCLIMB.txt": {
+   "overview": "Station list for the HiCLIMB (network XF) temporary network, in the same format as all_stations.txt (network, station, lat, lon, elevation, site, start, end). It is used to plot this network's stations on the study maps.",
+   "sections": [
+    {
+     "title": "Header",
+     "lineRange": [
+      1,
+      1
+     ],
+     "explanation": "Column names.",
+     "tourOrder": 10
+    },
+    {
+     "title": "Station records",
+     "lineRange": [
+      2,
+      82
+     ],
+     "explanation": "One line per HiCLIMB (network XF) station with coordinates and deployment window, which documents when each station was recording.",
+     "tourOrder": 10
+    }
+   ]
+  },
+  "gmt/files/sta_HIMNT.txt": {
+   "overview": "Station list for the HIMNT (network YL, 2001-2002) temporary network, in the same format as all_stations.txt (network, station, lat, lon, elevation, site, start, end). It is used to plot this network's stations on the study maps.",
+   "sections": [
+    {
+     "title": "Header",
+     "lineRange": [
+      1,
+      1
+     ],
+     "explanation": "Column names.",
+     "tourOrder": 10
+    },
+    {
+     "title": "Station records",
+     "lineRange": [
+      2,
+      30
+     ],
+     "explanation": "One line per HIMNT (network YL, 2001-2002) station with coordinates and deployment window, which documents when each station was recording.",
+     "tourOrder": 10
+    }
+   ]
+  },
+  "gmt/files/sta_NAMASTE.txt": {
+   "overview": "Station list for the NAMASTE (network XQ, Kathmandu region, 2015-2016) temporary network, in the same format as all_stations.txt (network, station, lat, lon, elevation, site, start, end). It is used to plot this network's stations on the study maps.",
+   "sections": [
+    {
+     "title": "Header",
+     "lineRange": [
+      1,
+      2
+     ],
+     "explanation": "Column names and data-center comment.",
+     "tourOrder": 10
+    },
+    {
+     "title": "Station records",
+     "lineRange": [
+      3,
+      49
+     ],
+     "explanation": "One line per NAMASTE (network XQ, Kathmandu region, 2015-2016) station with coordinates and deployment window, which documents when each station was recording.",
+     "tourOrder": 10
+    }
+   ]
+  },
+  "gmt/files/catalogs/GANSSER_cat.txt": {
+   "overview": "Earthquake catalog from the GANSSER network in Bhutan (2013-2014). Each row is a located event with hypocenter, location uncertainties, origin time, local magnitude and quality metrics.",
+   "sections": [
+    {
+     "title": "Header",
+     "lineRange": [
+      1,
+      1
+     ],
+     "explanation": "Column names: event ID, lat, lon, depth (km), uncertainties in meters, date/time parts, Mlv magnitude, type, RMS, azimuthal gap, nearest-station distance and number of observations.",
+     "tourOrder": 11
+    },
+    {
+     "title": "Event records",
+     "lineRange": [
+      2,
+      920
+     ],
+     "explanation": "Fixed-column event rows such as '201301001 27.545232 88.558239 41.859 ...'. Note that some depths are negative and some uncertainties are very large, so quality filtering (RMS, GAP, Nob) may be needed before plotting.",
+     "tourOrder": 11
+    }
+   ]
+  },
+  "gmt/files/catalogs/HIMNT_cat.txt": {
+   "overview": "Earthquake catalog from the HIMNT experiment, with a compact format of origin time, latitude, longitude and depth only. It supplies epicenters for the seismicity maps.",
+   "sections": [
+    {
+     "title": "Header",
+     "lineRange": [
+      1,
+      1
+     ],
+     "explanation": "Column names: year, month, day, hour, minute, seconds, latitude, longitude, depth.",
+     "tourOrder": 11
+    },
+    {
+     "title": "Event records",
+     "lineRange": [
+      2,
+      1648
+     ],
+     "explanation": "One event per line, e.g. '2001 10 01 06 26 49.201218 28.813375 87.410329 25.25'. There are no magnitudes or uncertainties in this file.",
+     "tourOrder": 11
+    }
+   ]
+  },
+  "gmt/files/catalogs/ISC_catalog.txt": {
+   "overview": "Reviewed ISC Bulletin event search results for the Himalayan region, in comma-separated form. It gives regional background seismicity with multiple magnitude estimates per event from different agencies.",
+   "sections": [
+    {
+     "title": "Search header",
+     "lineRange": [
+      1,
+      19
+     ],
+     "explanation": "Comment lines recording ISC citation guidance, search type (rectangular, reviewed bulletin) and the column header for event ID, author, date, time, lat, lon, depth, depth-fixed flag, and repeated author/type/magnitude triples.",
+     "tourOrder": 11
+    },
+    {
+     "title": "Event records",
+     "lineRange": [
+      20,
+      5704
+     ],
+     "explanation": "Each row starts with the ISC event ID, prime-hypocenter author, date, time, position and depth, followed by a variable number of magnitude entries (mb, mbtmp, ML, ...), so rows have differing numbers of fields.",
+     "tourOrder": 11
+    }
+   ]
+  },
+  "gmt/files/catalogs/focal_mechanisms/README": {
+   "overview": "Short index of the focal mechanism data files stored beside it, listing each file with its literature source and time span. It explains where the beach-ball data for the maps comes from.",
+   "sections": [
+    {
+     "title": "File inventory",
+     "lineRange": [
+      1,
+      13
+     ],
+     "explanation": "Lists Chandra historical data (1505-1886), Baranowski, Chen and Kao, Harvard CMT, Holt 1995 (instrumental and historical), Kumar (1997 event), Molnar 1989 and 1990, and the NEI/CNSS catalog, each with its citation and years covered.",
+     "tourOrder": 11
+    }
+   ]
+  },
+  "gmt/files/him/README.txt": {
+   "overview": "Documentation for HimaTibetMap-1.0, the active fault database (Taylor, Yin, Styron, Okoronkwo) from which the thrusts, normal, dextral and sinistral fault GMT files derive. It explains plotting, compilation method and data sources.",
+   "sections": [
+    {
+     "title": "Title and credits",
+     "lineRange": [
+      1,
+      5
+     ],
+     "explanation": "Names the database and its authors.",
+     "tourOrder": 12
+    },
+    {
+     "title": "Plotting the data",
+     "lineRange": [
+      7,
+      19
+     ],
+     "explanation": "Explains the KML, GMT and ESRI Shapefile versions: GMT files are plotted with psxy -M, and kinematics with -Sf. The shapefile uses a styles file from UC Davis.",
+     "tourOrder": 12
+    },
+    {
+     "title": "Database compilation",
+     "lineRange": [
+      22,
+      27
+     ],
+     "explanation": "Describes how structures were drawn in ArcMap over remote sensing imagery (ASTER, Landsat, SPOT, CORONA, SRTM) and from the literature. Precision is several kilometers, so it suits regional rather than local plots.",
+     "tourOrder": 12
+    },
+    {
+     "title": "Sources by structure type",
+     "lineRange": [
+      29,
+      101
+     ],
+     "explanation": "Tabulates faults by class (thrusts, fold-thrust belts, extensional systems, right- and left-slip faults, sutures, volcanics) with their references, and notes that unnamed faults come from Taylor et al. or remote sensing.",
+     "tourOrder": 12
+    },
+    {
+     "title": "Works cited",
+     "lineRange": [
+      104,
+      190
+     ],
+     "explanation": "Bibliography for the references above. Some accented characters appear garbled due to encoding.",
+     "tourOrder": 12
+    }
+   ]
+  },
+  "gmt/files/him/thrusts.gmt": {
+   "overview": "GMT multi-segment vector file with thrust fault traces for the Himalaya-Tibet region, derived from HimaTibetMap-1.0. It is plotted as lines on the maps, with other fault classes held in sibling files.",
+   "sections": [
+    {
+     "title": "OGR/GMT header",
+     "lineRange": [
+      1,
+      7
+     ],
+     "explanation": "Header comments identify the GMT vector format, bounding box, WGS84 projection and the attribute schema (Id, Name, Type, ltype, X, Y, Source) from the GDAL conversion.",
+     "tourOrder": 12
+    },
+    {
+     "title": "Fault segments",
+     "lineRange": [
+      8,
+      2495
+     ],
+     "explanation": "About 206 features, each starting with a '>' separator line followed by longitude/latitude vertices, for instance beginning near 82.31 E, 36.59 N. Plot with psxy -M.",
+     "tourOrder": 12
+    }
+   ]
+  }
+ }
+}

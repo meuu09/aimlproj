@@ -1,0 +1,543 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-20T17:37:46.288682Z",
+ "files": {
+  "README.md": {
+   "overview": "Top-level project description. It names the Frontiers in Earth Science manuscript on intermediate-depth seismicity beneath the Himalayas, points to the Zenodo QuakeML catalog, and routes readers to the Python and GMT instructions.",
+   "sections": [
+    {
+     "title": "Project description",
+     "lineRange": [
+      1,
+      13
+     ],
+     "explanation": "Explains that the repository holds Python and GMT scripts that reproduce the manuscript figures. The study applies advanced detection techniques to continuous waveforms to characterize intermediate-depth seismicity beneath the central Himalayas. The catalog itself lives on Zenodo in QuakeML format.",
+     "tourOrder": 1
+    },
+    {
+     "title": "Run instructions and caveat",
+     "lineRange": [
+      15,
+      24
+     ],
+     "explanation": "Links to the Python and GMT READMEs, which split the project in two halves. The note warns that the scripts reproduce this publication only and must be modified for other uses.",
+     "tourOrder": 1
+    }
+   ]
+  },
+  "python/README.md": {
+   "overview": "Setup guide for the Python half. It builds a conda environment and then runs the two driver scripts, Figures_5-9.py and Figure_10.py.",
+   "sections": [
+    {
+     "title": "Conda environment",
+     "lineRange": [
+      1,
+      17
+     ],
+     "explanation": "Recommends conda and creates a `him_seis` environment pinned to Python 3.7 and eqcorrscan 0.4.2, plus obspy, matplotlib, numpy, pandas, pyproj, shapely and basemap. The old Python and eqcorrscan pins matter because the scripts import eqcorrscan utilities.",
+     "tourOrder": 2
+    },
+    {
+     "title": "Running the figures",
+     "lineRange": [
+      18,
+      25
+     ],
+     "explanation": "Two commands produce the figures: `python Figures_5-9.py` for figures 5 to 9 and `python Figure_10.py` for figure 10.",
+     "tourOrder": 2
+    },
+    {
+     "title": "GMT notes",
+     "lineRange": [
+      26,
+      37
+     ],
+     "explanation": "The tail of the file mentions the files directory and the separate gmt5 conda environment for the GMT scripts, and shows how to run Figure_1.sh. This duplicates the GMT README.",
+     "tourOrder": 2
+    }
+   ]
+  },
+  "python/Figures_5-9.py": {
+   "overview": "Main driver script for figures 5 to 9. It reads the QuakeML catalog, defines polygon sub-regions, and delegates the actual plotting to temporal_plots and migration_plots. It does little computation itself and mainly orchestrates.",
+   "sections": [
+    {
+     "title": "Imports and figure style",
+     "lineRange": [
+      1,
+      30
+     ],
+     "explanation": "Imports obspy, the two local plotting modules and numpy, then sets global matplotlib font and default figure size (13 by 8) that apply to every later plot.",
+     "tourOrder": 3
+    },
+    {
+     "title": "Catalog loading",
+     "lineRange": [
+      32,
+      38
+     ],
+     "explanation": "Builds the catalog path from the current working directory, so the script must be run from the folder containing `quakeml/`. `read_events` parses the QuakeML file into an obspy Catalog.",
+     "tourOrder": 3
+    },
+    {
+     "title": "Sub-region polygons",
+     "lineRange": [
+      40,
+      45
+     ],
+     "explanation": "Defines `coords` as consecutive pairs of lists (latitudes, then longitudes) for four clusters plus a whole-area box. Later calls slice this list in twos, e.g. `coords[0:2]`, to select one polygon.",
+     "tourOrder": 3
+    },
+    {
+     "title": "Figures 5 and 6",
+     "lineRange": [
+      47,
+      58
+     ],
+     "explanation": "Figure 5 (magnitude versus time with cumulative counts) and Figure 6 (inter-event times) are single calls that take the full catalog and the polygons.",
+     "tourOrder": 3
+    },
+    {
+     "title": "Figure 7 frequency-magnitude",
+     "lineRange": [
+      60,
+      69
+     ],
+     "explanation": "Cuts sub-catalogs using polygons, merges the first two clusters into `catalog_one`, and sorts it by origin time. Then `multi_mfd_plot` compares cluster 1, cluster 3 and the full catalog.",
+     "tourOrder": 3
+    },
+    {
+     "title": "Figures 8 and 9 migration",
+     "lineRange": [
+      71,
+      97
+     ],
+     "explanation": "Defines cross-section endpoints as lon/lat arrays and calls `plot_migration` for two catalogs: cat_2 with profile CD (swath 200 km) and cat_1 with profile AB (swath 250 km). Events are sorted by time first. Some defined profiles (AA, BB) are unused.",
+     "tourOrder": 3
+    },
+    {
+     "title": "Figure 10 pointer",
+     "lineRange": [
+      99,
+      101
+     ],
+     "explanation": "Notes that figure 10 is produced by the separate Figure_10.py script.",
+     "tourOrder": 3
+    }
+   ]
+  },
+  "python/temporal_plots.py": {
+   "overview": "Library of catalog helpers and temporal/statistical plots used by Figures_5-9.py. It extracts event attributes, filters events by polygon, and produces inter-event time, magnitude-versus-time and magnitude-frequency (b-value) figures using eqcorrscan utilities.",
+   "sections": [
+    {
+     "title": "Imports",
+     "lineRange": [
+      9,
+      16
+     ],
+     "explanation": "Pulls in matplotlib, numpy and two eqcorrscan functions, `calc_b_value` and `calc_max_curv`, for magnitude-of-completeness work.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Catalog helpers",
+     "lineRange": [
+      19,
+      78
+     ],
+     "explanation": "`get_cat_details` flattens an obspy Catalog into lists of time, lat, lon, depth (converted from m to km) and magnitude, using the last origin and magnitude of each event. `cut_cat` builds a shapely Polygon from (lat, lon) lists and keeps events whose epicentre lies inside it. `create_lines` makes vertical stem lines for plots.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Inter-event times plot",
+     "lineRange": [
+      81,
+      217
+     ],
+     "explanation": "`interevent_times_single_cluster` computes time gaps between consecutive events in each polygon region and plots them for Figure 6.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Magnitude versus time",
+     "lineRange": [
+      218,
+      335
+     ],
+     "explanation": "`mag_vs_time_plus_cumulative` draws magnitude stem plots against time with cumulative event counts for each polygon sub-catalog, producing Figure 5.",
+     "tourOrder": 4
+    },
+    {
+     "title": "b-value fit",
+     "lineRange": [
+      336,
+      348
+     ],
+     "explanation": "`calc_bvalues` selects magnitudes at or above Mc + 0.4 and up to the maximum, then fits a line to log10 of the cumulative counts with `np.polyfit`. The slope gives the b-value.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Multi-catalog MFD plot",
+     "lineRange": [
+      349,
+      442
+     ],
+     "explanation": "`multi_mfd_plot` computes Mc via maximum curvature and the maximum magnitude for three catalogs, then overlays histograms and fitted cumulative distributions for Figure 7.",
+     "tourOrder": 4
+    }
+   ]
+  },
+  "python/migration_plots.py": {
+   "overview": "Implements the seismicity migration analysis behind Figures 8 and 9. It projects events onto strike and dip profile lines and plots distance versus time. Distance maths is done directly in the script.",
+   "sections": [
+    {
+     "title": "Setup and style",
+     "lineRange": [
+      10,
+      26
+     ],
+     "explanation": "Imports and sets a larger default figure size (15 by 10) and a subplot rectangle dict.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Distance helper",
+     "lineRange": [
+      29,
+      52
+     ],
+     "explanation": "`dist_calc` gives the 3D distance in km between two (lat, lon, depth) points. It uses a flat-Earth approximation with a mean-latitude cosine correction, as the docstring admits, and credits Calum Chamberlain.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Profile projection",
+     "lineRange": [
+      55,
+      83
+     ],
+     "explanation": "Inside `plot_migration`, the nested `calculate_profile` projects each event onto the line between two reference points. It scales longitude by cos(lat), rejects events farther than the swath width (degrees = km / 111) or beyond the line ends, and returns along-line distance, depth, magnitude and time.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Event selection",
+     "lineRange": [
+      84,
+      116
+     ],
+     "explanation": "Keeps only events between 40 and 110 km depth, collects their attributes and parses origin times. Then it calls `calculate_profile` once for the strike line and once for the dip line.",
+     "tourOrder": 4
+    },
+    {
+     "title": "Three-panel figure",
+     "lineRange": [
+      117,
+      162
+     ],
+     "explanation": "Dot sizes scale with magnitude (x70). The top panel plots along-strike versus perpendicular distance coloured by along-strike distance. The two lower panels plot dip and strike distances against time. It then saves a PNG named by profile and shows it.",
+     "tourOrder": 4
+    }
+   ]
+  },
+  "python/Figure_10.py": {
+   "overview": "Standalone driver for Figure 10, a 3D view of earthquake hypocentres and stations. It adapts eqcorrscan-style 3D plotting functions to show two catalogs (this study and Diehl et al. 2017) together with the station inventory.",
+   "sections": [
+    {
+     "title": "Imports and style",
+     "lineRange": [
+      10,
+      25
+     ],
+     "explanation": "Imports obspy readers and sets the same global matplotlib font and figure size as other scripts.",
+     "tourOrder": 5
+    },
+    {
+     "title": "Polygon split",
+     "lineRange": [
+      27,
+      46
+     ],
+     "explanation": "`cut_cat` is a variant that returns both the events inside the polygon and the remainder, so the rest can be plotted in another colour.",
+     "tourOrder": 5
+    },
+    {
+     "title": "Figure finaliser",
+     "lineRange": [
+      49,
+      74
+     ],
+     "explanation": "`_finalise_figure` is a copy of an eqcorrscan helper: it sizes the figure, optionally titles, saves and shows it, then closes it. Note that it refers to a `Logger` not defined in this file, which would fail if `save=True` were used.",
+     "tourOrder": 5
+    },
+    {
+     "title": "Single-catalog 3D plot",
+     "lineRange": [
+      77,
+      200
+     ],
+     "explanation": "`obspy_3d_plot` and `threeD_seismplot` extract station and event coordinates and draw them in a matplotlib 3D axes.",
+     "tourOrder": 5
+    },
+    {
+     "title": "Two-catalog 3D plot",
+     "lineRange": [
+      201,
+      338
+     ],
+     "explanation": "`obspy_3d_plot_2cats` and `threeD_seismplot_2cats` extend the above to plot catalog 1, the remainder of catalog 1 outside the region, and catalog 2 with different markers.",
+     "tourOrder": 5
+    },
+    {
+     "title": "Script body",
+     "lineRange": [
+      340,
+      363
+     ],
+     "explanation": "Reads the main catalog, the Diehl et al. 2017 catalog and station XML files, splits by polygon, and calls the two-catalog 3D plot.",
+     "tourOrder": 5
+    }
+   ]
+  },
+  "python/supporting_material/plot_1D_velocity_models.py": {
+   "overview": "Standalone script that plots four 1D velocity models (Nepal, Tibet, a gradient model and IASP) used for earthquake location. It is hard-coded data and plotting rather than catalog analysis.",
+   "sections": [
+    {
+     "title": "Imports and style",
+     "lineRange": [
+      9,
+      25
+     ],
+     "explanation": "Imports obspy, numpy and matplotlib and sets the standard figure style.",
+     "tourOrder": 6
+    },
+    {
+     "title": "Layer definitions",
+     "lineRange": [
+      28,
+      57
+     ],
+     "explanation": "Lists of Vp, Vs and layer-top depths per model, plus the step-line versions (`l_*`) where each value is repeated so that the plot shows velocity jumps as vertical steps.",
+     "tourOrder": 6
+    },
+    {
+     "title": "Vp/Vs ratios",
+     "lineRange": [
+      59,
+      75
+     ],
+     "explanation": "Computes Vp/Vs per model with loops. The IASP loop divides by `l_Vs_grad` rather than `l_Vs_iasp`, which looks like a copy-paste bug, though the ratio is not used in the final plot.",
+     "tourOrder": 6
+    },
+    {
+     "title": "Plot and save",
+     "lineRange": [
+      77,
+      125
+     ],
+     "explanation": "Plots Vp and Vs versus depth with different line styles, inverts the depth axis and saves a PNG to a hard-coded desktop path. Commented code outlines an unused Vp/Vs panel.",
+     "tourOrder": 6
+    }
+   ]
+  },
+  "python/supporting_material/plot_catalog_details.py": {
+   "overview": "Standalone script that summarises catalog quality: a hypocentral depth histogram and a multi-panel details figure. It helps judge the reliability of the catalog used in the main figures.",
+   "sections": [
+    {
+     "title": "Setup",
+     "lineRange": [
+      8,
+      30
+     ],
+     "explanation": "Imports, working directory and figure style.",
+     "tourOrder": 6
+    },
+    {
+     "title": "Depth histogram",
+     "lineRange": [
+      33,
+      59
+     ],
+     "explanation": "`plot_depth_histos` converts origin depths to km, draws a 2 km-bin histogram, and marks the mean and 90th percentile with vertical lines.",
+     "tourOrder": 6
+    },
+    {
+     "title": "Catalog details figure",
+     "lineRange": [
+      62,
+      165
+     ],
+     "explanation": "`plot_cat_details` collects per-event statistics such as the number of P picks and plots them in multiple panels.",
+     "tourOrder": 6
+    },
+    {
+     "title": "Run",
+     "lineRange": [
+      167,
+      177
+     ],
+     "explanation": "Loads the QuakeML catalog and calls both plotting functions.",
+     "tourOrder": 6
+    }
+   ]
+  },
+  "gmt/README.md": {
+   "overview": "Short setup note for the GMT scripts. It creates the gmt5 conda environment and runs Figure_1.sh.",
+   "sections": [
+    {
+     "title": "Environment and first map",
+     "lineRange": [
+      1,
+      11
+     ],
+     "explanation": "Notes that a files directory holds the map input data, creates the environment from gmt5.yml, activates it and runs `bash Figure_1.sh`.",
+     "tourOrder": 7
+    }
+   ]
+  },
+  "gmt/gmt5.yml": {
+   "overview": "Exported conda environment pinning GMT and its native dependencies so the shell scripts run reproducibly. It is a full dependency export, not a hand-written minimal file.",
+   "sections": [
+    {
+     "title": "Channels",
+     "lineRange": [
+      1,
+      4
+     ],
+     "explanation": "Uses conda-forge first and then defaults.",
+     "tourOrder": 7
+    },
+    {
+     "title": "Pinned dependencies",
+     "lineRange": [
+      5,
+      128
+     ],
+     "explanation": "A long list of exact package versions, including GMT, GDAL, GEOS and Ghostscript, along with their transitive libraries. Exact pins are the reason the environment recreates the original output.",
+     "tourOrder": 7
+    },
+    {
+     "title": "Prefix",
+     "lineRange": [
+      129,
+      129
+     ],
+     "explanation": "A machine-specific absolute prefix left over from the export. It is ignored when creating an environment elsewhere.",
+     "tourOrder": 7
+    }
+   ]
+  },
+  "gmt/Figure_1.sh": {
+   "overview": "GMT shell script for Figure 1, a map of the study region with topography, faults, seismicity, large historical earthquakes with focal mechanisms and seismic stations. It writes PostScript layer by layer and converts it to PDF.",
+   "sections": [
+    {
+     "title": "Settings and basemap",
+     "lineRange": [
+      8,
+      28
+     ],
+     "explanation": "Sets output name, GMT fonts and frame style, map bounds (26 to 30 N, 83 to 90 E) and a 6 inch Mercator projection. The first `pscoast` call opens the PostScript file (`-K` keeps it open).",
+     "tourOrder": 8
+    },
+    {
+     "title": "Topography and faults",
+     "lineRange": [
+      29,
+      37
+     ],
+     "explanation": "Overlays a topography grid with the `him.cpt` palette, then country borders and a scale bar, then thrust, normal and dextral fault lines with fault-symbol decorations.",
+     "tourOrder": 12
+    },
+    {
+     "title": "Seismicity and colour scales",
+     "lineRange": [
+      38,
+      50
+     ],
+     "explanation": "Makes a viridis depth palette and plots deep events from two catalogs after awk filtering (depth above 50 km) as circles, with colour bars for topography and depth.",
+     "tourOrder": 11
+    },
+    {
+     "title": "Labels and focal mechanisms",
+     "lineRange": [
+      51,
+      421
+     ],
+     "explanation": "Adds country labels, then many blocks, each drawing a connector line, a depth-coloured square and a `psmeca` beachball for historical events such as the 1988 Udayapur earthquake, GCMT solutions and other published mechanisms.",
+     "tourOrder": 11
+    },
+    {
+     "title": "Stations and study-area box",
+     "lineRange": [
+      422,
+      435
+     ],
+     "explanation": "Adds the study-area label and box, closes the PostScript with `psxy -T`, converts to PDF, opens it with evince and deletes temporary files.",
+     "tourOrder": 10
+    }
+   ]
+  },
+  "gmt/Figure_2.sh": {
+   "overview": "GMT shell script for Figure 2, the study-area map of the seismic stations, seismicity clusters and cross-section lines. It shares setup with Figure_1.sh but concentrates on station networks, shallow and deep events, and profile traces.",
+   "sections": [
+    {
+     "title": "Settings and basemap",
+     "lineRange": [
+      8,
+      36
+     ],
+     "explanation": "Same GMT configuration and projection as Figure 1. It also builds a reversed gray palette and draws the basemap, topography grid and borders.",
+     "tourOrder": 8
+    },
+    {
+     "title": "Labels, cluster box and faults",
+     "lineRange": [
+      37,
+      55
+     ],
+     "explanation": "Adds country names, outlines the main cluster area as a polygon and overlays fault traces.",
+     "tourOrder": 12
+    },
+    {
+     "title": "Stations",
+     "lineRange": [
+      56,
+      67
+     ],
+     "explanation": "Uses awk to extract longitude and latitude columns from station files (HIMNT, HiCLIMB, Bhutan pilot, IC) and plots each network.",
+     "tourOrder": 10
+    },
+    {
+     "title": "Seismicity layers",
+     "lineRange": [
+      69,
+      92
+     ],
+     "explanation": "Creates a depth palette and plots shallow high-quality events, deep events and all events coloured by depth, with labels for MFT, DCFZ and clusters, and a depth scale.",
+     "tourOrder": 11
+    },
+    {
+     "title": "Everest, plate motion, focal mechanisms",
+     "lineRange": [
+      93,
+      261
+     ],
+     "explanation": "Marks Mount Everest, shows a 45 mm/yr convergence arrow and plots focal mechanisms as in Figure 1.",
+     "tourOrder": 11
+    },
+    {
+     "title": "Cross-section traces",
+     "lineRange": [
+      262,
+      482
+     ],
+     "explanation": "Defines start and end points in shell variables and draws labelled surface-trace lines for profiles such as A-A' and B-B'. These depth cross-sections link to the Python migration profiles.",
+     "tourOrder": 9
+    },
+    {
+     "title": "Finalise",
+     "lineRange": [
+      483,
+      488
+     ],
+     "explanation": "Closes the PostScript, converts to PDF, displays it and removes temporary files.",
+     "tourOrder": 8
+    }
+   ]
+  }
+ }
+}

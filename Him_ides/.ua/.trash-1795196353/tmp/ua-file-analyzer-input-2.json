@@ -1,0 +1,7 @@
+{"projectRoot":"/home/vihaan/Desktop/acads/aimlproj/Him_ides","batchFiles":[
+{"path":"gmt/Figure_1.sh","language":"shell","sizeLines":435,"fileCategory":"script"},
+{"path":"gmt/Figure_2.sh","language":"shell","sizeLines":488,"fileCategory":"script"},
+{"path":"gmt/Figure_3AB.sh","language":"shell","sizeLines":77,"fileCategory":"script"},
+{"path":"gmt/Figure_3CD.sh","language":"shell","sizeLines":77,"fileCategory":"script"},
+{"path":"gmt/README.md","language":"markdown","sizeLines":11,"fileCategory":"docs"},
+{"path":"gmt/gmt5.yml","language":"yaml","sizeLines":129,"fileCategory":"config"}],"batchImportData":{}}

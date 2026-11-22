@@ -1,0 +1,13 @@
+# Python environment (465 MB, machine-specific; recreate with `python -m venv .venv`)
+.venv/
+
+# Claude Code local state
+.claude/
+
+# Redundant archive and logs
+results.zip
+data/pip_install.log
+
+# Python caches
+__pycache__/
+*.pyc
