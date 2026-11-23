@@ -13,10 +13,13 @@ Michailos et al. (2021) analyse "Cluster 1" beneath the Everest region with:
            migration (r = sqrt(4 pi D t), Shapiro et al. 1997)  -> FigK4
   Sec 3.2.1  Bath's-law check (largest minus 2nd-largest magnitude)
 
-Our equivalent of Cluster 1 is the band of solved intermediate-depth events
-between Kishtwar and Chamba (J&K / Himachal Pradesh). Only events whose depth
-USGS flags as solved ("from location" / "constrained by depth phases") are used
-for depth-dependent statements; see fetch_depth_type.py.
+Our equivalent of Cluster 1 is the band of deep events between Kishtwar and
+Chamba (J&K / Himachal Pradesh). Depth rules (same as him_ides_himachal.py):
+  * only events whose depth USGS solved for ("from location" / "constrained by
+    depth phases") are used at all; fixed and unflagged depths are dropped
+  * intermediate  = depth - depthError >= 40 km (deep even at the top of its error bar)
+  * shallow       = depth + depthError <  40 km
+  * uncertain     = error bar crosses 40 km, or no depthError given
 
 Run:  .venv/bin/python kishtwar_cluster.py      (outputs in results/kishtwar/)
 """
@@ -93,22 +96,26 @@ raw["time"] = raw["time"].dt.tz_localize(None)
 raw = raw[raw.time.dt.year >= START_YEAR]
 raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
 raw["depth_type"] = raw.depth_type.fillna("unknown")
-raw["solved"] = raw.depth_type.isin(SOLVED_DEPTH)
+n_before = len(raw)
+raw = raw[raw.depth_type.isin(SOLVED_DEPTH)].copy()        # drop fixed and unflagged depths
 raw["in_cluster"] = Path(CLUSTER_POLY).contains_points(raw[["longitude", "latitude"]].values)
-raw["intermediate"] = raw.solved & raw.depth.between(DEEP_MIN, DEEP_MAX)
+raw["intermediate"] = ((raw.depth - raw.depthError) >= DEEP_MIN) & (raw.depth <= DEEP_MAX)
+raw["shallow"] = (raw.depth + raw.depthError) < DEEP_MIN
+raw["uncertain"] = ~raw.intermediate & ~raw.shallow       # crosses 40 km, or no error
 raw = raw.sort_values("time").reset_index(drop=True)
 
-clu_all = raw[raw.in_cluster]                                  # every event in the outline
+clu_all = raw[raw.in_cluster]                                  # every event used in this case, inside the outline
 clu_deep = raw[raw.in_cluster & raw.intermediate]              # our "Cluster 1"
-clu_shal = raw[raw.in_cluster & raw.solved & (raw.depth < DEEP_MIN)]
+clu_shal = raw[raw.in_cluster & raw.shallow]
+clu_unc = raw[raw.in_cluster & raw.uncertain]
 rest_deep = raw[~raw.in_cluster & raw.intermediate]            # intermediate elsewhere in box
-clu_fix = raw[raw.in_cluster & ~raw.solved]
-print(f"Cluster outline, {START_YEAR}+: all={len(clu_all)}  intermediate(solved)={len(clu_deep)}  "
-      f"shallow(solved)={len(clu_shal)}  depth fixed/unflagged={len(clu_fix)}  | "
-      f"intermediate outside cluster={len(rest_deep)}")
-summary = {"N_cluster_all_M3": len(clu_all), "N_cluster_intermediate_M3": len(clu_deep),
+print(f"{START_YEAR}+: {len(raw)} solved-depth events kept, {n_before - len(raw)} fixed/unflagged dropped")
+print(f"Cluster outline: used={len(clu_all)}  intermediate={len(clu_deep)}  shallow={len(clu_shal)}  "
+      f"uncertain={len(clu_unc)}  | intermediate outside cluster={len(rest_deep)}")
+summary = {"N_cluster_used_M3": len(clu_all), "N_cluster_intermediate_M3": len(clu_deep),
+           "N_cluster_uncertain_M3": len(clu_unc),
            "N_cluster_intermediate_M>=Mc": int((clu_deep.mag >= MC_CUT).sum()),
-           "N_cluster_shallow_solved_M3": len(clu_shal), "N_intermediate_outside": len(rest_deep),
+           "N_cluster_shallow_M3": len(clu_shal), "N_intermediate_outside": len(rest_deep),
            "share_of_region_intermediate_in_cluster": len(clu_deep) / max(1, len(clu_deep) + len(rest_deep)),
            "depth_mean_km": clu_deep.depth.mean(), "depth_median_km": clu_deep.depth.median(),
            "depth_min_km": clu_deep.depth.min(), "depth_max_km": clu_deep.depth.max(),
@@ -118,6 +125,7 @@ summary = {"N_cluster_all_M3": len(clu_all), "N_cluster_intermediate_M3": len(cl
 def locator(ax):
     poly = np.array(CLUSTER_POLY + [CLUSTER_POLY[0]])
     ax.scatter(raw.longitude, raw.latitude, s=6, c=C_FIX, lw=0)
+    ax.scatter(clu_unc.longitude, clu_unc.latitude, s=16, c=C_REST, marker="+")
     ax.scatter(rest_deep.longitude, rest_deep.latitude, s=16, c=C_REST, marker="+")
     ax.scatter(clu_shal.longitude, clu_shal.latitude, s=16, facecolors="none", edgecolors=C_SHAL)
     ax.scatter(clu_deep.longitude, clu_deep.latitude, s=20, c=C_DEEP, marker="X", lw=0)
@@ -135,11 +143,13 @@ def time_axis(ax):
 # ------------- FIG K1 (paper Fig 5): magnitude vs time + cumulative -------- #
 fig = plt.figure(figsize=(13, 6.5))
 ax1 = plt.subplot2grid((2, 4), (0, 0), colspan=3, rowspan=2)
-for df, col, mk, lab in [(rest_deep, C_REST, "+", f"Intermediate, outside cluster (N={len(rest_deep)})"),
-                         (clu_shal, C_SHAL, "o", f"Cluster, shallow <{DEEP_MIN} km (N={len(clu_shal)})"),
-                         (clu_deep, C_DEEP, "X", f"Cluster, intermediate (N={len(clu_deep)})")]:
+for df, col, mk, lab in [(rest_deep, "k", "x", f"Intermediate, outside cluster (N={len(rest_deep)})"),
+                         (clu_unc, C_REST, "+", f"Cluster, uncertain: error bar crosses 40 km (N={len(clu_unc)})"),
+                         (clu_shal, C_SHAL, "o", f"Cluster, shallow: depth + error < 40 km (N={len(clu_shal)})"),
+                         (clu_deep, C_DEEP, "X", f"Cluster, intermediate: depth − error ≥ 40 km (N={len(clu_deep)})")]:
     ax1.vlines(df.time, 0, df.mag, color="gray", lw=0.3, zorder=1)
-    ax1.scatter(df.time, df.mag, s=df.mag ** 2 * 3, c="none" if mk == "o" else col, edgecolors=col,
+    ax1.scatter(df.time, df.mag, s=df.mag ** 2 * 3, c="none" if mk == "o" else col,
+                edgecolors=None if mk in ("x", "+") else col,
                 marker=mk, lw=1.4, alpha=0.85, zorder=3, label=lab)
 ax1.axhline(MC_CUT, color="k", ls=":", lw=0.8)
 ax1.text(raw.time.min(), MC_CUT + 0.03, f" Mc = {MC_CUT}", fontsize=9)
@@ -147,7 +157,7 @@ ax1.set_ylim(3, 5.8); ax1.set_ylabel("Magnitude (mostly mb)"); ax1.set_xlabel("T
 time_axis(ax1); ax1.legend(loc="upper left", fontsize=9)
 ax2 = ax1.twinx()
 ax2.plot(clu_deep.time, np.arange(1, len(clu_deep) + 1), "k--", lw=2, label="Cluster, intermediate")
-ax2.plot(clu_shal.time, np.arange(1, len(clu_shal) + 1), "k:", lw=2, label="Cluster, shallow")
+ax2.plot(clu_all.time, np.arange(1, len(clu_all) + 1), "k:", lw=2, label=f"Cluster, all events (solved depths)")
 ax2.plot(rest_deep.time, np.arange(1, len(rest_deep) + 1), "k-", lw=1.2, label="Intermediate, outside")
 ax2.set_ylabel("Cumulative number", color="gray"); ax2.tick_params(axis="y", labelcolor="gray")
 ax2.legend(loc="lower right", fontsize=9)
@@ -184,7 +194,7 @@ ax1.set_xlabel("Magnitude"); ax1.set_ylabel("Frequency (0.2 bins)"); ax1.legend(
 ax2 = ax1.twinx()
 bres = []
 for lab, df, col, ls, mk in [("Whole region", raw, "k", "-", "+"),
-                             ("Cluster outline, all depths", clu_all, "#555", "--", "o"),
+                             (f"Cluster outline, all events (solved depths)", clu_all, "#555", "--", "o"),
                              ("Cluster, intermediate", clu_deep, C_DEEP, ":", "X")]:
     m = df.mag.values
     mc_auth = max_curv_eqcorrscan(m) + 0.4
@@ -204,7 +214,7 @@ plt.tight_layout(); fig.savefig(os.path.join(OUT, "FigK3_magnitude_frequency_bva
 btab = pd.DataFrame(bres); btab.to_csv(os.path.join(OUT, "kishtwar_bvalues.csv"), index=False)
 
 # ------------- profile axes for the cluster (PCA of epicentres) ------------ #
-pts = raw[raw.in_cluster & raw.solved].copy()          # solved events in cluster, any depth
+pts = raw[raw.in_cluster].copy()                       # events used in this case, inside the outline
 lon0, lat0 = pts.longitude.mean(), pts.latitude.mean()
 x, y = xy_km(pts.longitude, pts.latitude, lon0, lat0)
 _, _, vt = np.linalg.svd(np.c_[x - x.mean(), y - y.mean()], full_matrices=False)
@@ -225,7 +235,7 @@ def hypo_km(a, b):
     xb, yb = xy_km(b.longitude, b.latitude, lon0, lat0)
     return np.sqrt((xa - xb) ** 2 + (ya - yb) ** 2 + (a.depth - b.depth) ** 2)
 
-search = raw[raw.in_cluster & raw.solved].reset_index(drop=True)   # needs real depths
+search = raw[raw.in_cluster & raw.intermediate].reset_index(drop=True)   # paper searched its deep catalog
 seqs, members_seen = [], set()
 for i, ev in search.iterrows():
     later = search[(search.time > ev.time) & (search.time <= ev.time + pd.Timedelta(days=SEQ_DAYS))]
@@ -245,7 +255,9 @@ for i, ev in search.iterrows():
                          linear_velocity_km_per_day=v, diffusivity_envelope_m2_per_s=D,
                          median_horizontalError_km=grp.horizontalError.median(),
                          median_depthError_km=grp.depthError.median(), ids=";".join(grp.id)))
-seq_tab = pd.DataFrame(seqs)
+seq_tab = pd.DataFrame(seqs, columns=["start", "n_events", "duration_days", "max_dist_km", "depths_km", "mags",
+                                       "linear_velocity_km_per_day", "diffusivity_envelope_m2_per_s",
+                                       "median_horizontalError_km", "median_depthError_km", "ids"])
 seq_tab.to_csv(os.path.join(OUT, "kishtwar_sequences.csv"), index=False)
 summary["n_sequences_20d_20km"] = len(seq_tab)
 
@@ -257,7 +269,7 @@ axb = plt.subplot2grid((3, 3), (2, 0), colspan=3, sharex=axa)
 deep_mask = pts.intermediate
 for ax_, col in [(axa, "across_km"), (axb, "along_km")]:
     ax_.scatter(pts.time[~deep_mask], pts[col][~deep_mask], s=pts.mag[~deep_mask] ** 2 * 4, marker="o",
-                c="none", edgecolors="k", lw=0.8, label=f"shallow <{DEEP_MIN} km")
+                c="none", edgecolors="k", lw=0.8, label="shallow or uncertain depth")
     sc = ax_.scatter(pts.time[deep_mask], pts[col][deep_mask], s=pts.mag[deep_mask] ** 2 * 4,
                      c=pts.along_km[deep_mask], cmap="jet", edgecolors="k", lw=0.6, label="intermediate")
     ax_.grid(alpha=0.2)
@@ -280,7 +292,9 @@ fig.savefig(os.path.join(OUT, "FigK4_migration.png"), dpi=200); plt.close(fig)
 
 # ------------- FIG K5 (paper Figs 3-4): depth sections with errors --------- #
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(14, 5.5), gridspec_kw=dict(width_ratios=[1, 1.3]))
-for d, col, lab in [(pts[~deep_mask], C_SHAL, "shallow (solved)"), (pts[deep_mask], C_DEEP, "intermediate (solved)")]:
+for d, col, lab in [(pts[pts.shallow], C_SHAL, "shallow: depth + error < 40 km"),
+                    (pts[pts.uncertain], C_REST, "uncertain: crosses 40 km / no error"),
+                    (pts[deep_mask], C_DEEP, "intermediate: depth − error ≥ 40 km")]:
     a1.errorbar(d.along_km, d.depth, yerr=d.depthError.fillna(0), fmt="o", ms=5, c=col, ecolor=col,
                 alpha=0.8, elinewidth=0.8, capsize=2, label=lab)
     a2.errorbar(d.time, d.depth, yerr=d.depthError.fillna(0), fmt="o", ms=5, c=col, ecolor=col,
@@ -303,7 +317,8 @@ for lab, d in [("before2010", clu_deep[clu_deep.time.dt.year < 2010]),
 
 # ------------- Bath's law check (paper Sec 3.2.1) ------------------------- #
 top = np.sort(clu_deep.mag.values)[::-1]
-summary["largest_mag"] = top[0]; summary["largest_minus_second"] = top[0] - top[1]
+summary["largest_mag"] = top[0]
+summary["largest_minus_second"] = top[0] - top[1] if len(top) > 1 else np.nan
 for _, s_ in seq_tab.iterrows():
     mm = sorted(map(float, s_.mags.split(", ")), reverse=True)
     print(f"Sequence {s_.start:%Y-%m-%d}: N={s_.n_events}, mags {s_.mags}, depths {s_.depths_km} km, "

@@ -18,9 +18,11 @@ What is changed:
     frequent 0.1-magnitude bin, and (2) the exact eqcorrscan 0.4.2 calc_max_curv
     code the authors used (peak of the second derivative on 0.5 bins), with the
     paper's +0.4 correction (Woessner & Wiemer 2005)
-  * depth reliability comes from the USGS origin "depth-type" flag
-    (data/usgs_depth_type.csv, made by fetch_depth_type.py), not from guessing
-    at round numbers: "operator assigned" = analyst-fixed depth, not measured
+  * only events whose depth USGS actually solved for are used (origin
+    "depth-type" flag in data/usgs_depth_type.csv, from fetch_depth_type.py).
+    Fixed ("operator assigned") and unflagged depths are dropped entirely.
+  * an event counts as intermediate only if it stays below 40 km after
+    subtracting its depth uncertainty: depth - depthError >= 40 km
   * migration uses a profile fitted to the data (PCA) instead of hand-picked lines
   * extra figure: rate / Mc / b-value per decade (the temporal-evolution summary)
 
@@ -43,8 +45,8 @@ START_YEAR = 1990          # analysis period
 MC_CUT = 4.4               # magnitude cutoff used for rate / inter-event / b-value
 DEEP_MIN, DEEP_MAX = 40, 150   # "intermediate depth" range (km)
 DEPTH_TYPES = os.path.join(HERE, "data", "usgs_depth_type.csv")
-# USGS depth-type values we trust as real, computed depths. "unknown" (no flag, mostly
-# pre-2000 events) is kept as its own class: plotted, but not counted as intermediate.
+# USGS depth-type values that mean the depth was computed. Only these events are used;
+# "operator assigned" (fixed by an analyst) and unflagged events are dropped.
 SOLVED_DEPTH = ("from location", "constrained by depth phases")
 BOX = dict(lat=(31.0, 35.0), lon=(74.0, 79.5))   # region the catalog was cut to
 os.makedirs(OUT, exist_ok=True)
@@ -58,22 +60,21 @@ raw["time"] = raw["time"].dt.tz_localize(None)
 raw = raw[raw.time.dt.year >= START_YEAR].copy()
 raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
 raw["depth_type"] = raw.depth_type.fillna("unknown")
-solved = raw.depth_type.isin(SOLVED_DEPTH)
-raw["untrusted_depth"] = ~solved   # operator-assigned or unflagged
+n_before = len(raw)
+raw = raw[raw.depth_type.isin(SOLVED_DEPTH)].copy()      # drop fixed and unflagged depths
+print(f"{START_YEAR}+: {n_before} events, {len(raw)} with USGS-solved depth kept, "
+      f"{n_before - len(raw)} fixed/unflagged dropped")
+top, bottom = raw.depth - raw.depthError, raw.depth + raw.depthError   # NaN error -> uncertain
 raw["depth_class"] = np.select(
-    [raw.depth_type.eq("operator assigned"),
-     solved & raw.depth.between(DEEP_MIN, DEEP_MAX),
-     solved],
-    ["fixed depth (USGS operator assigned)",
-     "intermediate depth (40-150 km, solved)",
-     "shallow/other (solved)"],
-    default="depth not flagged by USGS")
+    [(top >= DEEP_MIN) & (raw.depth <= DEEP_MAX), bottom < DEEP_MIN],
+    ["intermediate (depth - error >= 40 km)", "shallow (depth + error < 40 km)"],
+    default="uncertain (error bar crosses 40 km, or no error)")
 cat = raw[raw.mag >= MC_CUT].sort_values("time").reset_index(drop=True)
 deep = cat[cat.depth_class.str.startswith("intermediate")]
 shal = cat[cat.depth_class.str.startswith("shallow")]
-fix = cat[~cat.depth_class.str.contains("solved")]   # fixed or unflagged: depth not trusted
+unc = cat[cat.depth_class.str.startswith("uncertain")]
 print(f"Catalog {START_YEAR}+, M>={MC_CUT}: N={len(cat)}  intermediate={len(deep)}  "
-      f"shallow-solved={len(shal)}  fixed/unflagged={len(fix)}")
+      f"shallow={len(shal)}  uncertain={len(unc)}")
 print(cat.depth_class.value_counts().to_string())
 
 
@@ -127,9 +128,9 @@ def b_mle(mags, mc, dm=0.1):
 # ----------------- FIG A: magnitude vs time + cumulative ------------------- #
 fig = plt.figure(figsize=(13, 6.5))
 ax1 = plt.subplot2grid((2, 4), (0, 0), colspan=3, rowspan=2)
-for df, col, mk, lab in [(fix, C_FIX, "+", f"Depth fixed or unflagged (N={len(fix)})"),
-                         (shal, C_SHAL, "o", f"Shallow, solved depth (N={len(shal)})"),
-                         (deep, C_DEEP, "X", f"Intermediate 40–150 km (N={len(deep)})")]:
+for df, col, mk, lab in [(unc, C_FIX, "+", f"Uncertain: error bar crosses 40 km (N={len(unc)})"),
+                         (shal, C_SHAL, "o", f"Shallow: depth + error < 40 km (N={len(shal)})"),
+                         (deep, C_DEEP, "X", f"Intermediate: depth − error ≥ 40 km (N={len(deep)})")]:
     ax1.vlines(df.time, 0, df.mag, color="gray", lw=0.3, zorder=1)
     ax1.scatter(df.time, df.mag, s=df.mag**2 * 2.2, c=col if mk != "o" else "none",
                 edgecolors=col, marker=mk, alpha=0.8, lw=1.4, zorder=3, label=lab)
@@ -144,7 +145,7 @@ ax2.plot(deep.time, np.arange(1, len(deep) + 1), "k--", lw=2.2, label="Intermedi
 ax2.set_ylabel("Cumulative number", color="gray"); ax2.tick_params(axis="y", labelcolor="gray")
 ax2.legend(loc="lower right", fontsize=10)
 ax4 = plt.subplot2grid((2, 4), (0, 3))
-locator(ax4, [(fix, C_FIX, "+"), (shal, C_SHAL, "o"), (deep, C_DEEP, "X")])
+locator(ax4, [(unc, C_FIX, "+"), (shal, C_SHAL, "o"), (deep, C_DEEP, "X")])
 plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig1_magnitude_vs_time_cumulative.png"), dpi=200); plt.close(fig)
 
 # --------------------- FIG B: inter-event times ---------------------------- #
@@ -155,7 +156,7 @@ def interevent(df):
 fig = plt.figure(figsize=(13, 6.5))
 ax = plt.subplot2grid((2, 4), (0, 0), colspan=3, rowspan=2)
 ta, da = interevent(cat); td, dd = interevent(deep)
-ax.scatter(ta, da, s=45, marker="+", c=C_FIX, lw=1.2, label=f"All M≥{MC_CUT} (N={len(cat)})", zorder=1)
+ax.scatter(ta, da, s=45, marker="+", c=C_FIX, lw=1.2, label=f"All events (solved depths), M≥{MC_CUT} (N={len(cat)})", zorder=1)
 ax.scatter(td, dd, s=70, marker="o", facecolors="none", edgecolors=C_DEEP, lw=1.8,
            label=f"Intermediate depth only (N={len(deep)})", zorder=3)
 ax.set_yscale("log"); ax.set_ylabel("Inter-event time (days)"); ax.set_xlabel("Time (UTC)")
@@ -170,18 +171,18 @@ print(f"Inter-event time, all: median={np.median(da):.1f} d, mean={da.mean():.1f
 print(f"Inter-event time, intermediate: median={np.median(dd):.1f} d, mean={dd.mean():.1f} d")
 
 # ---------------------- FIG C: magnitude-frequency + b --------------------- #
-mags_all = raw.mag.values                      # full M>=3 catalog (1990+) to locate Mc
+mags_all = raw.mag.values                      # solved-depth M>=3 catalog (1990+) to locate Mc
 mc_curv = max_curv(mags_all)
 fig, ax1 = plt.subplots(figsize=(9.5, 6.5))
 bins = np.arange(3.05, raw.mag.max() + 0.2, 0.2)
 ax1.hist(raw.mag, bins, histtype="step", fill=True, color="gray", alpha=0.25, lw=2, ec="k",
-         label=f"All M≥3 since {START_YEAR} (N={len(raw)})")
+         label=f"All events (solved depths), M≥3 since {START_YEAR} (N={len(raw)})")
 ax1.set_ylabel("Frequency"); ax1.set_xlabel("Magnitude")
 ax2 = ax1.twinx()
 res = {}
-for lab, df, col, ls, mk in [("All depths", raw, "k", "-", "+"),
-                             ("Intermediate depth", raw[(raw.depth >= DEEP_MIN) & (raw.depth <= DEEP_MAX) & (~raw.untrusted_depth)],
-                              C_DEEP, "--", "o")]:
+for lab, df, col, ls, mk in [(f"All events (solved depths)", raw, "k", "-", "+"),
+                             ("Intermediate (depth − error ≥ 40 km)",
+                              raw[raw.depth_class.str.startswith("intermediate")], C_DEEP, "--", "o")]:
     m = df.mag.values
     b, steps, cum, fn = b_lsq(m, MC_CUT)
     bm, bs, n = b_mle(m, MC_CUT)
@@ -190,8 +191,9 @@ for lab, df, col, ls, mk in [("All depths", raw, "k", "-", "+"),
     allcum = np.array([(m >= s).sum() for s in allsteps])
     ax2.scatter(allsteps, np.log10(allcum), marker=mk, s=40, c=col if mk == "+" else "none",
                 edgecolors=col, alpha=0.7, lw=1.3)
-    ax2.plot(steps, fn(steps), ls, c=col, lw=2.4,
-             label=f"{lab}: b={b:.2f} (fit), {bm:.2f}±{bs:.2f} (MLE)\nM≥{MC_CUT}, N={n}")
+    if len(steps) >= 2:
+        ax2.plot(steps, fn(steps), ls, c=col, lw=2.4,
+                 label=f"{lab}: b={b:.2f} (fit), {bm:.2f}±{bs:.2f} (MLE)\nM≥{MC_CUT}, N={n}")
 ax2.axvline(MC_CUT, color="k", lw=0.8, ls=":")
 ax2.set_ylabel("log$_{10}$ cumulative number")
 ax2.legend(loc="upper right", fontsize=10)
@@ -212,10 +214,11 @@ cat["along_km"] = np.c_[x, y] @ ax_dir
 strike_az = (np.degrees(np.arctan2(ax_dir[0], ax_dir[1])) + 360) % 360
 fig, ax = plt.subplots(figsize=(12, 6))
 sc = ax.scatter(cat.time, cat.along_km, s=cat.mag**2 * 2.5,
-                c=cat.depth.where(~cat.untrusted_depth), cmap="viridis_r", vmin=0, vmax=150,
-                edgecolors="k", linewidths=0.4, alpha=0.85, zorder=3)
-ax.scatter(cat.time[cat.untrusted_depth], cat.along_km[cat.untrusted_depth], s=cat.mag[cat.untrusted_depth]**2 * 2.5,
-           c=C_FIX, marker="+", lw=1.0, label="depth fixed or unflagged", zorder=2)
+                c=cat.depth, cmap="viridis_r", vmin=0, vmax=150,
+                edgecolors=np.where(cat.depth_class.str.startswith("intermediate"), C_DEEP, "k"),
+                linewidths=np.where(cat.depth_class.str.startswith("intermediate"), 2.0, 0.4),
+                alpha=0.85, zorder=3)
+ax.scatter([], [], s=60, facecolors="none", edgecolors=C_DEEP, lw=2, label="intermediate (depth − error ≥ 40 km)")
 cb = plt.colorbar(sc, ax=ax); cb.set_label("Solved depth (km)")
 ax.set_xlabel("Time (UTC)"); ax.set_ylabel(f"Distance along arc, azimuth {strike_az:.0f}° (km)")
 ax.xaxis.set_major_locator(mdates.YearLocator(5)); ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
@@ -225,13 +228,13 @@ print(f"Profile azimuth (PCA of epicentres): {strike_az:.0f} deg; along-arc exte
       f"{cat.along_km.min():.0f} to {cat.along_km.max():.0f} km")
 
 # ----------------------------- FIG E: 3-D ---------------------------------- #
-meas = cat[~cat.untrusted_depth]
+meas = cat
 fig = plt.figure(figsize=(10, 7.5))
 ax = fig.add_subplot(111, projection="3d")
 p = ax.scatter(meas.longitude, meas.latitude, -meas.depth, c=meas.depth, cmap="viridis_r", vmin=0, vmax=150,
                s=meas.mag**2 * 2.5, edgecolors="k", linewidths=0.3, alpha=0.9)
 ax.set_xlabel("Longitude (°)"); ax.set_ylabel("Latitude (°)"); ax.set_zlabel("Depth (km)")
-ax.set_title(f"USGS-solved depths only (N={len(meas)}); {len(fix)} fixed/unflagged omitted", fontsize=11)
+ax.set_title(f"USGS-solved depths only, M≥{MC_CUT} (N={len(meas)}); fixed/unflagged depths not used", fontsize=11)
 fig.colorbar(p, ax=ax, shrink=0.6, label="Depth (km)"); ax.view_init(elev=22, azim=-65)
 plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig5_3D_hypocentres.png"), dpi=200); plt.close(fig)
 
