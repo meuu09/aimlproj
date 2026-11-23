@@ -13,8 +13,11 @@ What is kept from the original code (python/temporal_plots.py, Figures_5-9.py):
 What is changed:
   * input is a USGS CSV instead of a QuakeML file (no ObsPy Catalog needed)
   * dates, map extents, region box and magnitude cutoff are parameters below
-  * Mc by maximum curvature is re-implemented (same algorithm as eqcorrscan's
-    calc_max_curv) so eqcorrscan does not have to be installed
+  * Mc by maximum curvature is computed two ways, so eqcorrscan does not have to
+    be installed: (1) the textbook Wiemer & Wyss (2000) version, the most
+    frequent 0.1-magnitude bin, and (2) the exact eqcorrscan 0.4.2 calc_max_curv
+    code the authors used (peak of the second derivative on 0.5 bins), with the
+    paper's +0.4 correction (Woessner & Wiemer 2005)
   * migration uses a profile fitted to the data (PCA) instead of hand-picked lines
   * extra figure: rate / Mc / b-value per decade (the temporal-evolution summary)
 
@@ -73,11 +76,21 @@ def locator(ax, df_groups):
 
 
 def max_curv(mags, step=0.1):
-    """Mc by maximum curvature (same idea as eqcorrscan.calc_max_curv)."""
+    """Mc by maximum curvature, Wiemer & Wyss (2000): the most frequent magnitude bin."""
     mags = np.asarray(mags)
     bins = np.arange(np.floor(mags.min()) - 1, np.ceil(mags.max()) + 1, step)
     counts, edges = np.histogram(mags, bins=bins)
     return round(float(edges[np.argmax(counts)]), 2)
+
+
+def max_curv_eqcorrscan(mags, bin_size=0.5):
+    """The authors' Mc: eqcorrscan 0.4.2 calc_max_curv, copied verbatim
+    (peak |second derivative| of the 0.5-bin histogram). The paper adds +0.4 to it."""
+    min_bin, max_bin = int(min(mags)), int(max(mags) + 1)
+    bins = np.arange(min_bin, max_bin + bin_size, bin_size)
+    df, bins = np.histogram(mags, bins)
+    curvature = np.diff(np.diff(df) / bin_size) / bin_size
+    return float(bins[np.argmax(np.abs(curvature))] + bin_size)
 
 
 def b_lsq(mags, mc):
@@ -171,7 +184,8 @@ ax2.set_ylabel("log$_{10}$ cumulative number")
 ax2.legend(loc="upper right", fontsize=10)
 ax1.set_title(f"Max-curvature Mc of this catalog = {mc_curv}; fit threshold M≥{MC_CUT}", fontsize=11)
 plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig3_magnitude_frequency_bvalue.png"), dpi=200); plt.close(fig)
-print(f"Max-curvature Mc (M>=3, {START_YEAR}+): {mc_curv}")
+print(f"Max-curvature Mc (M>=3, {START_YEAR}+): Wiemer-Wyss mode = {mc_curv}; "
+      f"authors' eqcorrscan method = {max_curv_eqcorrscan(mags_all)} (+0.4 = {max_curv_eqcorrscan(mags_all) + 0.4:.1f})")
 for k, v in res.items():
     print(f"b-value [{k}]: LSQ={v[0]:.2f}  MLE={v[1]:.2f}±{v[2]:.2f}  N={v[3]}")
 
