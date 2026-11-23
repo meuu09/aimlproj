@@ -23,9 +23,9 @@ Read this first. It is the complete handoff, written so a fresh Claude session c
 | `him_ides_himachal.py` | **Our adapted analysis script.** Run: `.venv/bin/python him_ides_himachal.py` |
 | `reproduce_baseline.py` | Runs the ORIGINAL `Figures_5-9.py` unchanged (eqcorrscan 0.4.2 `calc_max_curv` injected verbatim, headless). Outputs to `results_baseline/`. `--fig10` also runs Figure_10.py (untested). |
 | `fetch_depth_type.py` | One-off: fetches USGS origin `depth-type` per event into `data/usgs_depth_type.csv` (resumable). |
-| `kishtwar_cluster.py` | Paper's cluster analysis (Figs 3-9 analogues) on our Kishtwar-Chamba cluster. Outputs `results/kishtwar/` (FigK1-K5, `kishtwar_catalog.csv`, `kishtwar_bvalues.csv`, `kishtwar_sequences.csv`, `kishtwar_summary.csv`). Polygon = `CLUSTER_POLY`. |
+| `kishtwar_cluster.py` | Paper's cluster analysis (Figs 3-9 analogues) on the Kishtwar-Chamba cluster. Outputs `results/<case>/kishtwar/` (FigK1-K5, `kishtwar_catalog.csv`, `kishtwar_bvalues.csv`, `kishtwar_sequences.csv`, `kishtwar_summary.csv`). Polygon = `CLUSTER_POLY`. Takes `--include-fixed`. |
 | `results_baseline/` | Reproduced Fig_5, Fig_6, Fig_7.jpg, migration AB/CD, `baseline_bvalues.csv` |
-| `results/` | Six figures, `catalog_M4.4_1990plus.csv`, `per_period_summary.csv` |
+| `results/excluding_fixed/`, `results/including_fixed/` | The two analysis cases (section 5). Each: six regional figures, `catalog_M4.4_1990plus.csv`, `per_period_summary.csv`, `kishtwar/`. Figures are stamped with the case name. |
 | `.venv/` | Not in git. Recreate: `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python obspy pandas matplotlib scipy numpy shapely pyproj` (obspy 1.5.2, matplotlib 3.11.2, pandas 3.1.1). System python is 3.9 and pip resolution there hangs; use uv. eqcorrscan does NOT build on 3.12 (pkg-resources build error), hence the injected function. |
 
 ## 3. What Him_ides is
@@ -51,7 +51,7 @@ Parameters at the top:
 - `START_YEAR = 1990`
 - `MC_CUT = 4.4` (magnitude of completeness cut)
 - `DEEP_MIN, DEEP_MAX = 40, 150` (km)
-- `SOLVED_DEPTH = ("from location", "constrained by depth phases")` (USGS depth-type values trusted as real depths; replaced FIXED_DEPTHS)
+- `SOLVED_DEPTH = ("from location", "constrained by depth phases")`; `INCLUDE_FIXED` from the `--include-fixed` CLI flag
 - `BOX = dict(lat=(31.0, 35.0), lon=(74.0, 79.5))`
 
 Functions:
@@ -61,11 +61,15 @@ Functions:
 - `b_mle`: Aki-Utsu maximum likelihood with binning correction
 - `interevent`: inter-event times and coefficient of variation (CV 1 = Poisson, >1 = clustered)
 
-Depth classes (from `depth_type`): "fixed depth (USGS operator assigned)", "intermediate depth (40-150 km, solved)", "shallow/other (solved)", "depth not flagged by USGS". `untrusted_depth` = not solved. `max_curv` is the Wiemer-Wyss mode (NOT the eqcorrscan algorithm, despite the old docstring); `max_curv_eqcorrscan` is the authors' exact method.
+**Two cases (user, 2026-11-23).** Run each script twice:
+- default -> `results/excluding_fixed/`: only USGS-solved depths; operator-assigned AND unflagged events dropped from everything (all stats, all plots).
+- `--include-fixed` -> `results/including_fixed/`: all 417 events (1990+), depths as reported.
+- Same depth classes in both: **intermediate = depth - depthError >= 40 km** (and depth <= 150); shallow = depth + depthError < 40; uncertain = error bar crosses 40 km or depthError missing.
+- `max_curv` is the Wiemer-Wyss mode; `max_curv_eqcorrscan` is the authors' exact method (+0.4 in the paper).
 
 Migration: SVD/PCA of epicentres gives a profile axis (azimuth about 120°); `along_km` is distance along it.
 
-Outputs in `results/`:
+Outputs per case folder:
 1. `Fig1_magnitude_vs_time_cumulative.png`
 2. `Fig2_interevent_times.png`
 3. `Fig3_magnitude_frequency_bvalue.png`
@@ -77,7 +81,7 @@ Outputs in `results/`:
 
 ## 6. Decisions
 Ten decisions; six were the user's, four were mine.
-- User (2026-11-23): one group report; approved defining a Kishtwar cluster and running the paper's cluster analysis on it.
+- User (2026-11-23): one group report; approved the Kishtwar cluster; intermediate = depth - error >= 40 km on non-fixed depths; keep BOTH cases (excluding fixed / including fixed) as separate results.
 - User: target folder `Him_ides/`; install pnpm globally via npm (tooling only); add exclusions `*.xml`, `*.dat`, `*.pyc` to the graph ignore file; **magnitude cut M >= 4.4**; **period 1990 to now**; **make all figures including 3D**.
 - Mine (user asked for an explanation and left it to me): region = Himachal/Kashmir box (most complete of the four); flag depths of exactly 10 and 33 km as fixed rather than measured; use both LSQ and MLE b-values; migration along a PCA axis.
 - On depth, the user said: "i dontttt think those depths are default values.. if its usgs then we can mark it as reliable." I explained the evidence but did not settle it (weak point 1).
@@ -85,12 +89,25 @@ Ten decisions; six were the user's, four were mine.
 ## 7. Results so far (read the caveats in section 8 first)
 - **Baseline reproduction (2026-11-23):** full catalog Mc 2.43 / b 0.917 vs paper 2.4 / 0.91 (match). Cluster 1 via the repo polygons: 254 events, Mc 2.43, b 0.90 vs paper 248 events, Mc 2.85, b 0.96; b is threshold-sensitive (0.90 at 2.43 -> 0.96 at 2.9), so the gap is event selection, not code. Cluster 2: 61 events (paper gives no b). Original-code cosmetic bug: AB migration plot axis says C-C'.
 - Authors' Mc method on our 1990+ data: eqcorrscan 4.0 + 0.4 = **4.4**, independently supporting MC_CUT=4.4.
-- With flag-based depths: 176 events M>=4.4; 22 intermediate (solved), 33 shallow solved, 104 operator-assigned, 17 unflagged. Intermediate b: LSQ 1.15, MLE 1.19 +/- 0.25. Intermediate events concentrate near Kishtwar (~33.2N 75.9E): candidate 'Cluster 1' for our region.
+- **Current numbers (1990+, M>=4.4 unless noted), two cases:**
+  | | excluding_fixed | including_fixed |
+  |---|---|---|
+  | events used (M>=3) | 124 | 417 |
+  | M>=4.4 | 55 (8 interm., 17 shallow, 30 uncertain) | 176 (14 interm., 77 shallow, 85 uncertain) |
+  | Mc authors' method | 4.0+0.4 = 4.4 | 4.0+0.4 = 4.4 |
+  | b all, MLE (LSQ) | 1.34+/-0.18 (1.63) | 1.40+/-0.11 (1.82) |
+  | b intermediate, MLE | 1.24+/-0.44, N=8 | 1.32+/-0.35, N=14 |
+  | Kishtwar outline: used / interm. / shallow / uncertain | 42 / 11 / 7 / 24 | 103 / 16 / 35 / 52 |
+  | Kishtwar interm. M>=4.4 | 3 (no b-value possible) | 6 (b not robust) |
+  | Kishtwar interm. median depth | 58.7 km (46.8-72.2) | 58.0 km |
+  | 20d/20km sequences (interm. only) | 0 | 0 |
+  - The extra intermediate events in including_fixed are all UNFLAGGED (no operator-assigned one qualifies); 4 sit at exactly 45 km with depthError 0, i.e. probably unlabelled fixed depths. Argument for excluding_fixed as the main case.
+  - With the strict rule the 2013 Kishtwar events (40-47 km, +/-5-9 km) become 'uncertain'; only one stays intermediate, so the earlier '2013 sequence' result no longer applies.
 - 176 events with M >= 4.4 from 1990 onward in the box; depth classes are in `catalog_M4.4_1990plus.csv`.
 - b-value: **LSQ 1.82 vs MLE 1.40**. Both are above the usual value of about 1, and the gap is not explained.
 - Inter-event time CV and per-period rates are in `per_period_summary.csv` and Fig2/Fig6. Do not claim a real rate change; see weak point 2.
 
-- **Kishtwar-Chamba cluster (2026-11-23)**, polygon around the NW-SE band 33.6N 75.5E to 32.75N 76.5E, profile azimuth 146 deg, about 95 km long:
+- **SUPERSEDED (old rule: depth 40-150 km, no error check, fixed excluded). Kept for history.** Kishtwar-Chamba cluster (2026-11-23), polygon around the NW-SE band 33.6N 75.5E to 32.75N 76.5E, profile azimuth 146 deg, about 95 km long:
   - 103 events M>=3 inside the outline; 28 intermediate (solved depth), 14 shallow solved, 61 fixed/unflagged. It holds 44% of the region's solved intermediate-depth events.
   - Depths 40-90 km, median 48.6 km, median depthError 8.5 km.
   - b (M>=4.4): intermediate 0.89 +/- 0.25 (N=13; LSQ 0.88); whole outline 1.11 +/- 0.16 (N=46). The intermediate b is close to the paper's 0.91-0.96, but N is tiny.
@@ -115,7 +132,7 @@ Ten decisions; six were the user's, four were mine.
 1. Ask the user: one group report or individual reports?
 2. **DONE** Baseline reproduction: run the original `Him_ides/python/Figures_5-9.py` on the bundled catalog (install `eqcorrscan` or stub its import; run from the right working directory). Save outputs in a separate folder, for example `results_baseline/`.
 3. Depth flags DONE. b-value gap: all-depth b ~1.4 is likely partly mb (body-wave magnitude) saturation / mixed magTypes; consider an mb-only fit and bootstrap errors. Not yet tested.
-3b. DONE: Kishtwar cluster (`kishtwar_cluster.py`). Possible extras: mb-only b-value test, bootstrap errors, Figure 10 baseline.
+3b. DONE: Kishtwar cluster (`kishtwar_cluster.py`), both cases. Possible extras: mb-only b-value test, bootstrap errors, Figure 10 baseline. The explainer page (claude.ai artifact XjbVGyf1u5CjSi39mujjyE) still shows the OLD numbers; update it before presenting.
 4. Optionally repeat for a second region (for example Arunachal) or clip to India's border (the box includes some non-Indian territory).
 5. Write the report: Abstract, Methods of data analysis, Results and Discussion, Conclusions, references. Include Michailos et al. 2021, the Him_ides repo, USGS ComCat, ObsPy, Aki 1965 / Utsu for the b-value, Wiemer & Wyss 2000 for Mc, plus the code.
 
