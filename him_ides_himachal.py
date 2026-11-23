@@ -18,6 +18,9 @@ What is changed:
     frequent 0.1-magnitude bin, and (2) the exact eqcorrscan 0.4.2 calc_max_curv
     code the authors used (peak of the second derivative on 0.5 bins), with the
     paper's +0.4 correction (Woessner & Wiemer 2005)
+  * depth reliability comes from the USGS origin "depth-type" flag
+    (data/usgs_depth_type.csv, made by fetch_depth_type.py), not from guessing
+    at round numbers: "operator assigned" = analyst-fixed depth, not measured
   * migration uses a profile fitted to the data (PCA) instead of hand-picked lines
   * extra figure: rate / Mc / b-value per decade (the temporal-evolution summary)
 
@@ -39,7 +42,10 @@ OUT = os.path.join(HERE, "results")
 START_YEAR = 1990          # analysis period
 MC_CUT = 4.4               # magnitude cutoff used for rate / inter-event / b-value
 DEEP_MIN, DEEP_MAX = 40, 150   # "intermediate depth" range (km)
-FIXED_DEPTHS = (10.0, 33.0)    # USGS placeholder depths (not measured)
+DEPTH_TYPES = os.path.join(HERE, "data", "usgs_depth_type.csv")
+# USGS depth-type values we trust as real, computed depths. "unknown" (no flag, mostly
+# pre-2000 events) is kept as its own class: plotted, but not counted as intermediate.
+SOLVED_DEPTH = ("from location", "constrained by depth phases")
 BOX = dict(lat=(31.0, 35.0), lon=(74.0, 79.5))   # region the catalog was cut to
 os.makedirs(OUT, exist_ok=True)
 
@@ -50,17 +56,25 @@ matplotlib.rc("font", size=13)
 raw = pd.read_csv(CSV, parse_dates=["time"])
 raw["time"] = raw["time"].dt.tz_localize(None)
 raw = raw[raw.time.dt.year >= START_YEAR].copy()
-raw["fixed_depth"] = raw.depth.isin(FIXED_DEPTHS)
-raw["depth_class"] = np.where(raw.fixed_depth, "fixed depth (10/33 km, not measured)",
-                      np.where((raw.depth >= DEEP_MIN) & (raw.depth <= DEEP_MAX),
-                               "intermediate depth (40-150 km, measured)",
-                               "shallow/other (measured)"))
+raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
+raw["depth_type"] = raw.depth_type.fillna("unknown")
+solved = raw.depth_type.isin(SOLVED_DEPTH)
+raw["untrusted_depth"] = ~solved   # operator-assigned or unflagged
+raw["depth_class"] = np.select(
+    [raw.depth_type.eq("operator assigned"),
+     solved & raw.depth.between(DEEP_MIN, DEEP_MAX),
+     solved],
+    ["fixed depth (USGS operator assigned)",
+     "intermediate depth (40-150 km, solved)",
+     "shallow/other (solved)"],
+    default="depth not flagged by USGS")
 cat = raw[raw.mag >= MC_CUT].sort_values("time").reset_index(drop=True)
 deep = cat[cat.depth_class.str.startswith("intermediate")]
 shal = cat[cat.depth_class.str.startswith("shallow")]
-fix = cat[cat.fixed_depth]
+fix = cat[~cat.depth_class.str.contains("solved")]   # fixed or unflagged: depth not trusted
 print(f"Catalog {START_YEAR}+, M>={MC_CUT}: N={len(cat)}  intermediate={len(deep)}  "
-      f"shallow-measured={len(shal)}  fixed-depth={len(fix)}")
+      f"shallow-solved={len(shal)}  fixed/unflagged={len(fix)}")
+print(cat.depth_class.value_counts().to_string())
 
 
 def locator(ax, df_groups):
@@ -113,8 +127,8 @@ def b_mle(mags, mc, dm=0.1):
 # ----------------- FIG A: magnitude vs time + cumulative ------------------- #
 fig = plt.figure(figsize=(13, 6.5))
 ax1 = plt.subplot2grid((2, 4), (0, 0), colspan=3, rowspan=2)
-for df, col, mk, lab in [(fix, C_FIX, "+", f"Fixed depth (N={len(fix)})"),
-                         (shal, C_SHAL, "o", f"Shallow, measured (N={len(shal)})"),
+for df, col, mk, lab in [(fix, C_FIX, "+", f"Depth fixed or unflagged (N={len(fix)})"),
+                         (shal, C_SHAL, "o", f"Shallow, solved depth (N={len(shal)})"),
                          (deep, C_DEEP, "X", f"Intermediate 40–150 km (N={len(deep)})")]:
     ax1.vlines(df.time, 0, df.mag, color="gray", lw=0.3, zorder=1)
     ax1.scatter(df.time, df.mag, s=df.mag**2 * 2.2, c=col if mk != "o" else "none",
@@ -166,7 +180,7 @@ ax1.set_ylabel("Frequency"); ax1.set_xlabel("Magnitude")
 ax2 = ax1.twinx()
 res = {}
 for lab, df, col, ls, mk in [("All depths", raw, "k", "-", "+"),
-                             ("Intermediate depth", raw[(raw.depth >= DEEP_MIN) & (raw.depth <= DEEP_MAX) & (~raw.fixed_depth)],
+                             ("Intermediate depth", raw[(raw.depth >= DEEP_MIN) & (raw.depth <= DEEP_MAX) & (~raw.untrusted_depth)],
                               C_DEEP, "--", "o")]:
     m = df.mag.values
     b, steps, cum, fn = b_lsq(m, MC_CUT)
@@ -198,11 +212,11 @@ cat["along_km"] = np.c_[x, y] @ ax_dir
 strike_az = (np.degrees(np.arctan2(ax_dir[0], ax_dir[1])) + 360) % 360
 fig, ax = plt.subplots(figsize=(12, 6))
 sc = ax.scatter(cat.time, cat.along_km, s=cat.mag**2 * 2.5,
-                c=np.where(cat.fixed_depth, np.nan, cat.depth), cmap="viridis_r", vmin=0, vmax=150,
+                c=cat.depth.where(~cat.untrusted_depth), cmap="viridis_r", vmin=0, vmax=150,
                 edgecolors="k", linewidths=0.4, alpha=0.85, zorder=3)
-ax.scatter(cat.time[cat.fixed_depth], cat.along_km[cat.fixed_depth], s=cat.mag[cat.fixed_depth]**2 * 2.5,
-           c=C_FIX, marker="+", lw=1.0, label="fixed depth", zorder=2)
-cb = plt.colorbar(sc, ax=ax); cb.set_label("Measured depth (km)")
+ax.scatter(cat.time[cat.untrusted_depth], cat.along_km[cat.untrusted_depth], s=cat.mag[cat.untrusted_depth]**2 * 2.5,
+           c=C_FIX, marker="+", lw=1.0, label="depth fixed or unflagged", zorder=2)
+cb = plt.colorbar(sc, ax=ax); cb.set_label("Solved depth (km)")
 ax.set_xlabel("Time (UTC)"); ax.set_ylabel(f"Distance along arc, azimuth {strike_az:.0f}° (km)")
 ax.xaxis.set_major_locator(mdates.YearLocator(5)); ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
 ax.legend(loc="upper left", fontsize=10); ax.grid(alpha=0.2)
@@ -211,13 +225,13 @@ print(f"Profile azimuth (PCA of epicentres): {strike_az:.0f} deg; along-arc exte
       f"{cat.along_km.min():.0f} to {cat.along_km.max():.0f} km")
 
 # ----------------------------- FIG E: 3-D ---------------------------------- #
-meas = cat[~cat.fixed_depth]
+meas = cat[~cat.untrusted_depth]
 fig = plt.figure(figsize=(10, 7.5))
 ax = fig.add_subplot(111, projection="3d")
 p = ax.scatter(meas.longitude, meas.latitude, -meas.depth, c=meas.depth, cmap="viridis_r", vmin=0, vmax=150,
                s=meas.mag**2 * 2.5, edgecolors="k", linewidths=0.3, alpha=0.9)
 ax.set_xlabel("Longitude (°)"); ax.set_ylabel("Latitude (°)"); ax.set_zlabel("Depth (km)")
-ax.set_title(f"Measured-depth events only (N={len(meas)}); {len(fix)} fixed-depth events omitted", fontsize=11)
+ax.set_title(f"USGS-solved depths only (N={len(meas)}); {len(fix)} fixed/unflagged omitted", fontsize=11)
 fig.colorbar(p, ax=ax, shrink=0.6, label="Depth (km)"); ax.view_init(elev=22, azim=-65)
 plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig5_3D_hypocentres.png"), dpi=200); plt.close(fig)
 
