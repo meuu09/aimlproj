@@ -1,0 +1,2 @@
+start,n_events,duration_days,max_dist_km,depths_km,mags,linear_velocity_km_per_day,diffusivity_envelope_m2_per_s,median_horizontalError_km,median_depthError_km,ids
+2013-08-02 21:37:46.070,4,16.09427789351852,19.301315130188616,"42, 47, 50, 45","5.2, 4.3, 4.1, 4.8",-0.20158882031307498,128.00304532948678,,7.050000000000001,usb000iug2;usb000ivha;usb000j2v5;usb000j66f
