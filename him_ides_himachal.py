@@ -26,9 +26,11 @@ What is changed:
   * migration uses a profile fitted to the data (PCA) instead of hand-picked lines
   * extra figure: rate / Mc / b-value per decade (the temporal-evolution summary)
 
-Run from anywhere:  .venv/bin/python him_ides_himachal.py
+Run from anywhere:  .venv/bin/python him_ides_himachal.py                   (results/excluding_fixed/)
+                    .venv/bin/python him_ides_himachal.py --include-fixed   (results/including_fixed/)
 """
 import os
+import sys
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -40,7 +42,16 @@ from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
 # ----------------------------- PARAMETERS ---------------------------------- #
 HERE = os.path.dirname(os.path.abspath(__file__))
 CSV = os.path.join(HERE, "data", "usgs_himachal_kashmir_M3plus_1970-2026.csv")
-OUT = os.path.join(HERE, "results")
+# Two cases, chosen on the command line:
+#   (default)          excluding_fixed: only USGS-solved depths; fixed/unflagged events dropped
+#   --include-fixed    including_fixed: every event, depths as USGS reports them
+# Both use the same intermediate rule (depth - depthError >= 40 km).
+INCLUDE_FIXED = "--include-fixed" in sys.argv
+CASE = "including_fixed" if INCLUDE_FIXED else "excluding_fixed"
+USED = "all depths" if INCLUDE_FIXED else "solved depths"   # wording for labels
+CASE_LABEL = ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
+              else "Case: excluding fixed depths (USGS-solved only)")
+OUT = os.path.join(HERE, "results", CASE)
 START_YEAR = 1990          # analysis period
 MC_CUT = 4.4               # magnitude cutoff used for rate / inter-event / b-value
 DEEP_MIN, DEEP_MAX = 40, 150   # "intermediate depth" range (km)
@@ -50,6 +61,12 @@ DEPTH_TYPES = os.path.join(HERE, "data", "usgs_depth_type.csv")
 SOLVED_DEPTH = ("from location", "constrained by depth phases")
 BOX = dict(lat=(31.0, 35.0), lon=(74.0, 79.5))   # region the catalog was cut to
 os.makedirs(OUT, exist_ok=True)
+
+
+def save(fig, name):
+    """Save a figure into this case's folder, stamped with the case name."""
+    fig.text(0.005, 0.995, CASE_LABEL, ha="left", va="top", fontsize=8, color="0.4")
+    fig.savefig(os.path.join(OUT, name), dpi=200)
 
 C_DEEP, C_SHAL, C_FIX = "#d62728", "#1f77b4", "#9a9a9a"
 matplotlib.rc("font", size=13)
@@ -61,8 +78,9 @@ raw = raw[raw.time.dt.year >= START_YEAR].copy()
 raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
 raw["depth_type"] = raw.depth_type.fillna("unknown")
 n_before = len(raw)
-raw = raw[raw.depth_type.isin(SOLVED_DEPTH)].copy()      # drop fixed and unflagged depths
-print(f"{START_YEAR}+: {n_before} events, {len(raw)} with USGS-solved depth kept, "
+if not INCLUDE_FIXED:
+    raw = raw[raw.depth_type.isin(SOLVED_DEPTH)].copy()   # drop fixed and unflagged depths
+print(f"{CASE_LABEL} | {START_YEAR}+: {n_before} events, {len(raw)} used, "
       f"{n_before - len(raw)} fixed/unflagged dropped")
 top, bottom = raw.depth - raw.depthError, raw.depth + raw.depthError   # NaN error -> uncertain
 raw["depth_class"] = np.select(
@@ -146,7 +164,7 @@ ax2.set_ylabel("Cumulative number", color="gray"); ax2.tick_params(axis="y", lab
 ax2.legend(loc="lower right", fontsize=10)
 ax4 = plt.subplot2grid((2, 4), (0, 3))
 locator(ax4, [(unc, C_FIX, "+"), (shal, C_SHAL, "o"), (deep, C_DEEP, "X")])
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig1_magnitude_vs_time_cumulative.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "Fig1_magnitude_vs_time_cumulative.png"); plt.close(fig)
 
 # --------------------- FIG B: inter-event times ---------------------------- #
 def interevent(df):
@@ -156,7 +174,7 @@ def interevent(df):
 fig = plt.figure(figsize=(13, 6.5))
 ax = plt.subplot2grid((2, 4), (0, 0), colspan=3, rowspan=2)
 ta, da = interevent(cat); td, dd = interevent(deep)
-ax.scatter(ta, da, s=45, marker="+", c=C_FIX, lw=1.2, label=f"All events (solved depths), M≥{MC_CUT} (N={len(cat)})", zorder=1)
+ax.scatter(ta, da, s=45, marker="+", c=C_FIX, lw=1.2, label=f"All events ({USED}), M≥{MC_CUT} (N={len(cat)})", zorder=1)
 ax.scatter(td, dd, s=70, marker="o", facecolors="none", edgecolors=C_DEEP, lw=1.8,
            label=f"Intermediate depth only (N={len(deep)})", zorder=3)
 ax.set_yscale("log"); ax.set_ylabel("Inter-event time (days)"); ax.set_xlabel("Time (UTC)")
@@ -165,7 +183,7 @@ ax.xaxis.set_major_locator(mdates.YearLocator(5)); ax.xaxis.set_major_formatter(
 ax.legend(loc="lower left", fontsize=10); ax.tick_params(top=True, right=True)
 ax4 = plt.subplot2grid((2, 4), (0, 3))
 locator(ax4, [(cat, C_FIX, "+"), (deep, C_DEEP, "o")])
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig2_interevent_times.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "Fig2_interevent_times.png"); plt.close(fig)
 print(f"Inter-event time, all: median={np.median(da):.1f} d, mean={da.mean():.1f} d, "
       f"min={da.min():.3f} d, max={da.max():.0f} d | CV={da.std()/da.mean():.2f}")
 print(f"Inter-event time, intermediate: median={np.median(dd):.1f} d, mean={dd.mean():.1f} d")
@@ -176,11 +194,11 @@ mc_curv = max_curv(mags_all)
 fig, ax1 = plt.subplots(figsize=(9.5, 6.5))
 bins = np.arange(3.05, raw.mag.max() + 0.2, 0.2)
 ax1.hist(raw.mag, bins, histtype="step", fill=True, color="gray", alpha=0.25, lw=2, ec="k",
-         label=f"All events (solved depths), M≥3 since {START_YEAR} (N={len(raw)})")
+         label=f"All events ({USED}), M≥3 since {START_YEAR} (N={len(raw)})")
 ax1.set_ylabel("Frequency"); ax1.set_xlabel("Magnitude")
 ax2 = ax1.twinx()
 res = {}
-for lab, df, col, ls, mk in [(f"All events (solved depths)", raw, "k", "-", "+"),
+for lab, df, col, ls, mk in [(f"All events ({USED})", raw, "k", "-", "+"),
                              ("Intermediate (depth − error ≥ 40 km)",
                               raw[raw.depth_class.str.startswith("intermediate")], C_DEEP, "--", "o")]:
     m = df.mag.values
@@ -198,7 +216,7 @@ ax2.axvline(MC_CUT, color="k", lw=0.8, ls=":")
 ax2.set_ylabel("log$_{10}$ cumulative number")
 ax2.legend(loc="upper right", fontsize=10)
 ax1.set_title(f"Max-curvature Mc of this catalog = {mc_curv}; fit threshold M≥{MC_CUT}", fontsize=11)
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig3_magnitude_frequency_bvalue.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "Fig3_magnitude_frequency_bvalue.png"); plt.close(fig)
 print(f"Max-curvature Mc (M>=3, {START_YEAR}+): Wiemer-Wyss mode = {mc_curv}; "
       f"authors' eqcorrscan method = {max_curv_eqcorrscan(mags_all)} (+0.4 = {max_curv_eqcorrscan(mags_all) + 0.4:.1f})")
 for k, v in res.items():
@@ -223,7 +241,7 @@ cb = plt.colorbar(sc, ax=ax); cb.set_label("Solved depth (km)")
 ax.set_xlabel("Time (UTC)"); ax.set_ylabel(f"Distance along arc, azimuth {strike_az:.0f}° (km)")
 ax.xaxis.set_major_locator(mdates.YearLocator(5)); ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
 ax.legend(loc="upper left", fontsize=10); ax.grid(alpha=0.2)
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig4_migration_along_arc.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "Fig4_migration_along_arc.png"); plt.close(fig)
 print(f"Profile azimuth (PCA of epicentres): {strike_az:.0f} deg; along-arc extent "
       f"{cat.along_km.min():.0f} to {cat.along_km.max():.0f} km")
 
@@ -236,7 +254,7 @@ p = ax.scatter(meas.longitude, meas.latitude, -meas.depth, c=meas.depth, cmap="v
 ax.set_xlabel("Longitude (°)"); ax.set_ylabel("Latitude (°)"); ax.set_zlabel("Depth (km)")
 ax.set_title(f"USGS-solved depths only, M≥{MC_CUT} (N={len(meas)}); fixed/unflagged depths not used", fontsize=11)
 fig.colorbar(p, ax=ax, shrink=0.6, label="Depth (km)"); ax.view_init(elev=22, azim=-65)
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig5_3D_hypocentres.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "Fig5_3D_hypocentres.png"); plt.close(fig)
 
 # ------------- FIG F: temporal evolution summary (rate, Mc, b) ------------- #
 periods = [(1990, 1999), (2000, 2009), (2010, 2019), (2020, 2026)]
@@ -259,7 +277,7 @@ axs[2].errorbar(xs, tab.b_MLE, yerr=tab.b_err, fmt="o-", c="k", capsize=4); axs[
 axs[2].axhline(1.0, ls=":", c="gray")
 for a in axs:
     a.set_xticks(xs); a.set_xticklabels(tab.period, rotation=20); a.grid(alpha=0.2)
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig6_temporal_evolution_summary.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "Fig6_temporal_evolution_summary.png"); plt.close(fig)
 print("Figures written to", OUT)
 
 # ------------------------------ catalog export ----------------------------- #

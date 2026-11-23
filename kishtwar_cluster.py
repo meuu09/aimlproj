@@ -21,9 +21,11 @@ Chamba (J&K / Himachal Pradesh). Depth rules (same as him_ides_himachal.py):
   * shallow       = depth + depthError <  40 km
   * uncertain     = error bar crosses 40 km, or no depthError given
 
-Run:  .venv/bin/python kishtwar_cluster.py      (outputs in results/kishtwar/)
+Run:  .venv/bin/python kishtwar_cluster.py                   (results/excluding_fixed/kishtwar/)
+      .venv/bin/python kishtwar_cluster.py --include-fixed   (results/including_fixed/kishtwar/)
 """
 import os
+import sys
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -36,7 +38,16 @@ from matplotlib.path import Path
 HERE = os.path.dirname(os.path.abspath(__file__))
 CSV = os.path.join(HERE, "data", "usgs_himachal_kashmir_M3plus_1970-2026.csv")
 DEPTH_TYPES = os.path.join(HERE, "data", "usgs_depth_type.csv")
-OUT = os.path.join(HERE, "results", "kishtwar")
+# Two cases, chosen on the command line:
+#   (default)          excluding_fixed: only USGS-solved depths; fixed/unflagged events dropped
+#   --include-fixed    including_fixed: every event, depths as USGS reports them
+# Both use the same intermediate rule (depth - depthError >= 40 km).
+INCLUDE_FIXED = "--include-fixed" in sys.argv
+CASE = "including_fixed" if INCLUDE_FIXED else "excluding_fixed"
+USED = "all depths" if INCLUDE_FIXED else "solved depths"   # wording for labels
+CASE_LABEL = ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
+              else "Case: excluding fixed depths (USGS-solved only)")
+OUT = os.path.join(HERE, "results", CASE, "kishtwar")
 START_YEAR = 1990
 MC_CUT = 4.4                     # regional completeness (authors' method gives 4.0 + 0.4)
 DEEP_MIN, DEEP_MAX = 40, 150     # intermediate depth (km)
@@ -47,6 +58,12 @@ CLUSTER_POLY = [(75.50, 33.60), (76.10, 33.60), (76.50, 32.95),
                 (76.50, 32.75), (75.90, 32.75), (75.50, 33.20)]
 SEQ_DAYS, SEQ_KM, SEQ_MIN_EVENTS = 20, 20, 3     # paper's migration-search window
 os.makedirs(OUT, exist_ok=True)
+
+
+def save(fig, name):
+    """Save a figure into this case's folder, stamped with the case name."""
+    fig.text(0.005, 0.995, CASE_LABEL, ha="left", va="top", fontsize=8, color="0.4")
+    fig.savefig(os.path.join(OUT, name), dpi=200)
 matplotlib.rc("font", size=12)
 C_DEEP, C_SHAL, C_REST, C_FIX = "#d62728", "#1f77b4", "#7f7f7f", "#bdbdbd"
 
@@ -97,7 +114,8 @@ raw = raw[raw.time.dt.year >= START_YEAR]
 raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
 raw["depth_type"] = raw.depth_type.fillna("unknown")
 n_before = len(raw)
-raw = raw[raw.depth_type.isin(SOLVED_DEPTH)].copy()        # drop fixed and unflagged depths
+if not INCLUDE_FIXED:
+    raw = raw[raw.depth_type.isin(SOLVED_DEPTH)].copy()   # drop fixed and unflagged depths
 raw["in_cluster"] = Path(CLUSTER_POLY).contains_points(raw[["longitude", "latitude"]].values)
 raw["intermediate"] = ((raw.depth - raw.depthError) >= DEEP_MIN) & (raw.depth <= DEEP_MAX)
 raw["shallow"] = (raw.depth + raw.depthError) < DEEP_MIN
@@ -109,7 +127,7 @@ clu_deep = raw[raw.in_cluster & raw.intermediate]              # our "Cluster 1"
 clu_shal = raw[raw.in_cluster & raw.shallow]
 clu_unc = raw[raw.in_cluster & raw.uncertain]
 rest_deep = raw[~raw.in_cluster & raw.intermediate]            # intermediate elsewhere in box
-print(f"{START_YEAR}+: {len(raw)} solved-depth events kept, {n_before - len(raw)} fixed/unflagged dropped")
+print(f"{CASE_LABEL} | {START_YEAR}+: {len(raw)} events used, {n_before - len(raw)} fixed/unflagged dropped")
 print(f"Cluster outline: used={len(clu_all)}  intermediate={len(clu_deep)}  shallow={len(clu_shal)}  "
       f"uncertain={len(clu_unc)}  | intermediate outside cluster={len(rest_deep)}")
 summary = {"N_cluster_used_M3": len(clu_all), "N_cluster_intermediate_M3": len(clu_deep),
@@ -157,12 +175,12 @@ ax1.set_ylim(3, 5.8); ax1.set_ylabel("Magnitude (mostly mb)"); ax1.set_xlabel("T
 time_axis(ax1); ax1.legend(loc="upper left", fontsize=9)
 ax2 = ax1.twinx()
 ax2.plot(clu_deep.time, np.arange(1, len(clu_deep) + 1), "k--", lw=2, label="Cluster, intermediate")
-ax2.plot(clu_all.time, np.arange(1, len(clu_all) + 1), "k:", lw=2, label=f"Cluster, all events (solved depths)")
+ax2.plot(clu_all.time, np.arange(1, len(clu_all) + 1), "k:", lw=2, label=f"Cluster, all events ({USED})")
 ax2.plot(rest_deep.time, np.arange(1, len(rest_deep) + 1), "k-", lw=1.2, label="Intermediate, outside")
 ax2.set_ylabel("Cumulative number", color="gray"); ax2.tick_params(axis="y", labelcolor="gray")
 ax2.legend(loc="lower right", fontsize=9)
 locator(plt.subplot2grid((2, 4), (0, 3)))
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "FigK1_magnitude_vs_time.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "FigK1_magnitude_vs_time.png"); plt.close(fig)
 
 # ------------- FIG K2 (paper Fig 6): inter-event times --------------------- #
 fig = plt.figure(figsize=(13, 6.5))
@@ -182,7 +200,7 @@ for lab, df, col, mk in [("cluster_intermediate_M3", clu_deep, C_DEEP, "X"),
 ax.set_yscale("log"); ax.set_ylabel("Inter-event time (days)"); ax.set_xlabel("Time (UTC)")
 time_axis(ax); ax.legend(loc="lower left", fontsize=9); ax.grid(alpha=0.2, which="both")
 locator(plt.subplot2grid((2, 4), (0, 3)))
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "FigK2_interevent_times.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "FigK2_interevent_times.png"); plt.close(fig)
 
 # ------------- FIG K3 (paper Fig 7): magnitude-frequency + b --------------- #
 fig, ax1 = plt.subplots(figsize=(10, 6.5))
@@ -194,7 +212,7 @@ ax1.set_xlabel("Magnitude"); ax1.set_ylabel("Frequency (0.2 bins)"); ax1.legend(
 ax2 = ax1.twinx()
 bres = []
 for lab, df, col, ls, mk in [("Whole region", raw, "k", "-", "+"),
-                             (f"Cluster outline, all events (solved depths)", clu_all, "#555", "--", "o"),
+                             (f"Cluster outline, all events ({USED})", clu_all, "#555", "--", "o"),
                              ("Cluster, intermediate", clu_deep, C_DEEP, ":", "X")]:
     m = df.mag.values
     mc_auth = max_curv_eqcorrscan(m) + 0.4
@@ -210,7 +228,7 @@ for lab, df, col, ls, mk in [("Whole region", raw, "k", "-", "+"),
 ax2.axvline(MC_CUT, color="k", lw=0.8, ls=":")
 ax2.set_ylabel("log$_{10}$ cumulative number"); ax2.legend(loc="upper right", fontsize=9)
 ax1.set_title(f"b-values above M{MC_CUT}; small N, read the MLE ± error", fontsize=11)
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "FigK3_magnitude_frequency_bvalue.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "FigK3_magnitude_frequency_bvalue.png"); plt.close(fig)
 btab = pd.DataFrame(bres); btab.to_csv(os.path.join(OUT, "kishtwar_bvalues.csv"), index=False)
 
 # ------------- profile axes for the cluster (PCA of epicentres) ------------ #
@@ -288,7 +306,7 @@ fig.colorbar(sc, cax=cax, orientation="horizontal", label="Along-strike distance
 fig.text(0.45, 0.66, f"Orange bands: sequences with ≥{SEQ_MIN_EVENTS} events within {SEQ_DAYS} days and "
          f"{SEQ_KM} km\n(paper's search window). N sequences = {len(seq_tab)}", fontsize=10)
 fig.subplots_adjust(left=0.07, right=0.97, top=0.95, bottom=0.07, hspace=0.35)
-fig.savefig(os.path.join(OUT, "FigK4_migration.png"), dpi=200); plt.close(fig)
+save(fig, "FigK4_migration.png"); plt.close(fig)
 
 # ------------- FIG K5 (paper Figs 3-4): depth sections with errors --------- #
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(14, 5.5), gridspec_kw=dict(width_ratios=[1, 1.3]))
@@ -305,7 +323,7 @@ a1.set_xlabel(f"Along-strike distance, az {az:.0f}° (km)"); a1.legend(fontsize=
 a2.set_xlabel("Time (UTC)"); time_axis(a2)
 a1.set_title("Depth section along the cluster (bars = USGS depthError)", fontsize=10)
 a2.set_title("Depth through time", fontsize=10)
-plt.tight_layout(); fig.savefig(os.path.join(OUT, "FigK5_depth_sections.png"), dpi=200); plt.close(fig)
+plt.tight_layout(); save(fig, "FigK5_depth_sections.png"); plt.close(fig)
 
 # ------------- depth vs catalog era (is a depth "trend" real?) -------------- #
 # Location quality changes over time (networks, methods), so compare depth AND its error.
