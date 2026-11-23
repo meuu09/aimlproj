@@ -1,0 +1,154 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/494609518.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1991-01-01 00:00:00</td></tr><tr><td>End date: 1991-12-31 23:59:59</td></tr><tr><td>Events found: 6</td></tr><tr><td>Date of search: Mon Nov 23 13:55:22 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      343886 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1991/01/10 01:33:18.10        0.370  34.3310   74.6620                  33.0               7                       fe NEIC        749746
+ (Less reliable solution.)
+ (Felt in the Srinagar area.)
+1991/01/10 01:33:24.69   1.07 2.150  34.0836   74.6915 14.67 9.264  14  35.0f        20   19 115   1.26  83.47 m i fe ISC         749747
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 314.4 | 338.9 | 0.011 |     5 |   1.3 |   2.9)
+ (  0 -  17 degrees    | 215.3 | 228.9 | 0.288 |    15 |   1.3 |  17.0)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  78.1 |  83.5)
+ (  0 - 180 degrees    | 115.3 | 215.3 | 0.681 |    17 |   1.3 |  83.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9        3 NEIC        749746
+
+Event      344929 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1991/01/20 12:43:15.10               31.5200   77.2400                  31.0                                       uk BJI         752199
+1991/01/20 12:43:15.40               31.5900   77.3500                  33.0                                       uk MOS         752200
+1991/01/20 12:43:16.14        1.240  31.4860   77.4180   7.5 5.400  25  15.0f       122  106                   m i fe ISC-EHB   12160536
+ (#PARAM DEPTH_QUALITY=L3)
+1991/01/20 12:43:17.00        1.010  31.5320   77.4630                  33.0              57                       fe NEIC        752201
+1991/01/20 12:43:17.50   0.59 2.609  31.6400   77.3918 5.965 4.981  70  27.8  4.22  156  134  39   2.95 145.31 m i fe ISC         752203
+ (#PRIME)
+ (#PARAM pP_DEPTH=27.0+3.9)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   2.9 |   2.9)
+ (  0 -  17 degrees    |  70.9 | 102.4 | 0.901 |    36 |   2.9 |  16.8)
+ ( 28 - 180 degrees    | 100.6 | 103.7 | 0.823 |    49 |  28.1 | 145.3)
+ (  0 - 180 degrees    |  39.0 |  45.8 | 0.981 |   102 |   2.9 | 145.3)
+ (Felt I=I MM Shimla, Himachal Pradesh)
+
+Magnitude  Err Nsta Author      OrigID
+Mb     4.9          BJI         752199
+mL     5.1          BJI         752199
+Ms     4.4          BJI         752199
+Mb     5.2        6 MOS         752200
+mb     4.9       26 NEIC        752201
+ML     4.5          NDI;NEIC    752201
+mb     5.0 0.1   33 ISC         752203
+
+Event      342360 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1991/02/22 22:41:45.60        0.680  33.8130   78.1880                  33.0               7                       uk NEIC        746176
+ (Less reliable solution.)
+
+Event      342599 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1991/02/25 10:52:33.90        0.890  34.6950   79.0590                  33.0              12                       uk NEIC        746747
+ (Less reliable solution.)
+1991/02/25 10:52:36.32   0.73 2.627  34.6007   79.0244 12.10 9.791  65  35.0f        24   26 114   4.87  82.62 m i ke ISC         746748
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 232.3 | 236.3 | 0.188 |    11 |   4.9 |  16.7)
+ ( 28 - 180 degrees    | 244.2 | 310.7 | 0.130 |     6 |  48.6 |  82.6)
+ (  0 - 180 degrees    | 114.5 | 124.8 | 0.761 |    21 |   4.9 |  82.6)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.6        6 NEIC        746747
+mb     4.6 0.4    4 ISC         746748
+
+Event      329869 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1991/06/23 02:45:41.09        1.500  32.3340   76.6830 8.800 6.600  30  15.0f       111   97                   m i fe ISC-EHB   12161438
+ (#PARAM DEPTH_QUALITY=L3)
+1991/06/23 02:45:41.20        1.460  32.3060   76.7160                  33.0              48                       fe NEIC        717212
+1991/06/23 02:45:41.50               32.4100   76.6200                  32.0                                       uk BJI         717213
+1991/06/23 02:45:42.80               32.4500   76.6500                  33.0                                       uk MOS         717214
+1991/06/23 02:45:41.68   0.54 2.786  32.3997   76.6275 5.679 4.127  63  18.0  2.63  170  127  60   1.00  93.22 m i fe ISC         717216
+ (#PRIME)
+ (#PARAM pP_DEPTH=18.0+4.6)
+ (Several parts of Himachal Pradesh, Northern India were shaken by two ear thquakes, the second one about three hours later. Felt I=IV MM)
+ ( Shimla (after HYB))
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 317.2 | 344.2 | 0.007 |     3 |   1.0 |   2.4)
+ (  0 -  17 degrees    |  79.0 | 105.7 | 0.899 |    40 |   1.0 |  16.1)
+ ( 28 - 180 degrees    | 176.7 | 178.4 | 0.492 |    36 |  29.7 |  93.2)
+ (  0 - 180 degrees    |  60.8 |  66.1 | 0.966 |    99 |   1.0 |  93.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.6       17 NEIC        717212
+Mb     4.5          BJI         717213
+mL     5.2          BJI         717213
+Ms     4.6          BJI         717213
+Mb     5.0        6 MOS         717214
+Ms     4.2       11 MOS         717214
+mb     4.7 0.2   21 ISC         717216
+MS     4.4 0.1   10 ISC         717216
+
+Event      317062 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1991/10/20 03:34:30.80        0.710  30.9450   78.9220                  33.0               7                       uk NEIC        688078
+ (Poor solution.)
+1991/10/20 03:34:24.86   1.72 2.295  31.4340   78.4973 14.37 8.694  11  32.0f        11    9 206   1.17   7.32 m i ke ISC         688079
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 289.7 | 356.6 | 0.006 |     3 |   1.2 |   3.0)
+ (  0 -  17 degrees    | 207.5 | 274.4 | 0.251 |     8 |   1.2 |   7.3)
+ ( 28 - 180 degrees    |       |       |       |     0 |       |)
+ (  0 - 180 degrees    | 207.5 | 274.4 | 0.251 |     8 |   1.2 |   7.3)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.3        2 NEIC        688078
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ BJI       China Earthquake Networks Center
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NEIC      National Earthquake Information Center
+
+<br>Mon Nov 23 13:55:22 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

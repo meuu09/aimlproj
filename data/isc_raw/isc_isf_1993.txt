@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/462125542.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1993-01-01 00:00:00</td></tr><tr><td>End date: 1993-12-31 23:59:59</td></tr><tr><td>Events found: 2</td></tr><tr><td>Date of search: Mon Nov 23 13:55:43 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      228652 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1993/06/19 11:51:18.40        1.720  31.3640   77.1200                  33.0               8                       uk NEIC        500175
+ (Poor solution.)
+1993/06/19 11:51:02.66   1.21 1.879  32.2148   75.8120 25.28 11.09  31  20.0f        12   12 169   2.58  18.59 m i ke ISC         500176
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   2.6 |   2.7)
+ (  0 -  17 degrees    | 169.0 | 176.5 | 0.414 |    11 |   2.6 |   9.7)
+ ( 28 - 180 degrees    |       |       |       |     0 |       |)
+ (  0 - 180 degrees    | 169.0 | 176.5 | 0.459 |    12 |   2.6 |  18.6)
+
+Event      208144 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1993/09/15 15:08:12.50               33.1800   75.8300                  33.0                                       uk MOS         459438
+1993/09/15 15:08:13.01        0.810  33.3570   75.7090   5.5   3.0   9  15.0f       143  136                   m i ke ISC-EHB   12166579
+ (#PARAM DEPTH_QUALITY=L3)
+1993/09/15 15:08:13.40        0.950  33.3220   75.7400                  33.0             118                       uk NEIC        459439
+ (Less reliable solution.)
+1993/09/15 15:08:14.20               33.3700   75.7700                  34.0                                       uk BJI         459440
+1993/09/15 15:08:14.38   0.49 1.905  33.2144   75.8515 5.887 5.361  53  25.3  3.45  190  163  43   2.21 146.18 m i ke ISC         459441
+ (#PRIME)
+ (#PARAM pP_DEPTH=25.0+4.5)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   2.2 |   3.0)
+ (  0 -  17 degrees    |  67.1 | 100.1 | 0.881 |    18 |   2.2 |  15.9)
+ ( 28 - 180 degrees    | 102.0 | 125.6 | 0.858 |    97 |  28.2 | 146.2)
+ (  0 - 180 degrees    |  43.7 |  57.7 | 0.980 |   132 |   2.2 | 146.2)
+
+Year Volume Page1 Page2 Journal
+2022    231  2009  2033 Geophys. J. Int.
+ (#AUTHOR O’Kane,A. , Copley,A. , Mitra,S. , Wimpenny,S.                                   )
+ (#TITLE  The geometry of active shortening in the north–west Himalayas and the            )
+ (+       implications for seismic hazard                                                  )
+
+Magnitude  Err Nsta Author      OrigID
+mb     5.3       13 MOS         459438
+MS     4.4        6 MOS         459438
+mb     5.0       55 NEIC        459439
+mb     4.9          BJI         459440
+mL     5.0          BJI         459440
+Ms     4.3          BJI         459440
+mb     5.0 0.2   53 ISC         459441
+MS     4.3 0.2   11 ISC         459441
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ BJI       China Earthquake Networks Center
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NEIC      National Earthquake Information Center
+
+<br>Mon Nov 23 13:55:43 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

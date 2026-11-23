@@ -1,0 +1,166 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/442566329.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1974-01-01 00:00:00</td></tr><tr><td>End date: 1974-12-31 23:59:59</td></tr><tr><td>Events found: 8</td></tr><tr><td>Date of search: Mon Nov 23 13:47:22 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+</pre><p><em>Please note:</em><br>
+<p>Data on or after 2024/11/01 have not been reviewed by the ISC.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      749268 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/04/12 10:32:49.00               33.6000   74.0000                                                             uk MOS        1655928
+1974/04/12 10:32:47.69   0.73 2.290  33.6556   74.0053 15.01 5.754  55  10.0f        22   23 138   3.02 110.14 m i ke ISC        1655930
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 138.1 | 168.5 | 0.524 |    11 |   3.0 |  15.1)
+ ( 28 - 180 degrees    | 327.7 | 341.0 | 0.004 |     6 |  65.4 | 110.1)
+ (  0 - 180 degrees    | 138.1 | 168.5 | 0.561 |    18 |   3.0 | 110.1)
+
+Magnitude  Err Nsta Author      OrigID
+MB     4.5          MOS        1655928
+mb     4.7 0.5    3 ISC        1655930
+
+Event      749573 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/04/20 16:25:49.16   1.30 1.767  31.5231   77.3635 15.33 5.938  50   9.0f        11    9 188   0.82  51.67 m i ke ISC        1656658
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 251.8 | 316.5 | 0.102 |     3 |   0.8 |   1.6)
+ (  0 -  17 degrees    | 210.9 | 254.3 | 0.280 |     7 |   0.8 |   7.6)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     1 |  51.7 |  51.7)
+ (  0 - 180 degrees    | 188.4 | 231.8 | 0.400 |     8 |   0.8 |  51.7)
+
+Event      748489 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/05/20 17:39:15.00               34.2000   74.4000                                                             uk MOS        1654097
+1974/05/20 17:39:16.00               34.3000   74.6000                  96.0                                       uk QUE        1654098
+1974/05/20 17:39:17.28        0.960  34.5510   74.2600 7.200 5.800  80  15.0f        69   62                   m i ke ISC-EHB   12125625
+ (#PARAM DEPTH_QUALITY=L3)
+1974/05/20 17:39:17.90        0.700  34.5840   74.2780                  33.0         21                            uk NEIS       1654100
+1974/05/20 17:39:18.64   0.41 2.341  34.5425   74.1996 7.475 4.591  66  26.0f        69   65  47   1.19  99.14 m i ke ISC        1654102
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 276.7 | 316.1 | 0.062 |     4 |   1.2 |   3.0)
+ (  0 -  17 degrees    | 123.9 | 134.8 | 0.768 |    19 |   1.2 |  16.5)
+ ( 28 - 180 degrees    |  96.7 | 100.4 | 0.821 |    36 |  33.1 |  99.1)
+ (  0 - 180 degrees    |  47.4 |  71.2 | 0.975 |    62 |   1.2 |  99.1)
+
+Magnitude  Err Nsta Author      OrigID
+MB     5.1          MOS        1654097
+mb     4.9        8 NEIS       1654100
+mb     4.9 0.1   12 ISC        1654102
+
+Event      738206 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/08/01 19:54:14.01   1.05 2.210  33.7357   75.7744 45.38 10.67  69  10.0f        10    9 156   3.87  69.87 m i ke ISC        1629275
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 343.3 | 359.4 | 0.000 |     3 |   3.9 |   5.2)
+ ( 28 - 180 degrees    | 319.4 | 354.3 | 0.003 |     5 |  42.3 |  69.9)
+ (  0 - 180 degrees    | 156.8 | 180.8 | 0.304 |     8 |   3.9 |  69.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.5 0.3    3 ISC        1629275
+
+Event      735493 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/11/16 16:18:33.00               32.9000   76.2000                                                             uk MOS        1622857
+1974/11/16 16:18:36.60        0.700  32.8490   76.1370                  63.0         20                            uk NEIS       1622859
+1974/11/16 16:18:35.13   0.42 2.089  32.9955   76.2360 8.683 5.001  61  28.0f        66   59  49   1.58 146.56 m i ke ISC        1622861
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 250.1 | 306.9 | 0.111 |     3 |   1.6 |   2.6)
+ (  0 -  17 degrees    | 125.2 | 131.2 | 0.762 |    21 |   1.6 |  16.1)
+ ( 28 - 180 degrees    | 137.5 | 187.5 | 0.699 |    30 |  35.4 | 146.6)
+ (  0 - 180 degrees    |  50.0 |  76.7 | 0.966 |    59 |   1.6 | 146.6)
+
+Magnitude  Err Nsta Author      OrigID
+MB     5.1          MOS        1622857
+mb     4.8        8 NEIS       1622859
+mb     4.9 0.1   10 ISC        1622861
+
+Event      735501 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/11/16 21:05:05.00               32.5000   77.1000                  33.0                                       uk QUE        1622885
+1974/11/16 21:05:07.56   1.09 1.677  33.1139   76.2519 14.26 6.710  52  10.0f        16   12 153   1.70  62.32 m i ke ISC        1622886
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   1.7 |   2.3)
+ (  0 -  17 degrees    | 224.9 | 243.4 | 0.237 |     7 |   1.7 |   8.4)
+ ( 28 - 180 degrees    | 198.4 | 352.3 | 0.041 |     4 |  42.9 |  62.3)
+ (  0 - 180 degrees    | 153.9 | 179.4 | 0.608 |    12 |   1.7 |  62.3)
+
+Event      735692 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/11/22 06:51:36.80   0.86 2.064  33.3440   76.5857 14.35 7.095  56  31.0f        20   20 156   1.93 146.70 m i ke ISC        1623339
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 268.0 | 317.8 | 0.069 |     3 |   2.0 |   2.8)
+ (  0 -  17 degrees    | 221.6 | 235.1 | 0.264 |     8 |   2.0 |  15.0)
+ ( 28 - 180 degrees    | 290.9 | 328.3 | 0.035 |     6 |  40.3 | 146.7)
+ (  0 - 180 degrees    | 156.1 | 179.4 | 0.616 |    18 |   2.0 | 146.7)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.7 0.2    4 ISC        1623339
+
+Event      733825 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1974/12/01 10:55:06.00               33.4000   75.9000                  33.0                                       uk QUE        1618984
+1974/12/01 10:54:41.74   1.91 2.911  34.0909   77.5416 25.44 9.843  72  10.0f        11   11 208   2.83  44.20 m i ke ISC        1618985
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   2.9 |   2.9)
+ (  0 -  17 degrees    | 267.0 | 278.9 | 0.083 |     7 |   2.9 |   9.8)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     1 |  44.2 |  44.2)
+ (  0 - 180 degrees    | 208.6 | 267.0 | 0.301 |     8 |   2.9 |  44.2)
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NEIS      National Earthquake Information Service
+ QUE       Pakistan Meteorological Department
+
+<br>Mon Nov 23 13:47:22 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

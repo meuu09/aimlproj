@@ -1,0 +1,1391 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/622920917.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 2001-01-01 00:00:00</td></tr><tr><td>End date: 2001-12-31 23:59:59</td></tr><tr><td>Events found: 132</td></tr><tr><td>Date of search: Mon Nov 23 13:57:23 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event     3409327 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/01 20:14:21.90   1.93 0.900  33.2580   76.2120 22.40  16.5  -1  33.0f              3 313                      NDI        4327049
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4327049
+
+Event     3409400 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/07 22:48:05.40   3.85 1.600  31.9450   77.1010  88.5 87.10  -1  35.9  57.5         3 261                      NDI        4327099
+ (Event not reviewed by the ISC)
+
+Event     1763346 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/08 09:01:49.51   1.11 0.450  33.2861   75.7198 31.20 25.70  68   0.0f         9      128  21.63  84.19     uk IDC        4223259
+2001/01/08 09:01:51.60   4.80 1.500  33.6910   75.6250 22.20 26.60  -1  33.0f             17 287                      NDI        4327101
+2001/01/08 09:01:55.20   0.33        33.6180   75.8630 26.90 18.20  14  33.0          9                               MOS        3039036
+2001/01/08 09:01:56.87   1.74 1.170  33.5150   75.6810 15.30  12.5 218  58.6  16.4   15      128   2.03  87.68     se NEIC       4042650
+2001/01/08 09:01:56.80   1.04 2.522  33.3682   75.8748 11.57 8.242  54  51.9  12.4   43   36 102   0.81  87.83 m i se ISC        4491945
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 235.2 | 278.0 | 0.188 |     8 |   0.8 |   2.5)
+ (  0 -  17 degrees    | 120.9 | 201.6 | 0.706 |    21 |   0.8 |  16.1)
+ ( 28 - 180 degrees    | 127.8 | 238.0 | 0.597 |     8 |  42.3 |  87.8)
+ (  0 - 180 degrees    | 102.2 | 105.1 | 0.848 |    34 |   0.8 |  87.8)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.0 0.1    9 IDC        4223259
+MD     3.4          NDI        4327101
+ML     3.5          NDI        4327101
+mb     4.3        6 MOS        3039036
+mb     4.2        2 NEIC       4042650
+mb     4.1 0.1   11 ISC        4491945
+
+Event     3409404 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/08 09:06:19.40   2.45 1.000  33.2470   75.5730 42.80 62.80  -1  14.7  38.1         4 239                      NDI        4327103
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4327103
+
+Event     3409410 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/09 03:12:27.80   2.09 1.000  33.7670   75.9670 15.10 37.40  -1  33.0f              4 330                      NDI        4327108
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4327108
+
+Event     3409445 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/14 22:54:34.90   3.32 1.500  31.6750   78.1350 14.10 11.80  -1  10.0f              7 208                      NDI        4327136
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4327136
+
+Event     3409451 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/15 16:35:20.20   2.31 1.000  31.7700   75.0770 13.20  21.0  -1  33.0f              4 256                      NDI        4327141
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4327141
+
+Event     3409456 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/16 04:35:53.90   0.86 0.300  32.7210   76.6420 6.800 5.100  -1   5.0f              4 274                      NDI        4327144
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4327144
+
+Event     3409464 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/16 11:39:52.70   2.11 0.900  31.8310   79.2390 16.20 18.90  -1   5.0f              3 309                      NDI        4327151
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4327151
+
+Event     3409470 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/17 01:52:06.10   3.00 1.500  31.5400   77.0100  56.0 97.20  -1  33.0f              3 220                      NDI        4327156
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4327156
+
+Event     2973981 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/18 00:19:52.60        2.400  34.0200   78.2100                   8.0               5                          BJI        4011971
+2001/01/18 00:19:45.30   2.03 0.700  33.6750   77.6940 144.3 193.0  -1  33.0f              6 292                      NDI        4327157
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.3          BJI        4011971
+MD     3.5          NDI        4327157
+
+Event     3409514 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/24 01:24:57.90   4.39 1.700  31.3210   76.9710 8.600 14.90  -1   5.0f              9 137                      NDI        4327191
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.1          NDI        4327191
+ML     3.3          NDI        4327191
+
+Event     3409518 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/24 01:49:38.40   1.40 0.900  31.5330   77.2870 7.700 7.300  -1   5.0f              6 207                      NDI        4327193
+ (Event not reviewed by the ISC)
+
+Event     3409520 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/24 10:54:54.00   1.97 0.800  32.7330   76.0200 6.400 7.300  -1   5.0f              6 199                      NDI        4327194
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.3          NDI        4327194
+
+Event     3409522 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/24 12:23:53.30   1.33 0.700  32.6310   75.6330 7.100 15.20  -1   5.0f              7 171                      NDI        4327195
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4327195
+
+Event     3409525 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/24 19:49:44.50   2.13 1.100  32.7720   75.8240 9.600 12.90  -1  33.0f              7 189                      NDI        4327197
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4327197
+
+Event     3008886 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/25 00:39:13.20   2.23 1.000  33.0670   75.7090 9.700 11.30  -1   5.0f             13 198                      NDI        4327200
+2001/01/25 00:39:17.23   1.02 0.800  33.7334   75.7582 25.80 14.80   5   0.0f         9      131   2.09  77.22     uk IDC        4224086
+2001/01/25 00:39:19.90   0.78 1.350  33.8370   75.7660 16.80 15.70  34  33.0f        11      131   2.10  83.64     se NEIC       4045818
+2001/01/25 00:39:13.10   2.21 2.260  33.1172   76.0112 8.314 4.597  44   8.9  15.6   34   29 119   0.73  84.34 m i se ISC        4494086
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 229.1 | 229.4 | 0.160 |     7 |   0.7 |   2.4)
+ (  0 -  17 degrees    | 135.2 | 149.2 | 0.673 |    19 |   0.7 |   9.8)
+ ( 28 - 180 degrees    | 313.8 | 319.7 | 0.010 |     5 |  42.6 |  84.3)
+ (  0 - 180 degrees    | 119.2 | 133.3 | 0.777 |    25 |   0.7 |  84.3)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.8          NDI        4327200
+ML     3.7          NDI        4327200
+mb     3.8 0.2    7 IDC        4224086
+ML     3.7 0.0    1 IDC        4224086
+mb     4.4        1 NEIC       4045818
+mb     3.8 0.3    9 ISC        4494086
+
+Event     2754404 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/01/30 14:50:45.16   0.96 1.270  32.8840   76.3760 23.10 16.40  22  33.0f         8      136   2.73  84.55     se NEIC       4047559
+2001/01/30 14:50:45.30   5.05 1.800  32.8880   76.3700 19.30 18.10  -1  10.0f              9 216                      NDI        4327265
+2001/01/30 14:50:45.60        3.600  32.7800   76.0300                  47.0               6                          BJI        4012199
+2001/01/30 14:50:48.75   3.41 0.630  32.8504   76.3424 29.20 22.10  23  53.3  31.8    9      136   2.71  84.58     uk IDC        4224311
+2001/01/30 14:50:44.25   1.46 2.224  32.9087   76.3319 9.067 4.640  34  12.0  11.0   24   18 106   0.70  84.52 m i se ISC        4494719
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 220.1 | 228.3 | 0.260 |     9 |   0.7 |   3.0)
+ (  0 -  17 degrees    | 138.8 | 206.7 | 0.652 |    11 |   0.7 |   6.6)
+ ( 28 - 180 degrees    | 250.9 | 322.0 | 0.103 |     4 |  42.9 |  84.5)
+ (  0 - 180 degrees    | 106.3 | 122.9 | 0.837 |    18 |   0.7 |  84.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.4        1 NEIC       4047559
+MD     3.0          NDI        4327265
+ML     3.3          BJI        4012199
+mb     3.4 0.2    7 IDC        4224311
+ML     4.0 0.0    1 IDC        4224311
+mb     3.6 0.1    7 ISC        4494719
+
+Event     3510209 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/03 04:20:46.00   0.36 0.100  32.3180   74.8890 3.100 8.100  -1  38.0  11.4         3 264                      NDI        4414904
+ (Event not reviewed by the ISC)
+
+Event     1763893 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/04 10:14:07.80   0.46 1.310  33.2050   75.8050 11.20 9.700  52  18.2         37       54   2.18  87.99     se NEIC       4048818
+ (#PARAM pP_DEPTH=18.2)
+2001/02/04 10:14:08.40   6.36 1.800  33.5400   75.4320 24.60 31.70  -1  26.2  28.6        25 246                      NDI        4414913
+2001/02/04 10:14:09.60   0.46 0.690  33.1738   75.6320 17.90 11.10  41  18.4  2.60   27       96  25.51 152.07     uk IDC        4227357
+2001/02/04 10:14:10.10   1.03        33.3200   75.7710 12.70 8.300   3  33.0         28                               MOS        3039403
+2001/02/04 10:14:10.20        2.100  33.2700   75.7500                  39.0              18                          BJI        4009925
+2001/02/04 10:14:09.08   0.43 2.242  33.2708   75.8057 5.934 3.545  52  15.0  2.77   96   76  35   0.47 152.24 m i ke ISC        4520585
+ (#PRIME)
+ (#PARAM pP_DEPTH=15.0+3.8)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 229.5 | 230.3 | 0.210 |    11 |   0.5 |   3.0)
+ (  0 -  17 degrees    |  73.1 |  99.9 | 0.884 |    39 |   0.5 |  16.0)
+ ( 28 - 180 degrees    |  96.4 | 117.1 | 0.865 |    24 |  34.3 | 152.2)
+ (  0 - 180 degrees    |  35.1 |  55.1 | 0.981 |    70 |   0.5 | 152.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.7        9 NEIC       4048818
+MD     4.4          NDI        4414913
+ML     4.4          NDI        4414913
+mb     4.1 0.1   16 IDC        4227357
+MS     3.6 0.0    1 IDC        4227357
+mb     4.8        8 MOS        3039403
+mb     4.3          BJI        4009925
+ML     4.2          BJI        4009925
+Msz    3.8          BJI        4009925
+mb     4.4 0.2   21 ISC        4520585
+
+Event     3510231 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/04 17:51:52.60   4.34 1.600  31.5860   77.9450  23.5 16.30  -1   5.0f              7 200                      NDI        4414919
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4414919
+
+Event     3510242 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/06 06:50:49.70   2.95 1.000  32.2000   79.1500 119.8 438.5  -1  15.0   370         5 323                      NDI        4414926
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4414926
+
+Event     3510249 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/06 22:14:03.70   1.91 0.700  32.5760   78.9100 13.40 25.90  -1  33.0f              5 251                      NDI        4414930
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4414930
+
+Event     3510338 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/15 02:52:10.40   0.89 0.400  33.7300   75.3620 150.0 111.6  -1  15.0   0.0         3 312                      NDI        4415002
+ (Event not reviewed by the ISC)
+
+Event     3510367 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/17 12:50:01.80   2.78 1.000  33.3720   75.8560 12.90  24.0  -1   0.7  18.5         8 258                      NDI        4415024
+ (Event not reviewed by the ISC)
+
+Event     1832469 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/20 17:33:28.60f       1.800  33.7130   75.4320f13.70 37.70  -1  33.0f             18 290                      NDI        4428146
+2001/02/20 17:33:33.56   0.50 0.630  33.1900   75.8752 16.20  11.5  39  22.1  2.80   28       95  21.69 152.26     uk IDC        4228673
+2001/02/20 17:33:33.67        0.830  33.1890   75.9010  60.0  38.0  15  22.7   2.0  107   96                   m i ke ISC-EHB   08912905
+ (#PARAM DEPTH_QUALITY=L1)
+2001/02/20 17:33:33.70   1.11        33.2690   75.9640 12.20 7.800   2  33.0         34                               MOS        3085094
+2001/02/20 17:33:36.06   1.03 0.780  33.2890   75.8930 7.700   4.5 194  57.4   9.0   63       95   2.24  89.65     se NEIC       4051089
+2001/02/20 17:33:41.10        1.200  33.5600   76.5800                  57.0              26                          BJI        4010226
+2001/02/20 17:33:33.71   0.44 1.304  33.1673   75.9219 6.285 4.143  57  23.6  3.40  132  108  30   0.75 152.29 m i ke ISC        4522632
+ (#PRIME)
+ (#PARAM pP_DEPTH=24.0+4.8)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 229.1 | 244.3 | 0.146 |     6 |   0.7 |   2.3)
+ (  0 -  17 degrees    |  66.0 | 100.5 | 0.895 |    34 |   0.7 |  14.1)
+ ( 28 - 180 degrees    |  94.9 | 115.3 | 0.880 |    58 |  28.6 | 152.3)
+ (  0 - 180 degrees    |  33.2 |  53.6 | 0.990 |   105 |   0.7 | 152.3)
+
+Magnitude  Err Nsta Author      OrigID
+ML     4.4          NDI        4428146
+mb     4.3 0.1   19 IDC        4228673
+mb     4.8       20 MOS        3085094
+mb     4.6       38 NEIC       4051089
+mb     4.3          BJI        4010226
+ML     4.5          BJI        4010226
+Msz    3.7          BJI        4010226
+mb     4.6 0.1   51 ISC        4522632
+MS     3.7 0.1    4 ISC        4522632
+
+Event     3510434 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/23 21:12:30.00   2.25 0.900  31.0170   77.9880 5.600 7.600  -1   3.0f              9 179                      NDI        4415080
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4415080
+
+Event     2737620 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/23 22:54:32.56   0.50 1.070  30.9980   78.0660 15.60 8.900  29  21.2         28       97   4.86  86.28     se NEIC       4051372
+ (#PARAM pP_DEPTH=21.2)
+2001/02/23 22:54:34.00        1.200  31.3800   78.4100                   5.0              15                          BJI        4010276
+2001/02/23 22:54:34.55   0.72 0.670  31.0553   78.1215  27.0 13.70  47  19.2  4.70   17      101   4.87  86.22     uk IDC        4228894
+2001/02/23 22:54:35.90   3.90 1.300  30.9290   78.0050   8.0 10.30  -1  17.6  16.3        22 155                      NDI        4415082
+2001/02/23 22:54:34.01   0.58 2.147  31.0848   78.2079 5.948 3.531  42  19.2  2.10   94   68  47   0.77  86.18 m i ke ISC        4523032
+ (#PRIME)
+ (#PARAM pP_DEPTH=19.0+3.9)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 186.8 | 193.9 | 0.414 |    12 |   0.8 |   3.0)
+ (  0 -  17 degrees    |  68.0 | 103.0 | 0.902 |    42 |   0.8 |  16.4)
+ ( 28 - 180 degrees    | 107.6 | 174.0 | 0.679 |    18 |  37.9 |  86.2)
+ (  0 - 180 degrees    |  47.2 |  68.0 | 0.968 |    65 |   0.8 |  86.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.5        9 NEIC       4051372
+mb     4.5          BJI        4010276
+ML     4.3          BJI        4010276
+Msz    3.6          BJI        4010276
+mb     3.7 0.1   12 IDC        4228894
+ML     4.2 0.0    1 IDC        4228894
+ML     4.0          NDI        4415082
+mb     4.2 0.4   19 ISC        4523032
+
+Event     3510445 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/24 08:25:19.70   3.35 1.200  33.2940   75.6940  18.5 22.80  -1  15.0f              6 248                      NDI        4415088
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.0          NDI        4415088
+
+Event     3510485 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/02/28 20:49:36.60   2.44 0.900  32.8510   76.6300 10.70 16.30  -1   8.7  15.2         6 237                      NDI        4415127
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4415127
+
+Event     3625204 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/03/01 21:29:52.10   2.24 1.000  32.4150   74.9170 12.90  17.5  -1  33.0f              4 256                      NDI        4494920
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4494920
+
+Event     3625230 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/03/03 15:33:27.30   3.41 1.100  31.4640   78.0130 17.30 15.30  -1   7.2  18.0         9 186                      NDI        4494947
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4494947
+
+Event     3625284 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/03/06 17:59:39.60   3.71 1.400  32.9070   74.7640 31.40 47.40  -1  28.3  22.3         5 281                      NDI        4494997
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4494997
+
+Event     3625486 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/03/17 00:50:14.90   0.76 0.300  31.0860   77.4130 16.40 23.90  -1  33.0f              3 324                      NDI        4495151
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4495151
+
+Event     3017230 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/03/24 14:39:08.00   3.34 1.500  33.5930   75.6370 23.10 21.20  -1  33.0f             10 262                      NDI        4495236
+2001/03/24 14:39:08.02   1.60 0.590  33.3679   76.0813  61.5 21.30  53   0.0f         7      200  21.47  84.09     uk IDC        4230916
+2001/03/24 14:39:11.50   1.16 0.850  33.4430   76.1260  42.0 15.70  54  33.0f         7      200  21.39  84.01     se NEIC       4053399
+2001/03/24 14:39:10.62   0.77 1.357  33.3078   75.7156 15.73 6.302  37  21.8  7.59   24   18 102   0.40  84.17 m i se ISC        4583731
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 250.0 | 254.3 | 0.096 |     8 |   0.4 |   2.5)
+ (  0 -  17 degrees    | 235.9 | 246.4 | 0.153 |    11 |   0.4 |   5.4)
+ ( 28 - 180 degrees    | 200.1 | 307.2 | 0.241 |     5 |  45.6 |  84.2)
+ (  0 - 180 degrees    | 102.3 | 107.1 | 0.771 |    18 |   0.4 |  84.2)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.2          NDI        4495236
+mb     3.8 0.2    7 IDC        4230916
+mb     3.4        1 NEIC       4053399
+mb     3.8 0.1    7 ISC        4583731
+
+Event     3625663 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/03/27 21:31:33.90   3.10 1.400  32.9870   74.8040 20.40 49.60  -1  33.0f              4 285                      NDI        4495273
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.1          NDI        4495273
+
+Event     3660986 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/05 14:59:08.70   3.03 1.500  34.4170   79.4780 26.60 59.90  -1  33.0f              5 318                      NDI        4532370
+ (Event not reviewed by the ISC)
+
+Event     3660990 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/06 03:17:49.70   1.77 0.700  33.3290   76.2100 25.20 43.40  -1  20.1  1000         3 257                      NDI        4532373
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.2          NDI        4532373
+
+Event     3661016 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/07 11:26:16.00   0.36 0.000  33.4400   76.3270 51.10 19.80  -1  12.2  50.7         4 267                      NDI        4532390
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4532390
+
+Event     3661019 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/07 13:49:19.80   0.50 0.100  33.1800   76.0760 2.900 7.700  -1   4.7  6.40         4 241                      NDI        4532392
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.2          NDI        4532392
+
+Event     3274656 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/08 05:28:57.13  23.85 0.520  31.2703   77.7993 423.0 74.40 153   0.0f         4      317  23.21  48.11     uk IDC        4231990
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.1 0.3    4 IDC        4231990
+
+Event     3661088 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/12 14:35:03.80   3.34 1.200  31.4430   77.6890 7.600 9.400  -1   5.0f             14 178                      NDI        4532448
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4532448
+ML     2.9          NDI        4532448
+
+Event     3661104 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/13 03:25:27.10   0.40 0.100  32.7360   75.0530  10.0 15.90  -1  75.6  6.10         3 251                      NDI        4532463
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4532463
+
+Event     3661114 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/14 11:32:56.60   1.39 0.600  31.2340   77.3860 7.400  19.5  -1  33.0f              4 290                      NDI        4532472
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4532472
+
+Event     3661178 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/18 23:32:26.50   0.46 0.100  32.6200   74.8150 5.600 7.300  -1  33.0  4.10         3 270                      NDI        4532532
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4532532
+
+Event     2973072 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/25 18:28:41.80        3.100  31.8700   76.3400                  43.0               6                          BJI        4011230
+2001/04/25 18:28:52.40   2.20 1.200  32.7690   76.5860 7.800 6.200  -1  15.0f             13 198                      NDI        4532596
+2001/04/25 18:28:52.69   0.56 1.150  32.7130   76.7980  17.0 6.700  44  33.0f        16      128   3.12  84.68     se NEIC       4055752
+2001/04/25 18:28:58.21   2.85 0.900  32.7279   76.6586 25.80 18.70  31  65.8  27.4    9      131   3.00  84.68     uk IDC        4233822
+2001/04/25 18:28:52.07   1.79 1.448  32.7706   76.6232 8.295 4.311  38  13.1  13.3   41   34 103   0.84  84.64 m i se ISC        4612891
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 199.4 | 221.0 | 0.378 |    11 |   0.8 |   3.0)
+ (  0 -  17 degrees    | 120.8 | 125.6 | 0.760 |    23 |   0.8 |  11.0)
+ ( 28 - 180 degrees    | 131.3 | 251.0 | 0.515 |     5 |  46.3 |  84.6)
+ (  0 - 180 degrees    | 103.5 | 111.3 | 0.852 |    30 |   0.8 |  84.6)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.8          BJI        4011230
+MD     3.1          NDI        4532596
+mb     3.9        2 NEIC       4055752
+mb     3.6 0.1    7 IDC        4233822
+ML     3.6 0.0    1 IDC        4233822
+mb     3.9 0.2    7 ISC        4612891
+
+Event     3661252 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/25 18:33:19.90   1.76 0.800  32.8760   76.8170   7.0  10.5  -1   4.8  8.60         8 245                      NDI        4532598
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4532598
+
+Event     3661254 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/25 18:37:01.90   2.26 0.900  32.7090   76.7360  25.0 28.40  -1   8.5  19.8         4 274                      NDI        4532599
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4532599
+
+Event     3661256 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/25 19:09:29.30   1.82 0.700  32.9560   76.7990 10.90 13.40  -1   8.5  11.2         4 290                      NDI        4532600
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4532600
+
+Event     3661259 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/25 21:06:23.90   2.17 1.000  32.8640   76.7550  21.5 11.90  -1  15.0f              4 288                      NDI        4532602
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4532602
+
+Event     3661263 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/26 00:29:11.20   2.24 0.800  32.7770   76.7920 38.80 38.40  -1   8.5  46.5         4 279                      NDI        4532604
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4532604
+
+Event     3661267 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/26 03:01:02.20   1.38 0.500  32.8650   76.7320 232.1 23.20  -1  15.0   232         4 284                      NDI        4532606
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4532606
+
+Event     3661269 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/26 03:47:26.90   2.25 1.200  32.9340   76.6670  11.0 17.10  -1  15.0f              8 231                      NDI        4532607
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4532607
+
+Event     3661294 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/27 23:38:49.60   1.54 0.600  32.9030   76.9430 322.7 233.3  -1  15.0   345         3 288                      NDI        4532631
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4532631
+
+Event     3661318 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/04/30 15:37:12.20   1.90 0.700  33.1510   75.7770 9.800 21.90  -1   8.0  12.9         6 228                      NDI        4532652
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4532652
+
+Event     3150284 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/05/04 06:26:41.75   0.43 0.970  34.4430   74.2130 10.90 5.900  46  33.0f        22      100   1.12  83.14     se NEIC       4132351
+2001/05/04 06:26:42.05   4.81 0.660  34.5515   73.9571 18.80 12.30 110  17.4  31.5   12      101   1.07  83.05     uk IDC        4259688
+2001/05/04 06:26:45.30   3.06 1.200  34.3990   73.6640 39.60 60.90  -1  33.0f              8 344                      NDI        4579976
+2001/05/04 06:26:43.28   0.68 1.747  34.5364   74.1661 11.66 6.864  26  26.0f        39   35 101   1.15  83.05 m i se ISC        4658483
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 257.3 | 277.1 | 0.081 |     6 |   1.2 |   3.0)
+ (  0 -  17 degrees    | 228.2 | 245.5 | 0.209 |    23 |   1.2 |  13.7)
+ ( 28 - 180 degrees    | 126.9 | 197.3 | 0.582 |     9 |  40.5 |  83.0)
+ (  0 - 180 degrees    | 101.1 | 107.7 | 0.788 |    33 |   1.2 |  83.0)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.3        3 NEIC       4132351
+mb     3.8 0.1   10 IDC        4259688
+MD     3.7          NDI        4579976
+mb     4.0 0.2   10 ISC        4658483
+
+Event     3715945 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/05/08 23:05:21.40   0.84 0.300  31.5780   77.3220   6.0 12.80  -1   9.4  6.90         3 254                      NDI        4580016
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4580016
+
+Event     3715951 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/05/09 02:39:42.80   1.24 0.600  32.8650   76.0430 14.30 6.800  -1  33.0f              3 297                      NDI        4580019
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4580019
+
+Event     3715953 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/05/09 04:15:45.60   2.15 1.100  31.7100   79.0420 30.10 26.40  -1  33.0f              3 338                      NDI        4580020
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4580020
+
+Event     3716082 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/05/23 18:06:39.30   1.21 0.500  32.7290   74.9190 999.9 999.9  -1  37.7   531         3 349                      NDI        4580129
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4580129
+
+Event     2970707 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/01 19:11:37.00        4.900  31.6000   77.4000                  33.0               5                          BJI        4009295
+2001/06/01 19:11:37.02   1.07 1.450  31.5592   77.3740 44.20 14.10  39   0.0f        11      174   4.06  77.07     uk IDC        4262639
+2001/06/01 19:11:37.50   4.72 1.800  31.7380   77.5650 13.10  12.5  -1  10.0f             10 173                      NDI        4602633
+2001/06/01 19:11:40.48   0.93 1.410  31.6330   77.4070 36.80 13.90  41  33.0f         8      173   4.04  77.09     se NEIC       4206444
+2001/06/01 19:11:36.60   1.34 2.008  31.6806   77.6300 6.460 3.688  26   0.4  10.1   59   38  94   0.55  76.97 m i ke ISC        4733522
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 169.4 | 279.9 | 0.391 |     6 |   0.5 |   1.8)
+ (  0 -  17 degrees    | 114.7 | 166.0 | 0.778 |    31 |   0.5 |   9.8)
+ ( 28 - 180 degrees    | 196.8 | 199.8 | 0.083 |     5 |  44.5 |  77.0)
+ (  0 - 180 degrees    |  94.4 | 114.7 | 0.863 |    38 |   0.5 |  77.0)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.9          BJI        4009295
+mb     3.7 0.1    7 IDC        4262639
+mb1    3.9 0.1    8 IDC        4262639
+mb1mx  3.7 0.1   22 IDC        4262639
+ML     3.7 0.3    1 IDC        4262639
+ML     3.4          NDI        4602633
+mb     3.7 0.1    7 ISC        4733522
+
+Event     3736387 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/08 21:01:14.50   5.40 2.100  32.2890   76.4600 21.20 18.90  -1  33.0f              9 162                      NDI        4602691
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4602691
+
+Event     3736429 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/13 19:43:28.20   2.32 1.200  33.3090   75.4900  13.0 22.30  -1   5.0f              9 324                      NDI        4602729
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.1          NDI        4602729
+
+Event     3736431 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/13 19:49:18.80   1.59 0.600  32.6960   74.8840 7.600 25.70  -1  11.1  10.5         3 266                      NDI        4602730
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4602730
+
+Event     3736460 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/16 21:33:10.90   1.84 0.700  31.9570   76.5190 18.70  19.0  -1  17.1  8.60         4 195                      NDI        4602756
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.3          NDI        4602756
+
+Event     1884471 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/17 01:49:42.97        1.280  32.6410   78.4120  69.0  57.0  42  15.0f        92   79                   m i ke ISC-EHB   08914105
+ (#PARAM DEPTH_QUALITY=L3)
+2001/06/17 01:49:43.00   3.25 1.200  32.7070   78.4440 10.40 10.20  -1  15.0f             20 232                      NDI        4602757
+2001/06/17 01:49:44.50        2.400  32.5500   78.0200                  57.0              12                          BJI        4009575
+2001/06/17 01:49:45.33   1.13 0.990  32.4790   78.3100   9.0 6.400 216  57.7  10.5   40       48   4.40  84.79     se NEIC       4208391
+2001/06/17 01:49:46.33   2.37 0.680  32.4645   78.3562 20.90 11.70  31  46.7  23.7   19       95   4.45  84.80     uk IDC        4263679
+2001/06/17 01:49:47.61   0.91 1.999  32.4655   78.4549 7.627 6.136  58  61.4  10.7   92   83  27   1.59  84.79 m i ke ISC        4734837
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 248.3 | 264.8 | 0.156 |     9 |   1.6 |   3.0)
+ (  0 -  17 degrees    | 131.4 | 135.3 | 0.725 |    37 |   1.6 |  15.0)
+ ( 28 - 180 degrees    |  94.8 | 126.6 | 0.847 |    29 |  43.3 |  84.8)
+ (  0 - 180 degrees    |  27.9 |  43.9 | 0.991 |    76 |   1.6 |  84.8)
+
+Magnitude  Err Nsta Author      OrigID
+MD     4.1          NDI        4602757
+ML     4.2          NDI        4602757
+mb     4.5          BJI        4009575
+ML     3.9          BJI        4009575
+Ms     4.2          BJI        4009575
+mb     4.6       11 NEIC       4208391
+mb     3.9 0.1   17 IDC        4263679
+mb1    4.0 0.1   18 IDC        4263679
+mb1mx  4.0 0.0   25 IDC        4263679
+ML     4.3 0.3    1 IDC        4263679
+MS     2.7 0.2    1 IDC        4263679
+Ms1    2.7 0.2    1 IDC        4263679
+ms1mx  2.5 0.0   17 IDC        4263679
+mb     4.3 0.3   30 ISC        4734837
+
+Event     3736571 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/26 10:55:45.50   1.28 0.500  31.5410   75.0830  10.0 11.90  -1  20.6  14.3         4 289                      NDI        4602854
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4602854
+
+Event     3736583 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/28 12:55:30.60   0.98 0.300  31.6190   77.3170 4.300 8.100  -1  12.9  4.30         5 240                      NDI        4602864
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.0          NDI        4602864
+
+Event     3736589 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/06/28 23:25:09.00   1.94 0.800  32.7520   74.7670 9.900 15.80  -1  10.0f              5 272                      NDI        4602867
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.1          NDI        4602867
+
+Event     3871663 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/07/09 01:40:59.50   6.35 2.400  33.2010   76.5970 33.40 52.20  -1  33.0f              8 255                      NDI        4693023
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.6          NDI        4693023
+
+Event     3871691 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/07/13 14:08:42.50   3.52 1.600  32.2670   76.8700  11.0  15.5  -1  15.0f              7 207                      NDI        4693050
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4693050
+
+Event     3871782 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/07/25 13:05:11.10   3.45 1.700  31.3400   77.4960 10.40  12.0  -1  15.0f              9 174                      NDI        4693133
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.0          NDI        4693133
+ML     2.8          NDI        4693133
+
+Event     3954545 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/08/02 14:58:00.00   1.96 0.800  33.9890   75.3130 387.0 590.8  -1  28.1  1000         3 320                      NDI        4741809
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4741809
+
+Event     3954555 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/08/03 18:27:17.50   4.71 1.800  33.1240   79.0360 27.80 28.70  -1  33.0f             10 284                      NDI        4741818
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.2          NDI        4741818
+
+Event     3954628 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/08/11 19:24:09.30   3.26 1.600  32.8560   76.2550 29.30 38.90  -1  10.0f              3 340                      NDI        4741889
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.2          NDI        4741889
+
+Event     3954684 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/08/20 07:33:52.90   3.07 1.200  33.5800   76.3390 64.30 31.70  -1   8.9  64.6         5 276                      NDI        4741939
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4741939
+
+Event     3954689 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/08/20 21:12:23.20   2.49 0.900  32.4350   76.4850   9.0 10.40  -1   2.6  1000         9 208                      NDI        4741942
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4741942
+
+Event     3954706 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/08/24 03:13:11.30   1.37 0.500  32.2630   78.3120 26.60 8.900  -1  11.6  28.5         3 310                      NDI        4741957
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4741957
+
+Event     3954757 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/08/27 16:39:42.30   3.32 1.300  33.3460   76.0210 14.40 15.80  -1  10.0f             10 256                      NDI        4742003
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4742003
+
+Event     3964933 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/04 20:30:48.20   2.22 1.300  32.3130   78.3970 12.60 18.30  -1   5.0f              4 272                      NDI        4752598
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4752598
+
+Event     3964935 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/04 21:42:41.00   1.37 0.600  31.8000   78.4460 7.800 14.30  -1   5.0f              4 282                      NDI        4752599
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4752599
+
+Event     3964981 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/11 00:54:53.30   3.10 1.400  32.9600   76.1980 26.10 14.60  -1  15.0f              4 298                      NDI        4752639
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.3          NDI        4752639
+
+Event     3965006 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/12 15:26:21.30   0.98 0.500  32.8940   75.7230 7.300 10.60  -1  15.0f              3 333                      NDI        4752668
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+mb     2.2          NDI        4752668
+MD     2.1          NDI        4752668
+
+Event     3965022 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/13 23:51:18.90   2.44 1.200  31.3600   77.7420 6.900 11.80  -1   5.0f              6 217                      NDI        4752685
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4752685
+
+Event     3965050 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/15 23:56:36.60   3.50 1.700  32.4400   75.9150 20.10 21.10  -1  33.0f              5 127                      NDI        4752707
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.0          NDI        4752707
+
+Event     3965070 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/18 03:18:12.70   2.04 0.800  31.3590   77.0400   6.0 9.400  -1   4.1   8.0         4 178                      NDI        4752748
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.3          NDI        4752748
+
+Event     3965133 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/26 01:21:16.30   4.81 2.000  34.5460   74.1630 999.9 999.9  -1   5.5  1000         3 355                      NDI        4752802
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.2          NDI        4752802
+
+Event     2146238 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/28 04:37:54.70        1.800  33.2000   75.9100                   9.0              42                          BJI        4013390
+2001/09/28 04:37:55.72        0.930  33.3110   75.7760  39.0  25.0  37  15.0f       293  277                   m i ke ISC-EHB   08915221
+ (#PARAM DEPTH_QUALITY=L3)
+2001/09/28 04:37:56.20   5.32 1.400  33.2220   75.6150 17.20 22.10  -1   3.2  14.4        37 201                      NDI        4752819
+2001/09/28 04:37:56.29   0.19 0.900  33.2650   75.7380 5.600 3.700  21  33.0f       179       57   9.41 145.53     se NEIC       4389027
+2001/09/28 04:37:57.50   1.11        33.4010   75.8300 10.60 6.400  16  33.0         45                               MOS        3601880
+2001/09/28 04:37:57.67   3.08 0.820  33.3246   75.9123 17.90 11.60  28  26.6  20.1   31       95   2.25 152.35     uk IDC        4270198
+2001/09/28 04:37:58.70   1.00        33.0000   75.4600                  40.5  8.90   18   15                          GCMT      05212206
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        16 2.630        2.169 -1.238 -0.930  1.113  1.377 -0.549   15      GCMT     )
+ (#                        0.281  0.360  0.486  1.014  0.341  1.033   18          1.00 )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#            BDC 125.00 59.00   81.00               GCMT     )
+ (+                323.00 32.00  105.00                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       16  2.510  10.00 74.00  0.250 130.00  8.00 -2.760 222.00 14.00 GCMT     )
+ (nsta1 refers to body waves, cutoff=45s.)
+ (Boxcar moment-rate function)
+2001/09/28 04:37:57.14   0.43 1.772  33.2701   75.8619 5.250 3.564  44  26.0  3.09  331  312  14   0.52 152.28 m i ke ISC        4847277
+ (#PRIME)
+ (#PARAM pP_DEPTH=26.0+4.8)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 209.1 | 230.9 | 0.273 |    10 |   0.5 |   2.7)
+ (  0 -  17 degrees    |  63.3 | 100.4 | 0.909 |    54 |   0.5 |  16.9)
+ ( 28 - 180 degrees    |  56.5 |  56.7 | 0.971 |   190 |  28.3 | 152.3)
+ (  0 - 180 degrees    |  14.7 |  18.1 | 0.998 |   270 |   0.5 | 152.3)
+
+Magnitude  Err Nsta Author      OrigID
+mb     5.0          BJI        4013390
+mB     4.9          BJI        4013390
+Ms     4.5          BJI        4013390
+Msz    4.3          BJI        4013390
+mb     5.1          NDI        4752819
+mb     5.1      109 NEIC       4389027
+MS     4.7       36 NEIC       4389027
+mb     5.1       24 MOS        3601880
+mb     4.8 0.1   18 IDC        4270198
+mb1    4.9 0.1   19 IDC        4270198
+mb1mx  4.9 0.1   19 IDC        4270198
+ML     5.0 0.3    1 IDC        4270198
+MS     4.2 0.1    8 IDC        4270198
+Ms1    4.2 0.1    8 IDC        4270198
+ms1mx  4.0 0.1   14 IDC        4270198
+MW     4.9       15 GCMT      05212206
+mb     5.1 0.2  112 ISC        4847277
+MS     4.6 0.3   59 ISC        4847277
+
+Event     3965154 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/28 05:06:11.00   4.28 2.000  33.6420   75.3630 41.90  51.5  -1  33.0f              5 314                      NDI        4752821
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4752821
+
+Event     3965156 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/28 08:35:29.80   3.74 1.500  33.2680   75.6420 16.80 14.90  -1  10.0f              7 243                      NDI        4752822
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4752822
+
+Event     3965158 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/28 12:34:02.80   3.76 1.600  33.3170   75.6420 16.90  14.0  -1  10.0f              7 252                      NDI        4752823
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4752823
+
+Event     3965162 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/28 17:10:36.60   0.51 0.200  33.4200   75.8220   4.5   6.5  -1  13.2  3.20         3 285                      NDI        4752825
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.3          NDI        4752825
+
+Event     3965181 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/28 21:51:49.70   4.26 1.800  33.2610   75.6800 18.70 16.20  -1  10.0f              8 239                      NDI        4752827
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4752827
+
+Event     3965183 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/28 22:37:51.40   0.45 0.100  33.3250   75.6250 6.100 7.900  -1  35.9  2.20         3 268                      NDI        4752828
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.4          NDI        4752828
+
+Event     3965186 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/29 06:47:31.10   4.34 2.200  33.1230   75.4980 161.2 200.1  -1  10.0f              3 211                      NDI        4752830
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4752830
+
+Event     3965201 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/09/30 20:59:28.50   1.84 0.900  32.8710   76.1810 26.20 30.10  -1  10.0f              3 340                      NDI        4752858
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     1.6          NDI        4752858
+
+Event     3975284 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/01 18:09:34.50   3.08 1.600  32.2060   76.0910 36.20  42.5  -1  33.0f              4 157                      NDI        4760230
+ (Event not reviewed by the ISC)
+
+Event     3975303 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/02 08:37:53.00   3.26 1.500  31.4160   77.0910  35.0 75.30  -1  20.0f              4 208                      NDI        4760235
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4760235
+
+Event     3975305 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/03 00:34:26.40   4.06 2.000  32.8700   76.2580 78.10 76.30  -1  20.0f              3 340                      NDI        4760236
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.0          NDI        4760236
+
+Event     3975312 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/03 13:57:13.20   2.38 1.100  33.7160   74.6570 54.80 81.10  -1  10.0f              4 349                      NDI        4760241
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.0          NDI        4760241
+
+Event     3975314 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/03 14:59:03.70   5.02 2.300  33.5620   74.9190 84.10 124.7  -1  20.0f              5 350                      NDI        4760242
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4760242
+
+Event     2147727 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/03 21:24:19.10   0.63 0.370  33.2469   76.2852 24.90 15.20  49   0.0f        15      103  21.55 152.59     uk IDC        4270499
+2001/10/03 21:24:19.20   4.03 1.400  33.6220   75.8320 19.40  22.0  -1  33.0f             17 276                      NDI        4760244
+2001/10/03 21:24:22.17   0.41 0.800  33.3100   76.3210 13.70 7.600  62  33.0f        18      103   9.42  89.38     se NEIC       4566440
+2001/10/03 21:24:22.20        3.300  33.3000   76.3700                  24.0               7                          BJI        4013453
+2001/10/03 21:24:24.96   1.06 2.160  33.2088   76.1775 10.96 7.941  77  44.2  11.6   46   40 102   0.69 152.50 m i se ISC        5201627
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 312.8 | 322.7 | 0.010 |     6 |   0.7 |   2.2)
+ (  0 -  17 degrees    | 149.9 | 157.5 | 0.338 |    19 |   0.7 |  15.9)
+ ( 28 - 180 degrees    | 107.3 | 147.1 | 0.725 |    12 |  42.6 | 152.5)
+ (  0 - 180 degrees    | 102.6 | 107.3 | 0.852 |    37 |   0.7 | 152.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.0 0.1   13 IDC        4270499
+mb1    4.1 0.1   13 IDC        4270499
+mb1mx  4.1 0.0   19 IDC        4270499
+MD     3.5          NDI        4760244
+ML     3.5          NDI        4760244
+mb     3.7        1 NEIC       4566440
+ML     3.9          BJI        4013453
+mb     3.9 0.2   15 ISC        5201627
+
+Event     3975343 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/07 19:42:41.00   4.22 1.800  33.4810   75.6890 19.40 15.80  -1  20.0f              8 269                      NDI        4760266
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.0          NDI        4760266
+
+Event     3975352 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/08 13:48:41.40   4.33 1.800  32.0430   78.9160 15.80 27.10  -1  20.0f              8 272                      NDI        4760272
+ (Event not reviewed by the ISC)
+
+Event     3975375 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/11 06:04:17.80   1.32 0.500  33.1120   74.9100 38.90 28.80  -1  33.0f              3 218                      NDI        4760287
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.1          NDI        4760287
+
+Event     3975387 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/12 20:55:13.90   2.78 1.200  32.9400   75.8680 7.800 16.70  -1  20.0f              3 207                      NDI        4760296
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.3          NDI        4760296
+
+Event     3975398 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/14 08:42:54.20   1.45 0.500  33.7230   75.8760 373.7 112.8  -1  22.9   505         5 331                      NDI        4760305
+ (Event not reviewed by the ISC)
+
+Event     3975403 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/14 11:07:35.10   0.83 0.300  33.0890   76.1300 11.20 6.700  -1  31.8   5.5         4 307                      NDI        4760308
+ (Event not reviewed by the ISC)
+
+Event     2153002 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/14 21:14:40.75   3.12 0.790  32.5460   76.1936 21.80  13.5  30  15.7  18.9   20       95   2.70 152.22     uk IDC        4271150
+2001/10/14 21:14:41.00   4.12 1.200  32.5230   76.0090   9.5 11.40  -1  15.5  8.20        32 155                      NDI        4760312
+2001/10/14 21:14:41.37   0.38 1.300  32.5640   76.0650 11.30   8.0  20  33.0f        55       95   2.60 145.54     se NEIC       4567293
+2001/10/14 21:14:41.90   0.94        32.5740   76.2280 14.40 8.900  13  33.0         26                               MOS        3673676
+2001/10/14 21:14:42.70        1.560  32.5090   76.0660  72.0  49.0  43  30.0f       177  151                   m i ke ISC-EHB   08915402
+ (#PARAM DEPTH_QUALITY=L3)
+2001/10/14 21:14:46.40        1.900  32.8900   76.8000                  23.0              28                          BJI        4013589
+2001/10/14 21:14:40.33   0.77 2.155  32.5310   76.1245 5.441 3.602  48  12.6  5.09  186  158  21   0.13 152.16 m i ke ISC        5202637
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 189.0 | 204.1 | 0.435 |    13 |   0.1 |   3.0)
+ (  0 -  17 degrees    |  62.9 |  99.4 | 0.940 |    57 |   0.1 |  15.4)
+ ( 28 - 180 degrees    |  79.1 |  95.0 | 0.925 |    69 |  28.4 | 152.2)
+ (  0 - 180 degrees    |  21.8 |  29.8 | 0.996 |   148 |   0.1 | 152.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.2 0.1   15 IDC        4271150
+mb1    4.4 0.1   16 IDC        4271150
+mb1mx  4.4 0.1   19 IDC        4271150
+ML     3.9 0.3    1 IDC        4271150
+MS     3.6 0.1    5 IDC        4271150
+Ms1    3.7 0.1    5 IDC        4271150
+ms1mx  3.5 0.1   15 IDC        4271150
+mb     4.7          NDI        4760312
+ML     4.7          NDI        4760312
+mb     4.8       35 NEIC       4567293
+mb     4.7       19 MOS        3673676
+mb     4.5          BJI        4013589
+mB     5.0          BJI        4013589
+ML     4.6          BJI        4013589
+Ms     4.3          BJI        4013589
+Msz    4.1          BJI        4013589
+mb     4.7 0.2   50 ISC        5202637
+MS     4.1 0.3   14 ISC        5202637
+
+Event     3975417 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/15 16:00:17.20   4.15 1.800  32.6920   75.9140 32.20 24.20  -1  20.0f              4 290                      NDI        4760319
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     1.9          NDI        4760319
+
+Event     2340546 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/20 21:41:59.60   3.72 0.900  33.5040   76.3740  13.0  13.0  -1  19.8  11.3        15 246                      NDI        4760382
+2001/10/20 21:42:00.40        4.300  33.7000   76.3000                  78.0               6                          BJI        4013658
+2001/10/20 21:42:00.49   0.78 1.220  33.6640   76.3180 16.10 13.30 116  78.6         17      104   2.56  78.58     se NEIC       4567719
+ (#PARAM pP_DEPTH=78.6)
+2001/10/20 21:42:02.33   0.88 0.560  33.4169   76.1988 21.80 9.800   7  79.9   7.5   14      104   2.47  78.33     uk IDC        4271437
+2001/10/20 21:41:59.51   0.58 2.223  33.5314   76.4958 8.601 6.423  46  62.5  6.55   59   42 101   1.09  78.59 m i se ISC        5203139
+ (#PRIME)
+ (#PARAM pP_DEPTH=63.0+5.4)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 252.9 | 255.1 | 0.132 |    10 |   1.1 |   2.7)
+ (  0 -  17 degrees    | 123.4 | 126.2 | 0.714 |    28 |   1.1 |  11.5)
+ ( 28 - 180 degrees    | 206.7 | 246.9 | 0.327 |     8 |  42.4 |  78.6)
+ (  0 - 180 degrees    | 101.9 | 105.9 | 0.864 |    40 |   1.1 |  78.6)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.1          NDI        4760382
+ML     3.2          NDI        4760382
+mb     4.1        1 NEIC       4567719
+mb     3.6 0.1   10 IDC        4271437
+mb1    3.8 0.1   11 IDC        4271437
+mb1mx  3.6 0.1   20 IDC        4271437
+mb     3.8 0.1   10 ISC        5203139
+
+Event     3975502 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/23 07:57:50.40   3.24 0.900  33.1150   75.6700 16.30  22.5  -1  20.0f              6 217                      NDI        4760408
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.6          NDI        4760408
+
+Event     3975517 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/25 17:54:23.70   3.04 1.000  31.8150   77.3540 23.40 35.20  -1  33.0f              3 291                      NDI        4760418
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     1.6          NDI        4760418
+
+Event     3975533 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/27 04:51:14.80   1.63 0.600  32.9000   76.0810 20.10 72.10  -1   3.2  1000         3 340                      NDI        4760435
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.1          NDI        4760435
+
+Event     3975538 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/27 15:45:41.90   3.97 1.700  34.0440   75.7930 29.20 24.10  -1  33.0f              4 297                      NDI        4760439
+ (Event not reviewed by the ISC)
+
+Event     3975548 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/10/28 12:17:34.10   1.96 0.800  32.9150   76.0140 15.60 26.90  -1  15.0  17.9         4 302                      NDI        4760448
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.2          NDI        4760448
+
+Event     4089847 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/04 01:37:53.10   1.67 0.600  33.5050   75.6390 16.80 32.90  -1  11.0  9.90         4 340                      NDI        4843234
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.9          NDI        4843234
+ML     2.6          NDI        4843234
+
+Event     4089892 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/10 04:47:11.60   1.30 0.600  33.2710   77.6830 15.10 32.70  -1  20.0f              3 342                      NDI        4843268
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4843268
+
+Event     4089894 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/10 05:47:13.00   0.80 0.300  32.8800   76.2120 6.900 10.60  -1   2.2  9.90         4 291                      NDI        4843269
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4843269
+ML     2.6          NDI        4843269
+
+Event     4089918 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/12 00:58:39.20   3.12 1.500  33.1900   75.7980 29.30 35.60  -1  33.0f              3 324                      NDI        4843288
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.3          NDI        4843288
+
+Event     4089924 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/12 11:38:55.40   1.31 0.700  31.1520   78.0740 11.60 11.90  -1  33.0f              4 186                      NDI        4843291
+ (Event not reviewed by the ISC)
+
+Event     4089970 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/15 06:40:22.40   3.34 1.100  32.8630   75.9710  20.5 21.10  -1  10.7  9.80        11 298                      NDI        4843340
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4843340
+
+Event     4089975 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/15 11:19:27.00   5.33 1.700  32.9270   76.0760 96.60 57.30  -1  15.6  60.9         5 300                      NDI        4843344
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.2          NDI        4843344
+
+Event     4090025 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/22 00:30:28.40   3.23 1.600  33.0930   78.5890 32.70  30.0  -1  33.0f              3 293                      NDI        4843391
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.7          NDI        4843391
+
+Event     4090050 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/26 07:08:52.90   4.92 1.700  33.3610   75.5450 27.10 16.70  -1  33.0f             11 241                      NDI        4843420
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.0          NDI        4843420
+ML     3.1          NDI        4843420
+
+Event     3337611 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/11/26 15:57:31.32   4.76 0.750  32.9985   78.9980 281.0 18.40  16   0.0f         6      205   4.85  76.90     uk IDC        4273380
+2001/11/26 15:57:33.00   2.56 1.200  32.6080   79.1060 11.70  19.5  -1  33.0f              6 292                      NDI        4843423
+2001/11/26 15:57:34.15   2.77 1.636  32.4960   78.8413 11.50 6.719  30   6.3  17.6   23   16 197   1.88  76.69 m i ke ISC        5250778
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 285.6 | 314.9 | 0.047 |     6 |   1.9 |   2.6)
+ (  0 -  17 degrees    | 215.2 | 228.6 | 0.294 |    13 |   1.9 |   4.8)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  74.4 |  76.7)
+ (  0 - 180 degrees    | 197.6 | 211.0 | 0.386 |    16 |   1.9 |  76.7)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    3 IDC        4273380
+mb1    3.9 0.1    4 IDC        4273380
+mb1mx  3.6 0.1   18 IDC        4273380
+ML     3.4 0.3    1 IDC        4273380
+MD     3.4          NDI        4843423
+mb     3.7 0.0    3 ISC        5250778
+
+Event     2974489 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/12/13 11:54:45.42   1.81 1.080  33.2470   76.6790 15.40 12.90  82  36.0  16.2   16      103   2.89 123.07     se NEIC       4577396
+2001/12/13 11:54:46.30   4.92 1.600  33.2640   76.2400 19.30 20.40  -1  33.0f             10 227                      NDI        4908038
+2001/12/13 11:54:48.91   3.00 0.850  33.1409   76.6836 23.40 16.40  39  54.6  28.8   15      128   2.92  86.07     uk IDC        4274376
+2001/12/13 11:54:59.40        4.500  34.2900   77.3600                  33.0               5                          BJI        4012406
+2001/12/13 11:54:42.45   1.63 1.879  33.2745   76.5131 8.073 4.813  60   0.9  11.6   36   28 103   0.86  85.97 m i se ISC        5282037
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 220.6 | 246.6 | 0.266 |    11 |   0.9 |   2.8)
+ (  0 -  17 degrees    | 143.1 | 169.2 | 0.638 |    15 |   0.9 |   9.7)
+ ( 28 - 180 degrees    | 127.9 | 195.4 | 0.576 |    10 |  42.7 |  86.0)
+ (  0 - 180 degrees    | 103.1 | 107.4 | 0.847 |    28 |   0.9 |  86.0)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.2          NDI        4908038
+mb     3.6 0.1   13 IDC        4274376
+mb1    3.8 0.1   14 IDC        4274376
+mb1mx  3.7 0.1   22 IDC        4274376
+ML     4.1 0.3    1 IDC        4274376
+ML     3.3          BJI        4012406
+mb     3.8 0.2   13 ISC        5282037
+
+Event     4176618 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/12/15 11:20:26.70   1.52 0.400  33.5140   76.4220 8.800 13.60  -1  26.9  10.2         6 271                      NDI        4908048
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.6          NDI        4908048
+
+Event     4176649 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/12/19 05:04:35.00   4.80 1.700  33.1450   76.3660  21.0  18.5  -1  13.3  33.4         8 226                      NDI        4908079
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.0          NDI        4908079
+
+Event     4176653 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/12/19 21:35:48.70   3.73 1.700  32.9000   78.7420 33.30 36.40  -1  33.0f              4 291                      NDI        4908084
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.8          NDI        4908084
+
+Event     4176683 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/12/23 21:31:21.30   1.26 1.500  33.7190   75.9040 10.10 43.40  -1  10.0f              4 331                      NDI        4908114
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4908114
+
+Event     4176715 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2001/12/27 15:38:47.60   4.05 1.600  32.5850   76.7800 63.90 17.40  -1  14.8  45.2         6 261                      NDI        4908144
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+MD     2.5          NDI        4908144
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ BJI       China Earthquake Networks Center
+ GCMT      The Global CMT Project
+ IDC       International Data Centre, CTBTO
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NDI       National Centre for Seismology of the Ministry of Earth Sciences of India
+ NEIC      National Earthquake Information Center
+
+<br>Mon Nov 23 13:57:24 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

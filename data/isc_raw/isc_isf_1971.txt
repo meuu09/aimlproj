@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/493982892.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1971-01-01 00:00:00</td></tr><tr><td>End date: 1971-12-31 23:59:59</td></tr><tr><td>Events found: 4</td></tr><tr><td>Date of search: Mon Nov 23 13:46:50 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+</pre><p><em>Please note:</em><br>
+<p>Data on or after 2024/11/01 have not been reviewed by the ISC.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      787682 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1971/02/25 04:36:24.00               32.6000   76.3000                 160.0                       2.00   8.00     uk QUE        1744127
+
+Event      780654 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1971/09/27 11:19:58.00               32.6000   76.6000                  16.0                                       uk QUE        1729140
+
+Event      778742 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1971/11/22 19:22:48.00               32.6000   78.5000                  96.0                       4.00  77.00     uk QUE        1725017
+1971/11/22 19:22:50.55   2.09 2.651  32.0933   77.9922 35.34 15.14  81  35.0f         6    7 217   3.46  50.06 m i ke ISC        1725018
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |   3.5 |   9.7)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  41.9 |  50.1)
+ (  0 - 180 degrees    | 217.7 | 239.3 | 0.246 |     6 |   3.5 |  50.1)
+
+Magnitude  Err Nsta Author      OrigID
+       4.0          QUE        1725017
+
+Event      778912 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1971/11/29 07:32:37.00               33.2000   76.2000                  50.0                       5.00   6.00     uk QUE        1725352
+
+Magnitude  Err Nsta Author      OrigID
+       3.6          QUE        1725352
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ ISC       International Seismological Centre
+ QUE       Pakistan Meteorological Department
+
+<br>Mon Nov 23 13:46:50 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

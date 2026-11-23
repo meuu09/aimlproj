@@ -1,0 +1,2051 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/18610453.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 2021-01-01 00:00:00</td></tr><tr><td>End date: 2021-12-31 23:59:59</td></tr><tr><td>Events found: 122</td></tr><tr><td>Date of search: Mon Nov 23 14:11:03 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event   625301732 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/02 16:15:48.80   0.91 0.300  32.5050   75.5760 2.800 8.300  -1  14.8  5.30         4 263                   se NDI       19285899
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.5          NDI       19285899
+MW     2.9          NDI       19285899
+
+Event   619760532 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/04 05:28:34.80   4.63 1.230  34.0774   74.3050 122.3 59.80 120   0.0f         5      330  14.07  83.50     uk IDC       14827253
+2021/01/04 05:28:45.30   2.54 1.100  34.1850   74.4850f 12.5 16.30  -1  10.0   0.0         6 280                   se NDI       19285902
+ (Presumed earthquake)
+2021/01/04 05:28:43.57   1.01 1.300  34.4804   74.5605 30.20 7.457  67  35.0f        12   12 168   1.71  83.08 m i se ISC       19187361
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 328.3 | 354.3 | 0.002 |     3 |   1.7 |   2.7)
+ (  0 -  17 degrees    | 168.7 | 196.7 | 0.310 |     6 |   1.7 |  16.4)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     1 |  83.1 |  83.1)
+ (  0 - 180 degrees    | 168.7 | 194.7 | 0.350 |     9 |   1.7 |  83.1)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.2 0.0    2 IDC       14827253
+mbtmp  3.2 0.1    5 IDC       14827253
+ML     2.7 0.1    3 IDC       14827253
+ML     3.3          NDI       19285902
+MW     3.1          NDI       19285902
+
+Event   619762705 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/05 07:39:18.01   4.13 0.600  32.1540   76.5458 118.1 61.30 103   0.0f         5      335  15.27  85.26     uk IDC       14828385
+2021/01/05 07:39:22.70   2.04 0.900  32.2920   76.6250f4.400   4.5  -1  10.0   0.0         8 103                   se NDI       19285904
+ (Presumed earthquake)
+2021/01/05 07:39:21.02   1.11 1.956  32.3663   76.7604 5.596 4.343  29  10.4  9.22   22   14  89   0.41  85.03 m i se ISC       19285424
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |  89.3 | 127.3 | 0.806 |     7 |   0.4 |   2.2)
+ (  0 -  17 degrees    |  89.3 | 120.5 | 0.820 |     9 |   0.4 |  15.0)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     1 |  85.0 |  85.0)
+ (  0 - 180 degrees    |  89.3 | 120.5 | 0.839 |    13 |   0.4 |  85.0)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.5 0.1    3 IDC       14828385
+mbtmp  3.5 0.1    5 IDC       14828385
+ML     3.2 0.4    2 IDC       14828385
+MS     3.6 0.3    1 IDC       14828385
+ML     3.2          NDI       19285904
+MW     3.1          NDI       19285904
+mb     3.6 0.2    3 ISC       19285424
+
+Event   619646375 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/09 14:51:47.43   0.79 0.990  32.4725   76.7194 19.30 12.20  50   0.0f        21      166  10.30  84.93     uk IDC       14829484
+2021/01/09 14:51:49.30   1.19        32.6110   76.6350   9.5 4.900 100  23.0         47                               MOS       16002357
+2021/01/09 14:51:49.50   2.39 0.900  32.4240   76.3520 3.900   7.5  -1   5.7  6.20        12 108                   se NDI       19285915
+ (Presumed earthquake)
+2021/01/09 14:51:49.76        1.270  32.4920   76.5600 6.800   5.0  59  15.0f       127  114                   m i ke ISC-EHB   36907012
+2021/01/09 14:51:50.40   1.46 0.720  32.5210   76.6552 14.03 12.14 192  22.6  6.70   51      152   3.06            se NEIC      15855826
+2021/01/09 14:51:50.62   0.41 1.471  32.5096   76.5617 13.44 5.635  50  10.0f        19   21 168   6.60  27.66        GFZ       18819682
+ (confirmed)
+2021/01/09 14:51:49.00   0.73 1.860  32.4665   76.5631 5.395 3.804  72  13.9  4.97  185  162  56   0.31  84.94 m i se ISC       19187850
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 120.2 | 179.9 | 0.733 |     7 |   0.3 |   2.4)
+ (  0 -  17 degrees    |  97.2 | 115.2 | 0.855 |    38 |   0.3 |  15.1)
+ ( 28 - 180 degrees    | 156.5 | 164.7 | 0.595 |    35 |  31.9 |  84.9)
+ (  0 - 180 degrees    |  56.6 |  86.4 | 0.963 |    95 |   0.3 |  84.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.1 0.0   16 IDC       14829484
+mbtmp  4.1 0.0   19 IDC       14829484
+ML     4.0 0.2    3 IDC       14829484
+MS     3.4 0.1    3 IDC       14829484
+mb     4.4       18 MOS       16002357
+ML     4.0          NDI       19285915
+MW     3.7          NDI       19285915
+mb     4.5 0.1   32 NEIC      15855826
+M      4.5       15 GFZ       18819682
+mb     4.5 0.2   15 GFZ       18819682
+mb     4.4 0.2   35 ISC       19187850
+
+Event   619647297 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/11 13:59:12.57   0.66 0.320  33.4274   75.7158 17.20 8.900 128  10.0f        26      149   2.06            se NEIC      15856087
+2021/01/11 13:59:12.86   1.15 1.040  33.5719   75.3426  33.0 15.70  65   0.0f        13      197   9.08  83.93     uk IDC       14835922
+2021/01/11 13:59:21.53   5.01 1.640  33.7666   75.3455 39.70 34.80 128  56.0  45.3   12       24   8.89  20.94     se NNC       15254717
+ (#PARAM ENERGY_CLASS=-)
+2021/01/11 13:59:14.78   0.80 1.606  33.4549   75.4987 11.54 10.46 163  22.0f        52   50 149   1.87  84.06 m i se ISC       19188052
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   1.9 |   1.9)
+ (  0 -  17 degrees    | 237.6 | 257.4 | 0.180 |     9 |   1.9 |  14.3)
+ ( 28 - 180 degrees    | 197.1 | 259.5 | 0.357 |    13 |  29.5 |  84.1)
+ (  0 - 180 degrees    | 149.2 | 157.0 | 0.632 |    32 |   1.9 |  84.1)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.1 0.2   12 NEIC      15856087
+mb     3.9 0.1    8 IDC       14835922
+mbtmp  3.9 0.1   12 IDC       14835922
+ML     3.4 0.2    4 IDC       14835922
+mb     3.7          NNC       15254717
+mpv    3.6          NNC       15254717
+mb     3.9 0.2   15 ISC       19188052
+
+Event   619647295 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/11 14:02:01.09   0.39 1.400  33.3617   75.5378 8.800   7.5  47   0.0f        70       51   9.30 152.08     uk IDC       14835924
+2021/01/11 14:02:01.17               33.5430   77.0080                  21.8                      50.13  50.13     ke BGR       18933009
+2021/01/11 14:02:02.40   2.32 0.900  33.5810   75.6850 23.40 8.100  -1  20.9  31.9        32 266                   se NDI       19285925
+ (Presumed earthquake)
+2021/01/11 14:02:02.50   0.92        33.3740   75.5890 5.400 3.100 100  18.0        138                               MOS       16014947
+2021/01/11 14:02:03.04   0.95 0.470  33.3042   75.5872  10.5 8.600 111  10.0f       111       66   1.97            se NEIC      15856090
+2021/01/11 14:02:03.77        0.910  33.3310   75.5430 2.300 1.800  37  15.1  1.13  555  496                   m i ke ISC-EHB   36907055
+2021/01/11 14:02:04.00        1.250  33.4600   75.9800                   8.0         67      271   6.70  43.90     uk BJI       15527133
+2021/01/11 14:02:04.72   0.14 1.140  33.2257   75.5712                  16.7   0.0   72   76  99   1.97  80.06        GFZ       18819731
+2021/01/11 14:02:11.05   4.62 1.780  33.5340   75.7137 35.70 31.30   6  89.9  36.1   14       24   9.15  21.41     se NNC       15254718
+ (#PARAM ENERGY_CLASS=11.51)
+2021/01/11 14:02:04.03   0.37 1.750  33.2893   75.6360 4.172 3.038  51  19.5  1.56  723  701  18   0.84 153.51 m i ke ISC       19188054
+ (#PRIME)
+ (#PARAM pP_DEPTH=20.0+4.6)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 227.6 | 230.5 | 0.187 |     7 |   0.8 |   2.7)
+ (  0 -  17 degrees    |  47.5 |  66.8 | 0.959 |    89 |   0.8 |  16.1)
+ ( 28 - 180 degrees    |  34.9 |  65.7 | 0.985 |   238 |  28.6 | 153.5)
+ (  0 - 180 degrees    |  18.4 |  21.8 | 0.998 |   390 |   0.8 | 153.5)
+
+Year Volume Page1 Page2 Journal
+2022    231  2009  2033 Geophys. J. Int.
+ (#AUTHOR O’Kane,A. , Copley,A. , Mitra,S. , Wimpenny,S.                                   )
+ (#TITLE  The geometry of active shortening in the north–west Himalayas and the            )
+ (+       implications for seismic hazard                                                  )
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.7 0.0   45 IDC       14835924
+mbtmp  4.7 0.0   49 IDC       14835924
+ML     4.3 0.2    4 IDC       14835924
+MS     3.9 0.0   33 IDC       14835924
+mb     4.6          BGR       18933009
+ML     5.1          NDI       19285925
+MW     4.9          NDI       19285925
+mb     5.2       34 MOS       16014947
+MS     4.2        7 MOS       16014947
+mb     5.1 0.1  127 NEIC      15856090
+mb     4.8       58 BJI       15527133
+mB     5.0       18 BJI       15527133
+ML     5.0        1 BJI       15527133
+Ms     4.3       30 BJI       15527133
+Ms7    4.1       29 BJI       15527133
+M      4.9       46 GFZ       18819731
+mb     5.1 0.2   46 GFZ       18819731
+mb     4.6          NNC       15254718
+mb     5.0 0.2  198 ISC       19188054
+MS     4.0 0.2   45 ISC       19188054
+
+Event   625301745 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/12 07:43:31.60   0.33 0.100  34.3030   77.4630 8.700 1.800  -1  10.0   0.0         4 264                   se NDI       19285929
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Event   619788658 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/16 16:31:01.00   1.03 0.860  32.9836   75.8232 28.70 14.20  67   0.0f        16      196   9.70  84.49     uk IDC       14850544
+2021/01/16 16:31:03.80   2.02 0.800  33.0370   75.7870 3.700 6.800  -1  10.0f             19 128                   se NDI       19285941
+ (Presumed earthquake)
+2021/01/16 16:31:06.64   3.38 0.670  33.3713   75.6983 35.30 28.60 120   0.0          8       52   9.31  19.72     se NNC       15254924
+ (#PARAM ENERGY_CLASS=9.01)
+2021/01/16 16:31:05.02   0.57 2.261  32.9575   75.9503 7.741 4.289  84  28.0f        77   53 125   0.77  84.50 m i se ISC       19188713
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 152.3 | 232.4 | 0.425 |     5 |   0.8 |   2.1)
+ (  0 -  17 degrees    | 125.2 | 144.9 | 0.693 |    24 |   0.8 |  14.6)
+ ( 28 - 180 degrees    | 196.0 | 199.1 | 0.258 |     7 |  42.7 |  84.5)
+ (  0 - 180 degrees    | 125.2 | 129.8 | 0.732 |    37 |   0.8 |  84.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1   11 IDC       14850544
+mbtmp  3.6 0.1   14 IDC       14850544
+ML     3.1 0.2    3 IDC       14850544
+MS     3.1 0.3    1 IDC       14850544
+ML     3.6          NDI       19285941
+MW     3.5          NDI       19285941
+mb     3.9          NNC       15254924
+mb     3.6 0.2   11 ISC       19188713
+
+Event   619798903 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/19 15:43:15.45   0.94 0.880  34.3228   74.2712 25.30 13.80  62   0.0f        20      196   8.31  83.26     uk IDC       14855672
+2021/01/19 15:43:17.70   0.97 0.400  34.4890   74.2080 4.600 6.900  -1  10.0f              8 293                   se NDI       19285949
+ (Presumed earthquake)
+2021/01/19 15:43:23.10   6.92 1.470  34.5274   73.5556  71.5 30.20 155  11.8  87.7   11       19   8.14  19.52     se NNC       15255052
+ (#PARAM ENERGY_CLASS=8.63)
+2021/01/19 15:43:18.46   0.65 1.704  34.4261   74.3716 12.66 6.660  65  10.0f        43   45 156   1.69  83.15 m i se ISC       19189028
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 287.7 | 329.7 | 0.038 |     5 |   1.7 |   2.7)
+ (  0 -  17 degrees    | 175.3 | 193.9 | 0.471 |    13 |   1.7 |  16.6)
+ ( 28 - 180 degrees    | 253.1 | 306.0 | 0.123 |     7 |  43.0 |  83.1)
+ (  0 - 180 degrees    | 156.2 | 172.7 | 0.621 |    26 |   1.7 |  83.1)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.1   15 IDC       14855672
+mbtmp  3.9 0.1   19 IDC       14855672
+ML     3.4 0.1    4 IDC       14855672
+MS     2.9 0.3    1 IDC       14855672
+ML     3.8          NDI       19285949
+MW     3.4          NDI       19285949
+mb     3.7          NNC       15255052
+mpv    3.5          NNC       15255052
+mb     3.8 0.1   13 ISC       19189028
+
+Event   619818490 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/01/25 09:53:37.48  12.59 1.060  34.2148   74.0145 207.8  57.5 152   0.0f         5      314  14.04  44.19     uk IDC       14864563
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.7    2 IDC       14864563
+mbtmp  3.6 0.3    5 IDC       14864563
+ML     2.9 0.2    2 IDC       14864563
+
+Event   619798938 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/02/03 14:29:48.50   0.55 0.900  34.2124   78.1634 15.30 10.10  59   0.0f        33       97   8.89  88.78     uk IDC       14885408
+2021/02/03 14:29:49.94   1.22 0.600  34.2600   78.2819  12.0  10.5 209  10.0f        85       82   4.21            se NEIC      15858822
+2021/02/03 14:29:50.20   1.11        34.3280   78.1770 7.300 3.700 104  23.0         79                               MOS       16077357
+2021/02/03 14:29:51.13        1.020  34.3040   78.2350   4.0 3.300  42  15.0f       215  199                   m i ke ISC-EHB   36907546
+2021/02/03 14:29:52.90   2.16 0.900  34.4660   77.9450 12.30 8.900  -1   5.0f              9 285                   se NDI       19402642
+ (Presumed earthquake)
+2021/02/03 14:29:53.60        1.180  34.4200   78.3700                  39.0         21      225   5.20  24.40     uk BJI       15527326
+2021/02/03 14:29:53.91   0.20 1.455  34.1980   78.1623                  23.9f        34   37 114   4.11  71.29        GFZ       18820180
+2021/02/03 14:29:58.68   2.28 1.360  34.8969   77.1788 19.40 16.30  17   0.0         12       19   8.01  20.85     se NNC       15227865
+ (#PARAM ENERGY_CLASS=10.52)
+2021/02/03 14:29:53.97   0.30 1.653  34.3617   78.2306 5.252 4.043  80  35.0f       259  264  31   0.88  88.84 m i se ISC       19307393
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 279.0 | 317.4 | 0.056 |     5 |   0.9 |   2.8)
+ (  0 -  17 degrees    |  74.4 |  93.6 | 0.928 |    62 |   0.9 |  16.8)
+ ( 28 - 180 degrees    |  82.3 |  97.2 | 0.919 |    68 |  28.3 |  88.8)
+ (  0 - 180 degrees    |  31.5 |  34.1 | 0.991 |   155 |   0.9 |  88.8)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.1 0.1   21 IDC       14885408
+mbtmp  4.1 0.1   25 IDC       14885408
+ML     3.5 0.1    4 IDC       14885408
+MS     3.6 0.1   27 IDC       14885408
+mb     4.5 0.1   52 NEIC      15858822
+mb     4.6       28 MOS       16077357
+ML     4.0          NDI       19402642
+mb     4.5       15 BJI       15527326
+mB     4.1        1 BJI       15527326
+ML     4.2        3 BJI       15527326
+Ms     4.0        4 BJI       15527326
+Ms7    3.8        4 BJI       15527326
+M      4.5       25 GFZ       18820180
+mb     4.6 0.2   25 GFZ       18820180
+mb     4.4          NNC       15227865
+mpv    4.6          NNC       15227865
+mb     4.5 0.2   65 ISC       19307393
+MS     3.6 0.2   26 ISC       19307393
+
+Event   625483218 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/02/14 10:19:50.50   1.96 0.700  31.3870   76.9790 3.200 4.100  -1   0.4  5.10        10  83                   se NDI       19402696
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.0          NDI       19402696
+MW     3.3          NDI       19402696
+
+Event   625483392 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/02/19 22:25:30.40   1.49 0.700  32.6090   76.1530   2.5 10.90  -1   5.0f              6 189                   se NDI       19402729
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       19402729
+MW     2.8          NDI       19402729
+
+Event   625483590 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/02/24 21:03:01.10   1.98 0.900  32.3160   76.3660   4.5 7.400  -1   5.0f              4 169                   se NDI       19402747
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.1          NDI       19402747
+MW     2.3          NDI       19402747
+
+Event   625483595 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/02/24 22:25:25.20   1.56 0.700  32.8580   76.2620 7.700 6.100  -1   5.0f              4 258                   se NDI       19402748
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.0          NDI       19402748
+MW     2.2          NDI       19402748
+
+Event   620061213 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/05 23:41:31.57   1.24 0.740  33.9747   78.4214 33.80 15.10  68   0.0f        14      197   9.18  83.30     uk IDC       15071810
+2021/03/05 23:41:34.00   2.26 0.900  34.2620   78.3950 108.6  57.5  -1  10.0   105         6 275                   se NDI       19563946
+ (Presumed earthquake)
+2021/03/05 23:41:38.60   7.36 1.210  34.0490   78.7785 52.30 26.30 154 175.4   131   10       14   9.22  13.02     se NNC       15302879
+ (#PARAM ENERGY_CLASS=9.50)
+2021/03/05 23:41:38.97   0.67 2.243  34.2387   78.7319 10.17 7.884 113  35.0f        31   24  59   1.28  83.01 m i se ISC       19484136
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 279.4 | 317.1 | 0.055 |     4 |   1.3 |   2.8)
+ (  0 -  17 degrees    | 177.6 | 215.4 | 0.475 |    11 |   1.3 |  16.4)
+ ( 28 - 180 degrees    | 196.2 | 236.5 | 0.358 |     6 |  42.9 |  83.0)
+ (  0 - 180 degrees    |  59.0 |  96.8 | 0.906 |    21 |   1.3 |  83.0)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.1    9 IDC       15071810
+mbtmp  3.8 0.1   13 IDC       15071810
+ML     3.1 0.1    4 IDC       15071810
+ML     3.6          NDI       19563946
+MW     3.8          NDI       19563946
+mb     3.2          NNC       15302879
+mb     3.9 0.1    8 ISC       19484136
+
+Event   625619195 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/06 23:10:33.40   2.08 0.800  33.0130   75.8200 5.700 5.400  -1   5.8  7.10         7 148                   se NDI       19563952
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       19563952
+MW     2.8          NDI       19563952
+
+Event   620177774 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/07 04:26:54.91   1.92 0.810  33.8528   78.4675 53.60 15.10  64   0.0f        11      212   9.31  83.41     uk IDC       15076057
+2021/03/07 04:26:56.90   0.96 0.400  34.0010   79.2440 1.400 6.100  -1   3.3   0.0         3 308                   se NDI       19563954
+ (Presumed earthquake)
+2021/03/07 04:26:58.87   0.92 1.900  34.1070   79.1545 22.24 10.01  83  10.0f        12   16 151   1.33  83.10 m i se ISC       19484586
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   1.3 |   1.3)
+ (  0 -  17 degrees    | 176.9 | 328.4 | 0.168 |     3 |   1.3 |  12.9)
+ ( 28 - 180 degrees    | 236.5 | 347.8 | 0.049 |     3 |  75.1 |  83.1)
+ (  0 - 180 degrees    | 151.5 | 208.2 | 0.562 |     9 |   1.3 |  83.1)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    7 IDC       15076057
+mbtmp  3.6 0.0    9 IDC       15076057
+ML     3.1 0.3    2 IDC       15076057
+MS     4.0 0.3    2 IDC       15076057
+MW     3.5          NDI       19563954
+mb     3.6 0.1    5 ISC       19484586
+
+Event   620177862 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/07 09:16:52.80   2.10 0.800  34.6960   78.9020 16.40 28.40  -1  40.4  1000         4 286                   se NDI       19563955
+ (Presumed earthquake)
+2021/03/07 09:16:55.97   1.83 0.920  34.0270   78.6252 41.20  21.5  51   0.0f         9      198   9.19  83.23     uk IDC       15076133
+2021/03/07 09:17:00.97   0.77 2.729  34.1987   78.9442 19.50 8.319  99  35.0f        15   15 116   1.42  83.03 m i se ISC       19484659
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   1.4 |   2.7)
+ (  0 -  17 degrees    | 168.7 | 200.2 | 0.308 |     5 |   1.4 |  12.8)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  43.0 |  83.0)
+ (  0 - 180 degrees    | 116.4 | 130.9 | 0.728 |    12 |   1.4 |  83.0)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.0          NDI       19563955
+MW     3.8          NDI       19563955
+mb     3.5 0.1    6 IDC       15076133
+mbtmp  3.6 0.1    9 IDC       15076133
+ML     3.0 0.1    3 IDC       15076133
+mb     3.6 0.0    5 ISC       19484659
+
+Event   620177958 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/07 17:38:16.94   1.25 1.130  33.9823   78.4455 24.80 16.80  58   0.0f        13      156   9.18  83.29     uk IDC       15076240
+2021/03/07 17:38:22.66   1.10 1.190  34.1473   78.5559 18.41 16.45  73  35.0f        12   11 155   9.05  83.11 m i se ISC       19484750
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |   9.1 |  12.9)
+ ( 28 - 180 degrees    | 262.2 | 307.5 | 0.092 |     4 |  35.8 |  83.1)
+ (  0 - 180 degrees    | 155.0 | 202.8 | 0.600 |    11 |   9.1 |  83.1)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8 0.1    8 IDC       15076240
+mbtmp  3.7 0.1   11 IDC       15076240
+ML     3.2 0.2    3 IDC       15076240
+mb     3.8 0.2    6 ISC       19484750
+
+Event   620180332 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/08 04:50:37.26   1.69 1.060  32.8407   76.5404 34.60  26.0  82   0.0f         8      174  14.61  84.58     uk IDC       15077832
+2021/03/08 04:50:42.70   1.95 0.700  32.9340   75.7900 4.600   6.0  -1   8.2  7.30         9  81                   se NDI       19563960
+ (Presumed earthquake)
+2021/03/08 04:50:41.47   1.18 1.996  32.9437   75.8805 5.758 4.709  69  17.8  7.10   34   23  68   0.51  84.52 m i se ISC       19484856
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |  79.2 | 140.4 | 0.830 |     8 |   0.5 |   2.6)
+ (  0 -  17 degrees    |  68.2 | 129.4 | 0.870 |    16 |   0.5 |  14.7)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  34.4 |  84.5)
+ (  0 - 180 degrees    |  68.2 | 107.1 | 0.913 |    21 |   0.5 |  84.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    5 IDC       15077832
+mbtmp  3.5 0.1    7 IDC       15077832
+ML     3.4 0.1    2 IDC       15077832
+ML     3.5          NDI       19563960
+MW     3.5          NDI       19563960
+mb     3.5 0.2    4 ISC       19484856
+
+Event   625619266 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/09 07:04:35.40   1.90 0.700  32.6720   76.5740 4.100   5.5  -1  16.1  5.80         8  88                   se NDI       19563963
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.3          NDI       19563963
+MW     3.7          NDI       19563963
+
+Event   625619283 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/09 18:04:54.70   2.48 0.900  32.7870   76.7290 8.400 8.900  -1  15.7  12.5         7 218                   se NDI       19563967
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.5          NDI       19563967
+MW     3.0          NDI       19563967
+
+Event   625619286 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/10 02:20:36.60   2.50 0.900  32.6450   76.6200 6.200 7.200  -1  10.7  8.60         8 153                   se NDI       19563969
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.3          NDI       19563969
+MW     3.5          NDI       19563969
+
+Event   620219479 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/18 13:50:52.34   2.19 0.630  32.9496   78.7034  61.0 18.60  66   0.0f         9      213  10.23  77.06     uk IDC       15114027
+2021/03/18 13:50:58.40   1.68 1.186  33.0937   78.9264 40.68 17.38  62  35.0f         9   10 211  10.15  77.01 m i se ISC       19486400
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |  10.1 |  13.9)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  76.1 |  77.0)
+ (  0 - 180 degrees    | 211.5 | 217.0 | 0.265 |     9 |  10.1 |  77.0)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.3 0.1    6 IDC       15114027
+mbtmp  3.3 0.1    9 IDC       15114027
+ML     2.8 0.2    3 IDC       15114027
+MS     3.9 0.3    1 IDC       15114027
+mb     3.3 0.2    5 ISC       19486400
+
+Event   620228277 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/23 05:57:04.87   2.63 0.730  33.4092   76.0400 77.20  27.5  55   0.0f         5      207  17.30  84.05     uk IDC       15122157
+2021/03/23 05:57:08.30   1.66 0.600  33.5490   76.4450   4.5 5.700  -1   3.2   5.5         8 162                   se NDI       19564025
+ (Presumed earthquake)
+2021/03/23 05:57:06.66   1.57 1.928  33.5071   76.3908 8.834 5.555 119   0.8  12.0   20   16  85   0.70  83.92 m i se ISC       19582905
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 161.4 | 226.4 | 0.546 |     8 |   0.7 |   2.5)
+ (  0 -  17 degrees    | 161.4 | 226.4 | 0.546 |     8 |   0.7 |   2.5)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     1 |  83.9 |  83.9)
+ (  0 - 180 degrees    |  85.4 | 123.1 | 0.858 |    13 |   0.7 |  83.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.5 0.2    4 IDC       15122157
+mbtmp  3.5 0.2    5 IDC       15122157
+ML     2.9 0.3    1 IDC       15122157
+MS     3.5 0.3    2 IDC       15122157
+ML     3.1          NDI       19564025
+MW     3.3          NDI       19564025
+mb     3.5 0.5    4 ISC       19582905
+
+Event   620293479 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/29 19:36:30.20   2.25 0.800  34.1680   76.0920 10.10 10.20  -1  14.5  11.9         7 232                   se NDI       19564048
+ (Presumed earthquake)
+2021/03/29 19:36:50.99   6.29 0.790  35.9656   75.2035 91.90 28.30  64 150.7  44.7    6      232   6.69  81.56     uk IDC       15194859
+2021/03/29 19:36:27.37   1.46 2.353  34.2615   75.9989 11.87 7.781 127  10.0f        15   14 161   0.98  20.64 m i se ISC       19487758
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 238.7 | 319.0 | 0.132 |     6 |   1.0 |   2.9)
+ (  0 -  17 degrees    | 238.7 | 308.4 | 0.153 |     7 |   1.0 |   3.3)
+ ( 28 - 180 degrees    |       |       |       |     0 |       |)
+ (  0 - 180 degrees    | 161.1 | 238.7 | 0.496 |     8 |   1.0 |  20.6)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       19564048
+MW     3.0          NDI       19564048
+mb     2.9 0.3    2 IDC       15194859
+mbtmp  3.4 0.2    6 IDC       15194859
+
+Event   620293537 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/03/30 14:35:58.91   1.55 0.630  34.2885   77.9246 32.90 16.60  64   0.0f        13      199   8.76  83.03     uk IDC       15194813
+2021/03/30 14:36:04.45   1.38 1.689  34.3877   78.2057 23.00 15.60  63  35.0f        12   10 198   8.73  82.91 m i se ISC       19487858
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 328.9 | 348.0 | 0.003 |     3 |   8.7 |  16.2)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  42.5 |  82.9)
+ (  0 - 180 degrees    | 198.1 | 274.6 | 0.335 |    10 |   8.7 |  82.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.4 0.1    6 IDC       15194813
+mbtmp  3.4 0.1   10 IDC       15194813
+ML     3.0 0.1    4 IDC       15194813
+mb     3.3 0.0    5 ISC       19487858
+
+Event   626048765 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/02 18:40:20.30   1.87 0.700  32.6870   76.6050 4.200 18.70  -1   8.4  19.4         8 111                   se NDI       19873004
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.9          NDI       19873004
+MW     3.0          NDI       19873004
+
+Event   626048769 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/04 20:31:55.20   1.68 0.700  32.6150   76.1420 5.300 38.80  -1  36.9  7.40         4 207                   se NDI       19873013
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.4          NDI       19873013
+MW     2.5          NDI       19873013
+
+Event   626048770 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/04 22:09:13.30   2.21 0.800  32.6830   76.5900 5.300 18.10  -1   6.1  18.7         5 123                   se NDI       19873014
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.6          NDI       19873014
+MW     2.5          NDI       19873014
+
+Event   626048776 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/13 20:40:26.20   1.49 0.600  32.3440   76.5110 8.800 23.30  -1  35.9  54.8         5 176                   se NDI       19873049
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.3          NDI       19873049
+
+Event   626048778 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/14 15:30:48.30   1.46 0.600  33.8840   76.1310 10.70 22.80  -1   9.8  13.5         4 328                   se NDI       19873054
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.1          NDI       19873054
+MW     3.2          NDI       19873054
+
+Event   620343936 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/15 21:33:26.67   1.92 1.280  32.2404   76.2753  43.5 23.80  64   0.0f         9      209  15.25  85.19     uk IDC       15241183
+2021/04/15 21:33:27.60   2.48 0.900  32.3330   76.4060 5.600 9.400  -1   8.1  15.7         8 104                   se NDI       19873060
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+2021/04/15 21:33:30.46   1.55 1.659  32.4990   76.5041 31.61 20.41  82  14.0f         9    8 208  14.95  84.92 m i se ISC       19632911
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     1 |  14.9 |  14.9)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  43.3 |  84.9)
+ (  0 - 180 degrees    | 208.0 | 280.2 | 0.292 |     8 |  14.9 |  84.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.5 0.0    6 IDC       15241183
+mbtmp  3.7 0.1    8 IDC       15241183
+ML     3.8 0.0    2 IDC       15241183
+ML     3.4          NDI       19873060
+MW     3.5          NDI       19873060
+mb     3.6 0.1    5 ISC       19632911
+
+Event   626048781 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/15 21:47:09.40   2.46 0.900  32.2900   76.3670 8.900 25.70  -1   6.0  19.1         8 102                   se NDI       19873061
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       19873061
+MW     2.9          NDI       19873061
+
+Event   620300640 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/15 22:26:21.76   0.47 0.700  32.3620   78.7069  14.0 10.80  43   0.0f        36       49  10.79 145.98     uk IDC       15241187
+2021/04/15 22:26:22.70   1.22        32.5100   78.7970 7.900 3.900 119  13.0         95                               MOS       16353843
+2021/04/15 22:26:23.10        2.110  32.5900   78.8900                   4.0         43      232   4.60  36.30     uk BJI       15709799
+2021/04/15 22:26:23.50   2.10 0.900  32.4710   78.9180 7.200 8.600  -1 100.0f             11 198                   se NDI       19873062
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+2021/04/15 22:26:23.88        1.000  32.4740   78.7530 4.400 2.800  32   9.4  2.60  302  287                   m i ke ISC-EHB   36909580
+2021/04/15 22:26:24.01   1.59 0.790  32.4789   78.7499  13.5 10.20 215  10.0f        95       51   4.75            se NEIC      16570835
+2021/04/15 22:26:24.47   0.21 1.228  32.3326   78.7498 7.068 5.437  44  10.0f        46   54 102   8.41  64.50        GFZ       18821781
+ (confirmed)
+2021/04/15 22:26:24.10   0.30 1.374  32.4275   78.7108 7.599 5.666  39  13.0f       360  420  45   4.73 151.56 m i se ISC       19632915
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 102.0 | 144.3 | 0.806 |    47 |   4.7 |  14.9)
+ ( 28 - 180 degrees    |  46.1 |  54.4 | 0.955 |   160 |  28.3 | 151.6)
+ (  0 - 180 degrees    |  45.4 |  47.7 | 0.977 |   236 |   4.7 | 151.6)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.3 0.1   27 IDC       15241187
+mbtmp  4.3 0.1   30 IDC       15241187
+ML     3.7 0.2    3 IDC       15241187
+MS     3.4 0.1   26 IDC       15241187
+mb     4.8       23 MOS       16353843
+mb     4.5       35 BJI       15709799
+mB     4.4        4 BJI       15709799
+Ms     4.1        9 BJI       15709799
+Ms7    3.8       11 BJI       15709799
+ML     4.5          NDI       19873062
+MW     4.2          NDI       19873062
+mb     4.6 0.1  117 NEIC      16570835
+M      4.5       36 GFZ       18821781
+mb     4.5 0.2   36 GFZ       18821781
+mb     4.6 0.1  140 ISC       19632915
+MS     3.5 0.2   29 ISC       19632915
+
+Event   620344855 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/16 18:50:44.61   1.50 0.780  32.3162   78.6509 47.20 14.60  65   0.0f        13      208  10.82  84.92     uk IDC       15248665
+2021/04/16 18:50:48.60   2.31 0.900  32.4260   78.8430  14.5 15.10  -1  28.5  28.2         6 195                   se NDI       19873065
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+2021/04/16 18:50:47.37   1.37 1.157  32.4625   78.9746 37.27 13.23  61  10.0f        13   12 207  10.76  84.75 m i se ISC       19632999
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |  10.8 |  14.5)
+ ( 28 - 180 degrees    | 207.9 | 236.8 | 0.196 |     5 |  47.4 |  84.7)
+ (  0 - 180 degrees    | 207.9 | 212.5 | 0.285 |    12 |  10.8 |  84.7)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    9 IDC       15248665
+mbtmp  3.6 0.1   12 IDC       15248665
+ML     3.4 0.2    2 IDC       15248665
+ML     3.2          NDI       19873065
+MW     3.4          NDI       19873065
+mb     3.6 0.4    9 ISC       19632999
+
+Event   626048789 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/22 00:24:18.30   2.20 0.800  31.4370   76.8850 10.70 13.70  -1   5.1  14.2         7 173                   se NDI       19873084
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       19873084
+MW     2.9          NDI       19873084
+
+Event   626048790 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/22 00:25:42.00   1.26 0.500  31.5210   76.9960 7.600 15.30  -1   8.1  14.5         4 188                   se NDI       19873085
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.6          NDI       19873085
+MW     2.7          NDI       19873085
+
+Event   626048793 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/24 23:53:39.80   0.96 0.400  32.7600   76.2120 3.400 5.100  -1   7.4   4.5         4 196                   se NDI       19873093
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     1.8          NDI       19873093
+MW     2.2          NDI       19873093
+
+Event   626048801 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/04/28 11:34:00.80   2.22 0.800  32.3270   76.6250 5.100   6.0  -1  10.1  14.6         7  96                   se NDI       19873111
+ (Presumed earthquake)
+ (Hypocentre not reviewed by the ISC)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.5          NDI       19873111
+MW     3.2          NDI       19873111
+
+Event   626013008 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/05/08 02:39:50.40   2.69 1.100  33.0150   76.2830 5.400 7.400  -1  10.0f             10 132                   se NDI       19756797
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.1          NDI       19756797
+
+Event   626013013 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/05/08 21:24:43.70   2.29 1.000  33.0290   75.9800 5.400 13.10  -1  10.0f              6 206                   se NDI       19756803
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.3          NDI       19756803
+
+Event   626013017 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/05/09 22:19:00.80   2.85 1.100  32.2920   76.9100  11.5  16.0  -1   5.0f              4 220                   se NDI       19756810
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.0          NDI       19756810
+
+Event   626013030 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/05/20 09:35:19.60   1.69 0.600  32.8400   76.2610 3.400 3.800  -1   6.9  11.0         8 122                   se NDI       19756860
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.1          NDI       19756860
+
+Event   626013033 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/05/22 07:59:03.80   3.32 1.200  33.1290   76.0230 6.200 7.800  -1   5.0f              9 150                   se NDI       19756882
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.3          NDI       19756882
+
+Event   626229434 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/01 10:17:01.00   2.00 0.700  33.0680   75.9990 3.800 5.300  -1   4.1  7.70         8 151                   se NDI       19914501
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.0          NDI       19914501
+MW     3.2          NDI       19914501
+
+Event   620513293 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/01 11:06:03.18   1.99 0.500  33.9716   77.6608 50.30  25.5  56   0.0f         6      201  13.28  42.62     uk IDC       15354874
+2021/06/01 11:06:08.45   1.81 0.558  34.1009   77.7997 39.28 23.63  59  35.0f         6    6 200  13.13  42.57 m i se ISC       19889069
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |  13.1 |  16.5)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     1 |  42.6 |  42.6)
+ (  0 - 180 degrees    | 200.2 | 310.7 | 0.229 |     6 |  13.1 |  42.6)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    3 IDC       15354874
+mbtmp  3.6 0.2    6 IDC       15354874
+ML     3.0 0.1    3 IDC       15354874
+mb     3.8 0.2    3 ISC       19889069
+
+Event   626229466 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/03 17:33:58.60   2.51 0.900  32.4410   76.5700   4.5 8.300  -1   6.1  8.40         7 120                   se NDI       19914515
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       19914515
+
+Event   626229484 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/06 00:51:49.70   2.43 0.900  33.0940   75.9590 7.300  12.0  -1   3.8  10.1         6 205                   se NDI       19914522
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.5          NDI       19914522
+
+Event   626229630 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/20 00:11:51.80   0.73 0.300  31.3060   77.7580   4.5   4.5  -1  40.1  9.10         6 175                   se NDI       19914560
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       19914560
+MW     2.8          NDI       19914560
+
+Event   620568059 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/28 00:40:32.60   2.15 0.900  34.6490   78.3440  12.5 13.20  -1  18.0f              6 278                   se NDI       19914578
+ (Presumed earthquake)
+2021/06/28 00:40:32.88   0.53 0.970  34.2494   78.1883 13.60 10.30  48   0.0f        35       67   8.86 124.04     uk IDC       15510435
+2021/06/28 00:40:33.47   5.65 1.730  34.1010   78.3170 40.70 24.60 149  23.2  58.7   15      311   9.04  22.05     se NNC       15872309
+ (#PARAM ENERGY_CLASS=11.45)
+2021/06/28 00:40:33.70        1.450  34.3400   78.3000                   6.0         59      223   3.00  41.80     uk BJI       16171097
+2021/06/28 00:40:33.70   1.04        34.3210   78.2490 5.800 3.100 113  12.0        140                               MOS       16535034
+2021/06/28 00:40:35.25   1.97 0.970  34.2781   78.2208 12.90  10.5 219  10.0f        87       78   6.76            se NEIC      16580709
+2021/06/28 00:40:36.34   0.21 1.780  34.2540   78.2480                  10.0         30   31 111   6.80  41.84        GFZ       18823110
+2021/06/28 00:40:36.50        0.950  34.3860   78.2540 3.200 2.400  16  16.6  2.08  451  417                   m i ke ISC-EHB   36911113
+2021/06/28 00:40:37.32               34.2900   78.4900                  33.0                      48.67  53.85     ke BGR       19464769
+2021/06/28 00:40:38.00   0.30        34.2800   77.9500                  12.0f       129   83                          GCMT      15779063
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        16 1.186       -0.956  0.172  0.780 -0.182  0.632  0.443   16   83 GCMT     )
+ (#                        0.044  0.049  0.041  0.209  0.037  0.174   16  113     0.50 )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#            BDC  54.00 42.00  -56.00               GCMT     )
+ (+                191.00 56.00 -117.00                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       16  1.218 300.00  8.00 -0.065 207.00 22.00 -1.153  48.00 66.00 GCMT     )
+ (nsta1 refers to body waves, cutoff=40s. nsta2 refers to surface waves, cutoff=50s.)
+ (Triangular moment-rate function)
+2021/06/28 00:40:35.53   0.49 1.614  34.2964   78.2036 4.124 4.062  51  13.2  2.97  588  658  29   2.25 124.09 m i ke ISC       19892216
+ (#PRIME)
+ (#PARAM pP_DEPTH=13.0+3.8)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 322.6 | 358.3 | 0.001 |     3 |   2.2 |   2.8)
+ (  0 -  17 degrees    |  42.4 |  74.2 | 0.961 |    61 |   2.2 |  16.8)
+ ( 28 - 180 degrees    |  49.7 |  55.6 | 0.960 |   224 |  28.0 | 124.1)
+ (  0 - 180 degrees    |  29.7 |  45.5 | 0.991 |   339 |   2.2 | 124.1)
+
+Magnitude  Err Nsta Author      OrigID
+ML     4.6          NDI       19914578
+MW     4.8          NDI       19914578
+mb     4.3 0.1   25 IDC       15510435
+mbtmp  4.4 0.1   29 IDC       15510435
+ML     3.6 0.3    4 IDC       15510435
+MS     3.9 0.0   65 IDC       15510435
+mb     4.7          NNC       15872309
+mb     4.6       50 BJI       16171097
+mB     4.9       20 BJI       16171097
+ML     4.5        5 BJI       16171097
+Ms     4.3       41 BJI       16171097
+Ms7    4.1       40 BJI       16171097
+mb     4.8       44 MOS       16535034
+MS     4.2       17 MOS       16535034
+mb     4.8 0.1  115 NEIC      16580709
+M      4.6       24 GFZ       18823110
+mb     4.8 0.2   24 GFZ       18823110
+mb     4.8          BGR       19464769
+Ms     4.2          BGR       19464769
+MW     4.7       83 GCMT      15779063
+mb     4.7 0.2  206 ISC       19892216
+MS     4.0 0.2   86 ISC       19892216
+
+Event   620786243 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/28 06:05:52.59   1.07 0.600  34.0399   78.0050 28.10 13.80  64   0.0f        15      194   9.02  78.20     uk IDC       15510473
+2021/06/28 06:06:13.50   9.59 1.570  34.2584   74.8565 134.0  99.0  96   0.0          4       54   9.47  20.31     se NNC       15872317
+ (#PARAM ENERGY_CLASS=8.22)
+2021/06/28 06:05:58.87   0.88 1.841  34.2703   77.9963 20.94 9.083  60  35.0f        22   22 184   7.69  78.35 m i se ISC       19892233
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 190.1 | 204.3 | 0.256 |     9 |   7.7 |  16.3)
+ ( 28 - 180 degrees    | 193.7 | 196.7 | 0.033 |     5 |  42.5 |  78.4)
+ (  0 - 180 degrees    | 184.3 | 187.0 | 0.412 |    19 |   7.7 |  78.4)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    9 IDC       15510473
+mbtmp  3.7 0.1   13 IDC       15510473
+ML     3.1 0.1    3 IDC       15510473
+MS     3.5 0.3    1 IDC       15510473
+mb     3.5          NNC       15872317
+mb     3.7 0.1    8 ISC       19892233
+
+Event   620587698 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/06/29 19:24:28.15   1.74 1.050  34.2459   78.2131 36.20 21.70  68   0.0f         9      199   8.87  42.64     uk IDC       15510650
+2021/06/29 19:24:31.80   2.51 0.800  34.7360   78.0990 50.60 28.90  -1  15.0  58.7         8 285                   se NDI       19914582
+ (Presumed earthquake)
+2021/06/29 19:24:35.05   1.85 0.910  34.6873   77.9908 15.30 8.600 102  10.0f        26      183   4.05            se NEIC      16580899
+2021/06/29 19:24:39.46  12.63 1.800  34.5601   78.5184 101.5 94.90 142   0.0          6       23   8.66  10.57     se NNC       15872391
+ (#PARAM ENERGY_CLASS=8.45)
+2021/06/29 19:24:33.23   0.77 3.111  34.3790   78.2446 9.772 7.584 103  10.0f        35   41  60   2.33  50.50 m i se ISC       19892378
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   2.3 |   2.8)
+ (  0 -  17 degrees    | 164.6 | 195.6 | 0.556 |    14 |   2.3 |  16.3)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  42.5 |  50.5)
+ (  0 - 180 degrees    |  60.4 | 112.8 | 0.908 |    22 |   2.3 |  50.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.4 0.2    4 IDC       15510650
+mbtmp  3.4 0.1    8 IDC       15510650
+ML     3.1 0.2    3 IDC       15510650
+ML     3.6          NDI       19914582
+mb     3.7 0.2    5 NEIC      16580899
+mb     3.7          NNC       15872391
+mpv    3.5          NNC       15872391
+mb     3.6 0.4    3 ISC       19892378
+
+Event   620928646 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/15 14:17:27.51   0.91 0.820  31.5239   77.4970  28.5  16.5  61   0.0f        14      122  15.69 121.32     uk IDC       15619253
+2021/07/15 14:17:28.50   3.00 1.200  31.3210   77.7640 4.400 5.700  -1   5.0f             20 104                   se NDI       19988020
+ (Presumed earthquake)
+2021/07/15 14:17:27.70   1.09 2.448  31.4302   77.7150 4.895 3.891   5  12.7  7.77   59   41  38   0.47 121.23 m i se ISC       20002693
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 120.2 | 199.3 | 0.724 |    14 |   0.5 |   3.0)
+ (  0 -  17 degrees    |  65.5 | 120.2 | 0.917 |    27 |   0.5 |  15.7)
+ ( 28 - 180 degrees    | 147.4 | 174.0 | 0.451 |     7 |  44.8 | 121.2)
+ (  0 - 180 degrees    |  38.9 |  69.4 | 0.968 |    39 |   0.5 | 121.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1   10 IDC       15619253
+mbtmp  3.7 0.1   12 IDC       15619253
+ML     3.7 0.2    2 IDC       15619253
+ML     3.4          NDI       19988020
+mb     3.7 0.2   10 ISC       20002693
+
+Event   626232869 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/16 18:02:28.90   2.37 1.100  31.5140   78.1460  12.0   6.0  -1   5.0f              8 174                   se NDI       19988023
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.6          NDI       19988023
+
+Event   626232871 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/17 23:18:29.70   2.18 1.000  32.3490   76.4550 5.300 6.800  -1   5.0f              7 145                   se NDI       19988028
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       19988028
+
+Event   620928801 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/18 04:38:46.07   1.60 0.820  34.0451   77.6766 31.80 23.80  65   0.0f         8      200  13.21  49.59     uk IDC       15619476
+2021/07/18 04:38:55.97   6.35 0.930  34.4546   77.8874 48.70 36.30 149  36.5  54.1    6      145  10.38  21.55     se NNC       15873273
+ (#PARAM ENERGY_CLASS=8.69)
+2021/07/18 04:38:55.44   0.69 3.010  34.5044   78.1656 10.43 7.248  96  35.0f        27   25  97   2.37  49.46 m i se ISC       20002978
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 312.8 | 359.2 | 0.001 |     3 |   2.4 |   3.0)
+ (  0 -  17 degrees    | 123.1 | 168.7 | 0.641 |    11 |   2.4 |  12.7)
+ ( 28 - 180 degrees    | 347.1 | 358.1 | 0.000 |     3 |  42.4 |  49.5)
+ (  0 - 180 degrees    |  97.3 | 112.5 | 0.807 |    19 |   2.4 |  49.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    6 IDC       15619476
+mbtmp  3.6 0.1    7 IDC       15619476
+ML     3.1 0.3    1 IDC       15619476
+MS     2.9 0.2    3 IDC       15619476
+mb     3.5          NNC       15873273
+mb     3.7 0.1    6 ISC       20002978
+
+Event   620961583 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/20 08:14:30.23   1.82 0.590  34.1648   78.1545  41.0 24.60  84   0.0f         7      200  13.00  75.84     uk IDC       15651893
+2021/07/20 08:14:35.94   1.57 0.778  34.3179   78.2228 36.63 18.46  90  35.0f         7    8 199  12.84  75.89 m i se ISC       20003196
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |  12.8 |  16.3)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  42.6 |  75.9)
+ (  0 - 180 degrees    | 199.5 | 277.1 | 0.320 |     6 |  12.8 |  75.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    4 IDC       15651893
+mbtmp  3.6 0.1    6 IDC       15651893
+ML     3.3 0.3    1 IDC       15651893
+MS     2.9 0.2    3 IDC       15651893
+mb     3.6 0.0    3 ISC       20003196
+
+Event   620961616 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/20 23:27:36.80   3.07 1.300  34.7610   78.5840 16.70 16.60  -1  10.0f              8 266                   se NDI       19988046
+ (Presumed earthquake)
+2021/07/20 23:27:37.49   1.02 0.860  34.1913   78.0792 21.60  13.5  72   0.0f        20      168   8.89  83.11     uk IDC       15651985
+2021/07/20 23:27:40.65   0.60 2.079  34.4237   78.3222 9.472 6.682  93  10.0f        37   28  76   2.88  82.86 m i se ISC       20003251
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 277.5 | 324.3 | 0.051 |     3 |   2.9 |   2.9)
+ (  0 -  17 degrees    | 121.6 | 133.6 | 0.730 |    16 |   2.9 |  16.2)
+ ( 28 - 180 degrees    | 286.6 | 326.8 | 0.042 |     8 |  38.9 |  82.9)
+ (  0 - 180 degrees    |  76.7 | 113.2 | 0.924 |    28 |   2.9 |  82.9)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.6          NDI       19988046
+mb     3.7 0.1   11 IDC       15651985
+mbtmp  3.6 0.1   15 IDC       15651985
+ML     3.1 0.1    4 IDC       15651985
+MS     3.3 0.3    1 IDC       15651985
+mb     3.8 0.1   10 ISC       20003251
+
+Event   620961626 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/21 04:01:44.69   2.07 0.720  33.7975   78.0737 43.40 24.40  49   0.0f         7      200  13.37  42.95     uk IDC       15651912
+2021/07/21 04:01:45.95   1.68 0.830  34.0777   78.4395 17.10  14.0 147  10.0f        24      171   4.32            se NEIC      16584585
+2021/07/21 04:01:49.39   0.91 1.629  34.0420   78.3587 16.99 12.23   2  35.0f        30   33 141   4.25  48.23 m i se ISC       20003269
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 254.1 | 264.0 | 0.121 |    12 |   4.3 |  16.7)
+ ( 28 - 180 degrees    | 192.8 | 218.1 | 0.288 |     5 |  38.9 |  48.2)
+ (  0 - 180 degrees    | 141.1 | 171.9 | 0.686 |    22 |   4.3 |  48.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8 0.2    4 IDC       15651912
+mbtmp  3.7 0.1    7 IDC       15651912
+ML     2.9 0.1    3 IDC       15651912
+MS     3.4 0.5    3 IDC       15651912
+mb     4.3 0.2    8 NEIC      16584585
+mb     4.1 0.3    6 ISC       20003269
+
+Event   626232901 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/27 00:24:28.20   2.14 1.000  32.1800   76.5280 10.20 9.800  -1  10.0f              6 180                   se NDI       19988075
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.5          NDI       19988075
+
+Event   626232905 India-Pakistan border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/07/30 16:01:09.10   2.87 0.900  31.6400   74.2470   8.5  13.5  -1  43.7   403        14 207                   se NDI       19988089
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.2          NDI       19988089
+
+Event   626338813 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/04 15:55:53.50   4.16 1.600  34.9510   78.8030 211.3 117.2  -1  10.0   305         6 309                   se NDI       20065352
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.3          NDI       20065352
+
+Event   626338823 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/12 02:28:46.90   3.04 1.300  31.3180   77.8380 8.900 6.200  -1   5.0f              7 143                   se NDI       20065395
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.6          NDI       20065395
+
+Event   625561004 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/15 07:43:10.70   2.53 1.100  31.5850   78.1570 5.300   6.0  -1  10.0f             11  84                   se NDI       20065417
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.1          NDI       20065417
+
+Event   626338840 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/16 23:25:00.90   2.16 0.900  32.9250   75.6330 8.700 13.80  -1  10.0f              7 280                   se NDI       20065426
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.5          NDI       20065426
+
+Event   621030434 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/18 23:38:29.77   0.81 0.930  32.6792   75.4289 21.90 16.60  44   0.0f        14      145  15.04  79.06     uk IDC       15705882
+2021/08/18 23:38:35.70   2.49 1.000  32.7370   75.4140   4.5 5.300  -1   5.0f             17  70                   se NDI       20065444
+ (Presumed earthquake)
+2021/08/18 23:38:34.14   0.87 2.484  32.7852   75.5230 5.189 3.961  53  29.1  7.29   59   40  63   0.40  79.06 m i se ISC       20082386
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 113.8 | 178.8 | 0.737 |    12 |   0.4 |   2.9)
+ (  0 -  17 degrees    |  65.0 | 128.2 | 0.911 |    27 |   0.4 |  14.9)
+ ( 28 - 180 degrees    | 146.3 | 166.4 | 0.366 |     8 |  34.2 |  79.1)
+ (  0 - 180 degrees    |  63.2 |  82.6 | 0.949 |    40 |   0.4 |  79.1)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.1   12 IDC       15705882
+mbtmp  3.9 0.1   14 IDC       15705882
+ML     3.2 0.2    2 IDC       15705882
+ML     3.5          NDI       20065444
+mb     3.8 0.1   10 ISC       20082386
+
+Event   626338853 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/21 16:31:34.30   2.25 1.000  31.4360   77.3870   5.0   4.5  -1   5.0f              6  98                   se NDI       20065458
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.6          NDI       20065458
+
+Event   621002177 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/24 16:48:11.60   0.51 0.810  32.0284   78.7843 14.10 10.60  37   0.0f        40       51  11.13 153.93     uk IDC       15717582
+2021/08/24 16:48:11.60        1.970  32.1000   78.8200                  10.0         42      233   7.50  39.00     uk BJI       16394006
+2021/08/24 16:48:11.70   0.89        32.1930   78.8090 7.900 3.900 109   7.0         89                               MOS       18744301
+2021/08/24 16:48:13.46   1.18 0.580  32.0551   78.7955 14.20  13.0 217  10.0f        75       46   4.92            se NEIC      16590760
+2021/08/24 16:48:14.10   3.26 1.400  32.1590   79.0200 5.900 7.100  -1  10.0f             26 113                   se NDI       20065475
+ (Presumed earthquake)
+2021/08/24 16:48:14.67        0.910  32.1470   78.8220 3.400 2.400  31  15.0f       345  310                   m i ke ISC-EHB   36912860
+2021/08/24 16:48:15.15   1.08 0.570  32.4501   78.7928 13.90  10.0 118   0.0         17       44  10.73  23.63     se NNC       19663013
+ (#PARAM ENERGY_CLASS=10.62)
+2021/08/24 16:48:15.49   0.23 1.500  32.1660   78.7780                  10.0         30   31 164   4.86  48.61        GFZ       18824392
+2021/08/24 16:48:12.86   0.99 1.680  32.1263   78.7948 3.884 3.279  90   7.1  6.34  429  414  21   0.67 153.99 m i se ISC       20083241
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 141.1 | 186.7 | 0.669 |    11 |   0.7 |   2.8)
+ (  0 -  17 degrees    |  71.2 |  86.7 | 0.942 |    72 |   0.7 |  16.8)
+ ( 28 - 180 degrees    |  46.2 |  62.1 | 0.957 |   139 |  28.1 | 154.0)
+ (  0 - 180 degrees    |  21.2 |  26.7 | 0.996 |   248 |   0.7 | 154.0)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.4 0.1   31 IDC       15717582
+mbtmp  4.5 0.1   34 IDC       15717582
+ML     4.3 0.2    3 IDC       15717582
+MS     3.7 0.1   13 IDC       15717582
+mb     4.5       38 BJI       16394006
+mB     4.4        3 BJI       16394006
+ML     4.2        2 BJI       16394006
+Ms     4.1       28 BJI       16394006
+Ms7    3.8       26 BJI       16394006
+mb     4.8       28 MOS       18744301
+mb     4.7 0.1   72 NEIC      16590760
+ML     4.4          NDI       20065475
+mb     4.8          NNC       19663013
+M      4.4       23 GFZ       18824392
+mb     4.8 0.2   23 GFZ       18824392
+mb     4.6 0.1  125 ISC       20083241
+MS     3.8 0.1   21 ISC       20083241
+
+Event   626338863 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/27 00:01:09.30   2.08 0.900  31.5760   77.4930   5.5 4.300  -1   5.0f              7 104                   se NDI       20065484
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       20065484
+
+Event   626338864 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/27 00:16:23.40   2.19 1.000  32.3210   78.6720 6.100 8.400  -1  10.0f              5 125                   se NDI       20065485
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       20065485
+
+Event   626338865 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/27 11:50:48.30   1.95 0.800  32.1950   78.9880   4.0 8.100  -1   5.0f              8 159                   se NDI       20065487
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       20065487
+
+Event   626338869 India-Pakistan border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/28 05:51:33.60   1.77 0.700  31.3420   74.3020 6.100 21.90  -1  20.9  28.8         8 257                   se NDI       20065492
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.3          NDI       20065492
+
+Event   626338870 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/28 14:40:49.80   2.22 1.000  33.5040   74.9090 16.20 19.10  -1  10.0f              6 316                   se NDI       20065495
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.0          NDI       20065495
+
+Event   626338871 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/28 23:28:11.80   1.91 0.900  32.3320   78.6180 5.900   8.5  -1  10.0f              5 149                   se NDI       20065498
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       20065498
+
+Event   626338872 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/08/29 08:39:05.30   3.35 1.400  32.2430   78.8750 6.800  10.5  -1  10.0f              8 148                   se NDI       20065499
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.3          NDI       20065499
+
+Event   621105882 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/09/09 13:20:55.21   1.28 0.910  32.4935   76.1583 34.60 19.80  70   0.0f         9      149  10.21  76.24     uk IDC       15755001
+2021/09/09 13:20:58.70   3.74 1.400  32.6350   76.3270 4.900 6.700  -1   5.0f             14  64                   se NDI       20065539
+ (Presumed earthquake)
+2021/09/09 13:21:03.52   3.90 1.540  33.1538   76.1547  31.5 30.60 118   0.0         10       28   9.57  14.42     se NNC       19061804
+ (#PARAM ENERGY_CLASS=8.98)
+2021/09/09 13:20:58.04   0.94 1.985  32.6456   76.2702 5.145 3.189  63  17.8  5.19   61   41  60   0.22  76.25 m i se ISC       20378447
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |  60.2 | 113.9 | 0.909 |    12 |   0.2 |   2.3)
+ (  0 -  17 degrees    |  60.2 |  91.7 | 0.932 |    28 |   0.2 |  14.9)
+ ( 28 - 180 degrees    | 148.4 | 295.3 | 0.314 |     3 |  46.4 |  76.2)
+ (  0 - 180 degrees    |  60.2 |  91.7 | 0.934 |    34 |   0.2 |  76.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    6 IDC       15755001
+mbtmp  3.9 0.1    9 IDC       15755001
+ML     3.5 0.1    3 IDC       15755001
+MS     4.0 0.1    3 IDC       15755001
+ML     3.6          NDI       20065539
+mb     3.8          NNC       19061804
+mb     3.6 0.2    4 ISC       20378447
+MS     3.9 0.2    3 ISC       20378447
+
+Event   626338887 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/09/09 18:20:45.90   1.77 0.800  33.4620   76.6970   3.5 4.600  -1   5.0f              6 141                   se NDI       20065541
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.8          NDI       20065541
+
+Event   621070935 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/09/13 03:46:44.88   0.75 0.880  33.6198   76.3842  19.0 12.30  54   0.0f        24      165   9.13  83.81     uk IDC       15757113
+2021/09/13 03:46:46.09   0.31 0.720  33.6100   76.4980 8.932 7.386 109  10.0f        22   22 100   2.69  44.22        GFZ       18824734
+ (confirmed)
+2021/09/13 03:46:46.70   2.59 1.100  33.7040   76.4020   5.5 5.900  -1   5.0f             12 127                   se NDI       20065556
+ (Presumed earthquake)
+2021/09/13 03:46:47.33        0.800  33.6610   76.3920 4.200 3.100  56  15.0f       133  118                   m i ke ISC-EHB   36913398
+2021/09/13 03:46:47.55   2.01 0.990  33.7409   76.4233 14.80 8.300 149  10.0f        45      141   2.63            se NEIC      16596428
+2021/09/13 03:46:55.60   3.18 1.300  33.9572   76.6285 34.80 21.40  39  93.1  22.1   15      110   8.84  21.36     se NNC       19061967
+ (#PARAM ENERGY_CLASS=9.56)
+2021/09/13 03:46:46.29   1.11 1.541  33.6226   76.4306 4.636 4.422  88  11.4  7.65  140  123  41   0.82  83.81 m i se ISC       20378874
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 118.6 | 182.9 | 0.749 |     8 |   0.8 |   2.6)
+ (  0 -  17 degrees    |  64.3 |  74.7 | 0.934 |    37 |   0.8 |  14.9)
+ ( 28 - 180 degrees    | 147.1 | 160.5 | 0.643 |    30 |  28.7 |  83.8)
+ (  0 - 180 degrees    |  41.6 |  74.7 | 0.976 |    83 |   0.8 |  83.8)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.1 0.1   18 IDC       15757113
+mbtmp  4.1 0.1   22 IDC       15757113
+ML     3.6 0.2    4 IDC       15757113
+M      4.6       14 GFZ       18824734
+mb     4.4 0.2   14 GFZ       18824734
+ML     4.5 0.3    3 GFZ       18824734
+MLv    4.7 0.2    4 GFZ       18824734
+ML     4.0          NDI       20065556
+mb     4.3 0.1   21 NEIC      16596428
+mb     3.8          NNC       19061967
+mpv    3.9          NNC       19061967
+mb     4.4 0.2   36 ISC       20378874
+
+Event   626338912 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/09/28 21:22:29.00   2.86 1.000  31.0020   76.3320 14.10 15.70  -1  10.0  1000         6 218                   se NDI       20065617
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.4          NDI       20065617
+
+Event   626338918 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/09/30 18:27:34.80   1.11 0.500  31.9210   77.2870 3.200 2.800  -1   5.0f              5 182                   se NDI       20065631
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     1.9          NDI       20065631
+
+Event   621147847 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/01 19:59:34.10   1.97 0.900  34.2670   79.0860 9.400 10.70  -1  10.0f              9 280                   se NDI       20065640
+ (Presumed earthquake)
+2021/10/01 19:59:35.95   1.26 1.460  34.1166   78.1124 36.30  13.0  63   0.0f        13      195   8.97  78.18     uk IDC       15787541
+2021/10/01 19:59:36.97   0.61 2.437  34.1603   78.1600 7.280 5.752  83  10.0f        31   31  76   0.81  78.18 m i se ISC       30795397
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 239.5 | 283.3 | 0.181 |     6 |   0.8 |   2.9)
+ (  0 -  17 degrees    | 118.4 | 130.2 | 0.761 |    17 |   0.8 |  16.5)
+ ( 28 - 180 degrees    | 196.7 | 357.0 | 0.016 |     3 |  42.7 |  78.2)
+ (  0 - 180 degrees    |  76.3 | 112.2 | 0.910 |    24 |   0.8 |  78.2)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.4          NDI       20065640
+mb     3.6 0.1    7 IDC       15787541
+mbtmp  3.6 0.1   11 IDC       15787541
+ML     3.1 0.1    4 IDC       15787541
+MS     3.5 0.3    1 IDC       15787541
+mb     3.7 0.1    6 ISC       30795397
+
+Event   626338929 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/04 04:35:38.40   2.08 0.900  31.8240   78.1950   4.0 5.400  -1   5.0f              7 134                   se NDI       20065662
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.1          NDI       20065662
+
+Event   626338932 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/06 02:55:18.00   0.94 0.300  31.6150   77.6660 2.600 1.900  -1  11.4  4.40         6 124                   se NDI       20065674
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.2          NDI       20065674
+
+Event   621217233 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/07 19:01:17.61   1.07 0.840  33.8615   78.9472 34.80 17.90  66   0.0f         9      144  13.17  77.48     uk IDC       15841334
+2021/10/07 19:01:25.40   2.51 0.700  34.1800   79.1040 40.10 53.10  -1  10.0  54.0         8 273                   se NDI       20065685
+ (Presumed earthquake)
+2021/10/07 19:01:19.92   0.66 2.459  34.1981   79.2712 7.982 6.623  66  10.0f        36   27 117   1.44  77.49 m i se ISC       30796051
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 279.0 | 351.9 | 0.017 |     3 |   1.4 |   2.8)
+ (  0 -  17 degrees    | 121.6 | 132.7 | 0.701 |    20 |   1.4 |  16.4)
+ ( 28 - 180 degrees    | 161.3 | 212.8 | 0.277 |     4 |  43.2 |  77.5)
+ (  0 - 180 degrees    | 117.4 | 128.5 | 0.782 |    26 |   1.4 |  77.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    7 IDC       15841334
+mbtmp  3.7 0.1    9 IDC       15841334
+ML     3.6 0.3    1 IDC       15841334
+MW     3.8          NDI       20065685
+mb     3.5 0.2    4 ISC       30796051
+
+Event   621224668 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/08 17:31:54.80   2.77 1.200  34.9210   78.3680 16.60  16.0  -1   5.0f             11 288                   se NDI       20065692
+ (Presumed earthquake)
+2021/10/08 17:31:56.87   0.86 0.550  34.1227   77.9901 27.80 14.60  53   0.0f        15      181  13.07  83.19     uk IDC       15849927
+2021/10/08 17:32:00.18   0.58 1.604  34.4945   78.3128 9.910 6.865  95  10.0f        44   40  76   0.97  82.79 m i se ISC       30796157
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 287.4 | 333.3 | 0.034 |     3 |   1.0 |   3.0)
+ (  0 -  17 degrees    | 120.6 | 132.6 | 0.654 |    23 |   1.0 |  16.1)
+ ( 28 - 180 degrees    | 180.5 | 188.7 | 0.296 |     9 |  38.8 |  82.8)
+ (  0 - 180 degrees    |  76.7 | 113.2 | 0.907 |    36 |   1.0 |  82.8)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.6          NDI       20065692
+mb     3.9 0.1   12 IDC       15849927
+mbtmp  3.9 0.0   15 IDC       15849927
+ML     3.4 0.1    3 IDC       15849927
+MS     3.1 0.2    3 IDC       15849927
+mb     4.1 0.1   11 ISC       30796157
+MS     3.1 0.2    3 ISC       30796157
+
+Event   621224670 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/08 18:08:58.62   1.54 0.750  33.8432   77.4999 51.90 18.70  67   0.0f         8      198  13.44  78.41     uk IDC       15849929
+2021/10/08 18:09:05.54   1.28 1.341  34.2635   78.0622 37.80 12.12  64  35.0f        16   18 181   7.45  78.31 m i se ISC       30796160
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 216.9 | 228.9 | 0.130 |    11 |   7.5 |  16.4)
+ ( 28 - 180 degrees    | 196.8 | 357.0 | 0.016 |     3 |  42.6 |  78.3)
+ (  0 - 180 degrees    | 181.8 | 201.8 | 0.325 |    16 |   7.5 |  78.3)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.5 0.1    5 IDC       15849929
+mbtmp  3.5 0.1    8 IDC       15849929
+ML     2.9 0.1    3 IDC       15849929
+MS     3.6 0.3    1 IDC       15849929
+mb     3.5 0.1    4 ISC       30796160
+
+Event   626338970 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/21 02:57:55.00   2.14 1.000  31.5790   78.7730   5.5 8.300  -1   5.0f              5 190                   se NDI       20065759
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       20065759
+
+Event   626338975 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/24 22:38:31.20   2.17 0.800  31.5050   77.9270 12.10 8.800  -1  10.0  49.3         4 158                   se NDI       20065777
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     1.6          NDI       20065777
+MW     2.2          NDI       20065777
+
+Event   621239258 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/26 00:32:06.82   0.57 0.780  33.1028   76.6517 13.60 10.80  64   0.0f        33       96   9.67  84.31     uk IDC       15927092
+2021/10/26 00:32:07.40        1.650  33.2000   76.8700                   7.0         38      264   6.80  40.50     uk BJI       16579236
+2021/10/26 00:32:07.90   3.55 1.300  33.3170   76.7590 6.600 8.700  -1  10.0f             25  87                   se NDI       20065780
+ (Presumed earthquake)
+2021/10/26 00:32:08.89   1.55 0.770  33.2123   76.8049 12.30 10.40 205  10.0f        81       53   2.99            se NEIC      16653130
+2021/10/26 00:32:09.52        0.950  33.2000   76.7460 3.100 2.600  57  15.0f       290  254                   m i ke ISC-EHB   36914292
+2021/10/26 00:32:09.94   0.22 1.490  33.0950   76.7910                  10.0         26   30 110   2.99  76.34        GFZ       18825450
+2021/10/26 00:32:14.04   3.66 1.450  33.3830   76.7945 29.10 22.60 157  49.2  29.8   17      310   9.43  21.92     se NNC       19053344
+ (#PARAM ENERGY_CLASS=10.28)
+2021/10/26 00:32:08.23   0.85 1.756  33.1972   76.8015 3.896 3.362  79   9.5  5.63  323  329  23   1.03  84.80 m i se ISC       30798010
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |  85.0 | 164.7 | 0.836 |    11 |   1.0 |   3.0)
+ (  0 -  17 degrees    |  38.0 |  66.7 | 0.978 |    69 |   1.0 |  16.8)
+ ( 28 - 180 degrees    |  96.4 |  99.5 | 0.875 |    91 |  28.4 |  84.8)
+ (  0 - 180 degrees    |  23.1 |  30.9 | 0.995 |   193 |   1.0 |  84.8)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.3 0.1   27 IDC       15927092
+mbtmp  4.3 0.1   30 IDC       15927092
+ML     3.9 0.1    3 IDC       15927092
+MS     3.5 0.1    8 IDC       15927092
+mb     4.6       34 BJI       16579236
+mB     4.6        6 BJI       16579236
+ML     4.2        1 BJI       16579236
+Ms     3.9        4 BJI       16579236
+Ms7    3.6        5 BJI       16579236
+mb     4.6          NDI       20065780
+ML     4.1          NDI       20065780
+mb     4.6 0.1   89 NEIC      16653130
+M      4.5       18 GFZ       18825450
+mb     4.6 0.2   18 GFZ       18825450
+mb     4.3          NNC       19053344
+mb     4.5 0.2  100 ISC       30798010
+MS     3.5 0.0    9 ISC       30798010
+
+Event   626338976 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/26 00:37:24.50   2.46 1.100  33.2040   76.8830   4.0 4.900  -1  10.0f              8 117                   se NDI       20065781
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.0          NDI       20065781
+
+Event   626338979 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/27 10:26:49.30   1.15 0.500  31.0410   78.0470 1.800 2.200  -1   5.0f             10 108                   se NDI       20065788
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.6          NDI       20065788
+
+Event   621395183 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/30 16:25:11.22   1.06 0.740  33.1128   76.6346 29.30 15.10  64   0.0f        14      197   9.66  78.52     uk IDC       15952277
+2021/10/30 16:25:18.73   4.36 1.470  33.3026   76.8951 32.80 28.60 143  73.1  38.8   14       36   9.52  22.03     se NNC       19053576
+ (#PARAM ENERGY_CLASS=8.79)
+2021/10/30 16:25:16.66   0.85 1.429  33.2683   76.9181 16.36 6.661  56  35.0f        47   32 191   7.34  78.43 m i se ISC       30798548
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 201.7 | 215.4 | 0.244 |    15 |   7.3 |  15.4)
+ ( 28 - 180 degrees    | 196.2 | 199.3 | 0.254 |     6 |  42.9 |  78.4)
+ (  0 - 180 degrees    | 191.5 | 193.6 | 0.384 |    28 |   7.3 |  78.4)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8 0.1   10 IDC       15952277
+mbtmp  3.8 0.1   13 IDC       15952277
+ML     3.4 0.1    3 IDC       15952277
+mb     3.5          NNC       19053576
+mb     3.7 0.1   10 ISC       30798548
+
+Event   621395184 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/30 16:29:07.32   0.92 0.710  33.0375   76.4971 26.80 14.80  55   0.0f        15      165   9.71  84.38     uk IDC       15952278
+2021/10/30 16:29:09.83   2.20 1.080  33.2438   76.7582 13.80  10.5 202  10.0f        46       80   2.94            se NEIC      16653826
+2021/10/30 16:29:10.20   2.74 1.100  33.3640   76.6270 5.200 7.200  -1  10.0f             13 139                   se NDI       20065796
+ (Presumed earthquake)
+2021/10/30 16:29:14.65   4.37 1.350  33.2972   76.8385 32.80  28.5 144  74.8  38.9   14       36   9.52  22.01     se NNC       19053577
+ (#PARAM ENERGY_CLASS=9.11)
+2021/10/30 16:29:09.47   1.08 1.691  33.2292   76.7880 4.813 3.733  95  13.8  7.55  121   94  55   1.04  84.17 m i se ISC       30798549
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |  99.4 | 184.1 | 0.785 |    11 |   1.0 |   3.0)
+ (  0 -  17 degrees    |  84.7 | 100.2 | 0.903 |    35 |   1.0 |  15.4)
+ ( 28 - 180 degrees    | 122.5 | 152.6 | 0.648 |    15 |  29.1 |  84.2)
+ (  0 - 180 degrees    |  55.2 |  82.0 | 0.964 |    66 |   1.0 |  84.2)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.1   12 IDC       15952278
+mbtmp  3.9 0.1   15 IDC       15952278
+ML     3.5 0.1    3 IDC       15952278
+MS     3.6 0.3    1 IDC       15952278
+mb     4.2 0.1   23 NEIC      16653826
+ML     3.7          NDI       20065796
+mb     3.7          NNC       19053577
+mb     4.1 0.2   22 ISC       30798549
+
+Event   626338984 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/10/31 14:53:39.00   1.64 0.700  32.3260   76.5110 3.400   4.0  -1   5.0f              5 131                   se NDI       20065801
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       20065801
+
+Event   621401302 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/01 20:35:29.70   2.10 0.150  34.0396   77.8056 46.10  25.0  59   0.0f         6      202  13.19  42.63     uk IDC       15954371
+2021/11/01 20:35:35.05   1.95 0.693  34.1575   77.8923 40.06 23.31  58  35.0f         6    6 201  13.05  42.57 m i se ISC       30834814
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |  13.1 |  16.5)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     1 |  42.6 |  42.6)
+ (  0 - 180 degrees    | 201.6 | 277.3 | 0.317 |     6 |  13.1 |  42.6)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.5 0.3    3 IDC       15954371
+mbtmp  3.5 0.1    6 IDC       15954371
+ML     3.1 0.1    3 IDC       15954371
+mb     3.4 0.5    3 ISC       30834814
+
+Event   626727088 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/03 18:26:39.40   0.58 0.200  31.1700   78.4460 2.100   2.0  -1  12.2   3.5         6 164                   se NDI       20479577
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     1.7          NDI       20479577
+MW     2.6          NDI       20479577
+
+Event   626727098 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/04 00:55:52.90   2.07 0.800  31.2410   78.0620 4.900 5.800  -1  14.0  8.90         5 118                   se NDI       20479579
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.4          NDI       20479579
+MW     3.2          NDI       20479579
+
+Event   626727099 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/04 01:43:13.10   0.93 0.300  31.2090   78.0590 2.200   2.5  -1   7.8  3.90         4 122                   se NDI       20479580
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.3          NDI       20479580
+MW     3.0          NDI       20479580
+
+Event   626727101 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/04 18:09:58.80   1.63 0.600  32.1920   75.2910 9.200  13.0  -1  32.3   8.0         4 226                   se NDI       20479585
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.2          NDI       20479585
+
+Event   626727116 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/07 00:50:26.10   2.24 0.900  31.3140   77.8060 31.60 7.200  -1  11.7  12.8         4 225                   se NDI       20479590
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.1          NDI       20479590
+MW     2.4          NDI       20479590
+
+Event   625561618 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/09 10:57:25.88   0.48 0.600  31.8729   78.5112 12.60 10.70  37   0.0f        40       97  11.21 145.99     uk IDC       15965934
+2021/11/09 10:57:25.90   1.91 0.700  31.8660   78.4170 3.800 5.300  -1   4.4  6.40        12 198                   se NDI       20479601
+ (Presumed earthquake)
+2021/11/09 10:57:26.70   1.08        32.0260   78.5610 8.300   4.5 111  15.0         70                               MOS       18992735
+2021/11/09 10:57:27.80        3.390  32.9800   78.5400                  10.0         26      230   1.40  39.30     uk BJI       18738502
+2021/11/09 10:57:27.88   0.83 0.410  31.9939   78.5517 13.70 7.600 202  10.0f       108       84   4.74            se NEIC      16654997
+2021/11/09 10:57:28.49   0.20 0.920  31.9260   78.5540 9.057 5.179  33  10.0f        38   50 112   4.77  76.96        GFZ       18825699
+ (confirmed)
+2021/11/09 10:57:28.71        1.040  31.9690   78.5400 3.900 2.900  35  15.0f       266  242                   m i ke ISC-EHB   36914573
+2021/11/09 10:57:27.59   1.45 1.322  31.8875   78.5072 5.250 3.359  45  10.3  9.46  325  297  32   1.16 148.79 m i se ISC       30835653
+ (#PRIME)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 223.0 | 258.6 | 0.253 |     7 |   1.2 |   2.7)
+ (  0 -  17 degrees    |  86.2 | 104.9 | 0.905 |    48 |   1.2 |  15.2)
+ ( 28 - 180 degrees    |  84.5 |  88.0 | 0.892 |   107 |  28.2 | 148.8)
+ (  0 - 180 degrees    |  32.7 |  38.4 | 0.991 |   186 |   1.2 | 148.8)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.3 0.1   34 IDC       15965934
+mbtmp  4.3 0.1   36 IDC       15965934
+ML     4.0 0.1    2 IDC       15965934
+MS     3.6 0.1   14 IDC       15965934
+ML     3.8          NDI       20479601
+MW     4.4          NDI       20479601
+mb     4.8       23 MOS       18992735
+mb     4.5       22 BJI       18738502
+mB     4.5        4 BJI       18738502
+Ms     4.0        5 BJI       18738502
+Ms7    3.7        3 BJI       18738502
+mb     4.6 0.1   69 NEIC      16654997
+M      4.6       29 GFZ       18825699
+mb     4.6 0.2   29 GFZ       18825699
+mb     4.6 0.2   95 ISC       30835653
+MS     3.6 0.2   17 ISC       30835653
+
+Event   621440063 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/10 13:40:57.40   3.36 1.300  33.3710   78.8240 34.60 71.10  -1  10.0  41.4         4 228                   se NDI       20479606
+ (Presumed earthquake)
+2021/11/10 13:41:04.06   1.22 0.910  32.6119   79.4584  34.0 17.60  66   0.0f        10      145  10.75  76.36     uk IDC       15983046
+2021/11/10 13:41:06.34   0.69 1.443  32.8018   79.4928 9.788 7.700 155  10.0f        25   23  78   0.44  76.46 m i se ISC       30835772
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 313.1 | 349.7 | 0.007 |     3 |   0.4 |   2.6)
+ (  0 -  17 degrees    | 117.3 | 145.7 | 0.704 |    14 |   0.4 |  14.1)
+ ( 28 - 180 degrees    | 212.1 | 357.0 | 0.015 |     3 |  72.8 |  76.5)
+ (  0 - 180 degrees    |  78.9 | 115.9 | 0.834 |    22 |   0.4 |  76.5)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.0          NDI       20479606
+MW     3.6          NDI       20479606
+mb     3.5 0.1    7 IDC       15983046
+mbtmp  3.6 0.1   10 IDC       15983046
+ML     3.3 0.2    3 IDC       15983046
+MS     4.3 0.3    1 IDC       15983046
+mb     3.5 0.0    6 ISC       30835772
+
+Event   626727153 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/12 21:06:21.40   1.29 0.500  32.9050   76.2110 999.9 999.9  -1   8.5  1000         3 342                   se NDI       20479617
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.0          NDI       20479617
+MW     2.6          NDI       20479617
+
+Event   625561659 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/15 05:44:17.50   2.14 0.800  33.0150   76.1990 10.60 11.10  -1  16.6  6.80         6 275                   se NDI       20479631
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       20479631
+
+Event   621475688 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/16 19:07:16.60   2.25 0.800  33.2410   75.4280   7.5 18.10  -1  35.5  22.6         6 246                   se NDI       20479640
+ (Presumed earthquake)
+2021/11/16 19:07:17.50   1.71 0.900  33.1209   75.9158 35.10 20.70  71   0.0f        11      205   9.57  49.49     uk IDC       15998099
+2021/11/16 19:07:21.48   0.70 2.594  33.1789   75.9796 8.531 4.997  78  28.0f        39   27 149   0.96  49.47 m i se ISC       30836591
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 240.2 | 294.6 | 0.167 |     5 |   1.0 |   2.5)
+ (  0 -  17 degrees    | 163.3 | 178.5 | 0.563 |    18 |   1.0 |  14.4)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  45.8 |  49.5)
+ (  0 - 180 degrees    | 149.7 | 160.9 | 0.636 |    24 |   1.0 |  49.5)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.2          NDI       20479640
+MW     4.0          NDI       20479640
+mb     3.6 0.1    6 IDC       15998099
+mbtmp  3.7 0.1    9 IDC       15998099
+ML     3.5 0.2    3 IDC       15998099
+MS     2.9 0.0    2 IDC       15998099
+mb     3.8 0.1    5 ISC       30836591
+
+Event   626727199 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/18 19:29:03.50   0.34 0.100  32.4850   76.6380 2.200 1.400  -1   9.8   3.5         3 253                   se NDI       20479646
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.9          NDI       20479646
+MW     3.2          NDI       20479646
+
+Event   621449564 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/23 16:31:56.47   0.72 0.690  31.3339   77.1471 19.80  14.0  50   0.0f        20       97  11.48  86.02     uk IDC       16076662
+2021/11/23 16:31:57.10   2.48 0.900  31.2690   77.1510 4.900 6.800  -1  12.2  11.3         9 117                   se NDI       20479666
+ (Presumed earthquake)
+2021/11/23 16:31:58.69   1.21 0.600  31.3163   77.1736  18.0 11.10 209  10.0f        40       97   4.04            se NEIC      16656802
+2021/11/23 16:31:59.32   0.38 1.110  31.2730   77.1860 12.71 6.986  41  10.0f        15   15 178   4.07  53.67        GFZ       18825958
+ (confirmed)
+2021/11/23 16:32:10.61   4.39 1.170  31.9206   76.8378  36.5 28.70 120  75.9  35.0   12       33  10.87  23.17     se NNC       19055591
+ (#PARAM ENERGY_CLASS=9.64)
+2021/11/23 16:31:58.46   0.43 2.011  31.4658   77.2893 7.286 3.962  45   9.0f       129  110  51   1.23  85.88 m i se ISC       30837381
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 121.5 | 176.8 | 0.697 |     6 |   1.2 |   2.8)
+ (  0 -  17 degrees    | 104.0 | 114.7 | 0.808 |    40 |   1.2 |  15.8)
+ ( 28 - 180 degrees    |  97.0 | 145.8 | 0.822 |    24 |  28.7 |  85.9)
+ (  0 - 180 degrees    |  51.6 |  82.0 | 0.950 |    78 |   1.2 |  85.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.1   16 IDC       16076662
+mbtmp  3.8 0.1   19 IDC       16076662
+ML     3.4 0.2    3 IDC       16076662
+MS     2.9 0.3    1 IDC       16076662
+ML     3.2          NDI       20479666
+MW     3.8          NDI       20479666
+mb     4.3 0.1   19 NEIC      16656802
+M      4.3       12 GFZ       18825958
+mb     4.3 0.2   12 GFZ       18825958
+mb     3.6          NNC       19055591
+mb     4.2 0.3   29 ISC       30837381
+
+Event   626727233 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/23 20:51:52.30   1.77 0.700  31.3100   77.9520 25.20  15.5  -1  10.1  54.3         3 206                   se NDI       20479668
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.4          NDI       20479668
+MW     2.8          NDI       20479668
+
+Event   626727234 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/23 21:03:00.30   1.26 0.500  31.2960   77.9260 18.20 10.80  -1  10.0  38.8         3 206                   se NDI       20479669
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.4          NDI       20479669
+MW     2.3          NDI       20479669
+
+Event   621613961 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/24 05:27:53.70   1.46 0.600  31.4280   77.9170 4.300 2.800  -1   5.9  9.30         5 129                   se NDI       20479671
+ (Presumed earthquake)
+2021/11/24 05:27:55.21   1.86 1.030  31.4041   77.8686 56.30  20.5  63   0.0f         8      209  15.74  76.64     uk IDC       16078630
+2021/11/24 05:27:56.42   0.68 1.667  31.3598   77.9339 6.758 4.981   5   8.0f        39   25 105   0.32  76.57 m i se ISC       30837442
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 114.3 | 188.5 | 0.614 |     5 |   0.3 |   2.6)
+ (  0 -  17 degrees    | 106.0 | 158.1 | 0.761 |    17 |   0.3 |  15.8)
+ ( 28 - 180 degrees    | 209.4 | 356.9 | 0.016 |     3 |  48.1 |  76.6)
+ (  0 - 180 degrees    | 106.0 | 158.1 | 0.804 |    24 |   0.3 |  76.6)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.8          NDI       20479671
+MW     3.5          NDI       20479671
+mb     3.6 0.1    6 IDC       16078630
+mbtmp  3.6 0.1    8 IDC       16078630
+ML     3.2 0.1    2 IDC       16078630
+MS     4.0 0.3    1 IDC       16078630
+mb     3.6 0.2    6 ISC       30837442
+
+Event   626727245 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/25 21:45:33.70   1.36 0.500  31.2920   77.9540 9.300 4.900  -1   4.2  4.90         5 211                   se NDI       20479676
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.3          NDI       20479676
+
+Event   621625166 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/28 08:17:44.60   1.18 0.400  31.4010   77.2950 2.300 2.800  -1  17.3  3.30        10  90                   se NDI       20479694
+ (Presumed earthquake)
+2021/11/28 08:17:56.25   7.20 0.950  32.6624   76.1993 115.5 47.80 138   0.0f         7      311  10.05  46.31     uk IDC       16092914
+2021/11/28 08:17:43.63   0.66 2.399  31.3771   77.4343 6.125 5.387  18  10.0f        31   29  80   0.34  47.89 m i se ISC       30837884
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |  90.3 | 173.7 | 0.735 |     7 |   0.3 |   3.0)
+ (  0 -  17 degrees    |  80.2 | 108.5 | 0.826 |    20 |   0.3 |  15.8)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  44.7 |  47.9)
+ (  0 - 180 degrees    |  80.2 | 108.5 | 0.854 |    25 |   0.3 |  47.9)
+
+Magnitude  Err Nsta Author      OrigID
+ML     3.5          NDI       20479694
+MW     3.6          NDI       20479694
+mb     3.8 0.1    4 IDC       16092914
+mbtmp  3.7 0.1    7 IDC       16092914
+ML     3.2 0.2    3 IDC       16092914
+MS     3.1 0.3    3 IDC       16092914
+mb     3.9 0.2    4 ISC       30837884
+
+Event   621627000 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/29 23:20:31.12   1.03 0.730  34.0684   78.6765  32.5 13.70  60   0.0f        15      189   9.16  83.18     uk IDC       16093674
+2021/11/29 23:20:31.70   1.34 0.500  34.8540   78.5620 37.80 8.800  -1  20.9  40.9         5 304                   se NDI       20479705
+ (Presumed earthquake)
+2021/11/29 23:20:33.54   0.58 1.792  34.2684   78.7418 8.950 6.106  95  10.0f        35   31  77   1.29  82.98 m i se ISC       30838078
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 280.7 | 322.6 | 0.047 |     3 |   1.3 |   2.9)
+ (  0 -  17 degrees    | 118.4 | 129.9 | 0.741 |    18 |   1.3 |  16.3)
+ ( 28 - 180 degrees    | 188.6 | 194.3 | 0.251 |     7 |  42.9 |  83.0)
+ (  0 - 180 degrees    |  77.6 | 115.0 | 0.893 |    29 |   1.3 |  83.0)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8 0.1   10 IDC       16093674
+mbtmp  3.8 0.1   14 IDC       16093674
+ML     3.4 0.2    4 IDC       16093674
+MS     3.2 0.2    3 IDC       16093674
+ML     3.7          NDI       20479705
+MW     3.9          NDI       20479705
+mb     3.9 0.1    9 ISC       30838078
+
+Event   626727279 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/11/30 20:04:18.60   1.20 0.500  31.6510   78.6050 7.600 9.300  -1   8.0  5.20         4 232                   se NDI       20479712
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.7          NDI       20479712
+MW     2.2          NDI       20479712
+
+Event   626727287 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/12/01 15:47:58.70   2.31 0.900  31.7640   78.5020 25.60 29.80  -1  10.1  87.7         4 202                   se NDI       20479718
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     1.9          NDI       20479718
+MW     2.3          NDI       20479718
+
+Event   621630686 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/12/04 19:49:54.11   1.82 0.680  32.7061   76.1232 45.40 16.70  66   0.0f        11      204  10.00  77.19     uk IDC       16095982
+2021/12/04 19:49:57.20   2.13 0.900  32.7690   76.0780  11.0  19.5  -1  10.0   0.0         6 323                   se NDI       20479737
+ (Presumed earthquake)
+2021/12/04 19:49:57.55   0.66 2.139  32.8768   76.4816 9.684 5.392  70  15.0f        51   34 133   0.64  76.94 m i se ISC       30935498
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 297.5 | 328.2 | 0.027 |     5 |   0.6 |   2.7)
+ (  0 -  17 degrees    | 143.2 | 173.9 | 0.567 |    21 |   0.6 |  14.6)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  76.2 |  76.9)
+ (  0 - 180 degrees    | 133.8 | 164.5 | 0.691 |    29 |   0.6 |  76.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    7 IDC       16095982
+mbtmp  3.6 0.1   10 IDC       16095982
+ML     3.6 0.1    2 IDC       16095982
+MS     4.1 0.1    4 IDC       16095982
+ML     3.5          NDI       20479737
+MW     3.5          NDI       20479737
+mb     3.6 0.1    6 ISC       30935498
+MS     4.2 0.1    4 ISC       30935498
+
+Event   626727355 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/12/06 08:45:48.60   2.20 0.800  32.7760   75.9060   5.5 13.90  -1   7.6   6.5         6 249                   se NDI       20479745
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.9          NDI       20479745
+MW     2.9          NDI       20479745
+
+Event   626727368 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/12/17 17:39:09.80   1.64 0.600  31.5120   77.0750 6.800 5.200  -1  17.1  10.0         9 111                   se NDI       20479784
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.5          NDI       20479784
+MW     2.8          NDI       20479784
+
+Event   626727392 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/12/26 13:20:51.70   2.48 0.900  32.0280   76.9890 6.600 10.90  -1  13.5  14.2         6 183                   se NDI       20479818
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.6          NDI       20479818
+MW     2.8          NDI       20479818
+
+Event   626727396 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2021/12/28 05:37:12.00   1.19 0.500  31.5120   77.6620 6.900 3.600  -1  12.2  1000         3 174                   se NDI       20479825
+ (Presumed earthquake)
+ (Event not reviewed by the ISC)
+
+Magnitude  Err Nsta Author      OrigID
+ML     2.0          NDI       20479825
+MW     2.2          NDI       20479825
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ BGR       Bundesanstalt für Geowissenschaften und Rohstoffe
+ BJI       China Earthquake Networks Center
+ GCMT      The Global CMT Project
+ GFZ       Helmholtz Centre Potsdam GFZ German Research Centre For Geosciences
+ IDC       International Data Centre, CTBTO
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NDI       National Centre for Seismology of the Ministry of Earth Sciences of India
+ NEIC      National Earthquake Information Center
+ NNC       National Nuclear Center
+
+<br>Mon Nov 23 14:11:05 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

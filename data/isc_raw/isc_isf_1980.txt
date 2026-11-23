@@ -1,0 +1,311 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/262602168.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1980-01-01 00:00:00</td></tr><tr><td>End date: 1980-12-31 23:59:59</td></tr><tr><td>Events found: 11</td></tr><tr><td>Date of search: Mon Nov 23 13:48:27 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      652402 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/01/07 12:45:20.60               33.1400   75.8540                  33.0              15                       uk NEIS       1445346
+ (LESS RELIABLE SOLUTION.)
+1980/01/07 12:45:22.40               33.3000   76.2000                  33.0                                       uk MOS        1445347
+1980/01/07 12:45:20.92   0.48 2.686  33.1280   76.0491 12.34 5.775  68  28.0f        37   36 109   3.23  84.33 m i ke ISC        1445348
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 143.1 | 162.0 | 0.519 |    11 |   3.2 |  15.8)
+ ( 28 - 180 degrees    | 178.4 | 270.2 | 0.403 |    13 |  40.1 |  84.3)
+ (  0 - 180 degrees    | 109.6 | 114.3 | 0.780 |    32 |   3.2 |  84.3)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.8          NEIS       1445346
+MB     4.7        4 MOS        1445347
+mb     4.7 0.4    3 ISC        1445348
+
+Event      650777 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/02/05 20:17:55.71   1.11 1.757  33.2637   75.8388 38.25 10.25  60  10.0f         9    7 149   3.49  70.33 m i ke ISC        1441728
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |   3.5 |   4.7)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  49.3 |  70.3)
+ (  0 - 180 degrees    | 149.2 | 188.4 | 0.479 |     7 |   3.5 |  70.3)
+
+Event      644883 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/05/01 05:39:03.90               33.0600   76.2700                  33.0                                       uk MOS        1429672
+1980/05/01 05:39:04.20               33.0550   75.9850                  35.0              19                       uk NEIS       1429673
+1980/05/01 05:39:08.20               33.3000   76.9000                                                             uk PEK        1429675
+1980/05/01 05:39:04.73   0.41 1.827  33.0178   76.0172 9.698 5.187  77  28.0f        60   52  66   1.63  85.31 m i ke ISC        1429676
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   1.6 |   1.6)
+ (  0 -  17 degrees    |  98.4 | 118.0 | 0.809 |    18 |   1.6 |  16.6)
+ ( 28 - 180 degrees    | 137.5 | 220.5 | 0.633 |    18 |  35.3 |  85.3)
+ (  0 - 180 degrees    |  66.7 |  78.6 | 0.927 |    47 |   1.6 |  85.3)
+
+Magnitude  Err Nsta Author      OrigID
+MB     4.9        4 MOS        1429672
+mb     4.7          NEIS       1429673
+MS     4.6          PEK        1429675
+mb     4.6 0.1    9 ISC        1429676
+
+Event      644884 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/05/01 05:43:07.00               32.8000   75.8000                                                             uk PEK        1429678
+1980/05/01 05:43:12.16        1.000  33.0730   75.9800 6.700 5.400  42  15.0f       100   88                   m i ke ISC-EHB   12137398
+ (#PARAM DEPTH_QUALITY=L3)
+1980/05/01 05:43:12.70               33.0190   75.9180                  33.0              47                       uk NEIS       1429679
+1980/05/01 05:43:14.40               33.2600   76.0800                  33.0                                       uk MOS        1429680
+1980/05/01 05:43:12.93   0.49 2.277  32.9729   75.8878 8.264 4.937  74  26.3  3.51  108   91  79   1.61 146.29 m i ke ISC        1429681
+ (#PRIME)
+ (#PARAM pP_DEPTH=26.0+4.7)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   1.6 |   1.6)
+ (  0 -  17 degrees    | 113.7 | 117.4 | 0.770 |    18 |   1.6 |  16.6)
+ ( 28 - 180 degrees    | 127.3 | 130.3 | 0.756 |    55 |  34.9 | 146.3)
+ (  0 - 180 degrees    |  79.4 |  81.3 | 0.927 |    87 |   1.6 | 146.3)
+
+Year Volume Page1 Page2 Journal
+2022    231  2009  2033 Geophys. J. Int.
+ (#AUTHOR O’Kane,A. , Copley,A. , Mitra,S. , Wimpenny,S.                                   )
+ (#TITLE  The geometry of active shortening in the north–west Himalayas and the            )
+ (+       implications for seismic hazard                                                  )
+
+Magnitude  Err Nsta Author      OrigID
+MS     4.7          PEK        1429678
+mb     5.0          NEIS       1429679
+MB     5.0        8 MOS        1429680
+MS     4.2        6 MOS        1429680
+mb     4.9 0.2   24 ISC        1429681
+
+Event      646776 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/05/29 22:40:52.00               31.5620   76.5700                  33.0               6                       uk NEIS       1433545
+ (LESS RELIABLE SOLUTION.)
+1980/05/29 22:40:51.36   0.91 3.251  31.2497   76.3064 10.57 6.275  80  10.0f        14   11 111   0.19  23.90 m i ke ISC        1433546
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 221.2 | 318.5 | 0.159 |     3 |   0.2 |   2.7)
+ (  0 -  17 degrees    | 111.8 | 195.4 | 0.640 |     6 |   0.2 |  14.0)
+ ( 28 - 180 degrees    |       |       |       |     0 |       |)
+ (  0 - 180 degrees    | 111.8 | 195.4 | 0.656 |     7 |   0.2 |  23.9)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.2          NEIS       1433545
+
+Event      640500 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/08/23 21:36:51.60               32.9130   75.6330                  25.0             116                       de NEIS       1420485
+ (FIFTEEN PEOPLE KILLED, AT LEAST 40 INJURED AND MANY HOUSES DAMAGED IN TH E BHADDU AREA, KASHMIR. FELT IN NORTHERN INDIA AND IN THE)
+ ( LAHORE-PESHAWAR AREA, PAKI STAN)
+1980/08/23 21:36:51.83        1.050  32.9200   75.6940 4.800 2.800  20  14.1  1.01  301  229                   m i ke ISC-EHB   12138017
+ (#PARAM DEPTH_QUALITY=L1)
+1980/08/23 21:36:53.80               33.1500   75.6900                  33.0                                       uk MOS        1420486
+1980/08/23 21:36:55.20   0.40        32.5900   75.3700                  15.0f        26   10                          GCMT      05179140
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        17 2.300        0.643 -0.425 -0.210  1.388  0.466 -1.678   10      GCMT     )
+ (#                        0.067  0.106  0.077  0.149  0.072  0.166   26          2.00 )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#            BDC 140.00 81.00   95.00               GCMT     )
+ (+                293.00 10.00   63.00                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       17  2.240  56.00 54.00  0.120 319.00  5.00 -2.360 226.00 36.00 GCMT     )
+ (nsta1 refers to body waves, cutoff=45s.)
+ (Boxcar moment-rate function)
+1980/08/23 21:37:02.90               33.4000   76.4000                                                             uk PEK        1420488
+1980/08/23 21:36:51.41   0.38 2.385  32.9862   75.7705 5.139 3.975  39  12.4  1.93  311  261  48   3.15 149.63 m i de ISC        1420489
+ (#PRIME)
+ (#PARAM pP_DEPTH=13.0+3.5)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    |  81.9 | 125.8 | 0.854 |    19 |   3.1 |  16.9)
+ ( 28 - 180 degrees    |  79.3 |  79.5 | 0.932 |   182 |  28.2 | 149.6)
+ (  0 - 180 degrees    |  48.8 |  49.4 | 0.981 |   224 |   3.1 | 149.6)
+
+Year Volume Page1 Page2 Journal
+1992     62    24    33 Curr. Sci.
+ (#AUTHOR Narula,P.L. , Shome,S.K.                                                         )
+ (#TITLE  Macroseismic studies of recent earthquakes in northwest Himalaya - a review      )
+1989     99   123   153 Geophys. J. Int.
+ (#AUTHOR Molnar,P. , Lyon-Caen,H.                                                         )
+ (#TITLE  Fault plane solutions of earthquakes and active tectonics of the Tibetan         )
+ (+       Plateau and its margins                                                          )
+2005     34   305   314 Natural Hazards
+ (#AUTHOR Wyss,M.                                                                         )
+ (#TITLE  Human Losses Expected in Himalayan Earthquakes                                   )
+2022    231  2009  2033 Geophys. J. Int.
+ (#AUTHOR O’Kane,A. , Copley,A. , Mitra,S. , Wimpenny,S.                                   )
+ (#TITLE  The geometry of active shortening in the north–west Himalayas and the            )
+ (+       implications for seismic hazard                                                  )
+
+Magnitude  Err Nsta Author      OrigID
+mb     5.2          NEIS       1420485
+MSZ    4.9          NEIS       1420485
+mb     5.7          MOS        1420486
+MS     5.5          MOS        1420486
+MW     5.5       10 GCMT      05179140
+MB     5.7          PEK        1420488
+MS     5.4          PEK        1420488
+mb     5.2 0.2   54 ISC        1420489
+MS     5.0 0.2    4 ISC        1420489
+
+Event      640501 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/08/23 21:50:02.19        1.500  32.8900   75.7860 6.700   4.0  25  10.4  1.73  271  229                   m i ke ISC-EHB   12138018
+ (#PARAM DEPTH_QUALITY=L1)
+1980/08/23 21:50:03.00               32.8340   75.6290                  33.0              92                       de NEIS       1420491
+ (CASUALTIES AND DAMAGE IN THE BHADDU AREA, KASHMIR. FELT IN NORTHERN INDI A AND IN THE LAHORE-PESHAWAR AREA, PAKISTAN)
+1980/08/23 21:50:04.90               32.7000   75.3000                                                             uk PEK        1420492
+1980/08/23 21:50:05.70   0.70        32.4900   75.4000                  15.0f        29   12                          GCMT      05179142
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        17 2.610        0.935 -0.765 -0.170  1.931  0.661 -1.389   12      GCMT     )
+ (#                        0.128  0.195  0.120  0.279  0.128  0.288   29          2.10 )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#            BDC 126.00 78.00   92.00               GCMT     )
+ (+                298.00 12.00   82.00                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       17  2.480  38.00 57.00  0.250 305.00  2.00 -2.730 214.00 33.00 GCMT     )
+ (nsta1 refers to body waves, cutoff=45s.)
+ (Boxcar moment-rate function)
+1980/08/23 21:50:06.40               33.3900   75.8600                  33.0                                       uk MOS        1420493
+1980/08/23 21:50:02.49   0.30 2.218  32.9156   75.7221 5.183 3.990  51  16.4  1.57  286  253  33   1.61 149.58 m i de ISC        1420495
+ (#PRIME)
+ (#PARAM pP_DEPTH=16.0+3.7)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   1.6 |   1.6)
+ (  0 -  17 degrees    | 101.1 | 126.6 | 0.836 |    22 |   1.6 |  16.9)
+ ( 28 - 180 degrees    |  79.3 |  81.1 | 0.931 |   178 |  28.3 | 149.6)
+ (  0 - 180 degrees    |  33.2 |  38.4 | 0.992 |   224 |   1.6 | 149.6)
+
+Year Volume Page1 Page2 Journal
+1992     62    24    33 Curr. Sci.
+ (#AUTHOR Narula,P.L. , Shome,S.K.                                                         )
+ (#TITLE  Macroseismic studies of recent earthquakes in northwest Himalaya - a review      )
+1989     99   123   153 Geophys. J. Int.
+ (#AUTHOR Molnar,P. , Lyon-Caen,H.                                                         )
+ (#TITLE  Fault plane solutions of earthquakes and active tectonics of the Tibetan         )
+ (+       Plateau and its margins                                                          )
+
+Magnitude  Err Nsta Author      OrigID
+mb     5.2          NEIS       1420491
+MSZ    4.8          NEIS       1420491
+MB     5.4          PEK        1420492
+MS     5.3          PEK        1420492
+MW     5.5       12 GCMT      05179142
+mb     5.5          MOS        1420493
+MS     5.5          MOS        1420493
+mb     5.2 0.2   51 ISC        1420495
+MS     4.9 0.3    4 ISC        1420495
+
+Event      638225 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/09/04 01:48:32.54   0.97 2.227  31.7799   76.5832 15.57 8.644  93  10.0f        16   13 153   0.39  75.55 m i ke ISC        1415614
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   0.4 |   0.4)
+ (  0 -  17 degrees    | 234.2 | 325.5 | 0.123 |     4 |   0.4 |   6.9)
+ ( 28 - 180 degrees    | 199.5 | 360.0 | 0.000 |     3 |  49.6 |  75.5)
+ (  0 - 180 degrees    | 153.1 | 181.8 | 0.535 |    10 |   0.4 |  75.5)
+
+Event      639094 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/09/22 20:37:51.23        1.260  32.6380   78.6570  13.0 9.100  75  15.0f        47   42                   m i ke ISC-EHB   12138138
+ (#PARAM DEPTH_QUALITY=L3)
+1980/09/22 20:37:55.00               32.4580   78.5190                  65.0              20                       uk NEIS       1417463
+ (LESS RELIABLE SOLUTION.)
+1980/09/22 20:37:56.00               33.1000   78.6200                  33.0                                       uk MOS        1417464
+1980/09/22 20:37:50.47   0.61 2.188  32.5957   78.7176 10.83 6.668  92  13.0f        49   43  83   2.28  74.55 m i ke ISC        1417465
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   2.3 |   2.3)
+ (  0 -  17 degrees    | 182.0 | 199.9 | 0.466 |    15 |   2.3 |  16.3)
+ ( 28 - 180 degrees    | 161.5 | 177.2 | 0.256 |    20 |  37.4 |  74.5)
+ (  0 - 180 degrees    |  83.8 | 109.7 | 0.889 |    42 |   2.3 |  74.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.7          NEIS       1417463
+mb     4.7 0.1   10 ISC        1417465
+
+Event      636614 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/10/05 10:47:18.40               34.6500   74.3350                  33.0               8                       uk NEIS       1412087
+ (LESS RELIABLE SOLUTION.)
+1980/10/05 10:47:20.46   1.10 1.898  34.7054   74.2756 22.22 10.70  53  35.0f        14   12 159   3.74  78.79 m i ke ISC        1412088
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 241.9 | 333.5 | 0.091 |     4 |   3.7 |   8.3)
+ ( 28 - 180 degrees    | 159.9 | 199.0 | 0.331 |     5 |  46.1 |  78.8)
+ (  0 - 180 degrees    | 159.9 | 161.0 | 0.531 |    11 |   3.7 |  78.8)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.2          NEIS       1412087
+mb     4.2 0.1    5 ISC        1412088
+
+Event      636151 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1980/11/26 07:52:11.83   2.40 2.130  32.4183   76.6011 32.85 12.76  62  14.0f         9    6 241   1.01  15.04 m i ke ISC        1411065
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   1.0 |   1.0)
+ (  0 -  17 degrees    | 241.2 | 335.2 | 0.088 |     5 |   1.0 |  15.0)
+ ( 28 - 180 degrees    |       |       |       |     0 |       |)
+ (  0 - 180 degrees    | 241.2 | 335.2 | 0.088 |     5 |   1.0 |  15.0)
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ GCMT      The Global CMT Project
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NEIS      National Earthquake Information Service
+ PEK       Peking
+
+<br>Mon Nov 23 13:48:27 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

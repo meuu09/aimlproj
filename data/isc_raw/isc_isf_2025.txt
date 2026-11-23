@@ -1,0 +1,526 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/249788186.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 2025-01-01 00:00:00</td></tr><tr><td>End date: 2025-12-31 23:59:59</td></tr><tr><td>Events found: 35</td></tr><tr><td>Date of search: Mon Nov 23 14:11:58 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+</pre><p><em>Please note:</em><br>
+<p>Data on or after 2024/11/01 have not been reviewed by the ISC.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event   642745757 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/01/05 08:03:59.36   1.60 0.950  33.1258   75.9991 34.20 23.40  80   0.0f        10      125  14.47 152.33     uk IDC       37616482
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.5 0.1    6 IDC       37616482
+mbtmp  3.4 0.1    8 IDC       37616482
+ML     3.1 0.2    2 IDC       37616482
+
+Event   642740385 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/01/20 18:39:44.54   0.54 0.650  34.0815   78.6100 13.40 10.90  58   0.0f        33       95   9.13  88.42     uk IDC       37676298
+2025/01/20 18:39:46.40        2.010  34.3100   78.2100                  32.0         25      263   3.10  25.40     uk BJI       38857408
+2025/01/20 18:39:48.36   0.19 0.990  34.1080   78.4070 12.50 5.479  49  10.0f        37   48 136   8.59  88.56        GFZ       37613190
+2025/01/20 18:39:46.59   1.44 0.710  34.0562   78.5487 15.14 11.04 224  10.0f        49   57  95   5.54            se NEIC      37840696
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.0 0.1   25 IDC       37676298
+mbtmp  4.0 0.1   30 IDC       37676298
+ML     3.5 0.1    3 IDC       37676298
+MS     3.5 0.3    1 IDC       37676298
+mb     4.0       17 BJI       38857408
+Ms     4.0        5 BJI       38857408
+Ms7    4.1        3 BJI       38857408
+M      4.7       13 GFZ       37613190
+mb     4.7 0.3   13 GFZ       37613190
+mb     4.3 0.1   29 NEIC      37840696
+
+Event   642841075 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/01/22 17:12:36.24   0.85 0.730  33.6412   76.1096  22.5 12.10  67   0.0f        20      183   9.07  83.81     uk IDC       37677614
+2025/01/22 17:12:42.36   3.68 1.660  33.7179   76.1294 29.10 23.90 131  52.3  34.4   16       46   9.01  21.33     se NNC       40234453
+ (#PARAM ENERGY_CLASS=9.08)
+2025/01/22 17:12:37.36   1.25 0.610  33.4365   75.8244 22.14 12.53 243  10.0f        30   33 165   5.02            se NEIC      37929981
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8 0.1   13 IDC       37677614
+mbtmp  3.8 0.1   17 IDC       37677614
+ML     3.5 0.2    4 IDC       37677614
+MS     3.2 0.4    2 IDC       37677614
+mb     3.8          NNC       40234453
+mpv    4.0          NNC       40234453
+mb     4.2 0.1   12 NEIC      37929981
+
+Event   642852811 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/01/28 00:27:09.06   0.84 0.540  34.2348   78.4896 22.70 14.60  49   0.0f        20      163   8.96  83.03     uk IDC       37685557
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1   16 IDC       37685557
+mbtmp  3.7 0.1   20 IDC       37685557
+ML     3.3 0.2    4 IDC       37685557
+MS     3.6 0.8    2 IDC       37685557
+
+Event   642899072 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/02/03 01:20:30.47  14.51 0.670  33.1785   76.2705 242.7 55.10 147   0.0f         4      310  14.35  42.64     uk IDC       37719961
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.4 0.3    3 IDC       37719961
+mbtmp  3.4 0.3    4 IDC       37719961
+ML     3.2 0.3    1 IDC       37719961
+MS     3.3 0.3    1 IDC       37719961
+
+Event   642916108 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/02/07 01:14:46.49   1.64 0.370  34.3200   74.1411 49.30 23.60  76   0.0f         7      196  13.90  80.90     uk IDC       37727746
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.2    4 IDC       37727746
+mbtmp  3.5 0.1    7 IDC       37727746
+ML     2.9 0.1    3 IDC       37727746
+
+Event   642848668 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/02/10 15:45:17                  34.1300   77.9100                  10.0               6                          MOS       37681873
+2025/02/10 15:45:17.51   0.97 0.480  34.0791   77.9906 13.71 6.618 184  10.0f        36   40 142   7.34            se NEIC      37931970
+2025/02/10 15:45:26.50   8.33 1.790  34.9449   78.1826 74.20 51.30 148   0.0          9       26   8.21  12.24     se NNC       38058834
+ (#PARAM ENERGY_CLASS=10.39)
+2025/02/10 15:45:16.36   0.78 1.030  34.2271   78.3058 18.70 12.60  56   0.0f        22      163   8.91  83.06     uk IDC       37735544
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+MB     4.5          MOS       37681873
+mb     4.4 0.1   21 NEIC      37931970
+mb     4.5          NNC       38058834
+mpv    4.3          NNC       38058834
+mb     4.0 0.1   15 IDC       37735544
+mbtmp  4.0 0.1   19 IDC       37735544
+ML     3.4 0.3    4 IDC       37735544
+MS     3.5 0.0   26 IDC       37735544
+
+Event   642979451 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/02/23 03:12:48.18   8.60 1.570  32.5613   76.7771  77.0 49.40 138  75.2  66.8    8      178  10.97  20.97     se NNC       38059332
+ (#PARAM ENERGY_CLASS=9.02)
+2025/02/23 03:12:28.42   1.23 0.810  31.4647   76.8636 44.80 17.70  68   0.0f        12      196  11.31  85.92     uk IDC       37772889
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.3          NNC       38059332
+mb     3.7 0.1    8 IDC       37772889
+mbtmp  3.7 0.1   11 IDC       37772889
+ML     3.4 0.1    3 IDC       37772889
+
+Event   643030326 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/03/02 10:31:50.13   1.02 0.630  33.7394   79.3453  25.0 15.70  68   0.0f        15      160  13.23  83.45     uk IDC       37797974
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.4 0.1    9 IDC       37797974
+mbtmp  3.5 0.1   12 IDC       37797974
+ML     3.1 0.2    2 IDC       37797974
+
+Event   643030345 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/03/02 14:58:42.29   1.34 0.650  34.2334   77.4915 32.90 15.40  68   0.0f        12      196   8.71  83.12     uk IDC       37798000
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.4 0.1    7 IDC       37798000
+mbtmp  3.4 0.1   10 IDC       37798000
+ML     2.8 0.3    3 IDC       37798000
+MS     3.8 0.5    2 IDC       37798000
+
+Event   643023991 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/03/13 21:19:07.60   1.83 0.700  28.7760   83.6410 999.9 999.9  -1   0.1  1000        29 352                   se TIR       38844238
+ (Presumed earthquake)
+2025/03/13 21:20:04.25   4.73 2.870  33.0938   76.4540 61.30 41.90 108   0.0         13       15   9.66  22.00     se NNC       38289535
+ (#PARAM ENERGY_CLASS=12.28)
+2025/03/13 21:20:06.50   0.20        33.1200   76.7600                  12.3  0.70  279  120                          GCMT      38268733
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        16 3.842        3.360 -2.870 -0.480  0.451  1.570  1.520   51  120 GCMT     )
+ (#                        0.123  0.091  0.078  0.212  0.055  0.261   67  212     0.80 )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#            BDC  95.00 47.00   58.00               GCMT     )
+ (+                318.00 52.00  119.00                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       16  4.024 292.00 67.00 -0.360 118.00 23.00 -3.661  27.00  2.00 GCMT     )
+ (nsta1 refers to body waves, cutoff=40s. nsta2 refers to surface waves, cutoff=50s.)
+ (Triangular moment-rate function)
+2025/03/13 21:20:08                  32.9940   76.7210                  30.0                                          MOS       39951281
+2025/03/13 21:20:10.98               32.7000   76.1370                  33.0                      48.28  53.37     ke BGR       39692274
+2025/03/13 21:20:11.54               33.1753   76.7714                   9.5         16   49  87   8.34  49.77     ke AUST      37794121
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        16 2.154 0.456 -1.382  1.712 -0.330 -0.432 -1.325 -0.471           AUST     )
+ (#                                                                                    )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#                 86.31 57.44 -133.84               AUST     )
+ (+                327.04 52.56  -42.67                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       16  2.373 205.67  2.83 -0.541 113.64 35.72 -1.832 299.59 54.14 AUST     )
+ (varianceReduction 0.922818937)
+ (doubleCouple 0.5442051607)
+ (azimuthalGap 87.67616394)
+ (misfit 0.07718106302)
+2025/03/13 21:20:05.31   1.13 0.560  33.0503   76.6596 12.53 9.958 212  10.0f       108  326  44   5.61            se NEIC      38116723
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+MB     5.6          TIR       38844238
+mb     5.5          NNC       38289535
+MW     5.0      120 GCMT      38268733
+mb     5.1          BGR       39692274
+Ms     4.3          BGR       39692274
+Mw     4.8       12 AUST      37794121
+mb     5.4 0.0  282 NEIC      38116723
+Mww    5.1 0.1    6 NEIC      38116723
+
+Event   643023920 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/03/13 21:20:03.50   0.38 0.890  33.1076   76.7375 10.70 8.800  37   0.0f        53       50   9.68 152.88     uk IDC       37827903
+2025/03/13 21:20:06.00   0.25 0.600  33.1290   76.7350 4.800 4.700  -1  10.0f             19  53                   se VAO       38773947
+ (Presumed earthquake)
+2025/03/13 21:20:06.10               33.1900   76.7400                  10.0              50                          MOS       37794095
+2025/03/13 21:20:06.25   0.09 1.143  33.1929   76.7855 3.981 2.693  42  10.0f       136  131  40   6.50  95.10     ke AUST      37794120
+2025/03/13 21:20:06.46   0.13 0.930  33.2339   76.8642 3.600 1.600 280  10.0   0.0   32        5   6.54  50.69        DSN       39090296
+2025/03/13 21:20:08.98   0.59 0.460  33.2892   76.7434 15.70   4.5 173  20.0f        73      219  32.44  50.38     ke BUC       37794145
+2025/03/13 21:20:10.30               33.1520   76.6410                  50.0                      42.99  46.45     ke CSEM      40230542
+2025/03/13 21:20:12.20        1.560  33.4100   77.1600                  50.0         87      239   2.60  43.10     uk BJI       38671780
+2025/03/13 21:20:06.09   0.08 0.860  33.1000   76.7130 3.842 2.442  35  10.0f       311  350  40   6.46  95.08        GFZ       37794276
+ (#PRIME)
+ (confirmed)
+
+Magnitude  Err Nsta Author      OrigID
+mb     5.0 0.1   36 IDC       37827903
+mbtmp  5.0 0.1   41 IDC       37827903
+ML     4.7 0.1    4 IDC       37827903
+MS     4.2 0.0   61 IDC       37827903
+mb     5.0          VAO       38773947
+MB     5.5          MOS       37794095
+mb     5.2 0.5  101 AUST      37794120
+ML     6.0 0.0    1 AUST      37794120
+MLv    5.9 0.0    1 AUST      37794120
+Mwp    5.2 0.1    3 AUST      37794120
+mb     5.2 0.3   21 DSN       39090296
+ML     6.0 0.0    1 DSN       39090296
+Ms     4.1 0.1   17 DSN       39090296
+mb     5.4          CSEM      40230542
+mb     5.0       73 BJI       38671780
+mB     5.2       27 BJI       38671780
+ML     4.9        2 BJI       38671780
+Ms     4.7       67 BJI       38671780
+Ms7    4.4       66 BJI       38671780
+M      5.1      217 GFZ       37794276
+mb     5.3 0.2  217 GFZ       37794276
+mB     5.6 0.2   62 GFZ       37794276
+Mw(mB  5.1 0.4   62 GFZ       37794276
+
+Event   643107531 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/03/23 23:02:52.00   1.75 1.100  34.2010   77.5845 45.90  24.0  58   0.0f         6      200  13.07  83.14     uk IDC       37861018
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    4 IDC       37861018
+mbtmp  3.6 0.1    6 IDC       37861018
+ML     3.4 0.3    1 IDC       37861018
+MS     3.0 0.2    2 IDC       37861018
+
+Event   643236968 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/04/13 03:48:33.37   4.40 0.580  31.1754   76.8831 86.30 36.40 150   0.0f        10      282  16.15  86.20     uk IDC       37942568
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    8 IDC       37942568
+mbtmp  3.5 0.1   10 IDC       37942568
+ML     3.1 0.4    2 IDC       37942568
+MS     4.1 0.3    3 IDC       37942568
+
+Event   643285458 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/04/23 08:40:51.31  50.10 0.780  33.2176   74.7762 662.8 451.3  90   0.0          3       54  10.44  19.46     se NNC       38328410
+ (#PARAM ENERGY_CLASS=8.87)
+2025/04/23 08:40:42.03   0.92 0.500  33.1457   76.7102 22.70 15.20  51   0.0f        19      165  14.28  84.26     uk IDC       37981272
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9          NNC       38328410
+mb     3.7 0.1   16 IDC       37981272
+mbtmp  3.7 0.1   18 IDC       37981272
+ML     3.4 0.2    2 IDC       37981272
+
+Event   643473450 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/05/02 18:25:58.50   1.18 0.660  34.0440   78.4528 35.40 15.60  61   0.0f        15      194   9.13  83.22     uk IDC       38072109
+2025/05/02 18:26:02.82   1.90 0.940  34.2004   78.4979 16.70 9.060 196  10.0f        27   34 141   5.41            se NEIC      38282184
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1   11 IDC       38072109
+mbtmp  3.7 0.1   15 IDC       38072109
+ML     3.1 0.1    4 IDC       38072109
+MS     4.5 0.3    1 IDC       38072109
+mb     4.3 0.1   14 NEIC      38282184
+
+Event   644514481 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/05/21 18:16:56.07   4.16 0.970  34.4192   78.2221 99.70 27.40  69   0.0f         6      220  12.74  33.71     uk IDC       38725173
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.1 0.1    3 IDC       38725173
+mbtmp  3.2 0.1    6 IDC       38725173
+ML     3.0 0.1    2 IDC       38725173
+MS     2.4 0.3    1 IDC       38725173
+
+Event   644515281 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/06/05 22:25:33.62   1.57 0.910  33.1375   75.5049  48.0 16.40  69   0.0f        11      201   9.52  84.36     uk IDC       38727853
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    8 IDC       38727853
+mbtmp  3.7 0.1   11 IDC       38727853
+ML     3.2 0.2    3 IDC       38727853
+MS     2.5 0.3    1 IDC       38727853
+
+Event   644515382 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/06/08 08:13:19.92   1.02 0.580  34.1897   74.3812  29.5 16.30  51   0.0f        15      184  13.94  83.38     uk IDC       38726604
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1   12 IDC       38726604
+mbtmp  3.7 0.1   15 IDC       38726604
+ML     3.2 0.1    3 IDC       38726604
+MS     3.3 0.3    1 IDC       38726604
+
+Event   644516378 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/06/28 14:05:54.64   1.02 0.830  32.7841   74.2040 35.10 15.90  53   0.0f        13      186  15.30  79.95     uk IDC       38728206
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1   11 IDC       38728206
+mbtmp  3.7 0.1   13 IDC       38728206
+ML     3.1 0.4    2 IDC       38728206
+MS     3.3 0.0    2 IDC       38728206
+
+Event   644516488 India-Pakistan border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/07/01 06:39:04.25   2.37 0.200  31.4503   74.1516  86.5 28.40  68   0.0f         5      216  19.43  77.07     uk IDC       38728355
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.1    4 IDC       38728355
+mbtmp  3.5 0.1    5 IDC       38728355
+ML     3.0 0.3    1 IDC       38728355
+MS     3.5 0.0    2 IDC       38728355
+
+Event   644516942 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/07/11 00:53:52.27   2.30 1.300  32.4080   76.3616  51.0  25.0  67   0.0f         8      219  15.07  46.60     uk IDC       38729765
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.6 0.0    5 IDC       38729765
+mbtmp  3.7 0.0    7 IDC       38729765
+ML     3.5 0.2    2 IDC       38729765
+
+Event   643821798 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/07/26 04:00:07.66   0.90 0.440  32.9053   76.1506 15.14 11.65 126  10.0f        30   34 171   5.60            se NEIC      38670638
+2025/07/26 04:00:06.16   0.75 0.600  32.9396   76.1116 18.60  11.5  55   0.0f        26      114   9.77 122.74     uk IDC       38732315
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.2 0.1   14 NEIC      38670638
+mb     3.9 0.0   20 IDC       38732315
+mbtmp  3.9 0.0   23 IDC       38732315
+ML     3.6 0.1    3 IDC       38732315
+MS     3.1 0.2    2 IDC       38732315
+
+Event   644415850 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/07/27 09:13:09.52   0.75 0.710  34.0561   79.5125 20.40  13.0  59   0.0f        19      115   9.43  77.25     uk IDC       38731724
+2025/07/27 09:13:10.01   1.90 0.940  33.8262   79.4981 17.56 15.81 232  10.0f        47   51 124   6.24            se NEIC      38670778
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.1   14 IDC       38731724
+mbtmp  4.0 0.1   18 IDC       38731724
+ML     3.6 0.2    3 IDC       38731724
+MS     3.3 0.1    2 IDC       38731724
+mb     4.3 0.1   27 NEIC      38670778
+
+Event   643907459 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/08/18 15:58:30.00   1.04 1.270  32.3167   76.5646 26.70 13.80  64   0.0f        19      184  10.43  85.09     uk IDC       38737110
+2025/08/18 15:58:37.17   8.85 1.670  32.8258   76.2161 85.90 30.60 146  12.3  98.8   12       82  10.81  22.12     se NNC       39360485
+ (#PARAM ENERGY_CLASS=10.01)
+2025/08/18 15:58:32.25   1.91 0.940  32.3157   76.6380 16.69 13.65 200  10.0f        47   51 163   6.29            se NEIC      39042254
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9 0.1   14 IDC       38737110
+mbtmp  3.9 0.1   17 IDC       38737110
+ML     3.9 0.2    3 IDC       38737110
+MS     3.1 0.3    1 IDC       38737110
+mb     4.1          NNC       39360485
+mb     4.1 0.1   26 NEIC      39042254
+
+Event   644521978 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/08/19 23:09:41.00   1.19 1.260  32.8630   76.3056 28.90 15.90  71   0.0f        13      169   9.86  77.00     uk IDC       38737264
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    8 IDC       38737264
+mbtmp  3.8 0.1   11 IDC       38737264
+ML     3.6 0.1    3 IDC       38737264
+MS     3.2 0.1    6 IDC       38737264
+
+Event   643908430 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/08/20 02:48:20.77   2.70 1.330  32.9099   76.2043 24.54 18.54 251  35.0f        26   31 269   5.61            se NEIC      39042395
+2025/08/20 02:48:15.78   1.05 1.020  33.0146   76.1513  27.5  15.5  66   0.0f        18      187   9.70 117.99     uk IDC       38739700
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.1 0.2    9 NEIC      39042395
+mb     3.9 0.1   12 IDC       38739700
+mbtmp  3.9 0.1   15 IDC       38739700
+ML     3.6 0.1    3 IDC       38739700
+MS     3.6 0.4    3 IDC       38739700
+
+Event   644522088 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/08/21 08:11:46.24  19.24 1.410  34.3847   72.5435 191.5 153.0  99   0.0          4      101   8.39   8.86     se NNC       39360608
+ (#PARAM ENERGY_CLASS=7.88)
+2025/08/21 08:11:34.27   1.29 1.040  34.0977   74.2199  40.5 21.20  68   0.0f        11      196  14.08  83.48     uk IDC       38739662
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.4          NNC       39360608
+mpv    3.1          NNC       39360608
+mb     3.7 0.1    8 IDC       38739662
+mbtmp  3.7 0.1   11 IDC       38739662
+ML     3.3 0.1    3 IDC       38739662
+
+Event   644523896 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/09/14 02:54:00.58   1.22 0.600  34.3700   75.2787 18.39 15.09 106  10.0f        27   27 117   4.00            se NEIC      39044736
+2025/09/14 02:54:01.63   1.15 0.610  34.7728   75.3589  25.5  19.5  50   0.0f        17      190   7.88  82.74     uk IDC       38741409
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.1 0.2   10 NEIC      39044736
+mb     3.8 0.1   13 IDC       38741409
+mbtmp  3.8 0.1   17 IDC       38741409
+ML     3.6 0.2    4 IDC       38741409
+MS     3.4 0.4    3 IDC       38741409
+
+Event   644524181 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/09/18 13:33:24.17   6.38 0.540  34.7774   75.1264 109.9 34.90 141   0.0f         7      301   7.87  47.76     uk IDC       38741732
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8 0.2    4 IDC       38741732
+mbtmp  3.6 0.2    7 IDC       38741732
+ML     3.1 0.2    3 IDC       38741732
+
+Event   644526688 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/09/25 17:32:50.70   1.28 0.560  33.1199   76.6221 30.10 18.70  61   0.0f        14      195  14.33  78.53     uk IDC       38744199
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1   11 IDC       38744199
+mbtmp  3.8 0.1   13 IDC       38744199
+ML     3.4 0.0    2 IDC       38744199
+MS     4.3 0.2    3 IDC       38744199
+
+Event   644586085 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/10/05 21:16:56.88   5.08 0.960  32.4121   76.7193  84.0  45.5 158   0.0f         7      297  14.98  46.71     uk IDC       38790470
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1    5 IDC       38790470
+mbtmp  3.7 0.1    7 IDC       38790470
+ML     3.5 0.3    2 IDC       38790470
+
+Event   645613131 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/10/19 14:56:01.58  13.14 1.970  32.9342   75.8013 134.0 106.1  89   0.0          4       30   9.75  10.98     se NNC       39408256
+ (#PARAM ENERGY_CLASS=8.98)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.0          NNC       39408256
+
+Event   644782653 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/12/05 18:06:35.63   1.16 0.980  33.0037   76.1266 25.40 16.40  63   0.0f        16      187   9.71  76.91     uk IDC       38972319
+2025/12/05 18:06:45.75  17.23 1.990  33.5996   75.8194 206.7 138.8  81   0.0          4       26   9.09  10.37     se NNC       39596475
+ (#PARAM ENERGY_CLASS=8.51)
+2025/12/05 18:06:37.92   1.57 0.770  32.8569   76.0845 22.37 19.07 203  18.8  9.08   23   32 295   6.18            se NEIC      39934944
+ (#PRIME)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.1   11 IDC       38972319
+mbtmp  3.7 0.1   14 IDC       38972319
+ML     3.7 0.2    3 IDC       38972319
+MS     3.2 0.3    1 IDC       38972319
+mb     4.0          NNC       39596475
+mb     4.0 0.2   12 NEIC      39934944
+
+Event   645089400 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2025/12/20 12:52:39.94   5.00 0.220  33.2211   76.6045  85.0 46.20 155   0.0f         6      293  14.23  48.46     uk IDC       39099069
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.7 0.2    4 IDC       39099069
+mbtmp  3.6 0.2    6 IDC       39099069
+ML     2.9 0.1    2 IDC       39099069
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ AUST      Geoscience Australia
+ BELR      Centre of Geophysical Monitoring of the National Academy of Sciences of Belarus
+ BGR       Bundesanstalt für Geowissenschaften und Rohstoffe
+ BJI       China Earthquake Networks Center
+ BRA       Earth Science Institute, Slovak Academy of Sciences
+ BUC       National Institute for Earth Physics
+ DSN       Dubai Seismic Network
+ GCMT      The Global CMT Project
+ GFZ       Helmholtz Centre Potsdam GFZ German Research Centre For Geosciences
+ IDC       International Data Centre, CTBTO
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NEIC      National Earthquake Information Center
+ NNC       National Nuclear Center
+ TIR       Institute of Geosciences, Polytechnic University of Tirana
+ VAO       Instituto Astronomico e Geofísico
+
+<br>Mon Nov 23 14:11:58 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

@@ -1,0 +1,269 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/274691705.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1986-01-01 00:00:00</td></tr><tr><td>End date: 1986-12-31 23:59:59</td></tr><tr><td>Events found: 7</td></tr><tr><td>Date of search: Mon Nov 23 13:49:30 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      498777 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1986/04/22 09:29:51.52        1.250  31.8730   76.9590 8.800 7.400  40  15.0f        74   61                   m i ke ISC-EHB   12150035
+ (#PARAM DEPTH_QUALITY=L3)
+1986/04/22 09:29:51.60               31.8500   76.7890                  33.0              18                       uk NEIC       1099497
+1986/04/22 09:29:52.40               31.8000   76.8000                                                             uk PEK        1099498
+1986/04/22 09:29:50.14   0.40 2.804  31.7863   76.9484 6.701 5.073  81  14.0f       103   80  48   1.97 147.55 m i ke ISC        1099500
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   2.0 |   2.0)
+ (  0 -  17 degrees    | 141.7 | 168.1 | 0.657 |    25 |   2.0 |  16.6)
+ ( 28 - 180 degrees    | 103.6 | 131.2 | 0.809 |    23 |  28.4 | 147.6)
+ (  0 - 180 degrees    |  48.8 |  63.5 | 0.969 |    62 |   2.0 | 147.6)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.7          NEIC       1099497
+MS     4.5          PEK        1099498
+mb     4.8 0.2   14 ISC        1099500
+
+Event      499040 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1986/04/26 07:35:12.60               32.2800   76.3300                   3.0                                       uk MOS        1100069
+1986/04/26 07:35:14.66        1.110  32.1370   76.4010 4.300 2.700  23  10.0f       399  335                   m i de ISC-EHB   12150050
+ (#PARAM DEPTH_QUALITY=L1)
+1986/04/26 07:35:15.50               32.1000   76.4000                  33.0                                       uk PEK        1100070
+1986/04/26 07:35:16                  32.1270   76.3740                  33.0                                          COSMOS     6131352
+1986/04/26 07:35:16.10               32.1280   76.3740                  33.0             172                       de NEIC       1100071
+ (Casualties.)
+ (Six people killed, about 30 injured and 85% of the houses damaged in the  Dharmsala, India area. Felt at Lahore, Pakistan.)
+1986/04/26 07:35:20.00   0.30        31.5900   76.0600                  15.0         26   12                          GCMT      05186276
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        17 2.280        1.041 -0.388 -0.650  0.834  0.893 -1.711   12      GCMT     )
+ (#                        0.045  0.071  0.060  0.149  0.060  0.176   26          1.90 )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#            BDC 153.00 74.00  100.00               GCMT     )
+ (+                299.00 19.00   58.00                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       17  2.130  77.00 60.00  0.300 330.00 10.00 -2.430 235.00 28.00 GCMT     )
+ (nsta1 refers to body waves, cutoff=45s.)
+ (Boxcar moment-rate function)
+1986/04/26 07:35:16.04   0.32 2.493  32.2102   76.3073 4.129 3.327  31  19.1  1.06  653  438  20   2.94 152.95 m i de ISC        1100074
+ (#PRIME)
+ (#PARAM pP_DEPTH=19.0+4.5)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   2.9 |   2.9)
+ (  0 -  17 degrees    |  62.8 |  88.6 | 0.944 |    39 |   2.9 |  16.0)
+ ( 28 - 180 degrees    |  43.3 |  57.6 | 0.986 |   270 |  28.3 | 153.0)
+ (  0 - 180 degrees    |  20.4 |  28.6 | 0.997 |   342 |   2.9 | 153.0)
+
+Year Volume Page1 Page2 Journal
+1989     26   221   235 Bull. Indian Soc. Earthq. Technol.
+ (#AUTHOR Srivastava,H.N.                                                                  )
+ (#TITLE  Application of strong motion data for epicentral determination of earthquakes    )
+1990     27     1    66 Bull. Indian Soc. Earthq. Technol.
+ (#AUTHOR Chandrasekaran,A.R. , Das,J.D.                                                   )
+ (#TITLE  Strong motion arrays in India and characteristics of recent recorded events      )
+1990     27   121   132 Bull. Indian Soc. Earthq. Technol.
+ (#AUTHOR Arya,A.S.                                                                        )
+ (#TITLE  Damage scenario of a hypothetical 8.0 magnitude earthquake in Kangra region of   )
+ (+       Himachal Pradesh                                                                 )
+1992     62    24    33 Curr. Sci.
+ (#AUTHOR Narula,P.L. , Shome,S.K.                                                         )
+ (#TITLE  Macroseismic studies of recent earthquakes in northwest Himalaya - a review      )
+1992     62   233   250 Curr. Sci.
+ (#AUTHOR Chandrasekaran,A.R. , Das,J.D.                                                   )
+ (#TITLE  Strong motion arrays in India and analysis of data from Shillong array           )
+1992     62   251   256 Curr. Sci.
+ (#AUTHOR Arya,A.S.                                                                        )
+ (#TITLE  Possible effects of a major earthquake in Kangra region of Himachal Pradesh      )
+1993     30    19    25 Bull. Indian Soc. Earthq. Technol.
+ (#AUTHOR Trifunac,M.D.                                                                    )
+ (#TITLE  An example of computing MLSM for the Dharamshala earthquake of 1986 in India     )
+1993     30    39    41 Bull. Indian Soc. Earthq. Technol.
+ (#AUTHOR Bapat,A. , Kulkarni,U.A.                                                         )
+ (#TITLE  Discussion on `On estimation of local magnitude (ML) of Dharamshala earthquake   )
+ (+       of 1986 using strong motion array data` by S. K. Jain, V. N. Singh and R.        )
+ (+       Chander                                                                         )
+2005      9   473   485 J. Seismol.
+ (#AUTHOR Ram,V.S. , Kumar,D. , Khattri,K.N.                                               )
+ (#TITLE  The 1986 Dharamsala earthquake of Himachal Himalaya - Estimates of source        )
+ (+       parameters, average intrinsic attenuation and site amplification functions       )
+1989     99   123   153 Geophys. J. Int.
+ (#AUTHOR Molnar,P. , Lyon-Caen,H.                                                         )
+ (#TITLE  Fault plane solutions of earthquakes and active tectonics of the Tibetan         )
+ (+       Plateau and its margins                                                          )
+2013    122   107   122 J. Earth Syst. Sci.
+ (#AUTHOR Ghosh,G.K. , Mahajan,A.K.                                                        )
+ (#TITLE  Intensity attenuation relation at Chamba–Garhwal area in north-west Himalaya     )
+ (+       with epicentral distance and magnitude                                           )
+2016     80   487   503 Natural Hazards
+ (#AUTHOR Sharma,B. , Chopra,S. , Kumar,V.                                                 )
+ (#TITLE  Simulation of strong ground motion for 1905 Kangra earthquake and a possible     )
+ (+       megathrust earthquake (Mw 8.5) in western Himalaya (India) using Empirical       )
+ (+       Green’s Function technique                                                       )
+2020     56  1315  1325 Izv. Atmos. Oceanic Phys.
+ (#AUTHOR Rogozhin,E.A. , Somala,S.N. , Erteleva,O.O. , Aptikaev,F.F. , Chanda,S.          )
+ (#TITLE  Seismic hazard of Garhwal region, Himalaya                                       )
+2022    231  2009  2033 Geophys. J. Int.
+ (#AUTHOR O’Kane,A. , Copley,A. , Mitra,S. , Wimpenny,S.                                   )
+ (#TITLE  The geometry of active shortening in the north–west Himalayas and the            )
+ (+       implications for seismic hazard                                                  )
+
+Magnitude  Err Nsta Author      OrigID
+Mb     5.6       33 MOS        1100069
+Ms     5.5       36 MOS        1100069
+Mb     5.5          PEK        1100070
+MS     5.6          PEK        1100070
+mb     5.5          NEIC       1100071
+MS     5.3          NEIC       1100071
+MW     5.5       12 GCMT      05186276
+mb     5.6 0.1  102 ISC        1100074
+MS     5.5 0.2   41 ISC        1100074
+
+Event      494324 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1986/06/30 13:01:43.50               31.8000   78.8000                                                             uk PEK        1089407
+1986/06/30 13:01:41.31   0.78 2.794  31.5698   78.8806 16.79 10.13 132  10.0f        15   13 113   3.22  77.21 m i ke ISC        1089408
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 360.0 | 360.0 | 0.000 |     2 |   3.2 |  10.3)
+ ( 28 - 180 degrees    | 131.3 | 252.3 | 0.505 |     5 |  38.3 |  77.2)
+ (  0 - 180 degrees    | 113.1 | 152.5 | 0.775 |    13 |   3.2 |  77.2)
+
+Event      490890 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1986/07/16 22:03:09.81        0.960  31.0560   78.0080   3.5   2.0  28  14.5  1.04  487  410                   m i fe ISC-EHB   12150710
+ (#PARAM DEPTH_QUALITY=L1)
+1986/07/16 22:03:10.40               31.0000   78.0000                  25.0                                       uk PEK        1081256
+1986/07/16 22:03:10.70               31.0490   77.9970                  33.0             257                       fe NEIC       1081257
+ (Felt at Chandigarh and in Haryana, Punjab and Himachal Pradesh. Also  felt at Dehra Dun and Delhi.)
+1986/07/16 22:03:11.40               31.2600   78.0000                  33.0                                       uk MOS        1081258
+1986/07/16 22:03:12.40   0.80        30.4800   78.1900                  15.0         21   10                          GCMT      05186658
+ (#CENTROID)
+ (#MOMTENS sc    M0 fCLVD    MRR    MTT    MPP    MRT    MTP    MPR NST1 NST2 Author   )
+ (#             eM0 eCLVD    eRR    eTT    ePP    eRT    eTP    ePR NCO1 NCO2 Duration )
+ (#        17 1.660        0.525 -0.384 -0.140  0.664  0.523 -1.353   10      GCMT     )
+ (#                        0.067  0.083  0.073  0.132  0.078  0.140   21          1.70 )
+ (#FAULT_PLANE Typ Strike   Dip    Rake  NP  NS Plane Author   )
+ (#            BDC 152.00 80.00  104.00               GCMT     )
+ (+                278.00 17.00   37.00                        )
+ (#PRINAX sc  T_val T_azim  T_pl  B_val B_azim  B_pl  P_val P_azim  P_pl Author   )
+ (#       17  1.610  79.00 53.00  0.110 330.00 14.00 -1.710 231.00 33.00 GCMT     )
+ (nsta1 refers to body waves, cutoff=45s.)
+ (Boxcar moment-rate function)
+1986/07/16 22:03:09.38   0.37 2.132  31.0629   78.0236 3.874 3.145  37  15.2  1.97  657  500  12   1.51 154.11 m i fe ISC        1081260
+ (#PRIME)
+ (#PARAM pP_DEPTH=16.0+3.2)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 263.7 | 333.0 | 0.063 |     3 |   1.5 |   2.5)
+ (  0 -  17 degrees    |  65.2 |  96.2 | 0.945 |    43 |   1.5 |  16.6)
+ ( 28 - 180 degrees    |  34.4 |  48.6 | 0.992 |   335 |  28.3 | 154.1)
+ (  0 - 180 degrees    |  12.7 |  19.0 | 0.998 |   409 |   1.5 | 154.1)
+ (Felt I=II MM Tarbela Dam (after Pakistan WAPDA))
+
+Year Volume Page1 Page2 Journal
+1989     99   123   153 Geophys. J. Int.
+ (#AUTHOR Molnar,P. , Lyon-Caen,H.                                                         )
+ (#TITLE  Fault plane solutions of earthquakes and active tectonics of the Tibetan         )
+ (+       Plateau and its margins                                                          )
+
+Magnitude  Err Nsta Author      OrigID
+MS     5.4          PEK        1081256
+mb     5.6          NEIC       1081257
+MS     5.2          NEIC       1081257
+Mb     5.7       34 MOS        1081258
+Ms     5.2       27 MOS        1081258
+MW     5.4       10 GCMT      05186658
+mb     5.7 0.2  136 ISC        1081260
+MS     5.1 0.1   42 ISC        1081260
+
+Event      492032 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1986/07/30 04:03:24.80               33.1600   75.7930                  33.0              18                       uk NEIC       1083885
+1986/07/30 04:03:25.60               33.4000   75.9000                                                             uk PEK        1083886
+1986/07/30 04:03:25.22   0.48 3.153  33.1422   75.8240 7.100 5.168  55  28.0f        59   55  57   2.20  76.51 m i ke ISC        1083888
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   2.2 |   2.9)
+ (  0 -  17 degrees    |  94.7 | 127.0 | 0.859 |    21 |   2.2 |  15.9)
+ ( 28 - 180 degrees    | 243.9 | 294.2 | 0.159 |    19 |  42.7 |  76.5)
+ (  0 - 180 degrees    |  57.2 |  77.5 | 0.945 |    50 |   2.2 |  76.5)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.6          NEIC       1083885
+MS     4.3          PEK        1083886
+mb     4.6 0.1   14 ISC        1083888
+
+Event      486220 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1986/09/11 04:22:29.90               32.5000   78.5000                                                             uk PEK        1070821
+1986/09/11 04:22:30.15        1.220  32.6550   78.5380 9.800   7.0  25  15.0f        76   74                   m i ke ISC-EHB   12151073
+ (#PARAM DEPTH_QUALITY=L3)
+1986/09/11 04:22:30.60               32.6620   78.5590                  33.0              54                       uk NEIC       1070822
+1986/09/11 04:22:29.51   0.40 2.487  32.5884   78.4065 6.159 4.582  88  13.0f       105  104  42   4.03 148.40 m i ke ISC        1070823
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    |  78.0 | 149.1 | 0.874 |    26 |   4.0 |  15.7)
+ ( 28 - 180 degrees    |  76.7 | 119.4 | 0.891 |    48 |  28.2 | 148.4)
+ (  0 - 180 degrees    |  42.2 |  59.3 | 0.978 |    91 |   4.0 | 148.4)
+
+Magnitude  Err Nsta Author      OrigID
+MS     4.4          PEK        1070821
+mb     4.8          NEIC       1070822
+mb     4.8 0.1   27 ISC        1070823
+
+Event      481507 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1986/11/21 17:30:55.60               32.4000   76.8000                  40.0                                       uk NDI        1060712
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8          NDI        1060712
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ COSMOS    Consortium of Organizations for Strong Motion Observations
+ GCMT      The Global CMT Project
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NDI       National Centre for Seismology of the Ministry of Earth Sciences of India
+ NEIC      National Earthquake Information Center
+ PEK       Peking
+
+<br>Mon Nov 23 13:49:30 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

@@ -1,0 +1,205 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/22397799.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1990-01-01 00:00:00</td></tr><tr><td>End date: 1990-12-31 23:59:59</td></tr><tr><td>Events found: 8</td></tr><tr><td>Date of search: Mon Nov 23 13:55:11 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      377880 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/02/07 22:00:50.50               34.4000   76.8400                  18.0                                       uk BJI         828521
+1990/02/07 22:00:52.20               34.3650   76.6470                  84.0              17                       uk NEIC        828522
+ (Less reliable solution.)
+1990/02/07 22:00:50.73   0.57 2.903  34.3108   76.4790 8.461 7.335 108  35.0f        34   31  43   2.75  69.25 m i ke ISC         828523
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     1 |   2.8 |   2.8)
+ (  0 -  17 degrees    |  91.7 | 135.2 | 0.837 |    18 |   2.8 |  16.9)
+ ( 28 - 180 degrees    | 250.6 | 298.3 | 0.129 |     7 |  47.5 |  69.3)
+ (  0 - 180 degrees    |  43.4 |  63.9 | 0.960 |    29 |   2.8 |  69.3)
+
+Magnitude  Err Nsta Author      OrigID
+mL     4.6          BJI         828521
+mb     4.6          NEIC        828522
+mb     4.6 0.2    8 ISC         828523
+
+Event      374830 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/03/06 14:43:10.73   0.61 1.334  33.2401   75.3402 10.39 5.883  44  16.0f        34   28  70   0.64  84.26 m i ke ISC         821594
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 230.1 | 299.1 | 0.185 |     5 |   0.6 |   2.9)
+ (  0 -  17 degrees    | 151.4 | 193.5 | 0.599 |    15 |   0.6 |  10.5)
+ ( 28 - 180 degrees    | 210.6 | 333.2 | 0.125 |     3 |  45.5 |  84.3)
+ (  0 - 180 degrees    |  70.4 | 112.9 | 0.885 |    19 |   0.6 |  84.3)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.8 0.1    3 ISC         821594
+
+Event      371151 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/04/03 01:08:17.00        1.430  31.7360   78.7310                  51.2              18                       uk NEIC        813161
+ (Less reliable solution.)
+1990/04/03 01:08:22.50               31.5200   78.4300                 126.0                                       uk BJI         813162
+1990/04/03 01:08:16.21   0.58 1.794  31.5564   78.5660 9.788 7.250  32  32.0f        34   31  70   3.09  85.68 m i ke ISC         813163
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 164.6 | 177.2 | 0.512 |    17 |   3.1 |  16.5)
+ ( 28 - 180 degrees    | 131.4 | 178.5 | 0.537 |     7 |  42.7 |  85.7)
+ (  0 - 180 degrees    |  70.2 | 107.1 | 0.901 |    29 |   3.1 |  85.7)
+
+Magnitude  Err Nsta Author      OrigID
+mb     3.9        5 NEIC        813161
+mb     4.1 0.3    5 ISC         813163
+
+Event      355631 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/09/05 21:15:25.00               32.7400   76.3400                  33.0                                       uk BJI         777289
+1990/09/05 21:15:24.40   0.66 2.964  32.7591   76.1354 8.798 5.280  47  20.0f        26   22  77   2.57  49.89 m i ke ISC         777290
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   2.6 |   2.9)
+ (  0 -  17 degrees    |  77.5 | 114.6 | 0.854 |    16 |   2.6 |  15.5)
+ ( 28 - 180 degrees    | 360.0 | 360.0 | 0.000 |     2 |  40.3 |  49.9)
+ (  0 - 180 degrees    |  77.5 | 114.6 | 0.889 |    20 |   2.6 |  49.9)
+
+Magnitude  Err Nsta Author      OrigID
+mL     4.5          BJI         777289
+
+Event      350359 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/11/12 15:45:16.74        1.220  33.5550   75.8440 9.400   6.5  29  15.0f        62   58                   m i ke ISC-EHB   12160120
+ (#PARAM DEPTH_QUALITY=L3)
+1990/11/12 15:45:18.30               33.4800   75.7600                  54.0                                       uk BJI         765060
+1990/11/12 15:45:20.40        1.190  33.4140   75.7150                  67.9              36                       uk NEIC        765061
+1990/11/12 15:45:18.07   0.45 2.131  33.4906   75.8626 7.716 5.848  51  26.0f        62   62  51   2.12  83.98 m i ke ISC         765063
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   2.1 |   2.2)
+ (  0 -  17 degrees    | 121.5 | 198.5 | 0.709 |    21 |   2.1 |  16.2)
+ ( 28 - 180 degrees    | 167.5 | 175.0 | 0.518 |    25 |  39.5 |  84.0)
+ (  0 - 180 degrees    |  51.7 |  60.0 | 0.961 |    55 |   2.1 |  84.0)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.7          BJI         765060
+Ms     4.4          BJI         765060
+mb     4.7       18 NEIC        765061
+MD     4.8          NDI;NEIC    765061
+mb     4.8 0.2   16 ISC         765063
+
+Event      347227 Northern India
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/12/13 08:28:53.10               31.4400   77.0700                  33.0                                       uk BJI         757476
+1990/12/13 08:28:54.88        1.340  31.4460   77.3160 10.10 6.700  35  15.0f        63   57                   m i ke ISC-EHB   12160274
+ (#PARAM DEPTH_QUALITY=L3)
+1990/12/13 08:28:55.70        0.970  31.5730   77.4380                  33.0              33                       uk NEIC        757477
+1990/12/13 08:28:53.19   0.45 2.496  31.4377   77.2765 6.087 4.819  54   9.0f        66   59  58   0.73 145.28 m i ke ISC         757478
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 241.7 | 313.7 | 0.135 |     4 |   0.8 |   2.7)
+ (  0 -  17 degrees    |  86.5 | 166.6 | 0.823 |    25 |   0.8 |  15.6)
+ ( 28 - 180 degrees    | 161.5 | 162.0 | 0.561 |    25 |  29.5 | 145.3)
+ (  0 - 180 degrees    |  59.1 |  65.7 | 0.959 |    58 |   0.8 | 145.3)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.3          BJI         757476
+mb     4.7       15 NEIC        757477
+MD     4.2          NDI;NEIC    757477
+mb     4.8 0.0   13 ISC         757478
+
+Event      347981 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/12/20 05:46:49.10        1.490  34.8450   75.0780                  33.0              10                       uk NEIC        759270
+ (Less reliable solution.)
+1990/12/20 05:46:50.75   0.82 1.230  34.4288   74.5614 13.01 11.82  48  35.0f        16   17 103   1.32  83.13 m i ke ISC         759271
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 317.5 | 339.5 | 0.008 |     4 |   1.3 |   3.0)
+ (  0 -  17 degrees    | 225.4 | 244.7 | 0.230 |    10 |   1.3 |  11.7)
+ ( 28 - 180 degrees    | 199.0 | 305.7 | 0.242 |     5 |  46.5 |  83.1)
+ (  0 - 180 degrees    | 103.5 | 116.5 | 0.787 |    15 |   1.3 |  83.1)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.2        4 NEIC        759270
+mb     4.3 0.3    3 ISC         759271
+
+Event      348642 Eastern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1990/12/25 03:56:42.90               33.3100   75.7000                  30.0                                       uk BJI         760938
+1990/12/25 03:56:44.30               33.4800   75.7800                  25.0                                       uk MOS         760939
+1990/12/25 03:56:45.74        0.990  33.3260   75.7350 4.400 2.900  19  31.3  2.45  245  221                   m i fe ISC-EHB   12160363
+ (#PARAM DEPTH_QUALITY=L1)
+1990/12/25 03:56:46.10        0.980  33.3310   75.7120                  51.1             148                       fe NEIC        760940
+1990/12/25 03:56:44.57   0.36 2.064  33.2754   75.7536 5.011 4.170  49  25.9  2.47  314  268  34   2.12 147.18 m i fe ISC         760941
+ (#PRIME)
+ (#PARAM pP_DEPTH=26.0+4.5)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   2.1 |   2.9)
+ (  0 -  17 degrees    |  63.0 |  89.0 | 0.936 |    38 |   2.1 |  16.7)
+ ( 28 - 180 degrees    |  77.2 |  77.4 | 0.935 |   161 |  28.2 | 147.2)
+ (  0 - 180 degrees    |  34.1 |  35.4 | 0.992 |   223 |   2.1 | 147.2)
+ (Felt in Jammu and Kashmir, I=II MM Jammu, and Himachal Pradesh)
+
+Year Volume Page1 Page2 Journal
+2022    231  2009  2033 Geophys. J. Int.
+ (#AUTHOR O’Kane,A. , Copley,A. , Mitra,S. , Wimpenny,S.                                   )
+ (#TITLE  The geometry of active shortening in the north–west Himalayas and the            )
+ (+       implications for seismic hazard                                                  )
+
+Magnitude  Err Nsta Author      OrigID
+mb     5.3          BJI         760938
+Ms     4.8          BJI         760938
+mb     5.5          MOS         760939
+MS     4.6          MOS         760939
+mb     5.3       69 NEIC        760940
+mb     5.4 0.1   88 ISC         760941
+MS     4.6 0.2   15 ISC         760941
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ BJI       China Earthquake Networks Center
+ ISC       International Seismological Centre
+ ISC-EHB   Revision and Continuation of the EHB project
+ MOS       Geophysical Survey of Russian Academy of Sciences
+ NEIC      National Earthquake Information Center
+
+<br>Mon Nov 23 13:55:11 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>

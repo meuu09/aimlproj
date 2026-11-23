@@ -1,0 +1,111 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel=stylesheet type=text/css href="/css/searchstyle.css">
+
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF">
+
+<center>
+<div class="header">
+  <h1>
+    International Seismological Centre<br>
+    ISC: On-Line Bulletin
+  </h1>
+</div>
+</center>
+
+<p>Any use of data from the ISC <b>should be cited</b>. The correct format for citations may be found on our <a href="http://www.isc.ac.uk/citations/">citation page</a>.</p>
+
+<p>Once the search has completed, a compressed <a href="/temp/kml/173463402.kmz">KML file</a> will be available to view the results in <a STYLE="text-decoration:none" href="http://earth.google.com/">Google Earth</a>.</p><table><tr><td><b>Search summary:</b></td><tr><td>Database: ISC Bulletin</td></tr><tr><td>Search type: Rectangular search</td></tr><tr><td>Latitude range: 31 to 35</td></tr><tr><td>Longitude range: 74 to 79.5</td></tr><tr><td>Start date: 1988-01-01 00:00:00</td></tr><tr><td>End date: 1988-12-31 23:59:59</td></tr><tr><td>Events found: 4</td></tr><tr><td>Date of search: Mon Nov 23 13:54:50 2026 GMT</td></tr></table><br><p style="color:red">From data year 2021 ISF 1 will not be able to show arrival data that has a network code, please use ISF 2.1</p>
+<p style="color:red">Agencies whose data contributed towards the results of this search are listed at the bottom of the page.</p>
+<pre>
+DATA_TYPE EVENT IMS1.0
+ISC Bulletin
+Event      448416 Southwestern Kashmir
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1988/01/20 11:48:34.40               34.8090   74.9770                  33.0               8                       uk NEIC        987530
+ (Less reliable solution.)
+1988/01/20 11:48:34.84   0.91 1.651  34.7190   74.5489 28.51 10.17  71  35.0f        16   17 151   0.67  82.84 m i ke ISC         987531
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   0.7 |   1.9)
+ (  0 -  17 degrees    | 309.0 | 319.6 | 0.013 |     7 |   0.7 |  11.8)
+ ( 28 - 180 degrees    | 199.6 | 239.6 | 0.214 |     6 |  47.7 |  82.8)
+ (  0 - 180 degrees    | 150.6 | 190.5 | 0.484 |    13 |   0.7 |  82.8)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.6          NEIC        987530
+mb     4.2 0.5    3 ISC         987531
+
+Event      430477 India-Pakistan border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1988/07/01 16:37:22.00               31.5000   74.0000                                                             fe QUE         947991
+ (Slightly felt at Lahore)
+1988/07/01 16:37:20.63   0.81 2.172  31.2275   74.0407 5.650 5.280  41  10.0f        32   24  88   0.41  16.68 m i fe ISC         947992
+ (#PRIME)
+ (Depth fixed by ISC Analyst)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 207.4 | 254.2 | 0.327 |     9 |   0.4 |   3.0)
+ (  0 -  17 degrees    |  88.5 | 130.4 | 0.880 |    22 |   0.4 |  16.7)
+ ( 28 - 180 degrees    |       |       |       |     0 |       |)
+ (  0 - 180 degrees    |  88.5 | 130.4 | 0.880 |    22 |   0.4 |  16.7)
+
+Event      432615 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1988/07/27 07:07:42.70               31.5900   78.6500                  33.0                                       uk BJI         952774
+1988/07/27 07:07:42.90               31.6050   78.6270                  33.0              12                       uk NEIC        952775
+1988/07/27 07:07:56.00               32.0000   78.1000                 255.0                                       uk QUE         952776
+1988/07/27 07:07:45.45   0.53 2.062  31.6025   78.6850 6.505 5.762  62  32.0f        49   42  49   1.39  71.81 m i ke ISC         952777
+ (#PRIME)
+ (Depth fixed to ISC default depth grid)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    | 360.0 | 360.0 | 0.000 |     2 |   1.4 |   2.4)
+ (  0 -  17 degrees    |  75.5 | 118.0 | 0.901 |    24 |   1.4 |  15.4)
+ ( 28 - 180 degrees    | 319.7 | 352.8 | 0.004 |     6 |  45.2 |  71.8)
+ (  0 - 180 degrees    |  49.5 |  62.0 | 0.966 |    38 |   1.4 |  71.8)
+
+Magnitude  Err Nsta Author      OrigID
+MS     4.1          BJI         952774
+mb     4.4          NEIC        952775
+MS     3.7          NEIC        952775
+mb     4.4 0.2    4 ISC         952777
+
+Event      419697 Kashmir-Xizang border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+1988/11/04 04:35:38.70               34.7110   80.7470                  33.0               9                       uk NEIC        924525
+ (Less reliable solution.)
+1988/11/04 04:35:46.00   0.73 2.009  34.7341   79.2567 11.77 9.685  44  35.0f        30   30 121   3.70 145.73 m i ke ISC         924528
+ (#PRIME)
+ (Depth fixed to ISC default region depth)
+ (Network Quality Metrics)
+ (Distance Range       |  gap  |  sgap |  cpq  |  nsta | mdist | Mdist)
+ (  0 -   3 degrees    |       |       |       |     0 |       |)
+ (  0 -  17 degrees    | 223.0 | 293.0 | 0.212 |    10 |   3.7 |  14.2)
+ ( 28 - 180 degrees    | 251.5 | 279.1 | 0.144 |    14 |  41.5 | 145.7)
+ (  0 - 180 degrees    | 121.9 | 177.6 | 0.752 |    27 |   3.7 | 145.7)
+
+Magnitude  Err Nsta Author      OrigID
+mb     4.8          NEIC        924525
+MS     4.1          NEIC        924525
+mb     4.8 0.3    6 ISC         924528
+
+
+STOP
+
+Agencies whose data contributed towards the results of this search:
+
+ BJI       China Earthquake Networks Center
+ ISC       International Seismological Centre
+ NEIC      National Earthquake Information Center
+ QUE       Pakistan Meteorological Department
+
+<br>Mon Nov 23 13:54:50 2026 GMT<br><br>International Seismological Centre<br>Pipers Lane, Thatcham, Berkshire<br>United Kingdom RG19 4NS<br>+44 (0)1635 861022, voice; +44 (0)1635 872351, fax<br>admin<img src="/images/staff/at.jpg" height="13"></img>isc.ac.uk, e-mail<br><br></pre>
+</body>
+</html>
