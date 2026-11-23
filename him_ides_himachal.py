@@ -59,7 +59,6 @@ cat = raw[raw.mag >= MC_CUT].sort_values("time").reset_index(drop=True)
 deep = cat[cat.depth_class.str.startswith("intermediate")]
 shal = cat[cat.depth_class.str.startswith("shallow")]
 fix = cat[cat.fixed_depth]
-cat.to_csv(os.path.join(OUT, f"catalog_M{MC_CUT}_{START_YEAR}plus.csv"), index=False)
 print(f"Catalog {START_YEAR}+, M>={MC_CUT}: N={len(cat)}  intermediate={len(deep)}  "
       f"shallow-measured={len(shal)}  fixed-depth={len(fix)}")
 
@@ -245,3 +244,6 @@ for a in axs:
     a.set_xticks(xs); a.set_xticklabels(tab.period, rotation=20); a.grid(alpha=0.2)
 plt.tight_layout(); fig.savefig(os.path.join(OUT, "Fig6_temporal_evolution_summary.png"), dpi=200); plt.close(fig)
 print("Figures written to", OUT)
+
+# ------------------------------ catalog export ----------------------------- #
+cat.to_csv(os.path.join(OUT, f"catalog_M{MC_CUT}_{START_YEAR}plus.csv"), index=False)  # includes along_km
