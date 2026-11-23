@@ -1,0 +1,129 @@
+id,time,latitude,longitude,depth,depthError,depth_type,depth_source,mag,magType,mag_source,source,isc_id,place,horizontalError,depth_class,along_km
+usp0004564,1990-02-07 22:00:52.290,34.365,76.647,83.5,17.3,from location,USGS,4.6,mb,USGS,USGS+ISC,377880.0,"52 km ESE of Kargil, India",,intermediate (depth - error >= 40 km),-74.32803219394131
+usp0004gu9,1990-11-12 15:45:20.480,33.414,75.715,67.9,12.4,from location,USGS,4.7,mb,USGS,USGS+ISC,350359.0,"12 km NNW of Kishtw?r, India",,intermediate (depth - error >= 40 km),-84.13436948989815
+usp0004jrn,1990-12-25 03:56:46.130,33.331,75.712,51.1,10.6,from location,USGS,5.3,mb,USGS,USGS+ISC,348642.0,"5 km WNW of Kishtw?r, India",,intermediate (depth - error >= 40 km),-79.03714893884862
+usp0004ky1,1991-01-20 12:43:17.070,31.532,77.463,27.8,4.22,from location,ISC:ISC,4.9,mb,USGS,USGS+ISC,344929.0,"16 km SE of Banj?r, India",,shallow (depth + error < 40 km),169.4407991482775
+usp0004t9x,1991-06-23 02:45:41.200,32.306,76.716,18.0,2.63,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,329869.0,"26 km NE of P?lampur, India",,shallow (depth + error < 40 km),63.018305877384115
+usp00060ds,1993-09-15 15:08:13.480,33.322,75.74,25.3,3.45,from location,ISC:ISC,5.0,mb,USGS,USGS+ISC,208144.0,"2 km WNW of Kishtw?r, India",,shallow (depth + error < 40 km),-76.3320367447316
+usp0006unn,1995-03-24 11:52:32.950,32.564,75.998,27.4,2.55,from location,ISC:ISC,4.9,mb,USGS,USGS+ISC,115177.0,"4 km ENE of Dalhousie, India",,shallow (depth + error < 40 km),-8.094537591094372
+usp0006z8y,1995-06-17 10:06:06.230,34.203,76.209,39.6,8.2,from location,USGS,4.6,mb,USGS,USGS+ISC,99208.0,"40 km S of Kargil, India",,"uncertain (error bar crosses 40 km, or no error)",-97.21732540823905
+usp0007m5d,1996-07-17 06:56:06.950,31.391,78.551,13.6,3.64,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,975556.0,"72 km NNE of Barkot, India",,shallow (depth + error < 40 km),261.1628566282351
+usp0007r8q,1996-10-11 00:05:08.220,33.55,76.299,30.6,4.54,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,990845.0,"55 km W of Padam, India",,shallow (depth + error < 40 km),-48.482601976772465
+usp00085hs,1997-07-29 18:00:18.760,31.554,76.817,33.2,1.86,from location,ISC:ISC,4.7,mb,USGS,USGS+ISC,1039234.0,"8 km WNW of Sundarnagar, India",,shallow (depth + error < 40 km),118.94063300422977
+usp0008wn2,1998-10-17 09:24:45.010,32.217,76.545,14.1,3.73,from location,ISC:ISC,4.5,mb,USGS,USGS+ISC,1312221.0,"11 km N of P?lampur, India",,shallow (depth + error < 40 km),55.73438568427469
+usp0009395,1999-02-23 06:56:14.860,34.059,74.443,9.6,1.89,from location,ISC:ISC-EHB,4.9,mb,USGS,USGS+ISC,1455581.0,"14 km WSW of M?g?m, India",,shallow (depth + error < 40 km),-222.17441176353648
+isc2159539,1999-04-22 05:22:04.800,32.996,75.768,6.7,11.2,from location,ISC:NDI,4.9,mb,ISC:NDI,ISC,2159539.0,Kashmir-India border region,,shallow (depth + error < 40 km),-53.288561595393425
+usp000982p,1999-05-16 05:41:43.580,32.505,78.425,54.8,21.6,from location,USGS,4.5,mb,USGS,USGS+ISC,1679049.0,"120 km ENE of Man?li, India",,"uncertain (error bar crosses 40 km, or no error)",180.11530086376263
+usp0009kvw,2000-01-08 02:21:16.030,34.542,78.468,35.7,11.2,from location,USGS,4.7,mb,USGS,USGS+ISC,1725740.0,"91 km ENE of Leh, India",,"uncertain (error bar crosses 40 km, or no error)",52.691187337447005
+usp0009rz9,2000-04-28 00:17:17.980,31.601,78.305,38.0,1.67,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,1734844.0,"49 km ENE of Sar?han, India",,shallow (depth + error < 40 km),228.99628410508086
+usp0009zef,2000-08-31 02:08:45.950,32.001,78.407,36.5,10.9,from location,USGS,4.7,mb,USGS,USGS+ISC,1739526.0,"79 km NE of Sar?han, India",,"uncertain (error bar crosses 40 km, or no error)",211.0835774121153
+usp000a0vc,2000-09-26 19:39:28.410,33.377,75.614,1.5,8.89,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,1740289.0,"15 km WNW of Kishtw?r, India",,shallow (depth + error < 40 km),-89.43534528655903
+usp000a8bw,2001-01-25 00:39:19.900,33.837,75.766,8.9,15.6,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,3008886.0,"45 km ESE of Pahlg?m, India",,shallow (depth + error < 40 km),-107.39815166607792
+usp000a91w,2001-02-04 10:14:07.800,33.205,75.805,15.0,2.77,from location,ISC:ISC,4.7,mb,USGS,USGS+ISC,1763893.0,"12 km SSE of Kishtw?r, India",,shallow (depth + error < 40 km),-63.88618597047494
+usp000a9zu,2001-02-20 17:33:36.060,33.289,75.893,57.4,9.0,from location,USGS,4.6,mb,USGS,USGS+ISC,1832469.0,"12 km ESE of Kishtw?r, India",,intermediate (depth - error >= 40 km),-62.588529747414064
+usp000agtg,2001-06-17 01:49:45.330,32.479,78.31,57.7,10.5,from location,USGS,4.6,mb,USGS,USGS+ISC,1884471.0,"109 km ENE of Man?li, India",,intermediate (depth - error >= 40 km),173.04473629115103
+usp000apx9,2001-09-28 04:37:56.290,33.265,75.738,26.0,3.09,from location,ISC:ISC,4.9,mwc,USGS,USGS+ISC,2146238.0,"6 km SSW of Kishtw?r, India",,shallow (depth + error < 40 km),-72.82695825457174
+usp000aqy1,2001-10-14 21:14:41.370,32.564,76.065,12.6,5.09,from location,ISC:ISC,4.8,mb,USGS,USGS+ISC,2153002.0,"5 km W of Chamba, India",,shallow (depth + error < 40 km),-3.0032977275451884
+usp000axa6,2002-01-27 22:33:43.630,33.123,75.91,40.0,8.2,from location,USGS,5.3,mwc,USGS,USGS+ISC,2749016.0,"24 km NE of Bhadarw?h, India",,"uncertain (error bar crosses 40 km, or no error)",-50.646349587678415
+usp000b1u8,2002-04-06 04:40:25.450,34.366,76.259,44.5,18.1,from location,USGS,4.4,mb,USGS,USGS+ISC,3759025.0,"24 km SSE of Kargil, India",,"uncertain (error bar crosses 40 km, or no error)",-103.87578908339772
+usp000b4tv,2002-05-23 05:03:55.040,34.32,76.426,10.2,10.9,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,3162060.0,"38 km SE of Kargil, India",,shallow (depth + error < 40 km),-88.23437556277773
+usp000be16,2002-10-08 04:48:17.200,31.73,77.21,10.9,8.47,from location,ISC:ISC,4.5,mb,USGS,USGS+ISC,3724709.0,"15 km NW of Banj?r, India",,shallow (depth + error < 40 km),137.51221252647326
+usp000brte,2003-03-02 15:23:33.400,33.375,75.689,26.2,7.86,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,6607369.0,"9 km NW of Kishtw?r, India",,shallow (depth + error < 40 km),-83.6078784382197
+usp000brzn,2003-03-05 08:22:35.710,31.519,78.62,18.9,,constrained by depth phases,USGS,4.7,mb,USGS,USGS+ISC,6608836.0,"78 km E of Sar?han, India",,"uncertain (error bar crosses 40 km, or no error)",258.19373797064577
+isc7136806,2003-09-27 15:40:52.700,31.5354,76.028,15.5,5.02,from location,ISC:ISC,4.4,mb,ISC:ISC,ISC,7136806.0,Northern India,,shallow (depth + error < 40 km),60.17893951220127
+usp000d849,2004-11-11 02:13:45.040,32.442,76.512,34.6,19.1,from location,USGS,4.9,mb,USGS,USGS+ISC,7434193.0,"30 km NE of Dharamsala, India",,"uncertain (error bar crosses 40 km, or no error)",38.79101350279065
+usp000dh75,2005-02-28 18:01:59.750,32.534,76.624,12.0,16.9,from location,USGS,4.8,mb,USGS,USGS+ISC,7475948.0,"37 km W of Kyelang, India",,shallow (depth + error < 40 km),41.399126448762004
+isc8551877,2005-03-28 19:59:16.900,33.438,75.075,20.0,17.6,from location,ISC:NDI,4.9,mb,ISC:NDI,ISC,8551877.0,Eastern Kashmir,,shallow (depth + error < 40 km),-134.30692145321848
+usp000dnae,2005-04-14 07:11:27.170,32.567,76.359,25.6,3.3,from location,ISC:ISC,4.8,mb,USGS,USGS+ISC,7492477.0,"21 km E of Chamba, India",,shallow (depth + error < 40 km),19.144890127302084
+usp000duhq,2005-07-04 19:44:05.760,32.729,76.312,29.1,2.71,from location,ISC:ISC-EHB,4.8,mb,USGS,USGS+ISC,7363024.0,"25 km NE of Chamba, India",,shallow (depth + error < 40 km),5.179685821874363
+usp000e8cd,2006-01-17 17:26:52.040,32.791,78.581,62.1,11.4,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,8036011.0,"144 km ENE of Man?li, India",,intermediate (depth - error >= 40 km),173.62009312254844
+usp000egp1,2006-05-09 13:30:19.390,32.661,76.686,14.3,,constrained by depth phases,USGS,4.4,mb,USGS,USGS+ISC,10698334.0,"33 km WNW of Kyelang, India",,"uncertain (error bar crosses 40 km, or no error)",37.962246082090054
+usp000ehyz,2006-05-26 00:41:41.660,33.148,76.241,45.4,3.54,from location,ISC:ISC,5.0,mb,USGS,USGS+ISC,10698626.0,"47 km ESE of Kishtw?r, India",,intermediate (depth - error >= 40 km),-27.09807673054372
+usp000fu90,2007-12-11 15:56:38.640,34.99,77.478,15.5,,constrained by depth phases,USGS,5.1,mwc,USGS,USGS,,"62 km E of Thang, India",,"uncertain (error bar crosses 40 km, or no error)",-51.28075620234793
+usp000g5zr,2008-05-10 06:35:55.860,33.06,76.116,44.7,9.2,from location,ISC:NEIC,4.4,mb,USGS,USGS+ISC,13227946.0,"38 km ENE of Bhadarw?h, India",,"uncertain (error bar crosses 40 km, or no error)",-30.95067768205643
+usp000gkrq,2008-10-21 15:09:10.500,31.655,77.465,17.1,14.7,from location,ISC:NEIC,4.5,mb,USGS,USGS+ISC,13397710.0,"11 km E of Banj?r, India",,shallow (depth + error < 40 km),161.70123499551778
+usp000gxap,2009-05-19 19:29:48.900,33.198,75.787,26.9,2.94,from location,ISC:ISC,4.9,mb,USGS,USGS+ISC,13193042.0,"12 km S of Kishtw?r, India",,shallow (depth + error < 40 km),-64.80486963898196
+usp000h9aw,2010-03-13 16:45:07.000,34.292,75.71,56.6,9.1,from location,ISC:NEIC,4.7,mb,USGS,USGS+ISC,14418091.0,"47 km NE of Pahlg?m, India",,intermediate (depth - error >= 40 km),-140.8458038506268
+usp000h9c9,2010-03-14 06:53:21.790,31.677,76.105,27.1,12.1,from location,ISC:NDI,4.5,mb,USGS,USGS+ISC,14406606.0,"4 km ENE of Gagret, India",,shallow (depth + error < 40 km),56.94516941005981
+usp000hd9n,2010-05-28 07:25:02.580,31.135,77.839,26.4,5.42,from location,ISC:ISC,5.0,mb,USGS,USGS+ISC,14727849.0,"10 km SE of Rohru, India",,shallow (depth + error < 40 km),223.4836061571819
+usp000hdk2,2010-06-04 11:58:10.100,33.243,76.297,43.5,9.9,from location,ISC:ISC,4.5,mb,USGS,USGS+ISC,14834666.0,"49 km E of Kishtw?r, India",,"uncertain (error bar crosses 40 km, or no error)",-28.937805067670883
+usp000hkjd,2010-09-11 03:10:40.870,33.718,75.368,25.8,11.5,from location,ISC:NEIC,4.7,mb,USGS,USGS+ISC,15178793.0,"19 km E of Anantnag, India",,shallow (depth + error < 40 km),-130.0067302612406
+usp000hp7v,2010-11-07 03:40:26.820,34.388,74.081,70.9,14.5,from location,ISC:NEIC,4.4,mb,USGS,USGS+ISC,15686712.0,"31 km NW of B?ram?la, India",,intermediate (depth - error >= 40 km),-270.7905741969698
+usp000j5mm,2011-07-28 18:42:35.260,33.32,75.998,33.3,17.8,from location,USGS,4.5,mb,USGS,USGS+ISC,16918085.0,"21 km E of Kishtw?r, India",,"uncertain (error bar crosses 40 km, or no error)",-56.59864608997878
+usp000j6w9,2011-08-23 01:22:56.280,33.095,76.858,23.9,4.83,from location,ISC:ISC,5.1,mb,USGS,USGS+ISC,16998173.0,"41 km S of Padam, India",,shallow (depth + error < 40 km),23.18734351173808
+usp000jpfg,2012-07-26 05:31:38.020,33.466,76.105,56.2,13.2,from location,ISC:NEIC,4.4,mb,USGS,USGS+ISC,601506056.0,"35 km ENE of Kishtw?r, India",,intermediate (depth - error >= 40 km),-57.83505559589818
+usp000jtcv,2012-10-02 03:45:30.090,32.401,76.507,19.1,26.7,from location,USGS,4.6,mb,USGS,USGS+ISC,601833105.0,"26 km NE of Dharamsala, India",,"uncertain (error bar crosses 40 km, or no error)",41.041584050098244
+usp000jtd8,2012-10-02 08:34:54.360,32.471,76.632,10.9,5.8,from location,ISC:NDI,4.8,mb,USGS,USGS+ISC,601776280.0,"38 km WSW of Kyelang, India",,shallow (depth + error < 40 km),46.049044727775374
+usp000jtrg,2012-10-08 17:46:20.670,31.832,78.444,19.3,2.43,from location,ISC:ISC,4.9,mb,USGS,USGS+ISC,601795309.0,"71 km ENE of Sar?han, India",,shallow (depth + error < 40 km),224.73800728647552
+usb000gjhz,2013-05-01 06:57:13.480,33.061,75.863,27.4,2.48,from location,ISC:ISC,5.7,mww,USGS,USGS+ISC,602926449.0,"16 km ENE of Bhadarw?h, India",,shallow (depth + error < 40 km),-50.2399661897332
+usb000gjjv,2013-05-01 09:19:45.930,33.001,75.764,16.1,5.81,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,602918508.0,"4 km ENE of Bhadarw?h, India",,shallow (depth + error < 40 km),-53.91331058249175
+usc000gwrb,2013-05-14 20:00:07.770,33.101,75.727,65.9,3.04,from location,ISC:ISC,4.7,mb,USGS,USGS+ISC,602953043.0,"13 km N of Bhadarw?h, India",,intermediate (depth - error >= 40 km),-63.14077817322284
+us2013qec4,2013-05-14 20:03:36.620,33.087,75.709,17.7,1.79,from location,ISC:ISC-EHB,4.7,mb,USGS,USGS+ISC,603044088.0,"11 km N of Bhadarw?h, India",,shallow (depth + error < 40 km),-63.610349725999576
+usb000hd78,2013-06-04 17:34:50.750,32.672,76.601,41.1,5.7,from location,ISC:NEIC,4.9,mb,USGS,USGS+ISC,603050442.0,"41 km WNW of Kyelang, India",,"uncertain (error bar crosses 40 km, or no error)",30.79746282386928
+usb000i9y4,2013-07-09 13:49:18.870,32.765,78.197,49.9,2.9,from location,ISC:NEIC,5.0,mb,USGS,USGS+ISC,603212870.0,"111 km ENE of Man?li, India",,intermediate (depth - error >= 40 km),146.10858044105726
+usb000idsv,2013-07-13 17:49:36.640,32.383,76.535,12.7,5.66,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,603236646.0,"27 km NE of Dharamsala, India",,shallow (depth + error < 40 km),44.32412610729726
+usb000itvz,2013-08-02 02:32:47.770,33.2663,75.9377,14.12,3.3,from location,USGS,5.0,mwb,USGS,USGS+ISC,608161108.0,"16 km ESE of Kishtw?r, India",,shallow (depth + error < 40 km),-57.735430450784406
+usb000iug2,2013-08-02 21:37:46.070,33.2967,75.9504,42.43,4.8,from location,USGS,5.2,mb,USGS,USGS+ISC,603303637.0,"17 km E of Kishtw?r, India",,"uncertain (error bar crosses 40 km, or no error)",-58.72080429609423
+usb000j66f,2013-08-18 23:53:31.680,33.2183,75.8728,44.81,6.4,from location,USGS,4.8,mb,USGS,USGS+ISC,603338700.0,"14 km SE of Kishtw?r, India",,"uncertain (error bar crosses 40 km, or no error)",-59.587468203069875
+usb000jd2p,2013-08-29 10:13:24.110,31.4785,76.2727,38.33,6.6,from location,USGS,4.4,mb,USGS,USGS+ISC,603354394.0,"1 km NNE of Una, India",,"uncertain (error bar crosses 40 km, or no error)",82.42400322451067
+usb000jirl,2013-09-05 18:11:28.600,33.2221,75.404,10.24,2.8,from location,USGS,4.5,mb,USGS,USGS+ISC,603384741.0,"14 km NE of Batoti, India",,shallow (depth + error < 40 km),-95.4547532369498
+usc000knei,2013-10-26 00:05:03.550,33.1049,75.9359,41.6,6.9,from location,USGS,4.5,mb,USGS,USGS+ISC,603780115.0,"24 km NE of Bhadarw?h, India",,"uncertain (error bar crosses 40 km, or no error)",-47.51696781793856
+usb000ktgz,2013-11-06 14:53:14.040,31.726,76.1301,41.11,6.3,from location,USGS,4.4,mb,USGS,USGS+ISC,603775625.0,"9 km NE of Gagret, India",,"uncertain (error bar crosses 40 km, or no error)",55.70869983241073
+usc000rf2p,2014-06-13 13:32:52.870,33.292,75.5807,42.74,5.2,from location,USGS,5.0,mb,USGS,USGS+ISC,604725280.0,"16 km N of Doda, India",,"uncertain (error bar crosses 40 km, or no error)",-86.51226322495799
+usb000s4v3,2014-08-21 08:11:18.820,32.3289,76.4266,15.1,2.79,from location,ISC:ISC,4.9,mb,USGS,USGS+ISC,605153295.0,"15 km NE of Dharamsala, India",,shallow (depth + error < 40 km),39.55795100586134
+usb000tpit,2015-02-15 14:14:20.990,34.4283,76.2031,48.05,7.2,from location,USGS,4.7,mb,USGS,USGS+ISC,606726713.0,"15 km SSE of Kargil, India",,intermediate (depth - error >= 40 km),-112.12065271000137
+us20006fcp,2016-07-17 11:53:57.580,31.3474,74.4464,60.73,5.0,from location,USGS,4.5,mb,USGS,USGS+ISC,609168698.0,"7 km ESE of Kahna Nau, Pakistan",,intermediate (depth - error >= 40 km),-47.9428484783992
+us10006acy,2016-08-01 13:38:32.850,31.3148,76.9876,35.06,6.9,from location,USGS,4.5,mb,USGS,USGS+ISC,609303127.0,"15 km WNW of Seoni, India",,"uncertain (error bar crosses 40 km, or no error)",147.2511000758568
+us20006ufk,2016-08-27 01:14:30.110,31.4746,77.7102,25.9,7.6,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,609386008.0,"8 km ENE of R?mpur, India",,shallow (depth + error < 40 km),191.90791393412547
+us10008ii5,2017-04-18 05:11:55.400,33.9575,76.422,51.3,7.5,from location,USGS,4.6,mb,USGS,USGS+ISC,610529601.0,Kashmir-India border region,,intermediate (depth - error >= 40 km),-65.28073847402996
+us10008tgd,2017-05-19 00:02:33.540,33.0204,76.1431,42.99,8.4,from location,USGS,4.5,mb,USGS,USGS+ISC,610643014.0,"40 km E of Bhadarw?h, India",,"uncertain (error bar crosses 40 km, or no error)",-26.35069374267165
+us10008w1v,2017-05-29 13:53:29.160,33.2999,75.9276,35.9,8.5,from location,USGS,4.5,mb,USGS,USGS+ISC,610655586.0,"15 km E of Kishtw?r, India",,"uncertain (error bar crosses 40 km, or no error)",-60.658654018557456
+us2000a8n7,2017-08-16 03:26:53.080,32.8724,76.2437,44.78,8.6,from location,USGS,4.4,mb,USGS,USGS+ISC,610942411.0,"36 km NNE of Chamba, India",,"uncertain (error bar crosses 40 km, or no error)",-9.210721777864494
+us2000atf6,2017-09-23 00:14:11.480,34.2131,74.5944,25.4,4.53,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,611022671.0,"5 km WSW of Sumbal, India",,shallow (depth + error < 40 km),-220.5566118784447
+us1000atxi,2017-10-19 01:10:25.000,33.5105,76.2599,32.12,5.1,from location,USGS,4.6,mb,USGS,USGS+ISC,611165715.0,"50 km ENE of Kishtw?r, India",,shallow (depth + error < 40 km),-48.91948286456199
+us2000c2cc,2017-12-09 10:43:07.020,33.4204,76.9149,20.3,3.2,from location,USGS,4.7,mb,USGS,USGS+ISC,611594792.0,"5 km SSE of Padam, India",,shallow (depth + error < 40 km),6.633800468924598
+us2000c2q3,2017-12-10 22:58:55.730,34.3183,78.5677,35.55,6.2,from location,USGS,4.6,mb,USGS,USGS+ISC,611595110.0,"92 km E of Leh, India",,"uncertain (error bar crosses 40 km, or no error)",74.61959625029806
+us1000d4p8,2018-03-15 14:53:24.170,33.0311,76.0989,39.8,9.1,from location,USGS,4.5,mb,USGS,USGS+ISC,611798607.0,"36 km E of Bhadarw?h, India",,"uncertain (error bar crosses 40 km, or no error)",-30.395892227851903
+us1000erd6,2018-06-14 10:15:49.470,32.5602,76.3615,16.5,8.21,from location,ISC:ISC,4.5,mb,USGS,USGS+ISC,612121534.0,"22 km E of Chamba, India",,shallow (depth + error < 40 km),19.771142104997757
+us2000gakd,2018-07-21 09:19:36.900,34.2911,74.0789,40.06,8.4,from location,USGS,4.5,mb,USGS,USGS,,"23 km N of Uri, India",,"uncertain (error bar crosses 40 km, or no error)",-264.73315551261516
+us1000hij3,2018-10-29 14:43:35.790,34.2342,78.1243,11.0,3.67,from location,ISC:ISC,4.9,mww,USGS,USGS+ISC,617459367.0,"50 km E of Leh, India",,shallow (depth + error < 40 km),46.321988041386874
+us2000j2bz,2019-01-10 02:52:04.640,34.3645,78.2373,34.51,5.1,from location,USGS,4.6,mb,USGS,USGS+ISC,614563813.0,"64 km ENE of Leh, India",,shallow (depth + error < 40 km),46.548804780256376
+us2000jjcb,2019-02-17 22:53:30.280,33.4367,76.7294,23.88,5.9,from location,USGS,4.5,mb,USGS,USGS+ISC,614944076.0,"14 km WSW of Padam, India",,shallow (depth + error < 40 km),-8.50788461510243
+us60004wwv,2019-07-29 03:33:52.069,32.8856,76.7183,43.2,9.98,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,616128179.0,"45 km NW of Kyelang, India",,"uncertain (error bar crosses 40 km, or no error)",26.00659660067019
+us70005dbm,2019-09-08 02:34:32.435,33.0736,76.1758,22.4,2.36,from location,ISC:ISC-EHB,4.8,mb,USGS,USGS+ISC,616346095.0,"44 km ENE of Bhadarw?h, India",,shallow (depth + error < 40 km),-27.279116814192253
+us70005dl7,2019-09-09 06:40:33.517,32.9804,76.181,43.93,6.7,from location,USGS,4.9,mb,USGS,USGS+ISC,616346692.0,"43 km E of Bhadarw?h, India",,"uncertain (error bar crosses 40 km, or no error)",-20.904368783275114
+us600084lt,2020-02-26 15:04:08.953,32.9752,76.2474,17.0,1.87,from location,ISC:ISC-EHB,5.0,mb,USGS,USGS+ISC,617575860.0,"47 km NNE of Chamba, India",,shallow (depth + error < 40 km),-15.525095969419038
+us70008h7l,2020-03-27 11:46:58.989,32.697,76.144,19.0,2.91,from location,ISC:ISC,4.5,mb,USGS,USGS+ISC,617820906.0,"15 km N of Chamba, India",,shallow (depth + error < 40 km),-5.5333242067147275
+us7000afay,2020-06-30 18:02:28.856,33.1193,75.8744,43.89,6.3,from location,USGS,4.7,mb,USGS,USGS+ISC,618644018.0,"21 km NE of Bhadarw?h, India",,"uncertain (error bar crosses 40 km, or no error)",-53.11415786168109
+us7000ak4u,2020-07-02 07:40:37.191,32.998,75.9509,23.3,7.99,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,618681657.0,"21 km E of Bhadarw?h, India",,shallow (depth + error < 40 km),-39.518554401800486
+us6000bzub,2020-09-22 16:10:29.177,34.0837,74.7947,26.7,14.9,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,619107599.0,"1 km WSW of Srinagar, India",,"uncertain (error bar crosses 40 km, or no error)",-197.0339260924257
+us6000c13w,2020-09-25 10:57:13.221,34.2487,78.2058,10.7,1.95,from location,ISC:ISC-EHB,5.3,mww,USGS,USGS+ISC,619321061.0,"58 km E of Leh, India",,shallow (depth + error < 40 km),51.584759729495076
+us6000c1ja,2020-09-26 06:32:00.651,34.7214,74.4055,27.1,5.64,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,619394216.0,"40 km NNW of Bandipura, India",,shallow (depth + error < 40 km),-267.5228242368627
+us6000c1yn,2020-09-27 17:27:42.182,34.1448,78.1519,5.2,4.67,from location,ISC:ISC,5.0,mww,USGS,USGS+ISC,619394656.0,"52 km E of Leh, India",,shallow (depth + error < 40 km),54.15507821716446
+us6000c222,2020-09-28 05:12:34.992,33.229,75.8586,36.1,1.54,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,619394858.0,"12 km SE of Kishtw?r, India",,shallow (depth + error < 40 km),-61.35300704785464
+us6000c5y3,2020-10-05 23:43:20.846,34.1788,79.2141,9.7,1.14,from location,ISC:ISC-EHB,5.0,mww,USGS,USGS+ISC,619458588.0,"150 km E of Leh, India",,shallow (depth + error < 40 km),132.68882551312095
+us7000cbmi,2020-11-06 22:59:17.399,33.5339,75.7388,28.3,8.7,from location,ISC:NDI,4.6,mb,USGS,USGS+ISC,619525648.0,"24 km N of Kishtw?r, India",,shallow (depth + error < 40 km),-90.0184884622435
+us7000cc3t,2020-11-08 13:26:25.069,33.4944,75.735,36.0,1.93,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,619526562.0,eastern Kashmir,,shallow (depth + error < 40 km),-87.7729698398335
+us6000d71u,2021-01-09 14:51:50.407,32.521,76.6552,22.64,6.7,from location,USGS,4.5,mb,USGS,USGS+ISC,619646375.0,"35 km W of Kyelang, India",,shallow (depth + error < 40 km),44.60403783255802
+us6000d7f5,2021-01-11 14:02:03.048,33.3042,75.5872,15.1,1.13,from location,ISC:ISC-EHB,5.1,mb,USGS,USGS+ISC,619647295.0,"16 km W of Kishtw?r, India",,shallow (depth + error < 40 km),-86.80107522838323
+us6000e1yd,2021-04-15 22:26:24.010,32.4789,78.7499,9.4,2.6,from location,ISC:ISC-EHB,4.6,mb,USGS,USGS+ISC,620300640.0,"140 km NE of Sar?han, India",,shallow (depth + error < 40 km),206.47856137218236
+us6000eqdp,2021-06-28 00:40:35.259,34.2781,78.2208,16.6,2.08,from location,ISC:ISC-EHB,4.8,mb,USGS,USGS+ISC,620568059.0,"60 km ENE of Leh, India",,shallow (depth + error < 40 km),50.83831866362493
+us7000f3a5,2021-08-24 16:48:13.463,32.0551,78.7955,7.1,6.34,from location,ISC:ISC,4.7,mb,USGS,USGS+ISC,621002177.0,"112 km ENE of Sar?han, India",,shallow (depth + error < 40 km),237.13417468937652
+us6000fxih,2021-10-26 00:32:08.893,33.2123,76.8049,9.5,5.63,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,621239258.0,"29 km SSW of Padam, India",,shallow (depth + error < 40 km),11.626510066070008
+us7000fsnw,2021-11-09 10:57:27.886,31.9939,78.5517,10.3,9.46,from location,ISC:ISC,4.6,mb,USGS,USGS+ISC,625561618.0,"89 km NE of Sar?han, India",,shallow (depth + error < 40 km),222.5346637473869
+us6000iuid,2022-10-18 12:09:45.297,32.3641,78.6637,6.1,13.5,from location,ISC:ISC,4.5,mb,USGS,USGS+ISC,624911213.0,"125 km NE of Sar?han, India",,shallow (depth + error < 40 km),207.29377803675916
+us7000iq4z,2022-11-16 16:02:53.870,31.8986,76.9792,7.9,7.46,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,625227093.0,"13 km WSW of Kulu, India",,shallow (depth + error < 40 km),109.15684492463045
+us7000k850,2023-06-13 08:03:40.348,33.1191,75.9074,16.7,2.28,from location,ISC:ISC,5.2,mww,USGS,USGS+ISC,626261770.0,"23 km NE of Bhadarwāh, India",,shallow (depth + error < 40 km),-50.59370048251094
+us7000k89b,2023-06-13 20:50:56.444,33.0446,75.948,14.274,3.773,from location,USGS,4.6,mb,USGS,USGS+ISC,626286049.0,"22 km ENE of Bhadarwāh, India",,shallow (depth + error < 40 km),-42.72872501366423
+us6000kr8m,2023-07-10 00:08:53.217,33.2332,75.9099,27.461,4.458,from location,USGS,4.9,mb,USGS,USGS+ISC,626366377.0,"15 km SE of Kishtwār, India",,shallow (depth + error < 40 km),-57.724256332216775
+us6000kywl,2023-08-09 17:44:20.929,32.5435,78.602,14.338,4.099,from location,USGS,4.7,mb,USGS,USGS+ISC,626624811.0,"137 km NE of Sarāhan, India",,shallow (depth + error < 40 km),191.0951761055788
+us6000le17,2023-10-08 13:37:04.576,31.7268,79.3465,5.6,14.1,from location,ISC:ISC,4.5,mb,USGS,USGS+ISC,635744486.0,"131 km N of Joshīmath, India",,shallow (depth + error < 40 km),300.0672816457285
+us7000ljty,2023-12-18 10:18:52.984,33.1836,76.8401,18.4,1.97,from location,ISC:ISC,5.1,mww,USGS,USGS+ISC,636334477.0,"31 km S of Padam, India",,shallow (depth + error < 40 km),16.142670385295574
+us7000lju0,2023-12-18 10:31:29.554,33.1609,76.6962,10.4,3.31,from location,ISC:ISC,4.8,mww,USGS,USGS+ISC,636334478.0,"38 km SSW of Padam, India",,shallow (depth + error < 40 km),6.664309409305589
+us7000llf2,2023-12-25 23:03:56.507,34.7111,76.7782,34.705,5.172,from location,USGS,4.6,mb,USGS,USGS+ISC,636370391.0,"24 km S of Thang, India",,shallow (depth + error < 40 km),-86.56370687913105
+us6000m1i0,2024-01-03 19:08:16.618,33.2551,76.7872,17.945,4.138,from location,USGS,4.5,mb,USGS,USGS+ISC,636597575.0,"25 km SSW of Padam, India",,shallow (depth + error < 40 km),7.535511084913287
+us7000m9w5,2024-04-04 16:04:32.601,33.1698,76.816,32.436,4.205,from location,USGS,5.0,mww,USGS,USGS+ISC,637119102.0,"33 km S of Padam, India",,shallow (depth + error < 40 km),15.196736264236378
+us7000maf3,2024-04-06 09:23:21.002,33.1643,76.8223,9.0,8.06,from location,ISC:ISC,4.4,mb,USGS,USGS+ISC,637119576.0,"34 km S of Padam, India",,shallow (depth + error < 40 km),16.028338593936176
+us7000mysm,2024-07-12 06:56:22.699,34.1455,74.3501,13.68,5.402,from location,USGS,4.4,mb,USGS,USGS+ISC,641646460.0,"7 km S of Bāramūla, India",,shallow (depth + error < 40 km),-234.78350035624868
+us7000n823,2024-08-20 01:15:55.090,34.1613,74.2677,14.076,1.842,from location,USGS,5.1,mb,USGS,USGS+ISC,642003012.0,"8 km SW of Bāramūla, India",,shallow (depth + error < 40 km),-242.05867570594458
+us7000n826,2024-08-20 01:22:26.354,34.1873,74.2881,13.738,3.315,from location,USGS,4.5,mwr,USGS,USGS+ISC,642003019.0,"5 km WSW of Bāramūla, India",,shallow (depth + error < 40 km),-242.1766378660464
