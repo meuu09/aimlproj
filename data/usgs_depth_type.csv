@@ -1,0 +1,567 @@
+id,depth_type,origin_source,depth_km
+iscgem797561,from location,iscgem,15.0
+iscgem769118,from location,iscgem,10.0
+usp000004y,unknown,US,90
+usp000005y,unknown,US,42
+usp00001b4,unknown,US,62
+usp00002q1,unknown,US,52
+usp00002q2,operator assigned,US,33
+usp00002rt,operator assigned,US,33
+usp00003x3,operator assigned,US,33
+usp00003x7,unknown,US,52
+usp00003xf,unknown,US,105
+usp0000403,unknown,US,35
+usp00004jj,operator assigned,US,33
+usp00004jm,unknown,US,47
+usp00006en,operator assigned,US,33
+usp00008tj,unknown,US,63
+usp00009jc,unknown,US,60
+usp00009jd,operator assigned,US,33
+usp00009jf,operator assigned,US,33
+usp00009jg,operator assigned,US,33
+usp00009jh,operator assigned,US,33
+usp00009jk,operator assigned,US,33
+usp00009jm,operator assigned,US,33
+usp00009jp,operator assigned,US,33
+usp00009jx,unknown,US,48
+usp00009jy,operator assigned,US,33
+usp00009ks,unknown,US,51
+usp00009ps,operator assigned,US,33
+usp00009pu,operator assigned,US,33
+usp00009px,operator assigned,US,33
+usp00009q0,operator assigned,US,33
+usp00009qq,operator assigned,US,33
+usp00009r8,unknown,US,45
+usp00009s4,unknown,US,21
+usp00009w6,operator assigned,US,33
+usp0000a69,unknown,US,49
+usp0000aex,operator assigned,US,33
+usp0000aj9,operator assigned,US,33
+usp0000ayr,operator assigned,US,33
+usp0000azf,unknown,US,26
+usp0000bdh,unknown,US,28
+usp0000bvn,unknown,US,33
+usp0000c1j,unknown,US,40
+usp0000c1k,operator assigned,US,33
+usp0000c3u,operator assigned,US,33
+usp0000c7f,unknown,US,51
+usp0000cfn,unknown,US,61
+usp0000ctw,unknown,US,44
+usp0000cvj,operator assigned,US,33
+usp0000cvm,operator assigned,US,33
+usp0000d5s,operator assigned,US,33
+usp0000dbj,unknown,US,112
+usp0000dbk,unknown,US,34
+usp0000deh,unknown,US,28
+usp0000du4,unknown,US,33
+usp0000dvh,unknown,US,21
+usp0000dvj,operator assigned,US,33
+usp0000dvk,unknown,US,54
+usp0000dvz,unknown,US,59
+usp0000eaw,unknown,US,50
+usp0000ec2,operator assigned,US,33
+usp0000ece,unknown,US,22
+usp0000esq,operator assigned,US,33
+usp0000ey1,unknown,US,37
+usp0000f7c,unknown,US,84
+usp0000fam,unknown,US,121
+usp0000fu3,unknown,US,50
+usp0000fv1,unknown,US,58
+usp0000fx2,unknown,US,92
+usp0000g5k,unknown,US,51
+usp0000gg0,unknown,US,89
+usp0000h6z,unknown,US,56
+usp0000hnz,unknown,US,15
+usp0000j9x,unknown,US,18
+usp0000jp5,unknown,US,29
+usp0000jr6,unknown,US,16
+usp0000m9t,unknown,US,51
+usp0000mcn,unknown,US,55
+usp0000mmf,unknown,US,40
+usp0000mmg,operator assigned,US,33
+usp0000n4z,unknown,US,26
+usp0000ncw,unknown,US,67
+usp0000nds,operator assigned,US,33
+usp0000pe0,unknown,US,36
+usp0000qmz,unknown,US,213
+usp0000r41,operator assigned,US,33
+usp0000s5s,operator assigned,US,33
+usp0000s5y,operator assigned,US,33
+usp0000shb,unknown,US,60
+usp0000t1q,unknown,US,59
+usp0000t3p,unknown,US,36
+usp0000tuw,unknown,US,50
+usp0000u0y,operator assigned,US,33
+usp0000v1w,constrained by depth phases,US,18
+usp0000ws2,unknown,US,35
+usp0000zps,operator assigned,US,33
+usp00010k1,operator assigned,US,33
+usp00010xk,unknown,US,20
+usp000117j,unknown,US,46
+usp00011p6,unknown,US,90
+usp00011p7,unknown,US,106
+usp00014nh,operator assigned,US,33
+usp00014ww,operator assigned,US,33
+usp00016zs,unknown,US,35
+usp00016zt,operator assigned,US,33
+usp00017th,operator assigned,US,33
+usp00019h8,unknown,US,25
+usp00019h9,operator assigned,US,33
+usp00019xk,unknown,US,65
+usp0001a39,operator assigned,US,33
+usp0001dxc,operator assigned,US,33
+usp0001e4b,operator assigned,US,33
+usp0001eae,operator assigned,US,33
+usp0001en8,unknown,US,49.8
+usp0001f70,operator assigned,US,33
+usp0001fba,unknown,US,57.7
+usp0001fkm,operator assigned,US,33
+usp0001fw4,unknown,US,48.7
+usp0001g4c,operator assigned,US,33
+usp0001gw4,operator assigned,US,33
+usp0001he2,from location,US,64.8
+usp0001m54,operator assigned,US,33
+usp0001pdc,operator assigned,US,33
+usp0001rfj,operator assigned,US,33
+usp0001tc7,operator assigned,US,33
+usp0001xhm,from location,US,126.7
+usp0001yxq,operator assigned,US,33
+usp000213c,operator assigned,US,33
+usp00024jz,constrained by depth phases,US,57.6
+usp00026eh,operator assigned,US,33
+usp0002a2a,operator assigned,US,33
+usp0002c7z,operator assigned,US,33
+usp0002cra,operator assigned,US,33
+usp0002hjv,operator assigned,US,33
+usp0002pjy,operator assigned,US,33
+usp0002t3u,operator assigned,US,33
+usp0002t74,operator assigned,US,33
+usp0002w2z,operator assigned,US,33
+usp0002wpp,operator assigned,US,33
+usp0002xzn,operator assigned,US,33
+usp000324s,from location,US,82.2
+usp00036rp,from location,US,54.1
+usp0003917,operator assigned,US,33
+usp0003bjg,operator assigned,US,33
+usp0003c7n,operator assigned,US,33
+usp0003eku,operator assigned,US,33
+usp0003j9a,operator assigned,US,33
+usp0003v4d,operator assigned,US,33
+usp0003v4e,from location,US,41.7
+usp0004564,from location,US,83.5
+usp00047d8,from location,US,51.2
+usp0004fb7,operator assigned,US,33
+usp0004gu9,from location,US,67.9
+usp0004j2e,operator assigned,US,33
+usp0004jcr,operator assigned,US,33
+usp0004jrn,from location,US,51.1
+usp0004kf8,operator assigned,US,33
+usp0004ky1,operator assigned,US,33
+usp0004ndb,operator assigned,US,33
+usp0004t9x,operator assigned,US,33
+usp000529u,operator assigned,US,33
+usp00052mr,operator assigned,US,33
+usp000531d,operator assigned,US,33
+usp00059ax,operator assigned,US,33
+usp0005b77,operator assigned,US,33
+usp0005dnf,operator assigned,US,33
+usp0005e30,operator assigned,US,33
+usp00060ds,operator assigned,US,33
+usp0006b4h,operator assigned,US,33
+usp0006cg4,operator assigned,US,33
+usp0006f33,operator assigned,US,33
+usp0006h8f,operator assigned,US,33
+usp0006kan,operator assigned,US,33
+usp0006unn,operator assigned,US,33
+usp0006z8y,from location,US,39.6
+usp00071zr,operator assigned,US,33
+usp00072xw,from location,US,45.7
+usp00075hk,operator assigned,US,33
+usp00077k7,unknown,US,30.4
+usp00077t5,from location,US,78.7
+usp0007b7f,operator assigned,US,33
+usp0007e5b,operator assigned,US,33
+usp0007h54,from location,US,59.5
+usp0007hew,operator assigned,US,33
+usp0007hfu,constrained by depth phases,US,51.6
+usp0007hqt,from location,US,34.8
+usp0007m15,operator assigned,US,33
+usp0007m5d,operator assigned,US,33
+usp0007nq5,operator assigned,US,33
+usp0007px7,operator assigned,US,33
+usp0007r8q,operator assigned,US,33
+usp0007uj8,operator assigned,US,33
+usp0007uwe,operator assigned,US,33
+usp0007w2w,operator assigned,US,33
+usp0007w2x,from location,US,72.2
+usp0007wb4,operator assigned,US,100
+usp0007wm2,operator assigned,US,33
+usp00082vq,operator assigned,US,33
+usp00085hs,operator assigned,US,33
+usp000866m,operator assigned,US,33
+usp0008d2c,operator assigned,US,33
+usp0008f59,constrained by depth phases,US,90.3
+usp0008hpy,operator assigned,US,33
+usp0008hq0,operator assigned,US,33
+usp0008hqg,from location,US,69.7
+usp0008hqn,operator assigned,US,33
+usp0008nnu,operator assigned,US,33
+usp0008qj4,operator assigned,US,33
+usp0008r1r,from location,US,82.8
+usp0008te4,operator assigned,US,33
+usp0008wn2,operator assigned,US,33
+usp00092ya,operator assigned,US,33
+usp0009395,operator assigned,US,33
+usp000982p,from location,US,54.8
+usp0009ec3,operator assigned,US,33
+usp0009ekv,operator assigned,US,33
+usp0009h9p,operator assigned,US,33
+usp0009ja5,operator assigned,US,33
+usp0009kvw,from location,US,35.7
+usp0009m7p,operator assigned,US,33
+usp0009nud,operator assigned,US,33
+usp0009nuh,operator assigned,US,33
+usp0009r5k,operator assigned,US,33
+usp0009rz9,operator assigned,US,33
+usp0009t5y,operator assigned,US,33
+usp0009tk8,from location,US,59.2
+usp0009uqv,operator assigned,US,33
+usp0009urn,operator assigned,US,33
+usp0009usj,from location,US,93.4
+usp0009vrf,operator assigned,US,33
+usp0009y73,operator assigned,US,33
+usp0009zef,from location,US,36.5
+usp000a0vc,operator assigned,US,33
+usp000a1n1,operator assigned,US,33
+usp000a1ps,operator assigned,US,33
+usp000a4n5,operator assigned,US,33
+usp000a6rd,operator assigned,US,33
+usp000a7aq,from location,US,58.6
+usp000a8bw,operator assigned,US,33
+usp000a8q6,operator assigned,US,33
+usp000a91w,constrained by depth phases,US,18.2
+usp000a9zu,from location,US,57.4
+usp000abz1,operator assigned,US,33
+usp000adyj,operator assigned,US,33
+usp000aedj,operator assigned,US,33
+usp000agtg,from location,US,57.7
+usp000apx9,operator assigned,US,33
+usp000aq6r,operator assigned,US,33
+usp000aqy1,operator assigned,US,33
+usp000ara6,constrained by depth phases,US,78.6
+usp000aw0f,operator assigned,US,33
+usp000axa5,constrained by depth phases,US,43.5
+usp000axa6,from location,US,40
+usp000b0a4,from location,US,39.7
+usp000b0a6,from location,US,39.6
+usp000b0b5,from location,US,47.1
+usp000b0jb,from location,US,57.7
+usp000b1u8,from location,US,44.5
+usp000b4tv,operator assigned,US,33
+usp000b4ur,operator assigned,US,33
+usp000b5hj,operator assigned,US,33
+usp000bb8c,operator assigned,US,33
+usp000be16,operator assigned,US,33
+usp000brte,operator assigned,US,33
+usp000brzn,constrained by depth phases,US,18.9
+usp000bvan,operator assigned,US,33
+usp000bw3f,operator assigned,US,33
+usp000bx1p,operator assigned,US,33
+usp000cfbq,operator assigned,US,33
+usp000cfbu,operator assigned,US,33
+usp000cfq2,operator assigned,US,33
+usp000ckdm,from location,US,23.8
+usp000cmvu,from location,US,46
+usp000d038,operator assigned,US,40
+usp000d0ns,operator assigned,US,10
+usp000d849,from location,US,34.6
+usp000d84d,unknown,US,20
+usp000d9hf,from location,US,37.9
+usp000dg7z,unknown,US,50.4
+usp000dh6x,from location,US,32.5
+usp000dh75,from location,US,12
+usp000dmah,from location,US,40.1
+usp000dnae,unknown,US,31.3
+usp000dnq5,unknown,US,20
+usp000drda,operator assigned,US,10
+usp000dtn5,unknown,US,45
+usp000duhq,unknown,US,20
+usp000dxjf,unknown,US,10
+usp000dy8f,from location,US,61.9
+usp000e1bz,operator assigned,US,10
+usp000e1mw,operator assigned,US,10
+usp000e1vp,operator assigned,US,10
+usp000e374,operator assigned,US,35
+usp000e3gw,operator assigned,US,10
+usp000e49j,operator assigned,US,10
+usp000e65g,unknown,US,10
+usp000e8cd,operator assigned,US,10
+usp000eaeg,from location,US,45
+usp000ed70,unknown,US,45
+usp000edp2,unknown,US,45
+usp000ef7r,operator assigned,US,35
+usp000egp1,constrained by depth phases,US,14.3
+usp000ehyz,constrained by depth phases,US,66.8
+usp000ek3x,operator assigned,US,10
+usp000ema2,operator assigned,US,10
+usp000enzn,from location,US,31.1
+usp000ep50,operator assigned,US,35
+usp000ep53,operator assigned,US,35
+usp000ep60,operator assigned,US,10
+usp000eprm,unknown,US,45
+usp000et0f,operator assigned,US,35
+usp000eu0x,operator assigned,US,10
+usp000ewnu,unknown,US,10
+usp000ezy7,unknown,US,10
+usp000ezya,from location,US,8.2
+usp000f0es,operator assigned,US,35
+usp000f124,unknown,US,33.3
+usp000f45y,operator assigned,US,35
+usp000f59e,unknown,US,36.6
+usp000f7mg,operator assigned,US,35
+usp000f85e,operator assigned,US,35
+usp000fd9c,operator assigned,US,30
+usp000fdz3,from location,US,29
+usp000fe0s,operator assigned,US,10
+usp000fe8n,from location,US,54.7
+usp000fek9,unknown,US,48.9
+usp000fhk7,unknown,US,47.6
+usp000fpup,operator assigned,US,10
+usp000fpz7,unknown,US,51.2
+usp000fu90,constrained by depth phases,US,15.5
+usp000fu91,operator assigned,US,10
+usp000fvx3,operator assigned,US,35
+usp000fw5e,operator assigned,US,35
+usp000fxb1,unknown,US,55.3
+usp000fyd4,from location,US,59
+usp000fyeu,operator assigned,US,10
+usp000fza1,unknown,US,37
+usp000fzx0,unknown,US,28.3
+usp000g0af,unknown,US,51.1
+usp000g0tf,unknown,US,39.4
+usp000g0yb,from location,US,37.2
+usp000g187,operator assigned,US,35
+usp000g1ka,operator assigned,US,10
+usp000g27n,operator assigned,US,10
+usp000g35y,from location,US,65.2
+usp000g3dn,from location,US,49.4
+usp000g40v,from location,US,61.8
+usp000g5hm,operator assigned,US,35
+usp000g5zr,unknown,US,44.7
+usp000g7c3,operator assigned,US,35
+usp000g7kp,from location,US,11.5
+usp000g82u,unknown,US,45.9
+usp000g9qn,unknown,US,36.3
+usp000gbcv,from location,US,56.6
+usp000gh26,from location,US,23.6
+usp000gkrq,unknown,US,17.1
+usp000gp49,unknown,US,73.7
+usp000gsdg,unknown,US,28.2
+usp000gt9r,unknown,US,36.1
+usp000gxap,unknown,US,20.8
+usp000gxv3,operator assigned,US,10
+usp000gzck,operator assigned,US,35
+usp000h9aw,unknown,US,56.6
+usp000h9c9,constrained by depth phases,US,30
+usp000h9w9,unknown,US,39.8
+usp000hd9n,unknown,US,18.8
+usp000hdk2,operator assigned,US,35
+usp000hj3a,unknown,US,67.9
+usp000hkjd,unknown,US,25.8
+usp000hp7v,unknown,US,70.9
+usp000j0qe,operator assigned,US,10
+usp000j5mm,from location,US,33.3
+usp000j6w9,unknown,US,14.6
+usp000j8gq,unknown,US,61
+usp000j9qr,operator assigned,US,10
+usp000jd1d,from location,US,22.8
+usp000jfwp,unknown,US,55.6
+usp000jpfg,unknown,US,56.2
+usp000jpsx,operator assigned,US,10
+usp000jtcv,from location,US,19.1
+usp000jtd8,operator assigned,US,10
+usp000jtfn,operator assigned,US,35
+usp000jtfr,operator assigned,US,10
+usp000jtrg,operator assigned,US,10
+usp000jvdc,operator assigned,US,10
+usp000k08v,unknown,US,42.2
+usb000gikz,operator assigned,US,10
+usb000gjhz,operator assigned,US,15
+usp000k0h5,unknown,US,10
+usb000gjjv,unknown,US,10
+usp000k0hs,operator assigned,US,10
+usp000k0ht,unknown,US,15.8
+usc000gwr4,unknown,US,35.7
+usc000gwrb,unknown,US,61.7
+us2013qec4,unknown,US,48
+usb000hd78,unknown,US,41.1
+usc000hgjk,unknown,US,43.3
+usb000i9y4,unknown,US,49.9
+usp000k1v3,unknown,US,37.4
+usp000k1v5,from location,US,36.9
+usb000idsv,unknown,US,25.5
+usb000itvz,from location,us,14.12
+usb000iug2,from location,us,42.43
+usb000ivha,from location,us,46.77
+usb000j2v5,from location,us,50.45
+usb000j66f,from location,us,44.81
+usb000jd2p,from location,us,38.33
+usb000jfkv,operator assigned,us,10
+usb000jirl,from location,us,10.24
+usc000knei,from location,us,41.6
+usb000ktgz,from location,us,41.11
+usb000kzjv,from location,us,30.76
+usb000lcjj,from location,us,41.12
+usb000pr2b,from location,us,34
+usc000rf2p,from location,us,42.74
+usc000rgty,from location,us,33.51
+usb000rx2e,from location,us,17.03
+usb000s4v3,operator assigned,us,10
+usb000sps1,from location,us,45.27
+usb000sl0g,operator assigned,us,35
+usc000syhy,from location,us,60.82
+usb000syre,from location,us,36.66
+usb000tpit,from location,us,48.05
+us20002w84,from location,us,63.07
+us10003l2c,from location,us,36.04
+us10003uws,from location,us,59.82
+us100041zf,operator assigned,us,35
+us20004x0r,from location,us,58.67
+us20004z10,from location,us,40.2
+us20005ai2,from location,us,31.9
+us10005jjq,operator assigned,us,35
+us20006fcp,from location,us,60.73
+us10006acy,from location,us,35.06
+us20006ufk,operator assigned,us,10
+us20006ufn,operator assigned,us,10
+us10006j3q,operator assigned,us,10
+us20007dpw,operator assigned,us,35
+us10008ii5,from location,us,51.3
+us10008tgd,from location,us,42.99
+us10008tqh,from location,us,35.36
+us10008w1v,from location,us,35.9
+us2000a8n7,from location,us,44.78
+us2000atf6,operator assigned,us,35
+us1000atxi,from location,us,32.12
+us1000axdn,from location,us,14.96
+us2000c2cc,from location,us,20.3
+us2000c2q3,from location,us,35.55
+us1000d4p8,from location,us,39.8
+us1000dz8g,from location,us,41.61
+us1000e99b,operator assigned,us,10
+us1000ek9l,operator assigned,us,10
+us1000erd6,operator assigned,us,10
+us1000euye,operator assigned,us,10
+us2000gakd,from location,us,40.06
+us2000h6g5,operator assigned,us,10
+us2000hckv,operator assigned,us,35
+us1000hie4,operator assigned,us,10
+us1000hij3,operator assigned,us,10
+us2000i61m,operator assigned,us,10
+us2000i61q,operator assigned,us,10
+us2000j0y0,operator assigned,us,10
+us2000j2bz,from location,us,34.51
+us2000jjcb,from location,us,23.88
+us60004v0j,operator assigned,us,10
+us60004wwv,operator assigned,us,10
+us70005dbm,operator assigned,us,10
+us70005dl7,from location,us,43.93
+us600084lt,operator assigned,us,10
+us60008612,operator assigned,us,10
+us60008dp6,operator assigned,us,10
+us70008h7l,operator assigned,us,10
+us70008idc,operator assigned,us,10
+us6000a0vp,operator assigned,us,10
+us7000aeua,from location,us,46.75
+us7000afay,from location,us,43.89
+us7000ak4u,operator assigned,us,10
+us6000bzub,operator assigned,us,10
+us6000c13w,operator assigned,us,10
+us6000c1i2,operator assigned,us,10
+us6000c1ja,operator assigned,us,10
+us6000c1yn,operator assigned,us,10
+us6000c222,operator assigned,us,10
+us6000c5y3,operator assigned,us,10
+us6000c5zr,operator assigned,us,10
+us7000c8na,operator assigned,us,10
+us7000cbmi,operator assigned,us,10
+us7000cc3t,operator assigned,us,10
+us7000cr0b,operator assigned,us,10
+us6000d71u,from location,us,22.64
+us6000d7f2,operator assigned,us,10
+us6000d7f5,operator assigned,us,10
+us6000de6k,operator assigned,us,10
+us6000e1yd,operator assigned,us,10
+us6000eqdp,operator assigned,us,10
+us6000eqyg,operator assigned,us,10
+us6000ezhw,operator assigned,us,10
+us7000f3a5,operator assigned,us,10
+us7000fanp,operator assigned,us,10
+us6000fxih,operator assigned,us,10
+us7000fq4k,operator assigned,us,10
+us7000fsnw,operator assigned,us,10
+us7000fwgt,operator assigned,us,10
+us7000g8yg,from location,us,40.06
+us7000ge0w,operator assigned,us,10
+us7000gidp,operator assigned,us,10
+us7000gn46,operator assigned,us,10
+us6000h0l1,operator assigned,us,10
+us6000hmcp,operator assigned,us,10
+us6000icvq,operator assigned,us,10
+us7000i23w,operator assigned,us,10
+us6000iuid,operator assigned,us,10
+us7000iq4z,operator assigned,us,10
+us6000kace,operator assigned,us,10
+us7000k850,operator assigned,us,10
+us7000k89b,from location,us,14.274
+us7000k986,operator assigned,us,10
+us7000k99b,operator assigned,us,10
+us6000kqna,operator assigned,us,10
+us6000kr8m,from location,us,27.461
+us7000kgk7,from location,us,25.38
+us7000kgdh,operator assigned,us,10
+us6000kywl,from location,us,14.338
+us6000le17,operator assigned,us,10
+us6000lflt,operator assigned,us,10
+us6000lnrg,from location,us,16.68
+us7000ljty,operator assigned,us,10
+us6000m14v,operator assigned,us,10
+us7000lju0,operator assigned,us,10
+us7000llf2,from location,us,34.705
+us6000m1i0,from location,us,17.945
+us6000m3vl,operator assigned,us,10
+us7000m09y,operator assigned,us,10
+us7000m0vv,operator assigned,us,10
+us7000m9w5,from location,us,32.436
+us7000mbq5,from location,us,28.17
+us7000maf3,operator assigned,us,10
+us7000mcxf,from location,us,45.414
+us7000mysm,from location,us,13.68
+us7000n0gq,from location,us,43.578
+us6000nj0n,operator assigned,us,10
+us7000n823,from location,us,14.076
+us7000n826,from location,us,13.738
+us7000n8j7,operator assigned,us,10
+us7000nzs7,operator assigned,us,10
+us6000pfxt,from location,us,64.259
+us6000plaw,operator assigned,us,10
+us6000plmk,operator assigned,us,10
+us7000pcnh,operator assigned,us,10
+us6000pyp3,operator assigned,us,10
+us7000pzmx,operator assigned,us,10
+us6000qv9f,operator assigned,us,10
+us6000qz4u,operator assigned,us,10
+us6000r1wg,operator assigned,us,10
+us6000r287,operator assigned,us,35
+us6000rfds,operator assigned,us,10
+us6000rst2,from location,us,18.813
+us6000s5we,operator assigned,us,10
+us7000s13v,operator assigned,us,10
+us6000spdm,operator assigned,us,10
+us7000sqxa,operator assigned,us,10
+us6000tn5r,operator assigned,us,10
+us6000tlnz,operator assigned,us,10
+us7000tbvm,operator assigned,us,10
+us6000txk0,operator assigned,us,10
+us6000u2wp,from location,us,29.899
+us7000ty72,operator assigned,us,10
