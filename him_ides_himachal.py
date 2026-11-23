@@ -27,6 +27,7 @@ What is changed:
   * extra figure: rate / Mc / b-value per decade (the temporal-evolution summary)
 
 Run from anywhere:  .venv/bin/python him_ides_himachal.py                   (results/excluding_fixed/)
+                    add --catalog combined for USGS + ISC   (results/combined_usgs_isc/<case>/)
                     .venv/bin/python him_ides_himachal.py --include-fixed   (results/including_fixed/)
 """
 import os
@@ -46,12 +47,17 @@ CSV = os.path.join(HERE, "data", "usgs_himachal_kashmir_M3plus_1970-2026.csv")
 #   (default)          excluding_fixed: only USGS-solved depths; fixed/unflagged events dropped
 #   --include-fixed    including_fixed: every event, depths as USGS reports them
 # Both use the same intermediate rule (depth - depthError >= 40 km).
+# Catalog, chosen on the command line: "--catalog usgs" (default) or "--catalog combined"
+# (USGS + ISC Bulletin, data/combined_usgs_isc_catalog.csv from build_combined_catalog.py).
+CATALOG = sys.argv[sys.argv.index("--catalog") + 1] if "--catalog" in sys.argv else "usgs"
+COMBINED = os.path.join(HERE, "data", "combined_usgs_isc_catalog.csv")
 INCLUDE_FIXED = "--include-fixed" in sys.argv
 CASE = "including_fixed" if INCLUDE_FIXED else "excluding_fixed"
 USED = "all depths" if INCLUDE_FIXED else "solved depths"   # wording for labels
-CASE_LABEL = ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
-              else "Case: excluding fixed depths (USGS-solved only)")
-OUT = os.path.join(HERE, "results", CASE)
+CASE_LABEL = (("USGS + ISC | " if CATALOG == "combined" else "USGS | ")
+              + ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
+                 else "Case: excluding fixed depths (solved only)"))
+OUT = os.path.join(HERE, "results", CASE) if CATALOG == "usgs" else os.path.join(HERE, "results", "combined_usgs_isc", CASE)
 START_YEAR = 1990          # analysis period
 MC_CUT = 4.4               # magnitude cutoff used for rate / inter-event / b-value
 DEEP_MIN, DEEP_MAX = 40, 150   # "intermediate depth" range (km)
@@ -72,10 +78,17 @@ C_DEEP, C_SHAL, C_FIX = "#d62728", "#1f77b4", "#9a9a9a"
 matplotlib.rc("font", size=13)
 
 # ----------------------------- LOAD / PREPARE ------------------------------ #
-raw = pd.read_csv(CSV, parse_dates=["time"])
-raw["time"] = raw["time"].dt.tz_localize(None)
-raw = raw[raw.time.dt.year >= START_YEAR].copy()
-raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
+if CATALOG == "combined":
+    raw = pd.read_csv(COMBINED)                                  # depth_type already included
+    raw["time"] = pd.to_datetime(raw.time, utc=True, format="ISO8601").dt.tz_localize(None)
+    raw = raw[raw.time.dt.year >= START_YEAR].copy()
+else:
+    raw = pd.read_csv(CSV, parse_dates=["time"])
+    raw["time"] = raw["time"].dt.tz_localize(None)
+    raw = raw[raw.time.dt.year >= START_YEAR].copy()
+    raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
+if "horizontalError" not in raw:
+    raw["horizontalError"] = np.nan
 raw["depth_type"] = raw.depth_type.fillna("unknown")
 n_before = len(raw)
 if not INCLUDE_FIXED:

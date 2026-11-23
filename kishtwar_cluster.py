@@ -23,6 +23,7 @@ Chamba (J&K / Himachal Pradesh). Depth rules (same as him_ides_himachal.py):
 
 Run:  .venv/bin/python kishtwar_cluster.py                   (results/excluding_fixed/kishtwar/)
       .venv/bin/python kishtwar_cluster.py --include-fixed   (results/including_fixed/kishtwar/)
+      add --catalog combined for USGS + ISC   (results/combined_usgs_isc/<case>/kishtwar/)
 """
 import os
 import sys
@@ -42,12 +43,18 @@ DEPTH_TYPES = os.path.join(HERE, "data", "usgs_depth_type.csv")
 #   (default)          excluding_fixed: only USGS-solved depths; fixed/unflagged events dropped
 #   --include-fixed    including_fixed: every event, depths as USGS reports them
 # Both use the same intermediate rule (depth - depthError >= 40 km).
+# Catalog, chosen on the command line: "--catalog usgs" (default) or "--catalog combined"
+# (USGS + ISC Bulletin, data/combined_usgs_isc_catalog.csv from build_combined_catalog.py).
+CATALOG = sys.argv[sys.argv.index("--catalog") + 1] if "--catalog" in sys.argv else "usgs"
+COMBINED = os.path.join(HERE, "data", "combined_usgs_isc_catalog.csv")
 INCLUDE_FIXED = "--include-fixed" in sys.argv
 CASE = "including_fixed" if INCLUDE_FIXED else "excluding_fixed"
 USED = "all depths" if INCLUDE_FIXED else "solved depths"   # wording for labels
-CASE_LABEL = ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
-              else "Case: excluding fixed depths (USGS-solved only)")
-OUT = os.path.join(HERE, "results", CASE, "kishtwar")
+CASE_LABEL = (("USGS + ISC | " if CATALOG == "combined" else "USGS | ")
+              + ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
+                 else "Case: excluding fixed depths (solved only)"))
+OUT = (os.path.join(HERE, "results", CASE, "kishtwar") if CATALOG == "usgs"
+       else os.path.join(HERE, "results", "combined_usgs_isc", CASE, "kishtwar"))
 START_YEAR = 1990
 MC_CUT = 4.4                     # regional completeness (authors' method gives 4.0 + 0.4)
 DEEP_MIN, DEEP_MAX = 40, 150     # intermediate depth (km)
@@ -108,10 +115,17 @@ def xy_km(lon, lat, lon0, lat0):
 
 
 # ----------------------------- LOAD ---------------------------------------- #
-raw = pd.read_csv(CSV, parse_dates=["time"])
-raw["time"] = raw["time"].dt.tz_localize(None)
-raw = raw[raw.time.dt.year >= START_YEAR]
-raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
+if CATALOG == "combined":
+    raw = pd.read_csv(COMBINED)                                  # depth_type already included
+    raw["time"] = pd.to_datetime(raw.time, utc=True, format="ISO8601").dt.tz_localize(None)
+    raw = raw[raw.time.dt.year >= START_YEAR].copy()
+else:
+    raw = pd.read_csv(CSV, parse_dates=["time"])
+    raw["time"] = raw["time"].dt.tz_localize(None)
+    raw = raw[raw.time.dt.year >= START_YEAR].copy()
+    raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
+if "horizontalError" not in raw:
+    raw["horizontalError"] = np.nan
 raw["depth_type"] = raw.depth_type.fillna("unknown")
 n_before = len(raw)
 if not INCLUDE_FIXED:
