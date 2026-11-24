@@ -1,7 +1,7 @@
 catalog,case,in_file,in_box_with_mag,after_start_year,after_duplicates,after_depth_filter,M>=4.4,M>=4.4_intermediate,all_intermediate,M>=4.4_shallow,all_shallow,M>=4.4_uncertain,all_uncertain,M>=4.4_deep,all_deep
 usgs,excluding_fixed,566,566,417,417,124,55,8,25,17,27,30,72,0,0
 usgs,including_fixed,566,566,417,417,417,176,14,41,77,146,85,230,0,0
-combined,excluding_fixed,2839,2839,2659,2659,1095,128,15,55,81,679,32,357,0,4
-combined,including_fixed,2839,2839,2659,2659,2659,186,15,60,102,729,69,1859,0,11
-combined (duplicates removed),excluding_fixed,2839,2839,2659,2652,1095,128,15,55,81,679,32,357,0,4
-combined (duplicates removed),including_fixed,2839,2839,2659,2652,2652,185,15,60,102,729,68,1852,0,11
+combined,excluding_fixed,2839,2829,2650,2650,1086,128,15,50,81,678,32,356,0,2
+combined,including_fixed,2839,2829,2650,2650,2650,186,15,55,102,728,69,1865,0,2
+combined (duplicates removed),excluding_fixed,2839,2829,2650,2643,1085,128,15,50,81,678,32,355,0,2
+combined (duplicates removed),including_fixed,2839,2829,2650,2643,2643,185,15,55,102,728,68,1858,0,2

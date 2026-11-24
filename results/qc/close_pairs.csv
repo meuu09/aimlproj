@@ -1,12 +1,12 @@
-time_1,id_1,source_1,mag_1,magType_1,mag_source_1,id_2,source_2,mag_2,magType_2,mag_source_2,dt_s,dist_km,flagged,why
-1976-03-04 18:45:36.450,isc716190,ISC,3.7,mb,ISC:NEIS,usp0000fam,USGS,3.7,mb,USGS,6.55,103.4,False,farther than 50 km: not flagged
-1999-05-21 19:18:12.600,isc2160447,ISC,3.8,ML,ISC:NDI,isc1681289,ISC,3.1,mb,ISC:ISC,3.34,55.4,False,farther than 50 km: not flagged
-2002-02-12 23:13:59.570,isc3753010,ISC,3.4,mb,ISC:IDC,isc3753008,ISC,3.5,mb,ISC:ISC,22.99,25.5,True,"within 60 s and 50 km, at least one ISC-only"
-2003-12-15 23:51:14.520,isc7209938,ISC,3.7,mb,ISC:IDC,isc7209940,ISC,4.0,mb,ISC:ISC,39.01,11.5,True,"within 60 s and 50 km, at least one ISC-only"
-2012-10-03 10:04:35.710,isc601837238,ISC,3.9,mb,ISC:ISC,usp000jtfn,USGS,4.1,mb,USGS,14.94,125.1,False,farther than 50 km: not flagged
-2013-05-02 00:30:07.400,usp000k0hs,USGS+ISC,4.2,mb,USGS,usp000k0ht,USGS+ISC,4.3,mb,USGS,33.85,21.6,False,both from USGS (listed separately by USGS): not flagged
-2019-01-06 23:10:42.200,us2000j0y0,USGS+ISC,4.3,mb,USGS,isc617462998,ISC,3.6,mb,ISC:ISC,37.9,8.5,True,"within 60 s and 50 km, at least one ISC-only"
-2022-03-15 20:06:29.800,isc636545114,ISC,1.8,ML,ISC:NDI,isc636545117,ISC,2.2,ML,ISC:NDI,18.7,7.8,True,"within 60 s and 50 km, at least one ISC-only"
-2023-01-13 23:47:16.600,isc636889823,ISC,2.4,ML,ISC:NDI,isc636889826,ISC,3.0,ML,ISC:NDI,25.7,0.8,True,"within 60 s and 50 km, at least one ISC-only"
-2025-03-13 21:20:05.314,us6000pyp3,USGS+ISC,5.1,mww,USGS,isc643023920,ISC,5.0,mb,ISC:IDC,0.78,7.4,True,"within 60 s and 50 km, at least one ISC-only"
-2026-02-28 19:55:23.400,isc645391652,ISC,3.4,mb,ISC:IDC,us7000s13v,USGS+ISC,4.4,mb,USGS,32.5,12.9,True,"within 60 s and 50 km, at least one ISC-only"
+time_1,id_1,source_1,mag_1,magType_1,mag_source_1,id_2,source_2,mag_2,magType_2,mag_source_2,dt_s,dist_km,eligible,flagged,status_1,status_2,why
+1976-03-04 18:45:36.450,isc716190,ISC,3.7,mb,ISC:NEIS,usp0000fam,USGS,3.7,mb,USGS,6.55,103.4,False,False,kept,kept,farther than 50 km: not eligible
+1999-05-21 19:18:12.600,isc2160447,ISC,3.8,ML,ISC:NDI,isc1681289,ISC,3.1,mb,ISC:ISC,3.34,55.4,False,False,kept,kept,farther than 50 km: not eligible
+2002-02-12 23:13:55.400,isc3753010,ISC,3.4,mb,ISC:IDC,isc3753008,ISC,3.5,mb,ISC:ISC,27.16,37.3,True,True,kept,possible duplicate,pair meets the rule; one row recorded as duplicate of the other
+2007-06-17 23:55:06.360,usp000fe8n,USGS,3.8,mb,USGS,isc12682316,ISC,3.9,mb,ISC:ISC,0.0,0.0,True,True,kept,possible duplicate,pair meets the rule; one row recorded as duplicate of the other
+2012-10-03 10:04:35.710,isc601837238,ISC,3.9,mb,ISC:ISC,usp000jtfn,USGS,4.1,mb,USGS,14.94,125.1,False,False,kept,kept,farther than 50 km: not eligible
+2013-05-02 00:30:10.060,usp000k0hs,USGS+ISC,4.2,mb,USGS,usp000k0ht,USGS+ISC,4.3,mb,USGS,31.64,24.3,False,False,kept,kept,both from USGS (listed separately by USGS): not eligible
+2019-01-06 23:10:42.200,us2000j0y0,USGS+ISC,4.3,mb,USGS,isc617462998,ISC,3.6,mb,ISC:ISC,37.9,8.5,True,True,kept,possible duplicate,pair meets the rule; one row recorded as duplicate of the other
+2022-03-15 20:06:29.800,isc636545114,ISC,1.8,ML,ISC:NDI,isc636545117,ISC,2.2,ML,ISC:NDI,18.7,7.8,True,True,kept,possible duplicate,pair meets the rule; one row recorded as duplicate of the other
+2023-01-13 23:47:16.600,isc636889823,ISC,2.4,ML,ISC:NDI,isc636889826,ISC,3.0,ML,ISC:NDI,25.7,0.8,True,True,possible duplicate,kept,pair meets the rule; one row recorded as duplicate of the other
+2025-03-13 21:20:05.314,us6000pyp3,USGS+ISC,5.1,mww,USGS,isc643023920,ISC,5.0,mb,ISC:IDC,0.78,7.4,True,True,kept,possible duplicate,pair meets the rule; one row recorded as duplicate of the other
+2026-02-28 19:55:23.400,isc645391652,ISC,3.4,mb,ISC:IDC,us7000s13v,USGS+ISC,4.4,mb,USGS,32.5,12.9,True,True,possible duplicate,kept,pair meets the rule; one row recorded as duplicate of the other

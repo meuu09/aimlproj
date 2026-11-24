@@ -7,7 +7,8 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from seis_utils import (DUP_MAX_KM, DUP_MAX_S, HERE, SOLVED_DEPTH, close_pairs, load_catalog)
+from seis_utils import (DEPTH_TYPES, DUP_MAX_KM, DUP_MAX_S, HERE, SOLVED_DEPTH, USGS_CSV, close_pairs, haversine_km,
+                        load_catalog, match_events, norm_magtype)
 
 OUT = os.path.join(HERE, "results", "qc")
 MC_CUT, START_YEAR = 4.4, 1990
@@ -18,6 +19,96 @@ os.makedirs(OUT, exist_ok=True)
 def decade(t):
     """Decade of each timestamp, e.g. 1990."""
     return (t.dt.year // 10 * 10).astype(int)
+
+
+def uncertainty_tables(us, co):
+    """Depth and horizontal errors by location source, for solved depths (Tasks 18-19)."""
+    s = co[co.depth_type.isin(SOLVED_DEPTH)]
+    g = s.groupby("location_source")
+    t = pd.DataFrame({"N_solved": g.size(), "depthError_missing": g.depthError.apply(lambda e: int(e.isna().sum())),
+                      "depthError_zero_or_negative": g.depthError.apply(lambda e: int((e <= 0).sum())),
+                      "depthError_median": g.depthError.median().round(1),
+                      "depthError_p95": g.depthError.quantile(0.95).round(1),
+                      "depthError_gt_50km": g.depthError.apply(lambda e: int((e > 50).sum())),
+                      "horizontalError_missing": g.horizontalError.apply(lambda e: int(e.isna().sum())),
+                      "horizontalError_median": g.horizontalError.median().round(1)}).sort_values("N_solved", ascending=False)
+    t.to_csv(os.path.join(OUT, "uncertainty_by_source.csv"))
+    return ["## Location uncertainties (solved depths, combined catalog)", "",
+            "| source | N | depth error missing | <= 0 | median | 95th pct | > 50 km | horizontal error missing | median |",
+            "|---|---|---|---|---|---|---|---|---|"] + [
+            f"| {k} | {r.N_solved:.0f} | {r.depthError_missing:.0f} | {r.depthError_zero_or_negative:.0f} | "
+            f"{r.depthError_median} | {r.depthError_p95} | {r.depthError_gt_50km:.0f} | {r.horizontalError_missing:.0f} | "
+            f"{r.horizontalError_median} |"
+            for k, r in t.iterrows()] + [
+            "", "Missing errors are never read as zero: such events are 'uncertain' in the depth classes and are "
+            "not perturbed (and reported separately) in the Monte Carlo. Neither USGS nor ISC errors are known here "
+            "to be 1-sigma values; see audit/SCIENTIFIC_ASSUMPTIONS.md.", ""]
+
+
+def location_quality(us):
+    """Availability and summary of USGS location-quality fields by depth class (Task 22)."""
+    d = us
+    rows = []
+    for cls, g in d.groupby("depth_class"):
+        for f in ("nst", "gap", "dmin", "rms", "horizontalError", "depthError"):
+            rows.append(dict(depth_class=cls, field=f, N=len(g), available=int(g[f].notna().sum()),
+                             median=round(g[f].median(), 2) if g[f].notna().any() else np.nan))
+    t = pd.DataFrame(rows)
+    t.to_csv(os.path.join(OUT, "location_quality_usgs.csv"), index=False)
+    av = t.groupby("field").available.sum()
+    return ["## USGS location-quality fields", "",
+            "Available for: " + ", ".join(f"{k} {v} of {len(d)}" for k, v in av.items()) + ". Because many events "
+            "lack these fields, no quality filter is applied; the table location_quality_usgs.csv describes them "
+            "by depth class.", ""]
+
+
+def match_review(co):
+    """Matching-threshold sensitivity, competing candidates and a review of matches > 50 km (Tasks 9-10)."""
+    from build_combined_catalog import load_isc
+    us = pd.read_csv(USGS_CSV).merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
+    isc = load_isc()
+    prime = isc[["prime_time", "prime_latitude", "prime_longitude"]].set_axis(["time", "latitude", "longitude"], axis=1)
+    base = match_events(us, prime, 20, 100)
+    base_set = set(zip(base.ia, base.ib))
+    sens = []
+    for s, km in [(10, 50), (20, 50), (20, 100), (30, 100), (30, 150), (60, 150)]:
+        m = match_events(us, prime, s, km)
+        sset = set(zip(m.ia, m.ib))
+        sens.append(dict(max_s=s, max_km=km, n_matches=len(m), n_also_in_20s_100km=len(sset & base_set),
+                         n_not_in_20s_100km=len(sset - base_set), n_lost_vs_20s_100km=len(base_set - sset)))
+    pd.DataFrame(sens).to_csv(os.path.join(OUT, "match_threshold_sensitivity.csv"), index=False)
+    tu = pd.to_datetime(us.time, utc=True, format="ISO8601").dt.tz_convert(None)
+    ti = pd.to_datetime(prime.time, format="ISO8601")
+    rev = []
+    for ia, ib, dt, dkm in base.itertuples(index=False):
+        if dkm <= 50:
+            continue
+        near_i = ((ti - tu[ia]).abs().dt.total_seconds() <= 20) & (
+            haversine_km(us.latitude[ia], us.longitude[ia], prime.latitude, prime.longitude) <= 100)
+        near_u = ((tu - ti[ib]).abs().dt.total_seconds() <= 20) & (
+            haversine_km(prime.latitude[ib], prime.longitude[ib], us.latitude, us.longitude) <= 100)
+        u, k = us.loc[ia], isc.loc[ib]
+        same_type = norm_magtype([u.magType]).iloc[0] == norm_magtype([k.magType]).iloc[0]
+        dmag = u.mag - k.mag
+        ok = dt <= 10 and (not same_type or abs(dmag) <= 0.5) and near_i.sum() == 1 and near_u.sum() == 1
+        rev.append(dict(usgs_id=u.id, isc_id=k.isc_id, time=u.time, dt_s=round(dt, 2), dist_km=round(dkm, 1),
+                        usgs_mag=u.mag, usgs_magType=u.magType, isc_mag=k.mag, isc_magType=k.magType,
+                        same_mag_type=same_type, dmag=round(dmag, 2), usgs_depth=u.depth, usgs_depth_type=u.depth_type,
+                        isc_depth=k.depth, isc_depth_type=k.depth_type, isc_location_agency=k.origin_author,
+                        competing_isc_candidates=int(near_i.sum()) - 1, competing_usgs_candidates=int(near_u.sum()) - 1,
+                        decision="consistent: kept" if ok else "questionable: kept, check by hand"))
+    rv = pd.DataFrame(rev)
+    rv.to_csv(os.path.join(OUT, "match_review_over_50km.csv"), index=False)
+    st = pd.DataFrame(sens)
+    return ["## USGS-ISC matching: sensitivity and review", "",
+            "| window | matches | same as 20 s / 100 km | new | lost |", "|---|---|---|---|---|"] + [
+            f"| {r.max_s} s / {r.max_km} km | {r.n_matches} | {r.n_also_in_20s_100km} | {r.n_not_in_20s_100km} | "
+            f"{r.n_lost_vs_20s_100km} |" for r in st.itertuples()] + [
+            "", f"Matches more than 50 km apart: {len(rv)}; {int((rv.decision.str.startswith('consistent')).sum())} "
+            "consistent (origin times within 10 s, magnitudes within 0.5 when of the same type, no competing "
+            f"candidate) and {int((rv.decision.str.startswith('questionable')).sum())} questionable "
+            "(match_review_over_50km.csv). Distance alone is not used to reject a match; old (pre-2000) "
+            "epicentres often differ by tens of km between agencies.", ""]
 
 
 def main():
@@ -134,11 +225,15 @@ def main():
                        "mag_source_1": a.mag_source, "id_2": b.id, "source_2": b.source, "mag_2": b.mag,
                        "magType_2": b.magType, "mag_source_2": b.mag_source,
                        "dt_s": pr.dt_s.round(2), "dist_km": pr.dist_km.round(1)})
-    cp["flagged"] = (a.possible_duplicate_of.notna() | b.possible_duplicate_of.notna()).values
-    cp["why"] = np.where(cp.flagged, f"within {DUP_MAX_S:.0f} s and {DUP_MAX_KM:.0f} km, at least one ISC-only",
-                         np.where((cp.source_1 != "ISC") & (cp.source_2 != "ISC"),
-                                  "both from USGS (listed separately by USGS): not flagged",
-                                  f"farther than {DUP_MAX_KM:.0f} km: not flagged"))
+    one_isc = ((cp.source_1 == "ISC") | (cp.source_2 == "ISC")).values
+    cp["eligible"] = one_isc & (pr.dt_s <= DUP_MAX_S).values & (pr.dist_km <= DUP_MAX_KM).values
+    cp["flagged"] = ((a.possible_duplicate_of == b.id) | (b.possible_duplicate_of == a.id)).values
+    cp["status_1"] = np.where(a.possible_duplicate_of.notna(), "possible duplicate", "kept")
+    cp["status_2"] = np.where(b.possible_duplicate_of.notna(), "possible duplicate", "kept")
+    cp["why"] = np.where(cp.flagged, "pair meets the rule; one row recorded as duplicate of the other",
+                         np.where(~one_isc, "both from USGS (listed separately by USGS): not eligible",
+                                  np.where(cp.eligible, "eligible, but the ISC row is linked to a closer partner",
+                                           f"farther than {DUP_MAX_KM:.0f} km: not eligible")))
     cp.to_csv(os.path.join(OUT, "close_pairs.csv"), index=False)
     nflag = int(co.possible_duplicate_of.notna().sum())
     fl = cp[cp.flagged]
@@ -154,6 +249,7 @@ def main():
               "* Flagged rows stay in the catalog. The analysis scripts leave them out only with "
               "--drop-duplicates (results in results/combined_usgs_isc_nodup/).", ""]
 
+    lines += uncertainty_tables(us, co) + location_quality(us) + match_review(co)
     head = ["# Catalog quality report", "",
             "Generated by catalog_qc.py from data/ (no data changed). Tables are in this folder.", ""]
     open(os.path.join(OUT, "QC_REPORT.md"), "w", encoding="utf-8").write("\n".join(head + lines) + "\n")
