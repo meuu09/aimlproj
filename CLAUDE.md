@@ -21,7 +21,7 @@ Read this first. It is the complete handoff, written so a fresh Claude session c
 | `Him_ides/.ua/` | Understand-Anything knowledge graph (see section 9). Optional. |
 | `data/usgs_himachal_kashmir_M3plus_1970-2026.csv` | Our USGS ComCat download (section 4) |
 | `him_ides_himachal.py` | **Our adapted analysis script.** Run: `.venv/bin/python him_ides_himachal.py` |
-| `reproduce_baseline.py` | Runs the ORIGINAL `Figures_5-9.py` unchanged (eqcorrscan 0.4.2 `calc_max_curv` injected verbatim, headless). Outputs to `results_baseline/`. `--fig10` also runs Figure_10.py (untested). |
+| `reproduce_baseline.py` | Runs the ORIGINAL `Figures_5-9.py` unchanged (eqcorrscan 0.4.2 `calc_max_curv` injected via `seis_utils.max_curv_eqcorrscan`, headless). Outputs to `results_baseline/`. `--fig10` also runs Figure_10.py (untested). |
 | `fetch_depth_type.py` | One-off: fetches USGS origin `depth-type` per event into `data/usgs_depth_type.csv` (resumable). |
 | `kishtwar_cluster.py` | Paper's cluster analysis (Figs 3-9 analogues) on the Kishtwar-Chamba cluster. Outputs `results/<case>/kishtwar/` (FigK1-K5, `kishtwar_catalog.csv`, `kishtwar_bvalues.csv`, `kishtwar_sequences.csv`, `kishtwar_summary.csv`). Polygon = `CLUSTER_POLY`. Takes `--include-fixed`. |
 | `fetch_isc_bulletin.py` | Downloads the ISC Bulletin (ISF text, all agencies' origins incl. India's NDI) per year into `data/isc_raw/`, parses to `data/isc_bulletin_events.csv` / `_origins.csv`. Depth per event = first non-fixed origin with error>0 from ISC-EHB > ISC > NEIC > NDI > others. ISC QuakeML has NO depth errors, hence ISF. |
@@ -70,7 +70,7 @@ Functions:
 - `max_curv(mags, step=0.1)`: Wiemer-Wyss mode; `max_curv_eqcorrscan`: authors' exact eqcorrscan 0.4.2 method (add +0.4 as in the paper)
 - `b_lsq`: the repo's method, a line fit to log10 cumulative counts
 - `b_mle`: Aki-Utsu maximum likelihood with binning correction
-- `interevent`: inter-event times and coefficient of variation (CV 1 = Poisson, >1 = clustered)
+- `seis_utils.interevent_days` + `cv`: inter-event times and coefficient of variation (CV 1 = Poisson, >1 = clustered)
 
 **Two cases (user, 2026-11-23).** Run each script twice:
 - default -> `results/excluding_fixed/`: only USGS-solved depths; operator-assigned AND unflagged events dropped from everything (all stats, all plots).

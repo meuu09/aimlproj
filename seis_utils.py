@@ -1,17 +1,4 @@
-"""
-Shared helpers for the Him_ides adaptation (one copy instead of three).
-
-Contents
-  * command-line options shared by the analysis scripts   parse_args()
-  * catalog loading with the two depth cases              load_catalog()
-  * depth classes (intermediate / shallow / uncertain / deep)   depth_class()
-  * magnitude of completeness (two methods)               max_curv(), max_curv_eqcorrscan()
-  * b-value (two methods)                                 b_lsq(), b_mle()
-  * distances, USGS-ISC event matching, duplicate flags   haversine_km(), match_events(), flag_duplicates()
-
-Nothing here changes the scientific choices documented in CLAUDE.md; it only
-collects them in one place so they can be tested (tests/).
-"""
+"""Shared helpers: catalog loading, depth classes, Mc, b-values, event matching and duplicate flags."""
 import argparse
 import os
 
@@ -25,23 +12,16 @@ DEPTH_TYPES = os.path.join(DATA, "usgs_depth_type.csv")
 COMBINED_CSV = os.path.join(DATA, "combined_usgs_isc_catalog.csv")
 
 BOX = dict(lat=(31.0, 35.0), lon=(74.0, 79.5))
-CATALOG_END = pd.Timestamp("2026-11-14")      # end date of the USGS / ISC downloads
-# USGS depth-type values that mean the depth was computed (not fixed by an analyst)
+CATALOG_END = pd.Timestamp("2026-11-14")
 SOLVED_DEPTH = ("from location", "constrained by depth phases")
-DEEP_MIN, DEEP_MAX = 40.0, 150.0          # "intermediate depth" range (km)
+DEEP_MIN, DEEP_MAX = 40.0, 150.0
 EARTH_R = 6371.0
 
-# Kishtwar-Chamba cluster outline (lon, lat), drawn around the NW-SE band of solved
-# intermediate-depth events (kishtwar_cluster.py, cluster_robustness.py).
 CLUSTER_POLY = [(75.50, 33.60), (76.10, 33.60), (76.50, 32.95),
                 (76.50, 32.75), (75.90, 32.75), (75.50, 33.20)]
 
-# Possible duplicates: two catalog rows this close in time and space, at least one
-# of them an ISC-only row, are probably the same earthquake listed twice. 60 s because
-# the clearest cases (IDC origins the ISC did not associate) differ by 20-40 s.
 DUP_MAX_S, DUP_MAX_KM = 60.0, 50.0
 
-# Depth classes. Short names are used in code; long names in figures and CSVs.
 LONG_CLASS = {
     "intermediate": "intermediate (depth - error >= 40 km)",
     "shallow": "shallow (depth + error < 40 km)",
@@ -50,7 +30,6 @@ LONG_CLASS = {
 }
 
 
-# ----------------------------- command line --------------------------------- #
 def parse_args(description="", argv=None):
     """Options shared by him_ides_himachal.py, kishtwar_cluster.py, depth_clusters.py."""
     p = argparse.ArgumentParser(description=description)
@@ -75,10 +54,12 @@ def results_base(args):
 
 
 def case_name(args):
+    """Name of the depth case folder."""
     return "including_fixed" if args.include_fixed else "excluding_fixed"
 
 
 def case_label(args):
+    """Catalog and depth case, as stamped on the figures."""
     cat = "USGS" if args.catalog == "usgs" else "USGS + ISC"
     if args.drop_duplicates:
         cat += " (possible duplicates removed)"
@@ -87,14 +68,10 @@ def case_label(args):
     return f"{cat} | {case}"
 
 
-# ----------------------------- loading -------------------------------------- #
 def load_catalog(catalog="usgs", include_fixed=False, start_year=None, drop_duplicates=False,
                  box=BOX, verbose=True):
-    """Load a catalog with a 'depth_type' column, optionally cut by year and depth case.
-
-    Returns (df, info). info holds the counts removed at each step, so the filtering
-    can be reported (catalog_qc.py writes them into a table).
-    """
+    """Load a catalog, cut it to the box, start year and depth case, and add depth classes.
+    Returns (df, info); info holds the event count left after each filtering step."""
     if catalog == "usgs":
         df = pd.read_csv(USGS_CSV)
         df = df.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
@@ -135,15 +112,9 @@ def load_catalog(catalog="usgs", include_fixed=False, start_year=None, drop_dupl
     return df, info
 
 
-# ----------------------------- depth classes -------------------------------- #
 def depth_class(depth, depth_error, deep_min=DEEP_MIN, deep_max=DEEP_MAX):
-    """Short depth class per event.
-
-    intermediate  depth - error >= deep_min and depth <= deep_max
-    shallow       depth + error <  deep_min
-    deep          depth > deep_max (previously these fell into 'uncertain')
-    uncertain     everything else: error bar crosses deep_min, or the error is missing
-    """
+    """Depth class per event: intermediate (depth - error >= 40 and depth <= 150 km),
+    shallow (depth + error < 40 km), deep (> 150 km), else uncertain."""
     z = np.asarray(depth, dtype=float)
     e = np.asarray(depth_error, dtype=float)
     with np.errstate(invalid="ignore"):
@@ -153,28 +124,21 @@ def depth_class(depth, depth_error, deep_min=DEEP_MIN, deep_max=DEEP_MAX):
     return np.select([inter, shal, deep], ["intermediate", "shallow", "deep"], default="uncertain")
 
 
-# ----------------------------- Mc and b-value ------------------------------- #
 def max_curv(mags, step=0.1):
     """Mc by maximum curvature (Wiemer & Wyss 2000): the most frequent magnitude bin.
-
-    Magnitudes are counted on integer multiples of `step`. (The earlier version built
-    bin edges with np.arange, whose floating-point edges sat just above each magnitude,
-    so every event fell one bin low and Mc came out 0.1 too small.)
-    """
+    Bins are floor-rounded multiples of `step` so float noise cannot shift a magnitude."""
     m = np.asarray(mags, dtype=float)
     m = m[np.isfinite(m)]
     if m.size == 0:
         return np.nan
-    k = np.floor(m / step + 1e-6).astype(int)        # bin [k*step, (k+1)*step), robust to float noise
+    k = np.floor(m / step + 1e-6).astype(int)
     vals, counts = np.unique(k, return_counts=True)
     return round(float(vals[np.argmax(counts)] * step), 2)
 
 
 def max_curv_eqcorrscan(mags, bin_size=0.5):
-    """The authors' Mc: eqcorrscan 0.4.2 calc_max_curv, copied verbatim
-    (peak |second derivative| of the 0.5-bin histogram). The paper adds +0.4 to it.
-    0.5-wide bins starting at an integer are exact in floating point, so this
-    function does not have the max_curv rounding problem."""
+    """The authors' Mc: eqcorrscan 0.4.2 calc_max_curv (peak |second derivative| of the
+    0.5-bin histogram). The paper adds +0.4 to it."""
     min_bin, max_bin = int(min(mags)), int(max(mags) + 1)
     bins = np.arange(min_bin, max_bin + bin_size, bin_size)
     df, bins = np.histogram(mags, bins)
@@ -183,12 +147,10 @@ def max_curv_eqcorrscan(mags, bin_size=0.5):
 
 
 def b_lsq(mags, mc, min_steps=3):
-    """The repo's b-value: straight line through log10(cumulative number) for M >= mc.
-
-    Returns (b, steps, cum, fit_fn). b is NaN (and fit_fn None) with fewer than
-    `min_steps` distinct magnitudes, where a line fit means nothing.
-    """
-    m = np.sort(np.asarray(mags, dtype=float)[np.asarray(mags, dtype=float) >= mc - 1e-9])
+    """The repo's b-value: line fit to log10(cumulative number) for M >= mc.
+    Returns (b, steps, cum, fit_fn); NaN and None with fewer than `min_steps` magnitudes."""
+    m = np.asarray(mags, dtype=float)
+    m = np.sort(m[m >= mc - 1e-9])
     steps = np.unique(m)
     cum = np.array([(m >= s - 1e-9).sum() for s in steps])
     if len(steps) < min_steps:
@@ -199,9 +161,7 @@ def b_lsq(mags, mc, min_steps=3):
 
 def b_mle(mags, mc, dm=0.1, min_n=5):
     """Aki (1965) / Utsu maximum-likelihood b-value with binning correction.
-
-    Returns (b, 1-sigma = b/sqrt(N) (Aki 1965), N). NaN below min_n events.
-    """
+    Returns (b, Aki sigma b/sqrt(N), N); NaN below min_n events."""
     m = np.asarray(mags, dtype=float)
     m = m[m >= mc - 1e-9]
     if len(m) < min_n:
@@ -211,8 +171,7 @@ def b_mle(mags, mc, dm=0.1, min_n=5):
 
 
 def b_shi_bolt_sigma(mags, mc, dm=0.1):
-    """Shi & Bolt (1982) 1-sigma of the MLE b-value: 2.30 b^2 sqrt(sum((M - mean)^2) / (N (N - 1))).
-    Unlike Aki's b/sqrt(N) it uses the actual spread of the magnitudes."""
+    """Shi & Bolt (1982) 1-sigma of the MLE b-value, from the spread of the magnitudes."""
     m = np.asarray(mags, dtype=float)
     m = m[m >= mc - 1e-9]
     b, _, n = b_mle(m, mc, dm)
@@ -239,8 +198,7 @@ def b_bootstrap(mags, mc, dm=0.1, n_boot=2000, seed=0, ci=95):
 
 
 def _eqcorrscan_or_nan(mags):
-    """max_curv_eqcorrscan, or NaN when the magnitudes span fewer than three 0.5 bins
-    (the original eqcorrscan code raises an error there)."""
+    """max_curv_eqcorrscan, or NaN when the magnitudes span too few bins for it."""
     try:
         return max_curv_eqcorrscan(mags)
     except ValueError:
@@ -248,9 +206,8 @@ def _eqcorrscan_or_nan(mags):
 
 
 def mc_sliding(times, mags, window=50, step=10, n_boot=200, seed=0):
-    """Mc through time: maximum curvature in windows of `window` consecutive events,
-    moved by `step` events. Returns a DataFrame with window centre time, Mc
-    (Wiemer-Wyss mode), its bootstrap 16-84 % range, and the authors' eqcorrscan Mc + 0.4."""
+    """Mc in sliding windows of `window` consecutive events, moved by `step` events:
+    max curvature with a bootstrap 16-84 % range, and the authors' Mc + 0.4."""
     order = np.argsort(np.asarray(times))
     t = pd.to_datetime(pd.Series(np.asarray(times)[order])).reset_index(drop=True)
     m = np.asarray(mags, dtype=float)[order]
@@ -279,8 +236,8 @@ def cv(gaps):
     return g.std() / g.mean() if len(g) > 1 and g.mean() > 0 else np.nan
 
 
-# ----------------------------- distances ------------------------------------ #
 def haversine_km(lat1, lon1, lat2, lon2):
+    """Great-circle distance in km."""
     p = np.radians
     a = (np.sin(p(np.asarray(lat2) - lat1) / 2) ** 2
          + np.cos(p(lat1)) * np.cos(p(lat2)) * np.sin(p(np.asarray(lon2) - lon1) / 2) ** 2)
@@ -293,17 +250,14 @@ def xy_km(lon, lat, lon0, lat0):
 
 
 def _epoch_s(times):
+    """Times as float seconds since 1970 (millisecond resolution)."""
     t = pd.to_datetime(pd.Series(times), utc=True, format="ISO8601").dt.tz_convert(None).to_numpy()
     return t.astype("datetime64[ms]").astype(float) / 1000
 
 
 def match_events(a, b, max_s, max_km):
-    """One-to-one matching of catalog a to catalog b (columns time, latitude, longitude).
-
-    Candidate pairs are within max_s seconds and max_km km. They are accepted greedily,
-    best first, by the score dt/max_s + dist/max_km; each event is used at most once.
-    Returns a DataFrame with columns ia, ib, dt_s, dist_km (positions in a and b).
-    """
+    """Greedy one-to-one matching of catalogs a and b within max_s seconds and max_km km,
+    best score (dt/max_s + dist/max_km) first. Returns positions ia, ib with dt_s, dist_km."""
     ta, tb = _epoch_s(a.time), _epoch_s(b.time)
     order = np.argsort(tb)
     tb_sorted = tb[order]
@@ -346,18 +300,9 @@ SOURCE_RANK = {"USGS+ISC": 0, "USGS": 1, "ISC": 2}
 
 
 def flag_duplicates(df, max_s=DUP_MAX_S, max_km=DUP_MAX_KM):
-    """Flag rows that are probably a second listing of the same earthquake.
-
-    Rule: two rows within max_s seconds and max_km km, AT LEAST ONE of them an
-    ISC-only row (column source == 'ISC'). Pairs where both rows came from USGS are
-    not flagged: USGS (and ISC, when matched) list them as separate events.
-    Linked rows form a group; one row per group is kept (best first: USGS-matched,
-    then USGS, then ISC; then solved depth; then has a depth error; then larger
-    magnitude; then earlier). The others get possible_duplicate_of = id of the kept row.
-
-    Returns (Series possible_duplicate_of aligned to df.index, DataFrame of close pairs
-    with a 'flagged' column).
-    """
+    """Flag likely double listings: rows within max_s and max_km, at least one ISC-only.
+    Keeps the best row per linked group (USGS first, solved depth, error, larger M, earlier).
+    Returns (possible_duplicate_of aligned to df.index, close pairs with a 'flagged' column)."""
     df = df.reset_index(drop=False).rename(columns={"index": "_orig_index"})
     pairs = close_pairs(df, max_s, max_km)
     src = df.source.astype(str).to_numpy()
@@ -381,7 +326,7 @@ def flag_duplicates(df, max_s=DUP_MAX_S, max_km=DUP_MAX_KM):
     for k in range(len(df)):
         groups.setdefault(find(k), []).append(k)
     solved = df.depth_type.isin(SOLVED_DEPTH).to_numpy()
-    has_err = df.depthError.notna().to_numpy() & (df.depthError.fillna(0) > 0).to_numpy()
+    has_err = (df.depthError.fillna(0) > 0).to_numpy()
     tsec = _epoch_s(df.time)
     dup_of = pd.Series(np.nan, index=df._orig_index, dtype=object)
     for members in groups.values():

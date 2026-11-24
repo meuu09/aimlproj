@@ -17,7 +17,7 @@ def test_usgs_ids_unique_and_all_have_depth_type():
     dt = pd.read_csv(su.DEPTH_TYPES)
     assert us.id.is_unique
     assert set(us.id) == set(dt.id)
-    assert us.mag.min() >= 3.0                 # the file name promises M3+
+    assert us.mag.min() >= 3.0
 
 
 @need
@@ -26,7 +26,7 @@ def test_combined_keeps_every_usgs_event_once():
     co = pd.read_csv(su.COMBINED_CSV, dtype={"isc_id": str})
     assert co.id.is_unique
     assert set(us.id) <= set(co.id)
-    assert co.isc_id.dropna().is_unique        # each ISC event used at most once
+    assert co.isc_id.dropna().is_unique
 
 
 @need

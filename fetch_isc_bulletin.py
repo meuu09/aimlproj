@@ -1,25 +1,4 @@
-"""
-Download and parse the ISC Bulletin (International Seismological Centre) for our
-region, to add real events beyond the USGS catalog. Nothing is invented: every row
-comes from the ISC on-line bulletin.
-
-Why ISC: it collects locations from many agencies for each event, including
-India's National Centre for Seismology (NDI), USGS/NEIC, ISC's own relocation and
-ISC-EHB (a reprocessed catalog with carefully checked depths). The ISC web service's
-QuakeML output has no depth errors, so we read the bulletin in ISF (IMS1.0) text
-format, which gives for every agency's location: depth, a fixed-depth flag ("f")
-and the depth error.
-
-Depth chosen per event (written to data/isc_bulletin_events.csv):
-  * among the event's locations whose depth was NOT fixed and that HAVE a depth
-    error, take the first agency in DEPTH_PRIORITY; that depth is "from location"
-  * if no such location exists, use ISC's prime location and mark the depth
-    "operator assigned" (fixed) when flagged "f", otherwise "unknown"
-Magnitude chosen per event: first available in MAG_PRIORITY (type, agency).
-
-Run:  .venv/bin/python fetch_isc_bulletin.py        (resumable; raw files in data/isc_raw/)
-Windows (PowerShell): .venv\\Scripts\\python fetch_isc_bulletin.py
-"""
+"""Download the ISC Bulletin (ISF format) for the study box and parse it into event and origin tables."""
 import csv
 import os
 import re
@@ -31,9 +10,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(HERE, "data", "isc_raw")
 OUT_EVENTS = os.path.join(HERE, "data", "isc_bulletin_events.csv")
 OUT_ORIGINS = os.path.join(HERE, "data", "isc_bulletin_origins.csv")
-BOX = dict(bot_lat=31, top_lat=35, left_lon=74, right_lon=79.5)   # same box as the USGS download
+BOX = dict(bot_lat=31, top_lat=35, left_lon=74, right_lon=79.5)
 YEARS = range(1970, 2027)
-DEPTH_PRIORITY = ["ISC-EHB", "ISC", "NEIC", "NDI"]                  # then any other agency
+DEPTH_PRIORITY = ["ISC-EHB", "ISC", "NEIC", "NDI"]
 MAG_PRIORITY = [("Mw", None), ("MW", None), ("mb", "ISC"), ("mb", "NEIC"), ("mb", None),
                 ("ML", "NDI"), ("ML", None), ("MS", None), ("Ms", None)]
 URL = ("https://www.isc.ac.uk/cgi-bin/web-db-run?request=COMPREHENSIVE&out_format=ISF"
@@ -45,6 +24,7 @@ ORIGIN_RE = re.compile(r"^\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}")
 
 
 def fnum(s):
+    """Float from a fixed-width field, or None."""
     s = s.strip()
     try:
         return float(s)
@@ -53,6 +33,7 @@ def fnum(s):
 
 
 def download(year):
+    """Download one year of the ISF bulletin into data/isc_raw/ (skips existing files)."""
     path = os.path.join(RAW, f"isc_isf_{year}.txt")
     if os.path.exists(path) and os.path.getsize(path) > 0:
         return path
@@ -87,7 +68,6 @@ def parse(path):
         if line.startswith("Magnitude"):
             mode = "mag"; continue
         if mode == "origin" and ORIGIN_RE.match(line):
-            # IMS1.0 fixed columns (0-based slices)
             o = dict(time=line[0:10].replace("/", "-") + "T" + line[11:22].strip(),
                      lat=fnum(line[36:44]), lon=fnum(line[45:54]),
                      depth=fnum(line[71:76]), depth_fixed=line[76:77] == "f",
@@ -109,6 +89,7 @@ def parse(path):
 
 
 def summarise(ev):
+    """One row per event: prime epicentre, best solved depth and preferred magnitude."""
     ors = [o for o in ev["origins"] if o["lat"] is not None]
     if not ors:
         return None
@@ -141,7 +122,7 @@ if __name__ == "__main__":
     for y in years:
         download(y)
         print(f"{y}: downloaded", flush=True)
-        time.sleep(3)                                  # be gentle with the ISC server
+        time.sleep(3)
     events, origins = [], []
     for y in YEARS:
         p = os.path.join(RAW, f"isc_isf_{y}.txt")

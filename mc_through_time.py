@@ -1,21 +1,4 @@
-"""
-Magnitude of completeness through time (results/robustness/).
-
-Rates can only be compared between periods above a magnitude that was complete in
-ALL of them. This script estimates Mc in sliding windows of consecutive events
-(50 events, moved 10 at a time), with two methods:
-  * maximum curvature (Wiemer & Wyss 2000) with a bootstrap 16-84 % range
-  * the authors' eqcorrscan 0.4.2 method + 0.4 (as in Michailos et al. 2021)
-
-Completeness is about detection, not depth quality, so all events are used
-(fixed depths included), all years. Catalogs:
-  * USGS (M >= 3.1 download, so Mc cannot come out below ~3.1)
-  * USGS + ISC, mb only (one magnitude scale)
-  * USGS + ISC, all types: shown for completeness only, it mixes mb, ML, MD and Mw
-
-Outputs: mc_through_time.csv, mc_through_time.png, mc_by_decade.csv
-Run:  .venv/bin/python mc_through_time.py      Windows: .venv\\Scripts\\python mc_through_time.py
-"""
+"""Magnitude of completeness through time in sliding windows (results/robustness/)."""
 import os
 
 import numpy as np
@@ -33,6 +16,7 @@ os.makedirs(OUT, exist_ok=True)
 
 
 def main():
+    """Mc in sliding windows and per decade for USGS and USGS + ISC."""
     us, _ = load_catalog("usgs", include_fixed=True, verbose=False)
     co, _ = load_catalog("combined", include_fixed=True, verbose=False)
     sets = [("USGS (mostly mb)", us), ("USGS + ISC, mb only", co[co.magType == "mb"]),

@@ -1,24 +1,4 @@
-"""
-Catalog quality-control reports for the USGS and combined USGS + ISC catalogs.
-
-Nothing here changes any data. It writes tables (and one figure) that show what is in
-the catalogs and what each filtering step removes, so the report can state its limits.
-
-Outputs in results/qc/:
-  magtype_by_source.csv          magnitude types per source (USGS, USGS+ISC, ISC-only)
-  magtype_by_decade.csv          magnitude types per decade, all events and M >= 4.4
-  depth_quality_by_decade.csv    USGS depth-type flags per decade, share solved at M >= 4.4
-  depth_source_by_decade.csv     combined catalog: which agency supplied each solved depth
-  filter_funnel.csv              events left after each step, for every catalog and case
-  match_diagnostics.csv          every USGS-ISC match: time / distance / magnitude difference
-  match_diagnostics.png          histograms of the same
-  close_pairs.csv                every pair of rows within 60 s and 150 km, with the flag
-                                 decision (flagged rows are only flagged, never deleted here)
-  QC_REPORT.md                   plain-language summary of the numbers above
-
-Run:  .venv/bin/python catalog_qc.py          Windows: .venv\\Scripts\\python catalog_qc.py
-Run build_combined_catalog.py first.
-"""
+"""Catalog quality-control tables and QC_REPORT.md (results/qc/)."""
 import os
 
 import numpy as np
@@ -31,20 +11,21 @@ from seis_utils import (DUP_MAX_KM, DUP_MAX_S, HERE, SOLVED_DEPTH, close_pairs, 
 
 OUT = os.path.join(HERE, "results", "qc")
 MC_CUT, START_YEAR = 4.4, 1990
-REVIEW_S, REVIEW_KM = 60.0, 150.0        # wider window, only for listing close pairs to review
+REVIEW_S, REVIEW_KM = 60.0, 150.0
 os.makedirs(OUT, exist_ok=True)
 
 
 def decade(t):
+    """Decade of each timestamp, e.g. 1990."""
     return (t.dt.year // 10 * 10).astype(int)
 
 
 def main():
+    """Write all QC tables, the match figure and QC_REPORT.md."""
     us, _ = load_catalog("usgs", include_fixed=True, verbose=False)
     co, _ = load_catalog("combined", include_fixed=True, verbose=False)
     lines = []
 
-    # --- magnitude types --------------------------------------------------- #
     mt_src = pd.crosstab(co.magType.fillna("none"), co.source, margins=True, margins_name="total")
     mt_src = mt_src.sort_values("total", ascending=False)
     mt_src.to_csv(os.path.join(OUT, "magtype_by_source.csv"))
@@ -68,7 +49,6 @@ def main():
               "India's NDI, so Mc and b-values computed below M4.4 mix scales and are not comparable.",
               "* No magnitude conversion is applied anywhere; magType and mag_source are kept.", ""]
 
-    # --- depth quality ------------------------------------------------------ #
     us["solved"] = us.depth_type.isin(SOLVED_DEPTH)
     dq = pd.crosstab(decade(us.time), us.depth_type)
     dq["N_M>=4.4"] = us[us.mag >= MC_CUT].groupby(decade(us[us.mag >= MC_CUT].time)).size()
@@ -91,7 +71,6 @@ def main():
               + ". For an ISC depth, the epicentre and depth may come from different agencies "
               "(epicentre: USGS or ISC prime; depth: first trusted agency with a free depth and an error).", ""]
 
-    # --- filter funnel ------------------------------------------------------ #
     fun = []
     for cat_name, dd in [("usgs", False), ("combined", False), ("combined", True)]:
         for inc in (False, True):
@@ -116,7 +95,6 @@ def main():
                      f"{r['M>=4.4_uncertain']} / {r['M>=4.4_deep']} |")
     lines.append("")
 
-    # --- USGS-ISC match diagnostics ----------------------------------------- #
     m = co[co.source == "USGS+ISC"].copy()
     m["dmag"] = m.mag - m.isc_mag
     m["same_magType"] = m.magType.str.lower() == m.isc_magType.str.lower()
@@ -137,7 +115,7 @@ def main():
               f"{m[m.same_magType].dmag.median():.2f}, |difference| > 0.5 in "
               f"{int((m[m.same_magType].dmag.abs() > 0.5).sum())} of {int(m.same_magType.sum())}.",
               "* The magnitudes agree closely, which supports the matches being the same earthquakes. "
-              f"Matches more than 50 km apart by decade: "
+              "Matches more than 50 km apart by decade: "
               + ", ".join(f"{k}s {v}" for k, v in decade(m[m.match_dist_km > 50].time).value_counts().sort_index().items())
               + " (listed in match_diagnostics.csv; check them by hand before relying on those events).", ""]
     fig, axs = plt.subplots(1, 3, figsize=(13, 3.8))
@@ -150,7 +128,6 @@ def main():
     fig.suptitle(f"USGS–ISC matches (N = {len(m)}); match window 20 s and 100 km", fontsize=11)
     plt.tight_layout(); fig.savefig(os.path.join(OUT, "match_diagnostics.png"), dpi=200); plt.close(fig)
 
-    # --- close pairs / possible duplicates ---------------------------------- #
     pr = close_pairs(co, REVIEW_S, REVIEW_KM)
     a, b = co.iloc[pr.i.to_numpy(int)].reset_index(drop=True), co.iloc[pr.j.to_numpy(int)].reset_index(drop=True)
     cp = pd.DataFrame({"time_1": a.time, "id_1": a.id, "source_1": a.source, "mag_1": a.mag, "magType_1": a.magType,

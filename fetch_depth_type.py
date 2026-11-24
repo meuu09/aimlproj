@@ -1,9 +1,4 @@
-"""Fetch the USGS ComCat origin 'depth-type' flag for every event in our CSV.
-
-depth-type tells whether the depth was solved for ("from location") or fixed by an
-analyst ("operator assigned"). Output: data/usgs_depth_type.csv (id, depth_type, ...).
-Run once:  .venv/bin/python fetch_depth_type.py   (about 5-10 minutes, 1 request per event)
-"""
+"""Fetch the USGS origin depth-type flag for every event into data/usgs_depth_type.csv."""
 import csv, json, os, time, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -30,7 +25,7 @@ with open(DST, "a", newline="", encoding="utf-8") as f:
                 w.writerow(dict(id=r["id"], depth_type=dt or "unknown",
                                 origin_source=o.get("origin-source", ""), depth_km=o.get("depth", "")))
                 break
-            except Exception as e:
+            except Exception:
                 time.sleep(2)
         else:
             w.writerow(dict(id=r["id"], depth_type="fetch_failed", origin_source="", depth_km=""))

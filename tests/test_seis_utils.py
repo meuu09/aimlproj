@@ -7,9 +7,7 @@ import pytest
 import seis_utils as su
 
 
-# ----------------------------- Mc ------------------------------------------- #
 def test_max_curv_puts_magnitudes_in_their_own_bin():
-    # the mode is 4.4; the old np.arange-based version returned 4.3
     assert su.max_curv([4.4] * 5 + [4.5] * 2 + [4.2]) == 4.4
     assert su.max_curv([3.0, 3.1, 3.1, 3.2]) == 3.1
 
@@ -19,7 +17,6 @@ def test_max_curv_empty_is_nan():
 
 
 def _eqcorrscan_verbatim(magnitudes, bin_size=0.5):
-    # eqcorrscan 0.4.2 calc_max_curv, as in reproduce_baseline.py
     min_bin, max_bin = int(min(magnitudes)), int(max(magnitudes) + 1)
     bins = np.arange(min_bin, max_bin + bin_size, bin_size)
     df, bins = np.histogram(magnitudes, bins)
@@ -36,9 +33,8 @@ def test_max_curv_eqcorrscan_matches_original(mags):
     assert su.max_curv_eqcorrscan(mags) == _eqcorrscan_verbatim(mags)
 
 
-# ----------------------------- b-values ------------------------------------- #
 def test_b_mle_formula_and_error():
-    mags = [4.4] * 10                       # mean - (Mc - dM/2) = 0.05
+    mags = [4.4] * 10
     b, err, n = su.b_mle(mags, 4.4)
     assert n == 10
     assert b == pytest.approx(np.log10(np.e) / 0.05)
@@ -46,7 +42,7 @@ def test_b_mle_formula_and_error():
 
 
 def test_b_mle_includes_events_at_float_threshold():
-    mc = 4.0 + 0.4                          # 4.4000000000000004 in floating point
+    mc = 4.0 + 0.4
     assert su.b_mle([4.4] * 6, mc)[2] == 6
 
 
@@ -56,7 +52,6 @@ def test_b_mle_too_few_events():
 
 
 def test_b_lsq_exact_gutenberg_richter():
-    # cumulative counts 1000, 100, 10 at M3, M4, M5 -> slope exactly -1
     mags = [3.0] * 900 + [4.0] * 90 + [5.0] * 10
     b, steps, cum, fn = su.b_lsq(mags, 3.0)
     assert b == pytest.approx(1.0)
@@ -68,15 +63,14 @@ def test_b_lsq_too_few_steps_returns_nan():
     assert np.isnan(b) and fn is None
 
 
-# ----------------------------- depth classes -------------------------------- #
 @pytest.mark.parametrize("depth,err,expected", [
-    (50, 10, "intermediate"),     # top of error bar exactly 40 km
-    (49, 10, "uncertain"),        # crosses 40 km
+    (50, 10, "intermediate"),
+    (49, 10, "uncertain"),
     (30, 9.9, "shallow"),
-    (30, 10, "uncertain"),        # bottom exactly 40 km is not shallow
-    (60, np.nan, "uncertain"),    # no error -> cannot say
-    (150, 5, "intermediate"),     # upper limit included
-    (151, 5, "deep"),             # previously mislabelled 'uncertain'
+    (30, 10, "uncertain"),
+    (60, np.nan, "uncertain"),
+    (150, 5, "intermediate"),
+    (151, 5, "deep"),
     (210, np.nan, "deep"),
     (10, 0, "shallow"),
 ])
@@ -84,7 +78,6 @@ def test_depth_class(depth, err, expected):
     assert su.depth_class([depth], [err])[0] == expected
 
 
-# ----------------------------- inter-event times ---------------------------- #
 def test_interevent_days_sorted_and_cv():
     t = pd.Series(pd.to_datetime(["2000-01-03", "2000-01-01", "2000-01-02"]))
     _, gaps = su.interevent_days(t)
@@ -93,7 +86,6 @@ def test_interevent_days_sorted_and_cv():
     assert np.isnan(su.cv([5.0]))
 
 
-# ----------------------------- distances / matching ------------------------- #
 def test_haversine_one_degree_latitude():
     assert su.haversine_km(33.0, 76.0, 34.0, 76.0) == pytest.approx(111.19, abs=0.05)
 
@@ -105,10 +97,10 @@ def _cat(rows):
 def test_match_events_one_to_one_closest_first():
     a = _cat([("2010-01-01T00:00:00Z", 33.0, 76.0),
               ("2010-01-01T00:00:05Z", 33.1, 76.0)])
-    b = _cat([("2010-01-01T00:00:01", 33.0, 76.0),       # best for a0
-              ("2010-01-01T00:00:05", 33.1, 76.0),       # best for a1
-              ("2010-01-01T00:00:30", 33.0, 76.0),       # outside 20 s
-              ("2010-01-01T00:00:00", 35.0, 76.0)])      # outside 100 km
+    b = _cat([("2010-01-01T00:00:01", 33.0, 76.0),
+              ("2010-01-01T00:00:05", 33.1, 76.0),
+              ("2010-01-01T00:00:30", 33.0, 76.0),
+              ("2010-01-01T00:00:00", 35.0, 76.0)])
     m = su.match_events(a, b, 20, 100)
     assert sorted(zip(m.ia, m.ib)) == [(0, 0), (1, 1)]
 
@@ -120,7 +112,6 @@ def test_match_events_each_event_used_once():
     assert len(m) == 1 and m.ia[0] == 0
 
 
-# ----------------------------- duplicates ----------------------------------- #
 def _dup_cat():
     return pd.DataFrame({
         "id": ["us1", "isc2", "us3", "us4", "isc5"],
@@ -138,21 +129,20 @@ def _dup_cat():
 def test_flag_duplicates_rules():
     c = _dup_cat()
     dup, pairs = su.flag_duplicates(c)
-    assert dup.loc[1] == "us1"                 # ISC copy 30 s / 5.6 km after a USGS event
-    assert pd.isna(dup.loc[0])                 # the kept row is not flagged
-    assert pd.isna(dup.loc[2]) and pd.isna(dup.loc[3])   # USGS-USGS pair: listed, not flagged
-    assert pd.isna(dup.loc[4])                 # nothing near it
+    assert dup.loc[1] == "us1"
+    assert pd.isna(dup.loc[0])
+    assert pd.isna(dup.loc[2]) and pd.isna(dup.loc[3])
+    assert pd.isna(dup.loc[4])
     assert set(pairs.flagged) == {True, False}
 
 
 def test_flag_duplicates_ignores_far_pairs():
     c = _dup_cat()
-    c.loc[1, "latitude"] = 33.6                # ~67 km away
+    c.loc[1, "latitude"] = 33.6
     dup, _ = su.flag_duplicates(c)
     assert dup.isna().all()
 
 
-# ----------------------------- command line --------------------------------- #
 def test_parse_args_rejects_drop_duplicates_for_usgs():
     with pytest.raises(SystemExit):
         su.parse_args(argv=["--drop-duplicates"])
@@ -169,7 +159,6 @@ def test_parse_args_combined_nodup_folder():
     assert su.case_name(a) == "including_fixed"
 
 
-# ----------------------------- robustness helpers --------------------------- #
 def test_shi_bolt_sigma_formula():
     m = np.array([4.4, 4.5, 4.6, 4.8, 5.0, 5.3])
     b = su.b_mle(m, 4.4)[0]
@@ -189,7 +178,7 @@ def test_bootstrap_is_repeatable_and_brackets_mle():
 
 def test_mc_sliding_windows():
     t = pd.date_range("2000-01-01", periods=30, freq="D")
-    mags = np.r_[[3.5] * 15, [4.5] * 15]          # completeness jumps half way through
+    mags = np.r_[[3.5] * 15, [4.5] * 15]
     r = su.mc_sliding(t, mags, window=10, step=10, n_boot=20)
     assert len(r) == 3
     assert list(r.mc_maxc) == [3.5, 3.5, 4.5]
@@ -199,8 +188,8 @@ def test_mc_sliding_windows():
 def test_cluster_outline_contains_kishtwar():
     from matplotlib.path import Path
     poly = Path(su.CLUSTER_POLY)
-    assert poly.contains_point((75.8, 33.3))      # Kishtwar
-    assert not poly.contains_point((77.5, 32.0))  # far SE
+    assert poly.contains_point((75.8, 33.3))
+    assert not poly.contains_point((77.5, 32.0))
 
 
 def test_mc_sliding_narrow_window_gives_nan_for_authors_method():

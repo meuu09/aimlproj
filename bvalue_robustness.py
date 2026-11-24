@@ -1,23 +1,4 @@
-"""
-How robust are the b-values? (results/robustness/)
-
-For every catalog (USGS, USGS + ISC) and depth case (excluding / including fixed depths),
-1990 onward, and for several event groups (whole region; intermediate; shallow; Kishtwar
-outline, all and intermediate), compute the b-value above Mc = 4.4:
-
-  * with all magnitude types, and with mb only (no magnitude conversion is made).
-    Above M4.4 the non-mb events are mostly Mw for the larger earthquakes, so this
-    tests whether mixing scales changes b.
-  * MLE (Aki 1965 / Utsu) with two 1-sigma errors: Aki's b/sqrt(N) and Shi & Bolt (1982),
-    which uses the actual spread of the magnitudes
-  * a bootstrap 95 % interval (2000 resamples, fixed seed so results repeat)
-  * the repo's least-squares fit, for comparison only (known to be biased)
-
-and how b changes with the cutoff (Mc 4.2-4.8), because the baseline showed b depends on it.
-
-Outputs: bvalues.csv, bvalue_vs_cutoff.csv, bvalue_vs_cutoff.png
-Run:  .venv/bin/python bvalue_robustness.py      Windows: .venv\\Scripts\\python bvalue_robustness.py
-"""
+"""b-value robustness: magnitude types, error estimates and cutoff dependence (results/robustness/)."""
 import os
 
 import numpy as np
@@ -36,6 +17,7 @@ os.makedirs(OUT, exist_ok=True)
 
 
 def groups(df):
+    """Event groups whose b-values are compared."""
     inside = Path(CLUSTER_POLY).contains_points(df[["longitude", "latitude"]].values)
     return {"whole region": df,
             "intermediate": df[df.depth_class == "intermediate"],
@@ -45,6 +27,7 @@ def groups(df):
 
 
 def one(m, mc):
+    """MLE b with Aki, Shi-Bolt and bootstrap errors, plus the LSQ b, above mc."""
     b, aki, n = b_mle(m, mc)
     med, lo, hi = b_bootstrap(m, mc)
     bl = b_lsq(m, mc)[0] if n >= 5 else np.nan
@@ -53,6 +36,7 @@ def one(m, mc):
 
 
 def main():
+    """b-values per catalog, case, group and magnitude type, and b against the cutoff."""
     rows, curve = [], []
     for cat in ("usgs", "combined"):
         for inc in (False, True):
@@ -76,7 +60,6 @@ def main():
     cur = pd.DataFrame(curve)
     cur.to_csv(os.path.join(OUT, "bvalue_vs_cutoff.csv"), index=False)
 
-    # figure: b vs cutoff, mb only, one panel per catalog/case, two series
     fig, axs = plt.subplots(1, 4, figsize=(17, 4.4), sharey=True)
     combos = [(c, k) for c in ("usgs", "combined") for k in ("excluding_fixed", "including_fixed")]
     style = {"whole region": dict(color="#1f3b73", marker="o"), "intermediate": dict(color="#c0392b", marker="s")}
@@ -94,7 +77,7 @@ def main():
         ax.set_title(f"{'USGS' if c == 'usgs' else 'USGS + ISC'} | {k.replace('_', ' ')}", fontsize=10)
         ax.set_xlabel("Magnitude cutoff Mc (mb)"); ax.grid(alpha=0.2)
         ax.spines[["top", "right"]].set_visible(False)
-    axs[0].set_ylim(0.5, 4.0)                    # a few 7-event intervals reach ~9; they are clipped
+    axs[0].set_ylim(0.5, 4.0)
     axs[0].set_ylabel("b-value (MLE), bootstrap 95 % interval")
     axs[0].legend(fontsize=9, loc="upper left")
     fig.suptitle("b-value against magnitude cutoff, mb magnitudes only (numbers = events above the cutoff; "

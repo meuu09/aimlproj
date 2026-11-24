@@ -1,18 +1,4 @@
-"""
-Rebuild every derived result from the data already in data/ (no downloads).
-
-  1. build_combined_catalog.py              -> data/combined_usgs_isc_catalog.csv
-  2. him_ides_himachal.py, kishtwar_cluster.py, depth_clusters.py for every
-     catalog (usgs, combined, combined with duplicates removed) and both depth cases
-  3. catalog_qc.py                          -> results/qc/
-  4. bvalue_robustness.py, mc_through_time.py, cluster_robustness.py -> results/robustness/
-  5. with --baseline: reproduce_baseline.py --fig10 (original code, needs obspy) -> results_baseline/
-
-Works the same on macOS/Linux and Windows because it calls the current Python:
-  macOS/Linux:  .venv/bin/python run_all.py
-  Windows:      .venv\\Scripts\\python run_all.py
-Add --quick to run only the USGS catalog, --baseline to also rerun the original code.
-"""
+"""Rebuild every derived result from data/ (--quick: USGS only, --baseline: also the original code)."""
 import os
 import subprocess
 import sys
@@ -26,6 +12,7 @@ if "--quick" in sys.argv:
 
 
 def run(args):
+    """Run one script with the current Python and report status and time."""
     t0 = time.time()
     r = subprocess.run([sys.executable] + args, cwd=HERE, capture_output=True, text=True, encoding="utf-8")
     status = "ok" if r.returncode == 0 else f"FAILED ({r.returncode})"
@@ -36,6 +23,7 @@ def run(args):
 
 
 def main():
+    """Run every step in order; exit 1 if any failed."""
     env_ok = os.path.exists(os.path.join(HERE, "data", "isc_bulletin_events.csv"))
     fails = 0
     if env_ok:

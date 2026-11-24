@@ -1,15 +1,4 @@
-"""
-Compare the summary tables in results/ with the same files at an earlier git commit,
-so every changed number is visible. Writes results/qc/old_vs_new.csv.
-
-  .venv/bin/python compare_results.py            (compares with HEAD, i.e. the last commit)
-  .venv/bin/python compare_results.py <commit>   (any other commit or branch)
-
-Files compared (wherever they exist in both versions):
-  per_period_summary.csv, kishtwar_summary.csv, kishtwar_bvalues.csv, depth_clusters.csv,
-  and the event count / depth-class counts of catalog_M4.4_1990plus.csv.
-Columns renamed on purpose are mapped (N_M3 -> N_all_used, diffusivity column).
-"""
+"""Compare summary CSVs in results/ with an earlier git commit (results/qc/old_vs_new.csv)."""
 import io
 import os
 import subprocess
@@ -27,18 +16,21 @@ RENAMED = {"N_M3": "N_all_used", "diffusivity_envelope_m2_per_s": "diffusivity_m
 
 
 def git_files(ref):
+    """Files under results/ at a git ref."""
     out = subprocess.run(["git", "ls-tree", "-r", "--name-only", ref, "results"], cwd=HERE,
                          capture_output=True, text=True, check=True).stdout
     return out.split()
 
 
 def git_read(ref, path):
+    """Read a CSV as it was at a git ref."""
     txt = subprocess.run(["git", "show", f"{ref}:{path}"], cwd=HERE, capture_output=True, text=True,
                          check=True, encoding="utf-8").stdout
     return pd.read_csv(io.StringIO(txt))
 
 
 def long_form(df, name):
+    """Summary table as (row, column, value) triples."""
     if name == "kishtwar_summary.csv":
         df = df.rename(columns={df.columns[0]: "key"}).set_index("key")[["value"]].T
         df.index = ["summary"]
@@ -56,6 +48,7 @@ def long_form(df, name):
 
 
 def catalog_counts(df):
+    """Event and depth-class counts of an exported catalog."""
     d = {"n_events": len(df)}
     cls = df.depth_class.astype(str).str.split(" ").str[0].value_counts()
     d.update({f"n_{k}": v for k, v in cls.items()})
@@ -63,6 +56,7 @@ def catalog_counts(df):
 
 
 def same(a, b):
+    """Equal as numbers (NaN == NaN) or as strings."""
     try:
         fa, fb = float(a), float(b)
         return (np.isnan(fa) and np.isnan(fb)) or np.isclose(fa, fb, rtol=1e-6, atol=1e-9)
@@ -71,6 +65,7 @@ def same(a, b):
 
 
 def main():
+    """Compare every summary file with REF and write old_vs_new.csv."""
     rows = []
     for path in git_files(REF):
         name = os.path.basename(path)

@@ -1,32 +1,4 @@
-"""
-Do the intermediate-depth clusters survive other settings and the location errors?
-(results/robustness/)
-
-1. DBSCAN settings grid. The depth_clusters.py run used one setting (radius 30 km,
-   at least 4 events). Here the intermediate-depth events (solved depths only, all
-   years) are clustered with radius 15/20/30/45 km and minimum 3/4/5/6 events.
-   For each setting: number of clusters, events clustered, and the share of the
-   intermediate events inside the Kishtwar outline that end up in one cluster
-   ("Kishtwar band recovered" if at least half of them share one cluster).
-
-2. Monte Carlo over location errors (N_MC runs, fixed seed), two separate tests:
-   a. Depth: every solved-depth event gets depths drawn from Normal(depth, depthError);
-      p_intermediate = share of draws with 40 <= depth <= 150 km. Informational only:
-      this is looser than the project's depth - error >= 40 km rule.
-   b. Cluster stability: the rule-based intermediate events (fixed set) get epicentres
-      shifted by Normal(0, horizontal error) in x and y, and DBSCAN (30 km, 4 events)
-      is rerun. Reported per event: p_in_cluster; per run: number of clusters and
-      whether at least half of the Kishtwar-outline events (outline judged at their
-      catalog positions) share one cluster.
-   Assumption (stated, not measured): the ISC rows of the combined catalog carry no
-   horizontal error, and many USGS rows lack it; for those the median USGS
-   horizontalError of solved-depth events (HORIZ_DEFAULT_KM) is used. Events with no
-   depthError keep their depth unchanged.
-
-Outputs: dbscan_grid.csv, dbscan_grid.png, mc_event_probabilities_<catalog>.csv,
-         mc_runs_summary.csv, mc_probability_map.png
-Run:  .venv/bin/python cluster_robustness.py     Windows: .venv\\Scripts\\python cluster_robustness.py
-"""
+"""Robustness of the intermediate-depth clusters: DBSCAN settings grid and Monte Carlo over location errors."""
 import os
 
 import numpy as np
@@ -41,12 +13,13 @@ from seis_utils import (BOX, CLUSTER_POLY, DEEP_MAX, DEEP_MIN, EARTH_R, HERE, lo
 
 OUT = os.path.join(HERE, "results", "robustness")
 EPS_GRID, MIN_GRID = [15, 20, 30, 45], [3, 4, 5, 6]
-EPS_KM, MIN_EVENTS = 30.0, 4          # the depth_clusters.py setting
+EPS_KM, MIN_EVENTS = 30.0, 4
 N_MC, SEED = 500, 0
 os.makedirs(OUT, exist_ok=True)
 
 
 def dbscan(lat, lon, eps_km, min_events):
+    """DBSCAN labels on a haversine metric; all -1 if too few events."""
     if len(lat) < min_events:
         return np.full(len(lat), -1)
     X = np.radians(np.c_[lat, lon])
@@ -63,6 +36,7 @@ def band_share(labels, inside):
 
 
 def grid(cat_name, df):
+    """Cluster the intermediate events for every radius / minimum-size setting."""
     deep = df[df.depth_class == "intermediate"]
     inside = Path(CLUSTER_POLY).contains_points(deep[["longitude", "latitude"]].values)
     rows = []
@@ -79,6 +53,8 @@ def grid(cat_name, df):
 
 
 def monte_carlo(cat_name, df, horiz_default):
+    """Resample depths and epicentres within their errors N_MC times.
+    Returns per-event probabilities and per-run cluster results."""
     rng = np.random.default_rng(SEED)
     z, ez = df.depth.values, df.depthError.fillna(0).values
     has_h = df.horizontalError.notna().values
@@ -90,10 +66,10 @@ def monte_carlo(cat_name, df, horiz_default):
     p_int, p_clu = np.zeros(n), np.zeros(n)
     runs = []
     for k in range(N_MC):
-        zz = z + rng.normal(0, 1, n) * ez                        # test a: depth only
+        zz = z + rng.normal(0, 1, n) * ez
         p_int += (zz >= DEEP_MIN) & (zz <= DEEP_MAX)
         dx, dy = rng.normal(0, 1, deep.sum()) * eh[deep], rng.normal(0, 1, deep.sum()) * eh[deep]
-        la = lat + dy / 110.57                                   # test b: epicentres only
+        la = lat + dy / 110.57
         lo = lon + dx / (111.32 * np.cos(np.radians(lat)))
         lab = dbscan(la, lo, EPS_KM, MIN_EVENTS)
         p_clu[deep] += lab >= 0
@@ -112,6 +88,7 @@ def monte_carlo(cat_name, df, horiz_default):
 
 
 def main():
+    """Run the settings grid and the Monte Carlo for both catalogs, write tables and figures."""
     usgs, _ = load_catalog("usgs", include_fixed=False, verbose=False)
     comb, _ = load_catalog("combined", include_fixed=False, verbose=False)
     horiz_default = float(usgs.horizontalError.median())
