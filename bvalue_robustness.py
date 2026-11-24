@@ -38,12 +38,13 @@ def one(m, mc):
 def main():
     """b-values per catalog, case, group and magnitude type, and b against the cutoff."""
     rows, curve = [], []
-    for cat in ("usgs", "combined"):
+    for cat, src, nodup in (("usgs", "usgs", False), ("combined", "combined", False),
+                            ("combined_nodup", "combined", True)):
         for inc in (False, True):
-            df, _ = load_catalog(cat, inc, START_YEAR, verbose=False)
+            df, _ = load_catalog(src, inc, START_YEAR, nodup, verbose=False)
             case = "including_fixed" if inc else "excluding_fixed"
             for gname, g in groups(df).items():
-                for mags_used, sub in (("all types", g), ("mb only", g[g.magType == "mb"])):
+                for mags_used, sub in (("all types", g), ("mb only", g[g.magType_norm == "mb"])):
                     r = dict(catalog=cat, case=case, group=gname, magnitudes=mags_used, Mc=MC_CUT)
                     r.update(one(sub.mag.values, MC_CUT))
                     r["sample_size"] = ("N>=50" if r["N"] >= 50 else
