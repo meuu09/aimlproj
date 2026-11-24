@@ -11,3 +11,6 @@ data/pip_install.log
 # Python caches
 __pycache__/
 *.pyc
+
+# pytest
+.pytest_cache/
