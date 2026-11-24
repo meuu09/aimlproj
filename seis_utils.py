@@ -12,7 +12,8 @@ DEPTH_TYPES = os.path.join(DATA, "usgs_depth_type.csv")
 COMBINED_CSV = os.path.join(DATA, "combined_usgs_isc_catalog.csv")
 
 BOX = dict(lat=(31.0, 35.0), lon=(74.0, 79.5))
-CATALOG_END = pd.Timestamp("2026-11-14")
+CATALOG_START = pd.Timestamp("1970-01-01")
+CATALOG_END = pd.Timestamp("2026-11-15")
 SOLVED_DEPTH = ("from location", "constrained by depth phases")
 DEEP_MIN, DEEP_MAX = 40.0, 150.0
 EARTH_R = 6371.0
@@ -23,11 +24,13 @@ CLUSTER_POLY = [(75.50, 33.60), (76.10, 33.60), (76.50, 32.95),
 DUP_MAX_S, DUP_MAX_KM = 60.0, 50.0
 
 LONG_CLASS = {
-    "intermediate": "intermediate (depth - error >= 40 km)",
+    "intermediate": "intermediate (40 <= depth - error, depth + error <= 150 km)",
     "shallow": "shallow (depth + error < 40 km)",
-    "uncertain": "uncertain (error bar crosses 40 km, or no error)",
-    "deep": "deep (depth > 150 km)",
+    "uncertain": "uncertain (error bar crosses 40 or 150 km, or no error)",
+    "deep": "deep (depth - error > 150 km)",
 }
+MAGTYPE_NORM = {"mb": "mb", "ml": "ML", "md": "MD", "ms": "Ms", "mw": "Mw", "mww": "Mw", "mwc": "Mw",
+                "mwb": "Mw", "mwr": "Mw", "mi": "Mi", "mpv": "mpv"}
 
 
 def parse_args(description="", argv=None):
@@ -89,8 +92,11 @@ def load_catalog(catalog="usgs", include_fixed=False, start_year=None, drop_dupl
         df["horizontalError"] = np.nan
     df["depth_type"] = df.depth_type.fillna("unknown")
     df["time"] = pd.to_datetime(df.time, utc=True, format="ISO8601").dt.tz_localize(None)
+    if "magType_norm" not in df:
+        df["magType_norm"] = norm_magtype(df.magType)
     info = {"catalog": catalog, "in_file": len(df)}
-    df = df[df.latitude.between(*box["lat"]) & df.longitude.between(*box["lon"]) & df.mag.notna()]
+    df = df[df.latitude.between(*box["lat"]) & df.longitude.between(*box["lon"]) & df.mag.notna()
+            & (df.time >= CATALOG_START) & (df.time < CATALOG_END)]
     info["in_box_with_mag"] = len(df)
     if start_year is not None:
         df = df[df.time.dt.year >= start_year]
@@ -113,14 +119,14 @@ def load_catalog(catalog="usgs", include_fixed=False, start_year=None, drop_dupl
 
 
 def depth_class(depth, depth_error, deep_min=DEEP_MIN, deep_max=DEEP_MAX):
-    """Depth class per event: intermediate (depth - error >= 40 and depth <= 150 km),
-    shallow (depth + error < 40 km), deep (> 150 km), else uncertain."""
+    """Depth class from the whole error bar: intermediate if [depth - error, depth + error] lies in
+    [40, 150] km, shallow if above 40 km, deep if below 150 km; otherwise (or no error) uncertain."""
     z = np.asarray(depth, dtype=float)
     e = np.asarray(depth_error, dtype=float)
     with np.errstate(invalid="ignore"):
-        inter = (z - e >= deep_min) & (z <= deep_max)
+        inter = (z - e >= deep_min) & (z + e <= deep_max)
         shal = (z + e) < deep_min
-        deep = z > deep_max
+        deep = (z - e) > deep_max
     return np.select([inter, shal, deep], ["intermediate", "shallow", "deep"], default="uncertain")
 
 
@@ -236,6 +242,12 @@ def cv(gaps):
     return g.std() / g.mean() if len(g) > 1 and g.mean() > 0 else np.nan
 
 
+def norm_magtype(types):
+    """Group equivalent magnitude labels (e.g. MW, mww, mwc -> Mw); unknown labels are kept as given."""
+    s = pd.Series(types, dtype=object)
+    return s.map(lambda t: MAGTYPE_NORM.get(str(t).lower(), t) if pd.notna(t) else "none")
+
+
 def haversine_km(lat1, lon1, lat2, lon2):
     """Great-circle distance in km."""
     p = np.radians
@@ -296,21 +308,25 @@ def close_pairs(df, max_s=DUP_MAX_S, max_km=DUP_MAX_KM):
     return pd.DataFrame(out, columns=["i", "j", "dt_s", "dist_km"])
 
 
-SOURCE_RANK = {"USGS+ISC": 0, "USGS": 1, "ISC": 2}
-
-
 def flag_duplicates(df, max_s=DUP_MAX_S, max_km=DUP_MAX_KM):
-    """Flag likely double listings: rows within max_s and max_km, at least one ISC-only.
-    Keeps the best row per linked group (USGS first, solved depth, error, larger M, earlier).
-    Returns (possible_duplicate_of aligned to df.index, close pairs with a 'flagged' column)."""
+    """Flag ISC-only rows that probably repeat another row (within max_s and max_km). USGS rows are never
+    flagged, so no chain can join two USGS events; ISC-only groups keep their best-quality row.
+    Returns (possible_duplicate_of aligned to df.index, close pairs with 'eligible' and 'flagged')."""
     df = df.reset_index(drop=False).rename(columns={"index": "_orig_index"})
     pairs = close_pairs(df, max_s, max_km)
-    src = df.source.astype(str).to_numpy()
-    if len(pairs):
-        pairs["flagged"] = [(src[i] == "ISC") or (src[j] == "ISC") for i, j in zip(pairs.i, pairs.j)]
-    else:
-        pairs["flagged"] = pd.Series(dtype=bool)
-    parent = list(range(len(df)))
+    isc = (df.source.astype(str) == "ISC").to_numpy()
+    ii, jj = pairs.i.to_numpy(int), pairs.j.to_numpy(int)
+    pairs["eligible"] = isc[ii] | isc[jj] if len(pairs) else pd.Series(dtype=bool)
+    score = (pairs.dt_s / max_s + pairs.dist_km / max_km).to_numpy()
+    dup = {}
+    best_usgs = {}
+    for i, j, s, ok in zip(ii, jj, score, pairs.eligible):
+        for a, b in ((i, j), (j, i)):
+            if ok and isc[a] and not isc[b] and s < best_usgs.get(a, (np.inf, None))[0]:
+                best_usgs[a] = (s, b)
+    for a, (_, b) in best_usgs.items():
+        dup[a] = b
+    parent = {k: k for k in np.flatnonzero(isc)}
 
     def find(x):
         while parent[x] != x:
@@ -318,26 +334,28 @@ def flag_duplicates(df, max_s=DUP_MAX_S, max_km=DUP_MAX_KM):
             x = parent[x]
         return x
 
-    for i, j in pairs.loc[pairs.flagged, ["i", "j"]].itertuples(index=False):
-        ri, rj = find(i), find(j)
-        if ri != rj:
-            parent[rj] = ri
+    for i, j in zip(ii, jj):
+        if isc[i] and isc[j]:
+            parent[find(j)] = find(i)
     groups = {}
-    for k in range(len(df)):
+    for k in parent:
         groups.setdefault(find(k), []).append(k)
     solved = df.depth_type.isin(SOLVED_DEPTH).to_numpy()
     has_err = (df.depthError.fillna(0) > 0).to_numpy()
+    mag = df.mag.fillna(-9).to_numpy(float)
     tsec = _epoch_s(df.time)
-    dup_of = pd.Series(np.nan, index=df._orig_index, dtype=object)
     for members in groups.values():
-        if len(members) < 2:
+        if len(members) < 2 or any(k in dup for k in members):
             continue
-        best = min(members, key=lambda k: (SOURCE_RANK.get(src[k], 3), not solved[k], not has_err[k],
-                                           -float(df.mag.iloc[k]) if pd.notna(df.mag.iloc[k]) else 0, tsec[k]))
+        best = min(members, key=lambda k: (not solved[k], not has_err[k], -mag[k], tsec[k]))
         for k in members:
             if k != best:
-                dup_of.iloc[k] = df.id.iloc[best]
+                dup[k] = best
     ids = df.id.to_numpy()
-    pairs.insert(0, "id_1", ids[pairs.i.to_numpy(int)] if len(pairs) else [])
-    pairs.insert(1, "id_2", ids[pairs.j.to_numpy(int)] if len(pairs) else [])
+    dup_of = pd.Series(np.nan, index=df._orig_index, dtype=object)
+    for k, b in dup.items():
+        dup_of.iloc[k] = ids[b]
+    pairs["flagged"] = [dup.get(i) == j or dup.get(j) == i for i, j in zip(ii, jj)]
+    pairs.insert(0, "id_1", ids[ii] if len(pairs) else [])
+    pairs.insert(1, "id_2", ids[jj] if len(pairs) else [])
     return dup_of, pairs.drop(columns=["i", "j"])

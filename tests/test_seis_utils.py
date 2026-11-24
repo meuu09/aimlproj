@@ -69,9 +69,11 @@ def test_b_lsq_too_few_steps_returns_nan():
     (30, 9.9, "shallow"),
     (30, 10, "uncertain"),
     (60, np.nan, "uncertain"),
-    (150, 5, "intermediate"),
-    (151, 5, "deep"),
-    (210, np.nan, "deep"),
+    (145, 5, "intermediate"),
+    (150, 5, "uncertain"),
+    (151, 5, "uncertain"),
+    (156, 5, "deep"),
+    (210, np.nan, "uncertain"),
     (10, 0, "shallow"),
 ])
 def test_depth_class(depth, err, expected):
@@ -195,3 +197,51 @@ def test_cluster_outline_contains_kishtwar():
 def test_mc_sliding_narrow_window_gives_nan_for_authors_method():
     r = su.mc_sliding(pd.date_range("2000-01-01", periods=10, freq="D"), [3.5] * 10, window=10, step=10, n_boot=5)
     assert np.isnan(r.mc_authors.iloc[0]) and r.mc_maxc.iloc[0] == 3.5
+
+
+def test_duplicate_chain_never_joins_two_usgs_events():
+    c = pd.DataFrame({
+        "id": ["usA", "iscX", "usB"],
+        "time": ["2010-01-01T00:00:00Z", "2010-01-01T00:00:40", "2010-01-01T00:01:20Z"],
+        "latitude": [33.0, 33.0, 33.0], "longitude": [76.0, 76.0, 76.0],
+        "source": ["USGS", "ISC", "USGS"], "depth_type": ["from location"] * 3,
+        "depthError": [5.0] * 3, "mag": [4.5, 4.4, 4.3]})
+    dup, pairs = su.flag_duplicates(c)
+    assert pd.isna(dup.loc[0]) and pd.isna(dup.loc[2])
+    assert dup.loc[1] == "usA"
+    assert pairs.flagged.sum() == 1
+
+
+def test_duplicate_isc_only_group_keeps_best_row():
+    c = pd.DataFrame({
+        "id": ["isc1", "isc2"], "time": ["2010-01-01T00:00:00", "2010-01-01T00:00:20"],
+        "latitude": [33.0, 33.0], "longitude": [76.0, 76.0], "source": ["ISC", "ISC"],
+        "depth_type": ["unknown", "from location"], "depthError": [np.nan, 5.0], "mag": [4.0, 3.9]})
+    dup, _ = su.flag_duplicates(c)
+    assert dup.loc[0] == "isc2" and pd.isna(dup.loc[1])
+
+
+def test_pair_flag_is_pair_level():
+    c = _dup_cat()
+    _, pairs = su.flag_duplicates(c)
+    p = pairs.set_index(["id_1", "id_2"])
+    assert p.loc[("us1", "isc2"), "flagged"]
+    assert not p.loc[("us3", "us4"), "eligible"] and not p.loc[("us3", "us4"), "flagged"]
+
+
+def test_match_events_competing_candidates_resolved_by_score():
+    a = _cat([("2010-01-01T00:00:00Z", 33.0, 76.0), ("2010-01-01T00:00:10Z", 33.0, 76.0)])
+    b = _cat([("2010-01-01T00:00:09", 33.0, 76.0)])
+    m = su.match_events(a, b, 20, 100)
+    assert len(m) == 1 and m.ia[0] == 1
+
+
+def test_norm_magtype_keeps_scales_apart():
+    out = list(su.norm_magtype(["MW", "mww", "mwc", "mb", "ML", "mL", "MD", "Ms", None, "Mx"]))
+    assert out == ["Mw", "Mw", "Mw", "mb", "ML", "ML", "MD", "Ms", "none", "Mx"]
+
+
+def test_load_catalog_respects_dates_and_box():
+    df, _ = su.load_catalog("combined", include_fixed=True, verbose=False)
+    assert df.time.min() >= su.CATALOG_START and df.time.max() < su.CATALOG_END
+    assert df.latitude.between(*su.BOX["lat"]).all() and df.longitude.between(*su.BOX["lon"]).all()
