@@ -13,6 +13,7 @@ OUT_ORIGINS = os.path.join(HERE, "data", "isc_bulletin_origins.csv")
 BOX = dict(bot_lat=31, top_lat=35, left_lon=74, right_lon=79.5)
 YEARS = range(1970, 2027)
 DEPTH_PRIORITY = ["ISC-EHB", "ISC", "NEIC", "NDI"]
+TRUSTED_DEPTH = set(DEPTH_PRIORITY)
 MAG_PRIORITY = [("Mw", None), ("MW", None), ("mb", "ISC"), ("mb", "NEIC"), ("mb", None),
                 ("ML", "NDI"), ("ML", None), ("MS", None), ("Ms", None)]
 URL = ("https://www.isc.ac.uk/cgi-bin/web-db-run?request=COMPREHENSIVE&out_format=ISF"
@@ -69,9 +70,12 @@ def parse(path):
             mode = "mag"; continue
         if mode == "origin" and ORIGIN_RE.match(line):
             o = dict(time=line[0:10].replace("/", "-") + "T" + line[11:22].strip(),
+                     time_err=fnum(line[24:29]), rms=fnum(line[30:35]),
                      lat=fnum(line[36:44]), lon=fnum(line[45:54]),
+                     smaj=fnum(line[55:60]), smin=fnum(line[61:66]),
                      depth=fnum(line[71:76]), depth_fixed=line[76:77] == "f",
-                     depth_err=fnum(line[78:82]), ndef=fnum(line[83:87]),
+                     depth_err=fnum(line[78:82]), ndef=fnum(line[83:87]), nsta=fnum(line[88:92]),
+                     gap=fnum(line[93:96]),
                      author=line[118:127].strip(), origid=line[128:136].strip(), prime=False,
                      ehb_quality="")
             ev["origins"].append(o); last_origin = o
@@ -89,19 +93,17 @@ def parse(path):
 
 
 def summarise(ev):
-    """One row per event: prime epicentre, best solved depth and preferred magnitude."""
+    """One row per event from ONE whole origin: the first trusted agency (DEPTH_PRIORITY) with a free
+    depth and a depth error, else the ISC prime origin; prime coordinates kept for matching."""
     ors = [o for o in ev["origins"] if o["lat"] is not None]
     if not ors:
         return None
     prime = next((o for o in ors if o["prime"]), ors[-1])
     free = [o for o in ors if o["depth"] is not None and not o["depth_fixed"] and (o["depth_err"] or 0) > 0]
-    rank = lambda o: DEPTH_PRIORITY.index(o["author"]) if o["author"] in DEPTH_PRIORITY else len(DEPTH_PRIORITY)
-    best = min(free, key=rank) if free else None
-    if best:
-        depth, derr, dtype, dauth = best["depth"], best["depth_err"], "from location", best["author"]
-    else:
-        depth, derr, dauth = prime["depth"], None, prime["author"]
-        dtype = "operator assigned" if prime["depth_fixed"] else "unknown"
+    trusted = [o for o in free if o["author"] in TRUSTED_DEPTH]
+    best = min(trusted, key=lambda o: DEPTH_PRIORITY.index(o["author"])) if trusted else None
+    o = best or prime
+    dtype = "from location" if best else ("operator assigned" if prime["depth_fixed"] else "unknown")
     mag = None
     for mt, ma in MAG_PRIORITY:
         mag = next((m for m in ev["mags"] if m["type"] == mt and (ma is None or m["author"] == ma)), None)
@@ -109,20 +111,26 @@ def summarise(ev):
             break
     if mag is None and ev["mags"]:
         mag = ev["mags"][0]
-    return dict(isc_id=ev["id"], time=prime["time"], latitude=prime["lat"], longitude=prime["lon"],
-                prime_author=prime["author"], depth=depth, depthError=derr, depth_type=dtype,
-                depth_author=dauth, mag=mag["mag"] if mag else None, magType=mag["type"] if mag else None,
+    return dict(isc_id=ev["id"], time=o["time"], latitude=o["lat"], longitude=o["lon"],
+                horizontalError=o["smaj"], depth=o["depth"], depthError=o["depth_err"] if best else None,
+                depth_type=dtype, depth_author=o["author"], origin_author=o["author"], origin_id=o["origid"],
+                rms=o["rms"], nsta=o["nsta"], gap=o["gap"],
+                prime_author=prime["author"], prime_time=prime["time"], prime_latitude=prime["lat"],
+                prime_longitude=prime["lon"], n_free_depth_origins=len(free), mag=mag["mag"] if mag else None, magType=mag["type"] if mag else None,
                 mag_author=mag["author"] if mag else None, n_origins=len(ors),
                 agencies=";".join(sorted({o["author"] for o in ors})), region=ev["region"])
 
 
 if __name__ == "__main__":
     os.makedirs(RAW, exist_ok=True)
-    years = [int(sys.argv[1])] if len(sys.argv) > 1 else YEARS
-    for y in years:
-        download(y)
-        print(f"{y}: downloaded", flush=True)
-        time.sleep(3)
+    parse_only = "--parse-only" in sys.argv
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    years = [int(args[0])] if args else YEARS
+    for y in ([] if parse_only else years):
+        if not os.path.exists(os.path.join(RAW, f"isc_isf_{y}.txt")):
+            download(y)
+            print(f"{y}: downloaded", flush=True)
+            time.sleep(3)
     events, origins = [], []
     for y in YEARS:
         p = os.path.join(RAW, f"isc_isf_{y}.txt")
