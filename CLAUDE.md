@@ -1,6 +1,6 @@
 # CLAUDE.md: full project context (Him_ides / Himalayan intermediate-depth seismicity)
 
-Read this first. It is the complete handoff, written so a fresh Claude session can continue without redoing work or asking the user to re-explain. Last updated: 2026-11-23.
+Read this first. It is the complete handoff, written so a fresh Claude session can continue without redoing work or asking the user to re-explain. Last updated: 2026-11-24 (audit branch `audit/qc-and-fixes`, see section 12).
 
 ## 1. The assignment
 - University group assignment at IIT Roorkee (group of 7 students). Our topic is #4: **"Analysis of the temporal evolution of Intermediate-depth seismicity beneath the central Himalayas."**
@@ -30,7 +30,14 @@ Read this first. It is the complete handoff, written so a fresh Claude session c
 | `results/combined_usgs_isc/<case>/` | Same analyses (regional, kishtwar/, depth_clusters/) on the combined catalog. `him_ides_himachal.py` and `kishtwar_cluster.py` take `--catalog combined`. |
 | `results_baseline/` | Reproduced Fig_5, Fig_6, Fig_7.jpg, migration AB/CD, `baseline_bvalues.csv` |
 | `results/excluding_fixed/`, `results/including_fixed/` | The two analysis cases (section 5). Each: six regional figures, `catalog_M4.4_1990plus.csv`, `per_period_summary.csv`, `kishtwar/`. Figures are stamped with the case name. |
-| `.venv/` | Not in git. Recreate: `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python obspy pandas matplotlib scipy numpy shapely pyproj` (obspy 1.5.2, matplotlib 3.11.2, pandas 3.1.1). System python is 3.9 and pip resolution there hangs; use uv. eqcorrscan does NOT build on 3.12 (pkg-resources build error), hence the injected function. |
+| `seis_utils.py` | Shared helpers used by all analysis scripts: `parse_args` (argparse: `--catalog`, `--include-fixed`, `--drop-duplicates`), `load_catalog`, `depth_class` (adds `deep` >150 km), `max_curv`, `max_curv_eqcorrscan`, `b_lsq`, `b_mle`, `match_events`, `flag_duplicates`. |
+| `catalog_qc.py` | Writes `results/qc/` (QC_REPORT.md, magtype/depth-quality/depth-source tables, filter_funnel.csv, match_diagnostics.csv/png, close_pairs.csv). |
+| `run_all.py` | Rebuilds all derived results from data/ (20 steps, ~20 s). `--quick` = USGS only. |
+| `compare_results.py [ref]` | Diffs summary CSVs against a git commit -> `results/qc/old_vs_new.csv`. |
+| `tests/` | pytest (33 tests): unit tests on hand-made fixtures + read-only consistency checks on data/. Run `.venv/bin/python -m pytest -q tests`. |
+| `README.md`, `requirements.txt` | Setup incl. Windows PowerShell commands; pinned versions. |
+| `results/combined_usgs_isc_nodup/` | Sensitivity run without the 7 rows flagged as possible duplicates. |
+| `.venv/` | Not in git. Recreate: `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.txt` (old line: `uv pip install --python .venv/bin/python obspy pandas matplotlib scipy numpy shapely pyproj` -- missed scikit-learn) (obspy 1.5.2, matplotlib 3.11.2, pandas 3.1.1). System python is 3.9 and pip resolution there hangs; use uv. eqcorrscan does NOT build on 3.12 (pkg-resources build error), hence the injected function. |
 
 ## 3. What Him_ides is
 Plotting code for Michailos et al. 2021 (Frontiers in Earth Science) on intermediate-depth (40-150 km) earthquakes beneath the central Himalaya.
@@ -116,7 +123,7 @@ Ten decisions; six were the user's, four were mine.
   - Depths 40-90 km, median 48.6 km, median depthError 8.5 km.
   - b (M>=4.4): intermediate 0.89 +/- 0.25 (N=13; LSQ 0.88); whole outline 1.11 +/- 0.16 (N=46). The intermediate b is close to the paper's 0.91-0.96, but N is tiny.
   - Inter-event CV about 1.3 (mildly clustered, driven by 2013). Largest M 5.3 (twice: 1990, 2002).
-  - Migration search (paper's 20 d / 20 km, solved depths): 1 sequence, the 2013 Kishtwar sequence (Aug 2 M5.2 at 42 km, then 4.3, 4.1, 4.8 at 45-50 km). dM(1st-2nd) = 0.4, well below Bath's 1.2: not a classic mainshock-aftershock pattern, same as the paper's finding. Fitted v = -0.2 km/d and D <= 128 m2/s are NOT meaningful: the distances are about the size of the location errors (depth error about 7 km). The M5.0 at 14 km 19 h earlier at the same epicentre is likely the same source; its depth inconsistency illustrates the errors.
+  - Migration search (paper's 20 d / 20 km, solved depths): 1 sequence, the 2013 Kishtwar sequence (Aug 2 M5.2 at 42 km, then 4.3, 4.1, 4.8 at 45-50 km). dM(1st-2nd) = 0.4, well below Bath's 1.2: not a classic mainshock-aftershock pattern, same as the paper's finding. Fitted v = -0.2 km/d and D >= 128 m2/s (minimum diffusivity whose envelope holds all events) are NOT meaningful: the distances are about the size of the location errors (depth error about 7 km). The M5.0 at 14 km 19 h earlier at the same epicentre is likely the same source; its depth inconsistency illustrates the errors.
   - **Depth vs era artefact:** median depth 59 km (error 16.7) before 2010 vs 44 km (error 7.6) from 2010. Better locations, not physical shallowing. Do not claim a depth change.
 
 - **More real data (2026-11-23, user asked; nothing synthetic):** USGS has only 53 extra events below M3. ISC Bulletin for the box, 1970-2026: 3,024 events. Combined catalog: **2,839 events** (536 matched, 2,273 ISC-only added, mostly NDI ML). Solved depths 133 -> **1,133** (NDI 670, ISC 273, USGS 125, NEIC 37, ISC-EHB 28); 187 USGS fixed-depth events got an ISC solved depth.
@@ -151,3 +158,20 @@ Ten decisions; six were the user's, four were mine.
 ## 11. Working notes
 - Use the dedicated tools, keep temporary files out of the project, and don't commit `.venv/`.
 - The project is not a git repo until the user uploads it; the user plans to upload to a teammate's private GitHub repo. Never push without being asked.
+
+## 12. Audit 2026-11-24 (branch `audit/qc-and-fixes`, not committed until the user says so)
+User asked for a full review, then "Batch 1" safe fixes. User decisions: create the branch; duplicates are FLAGGED only, plus a `--drop-duplicates` option; OK to overwrite results/ (git keeps old ones).
+- **Bugs fixed:** (1) `max_curv` (Wiemer-Wyss mode) used np.arange float bin edges, so many magnitudes fell one bin low; Mc_maxcurv values were 0.1-0.2 too low (now floor-binned). Authors' eqcorrscan Mc and MC_CUT=4.4 unaffected. (2) Depth > 150 km was labelled "uncertain"; now class `deep` (12 events in combined, 0 in the M>=4.4 sets). (3) Fig4/Fig5 said "USGS-solved depths" in every case; Fig3 / per_period said "M>=3" though the combined catalog goes down to M1.2 (1,133 events <M3). Column `N_M3` renamed `N_all_used`; added `mag_min`, `share_solved_depth_Mc`, `years`. (4) Kishtwar y-axis clipped at M3, label "mostly mb" on combined data. (5) Crash guards (empty cluster, <3 magnitude steps). (6) UTF-8 encodings in the downloaders (Windows).
+- **Verified unchanged:** USGS-ISC matching reproduces the old combined catalog exactly; ISC parser output identical; no b-value, event count or depth-class count changed (`results/qc/old_vs_new.csv`).
+- **Duplicates:** rule = within 60 s and 50 km, at least one row ISC-only -> 7 rows flagged (`possible_duplicate_of`). Removing them changes nothing in excluding_fixed and only trivially in including_fixed.
+- **My own audit error (told the user):** I first reported 455 duplicate pairs and a CV drop; that came from treating pandas-3 microsecond timestamps as nanoseconds (int64/1e9) in a throwaway script. Real number is above. When converting datetimes, use `.astype("datetime64[ms]")`, never `int64/1e9`.
+- **Key QC finding:** the share of USGS M>=4.4 events with a solved depth is 16% (1990s), 33%, 46%, 22% (2020s); excluding_fixed rates per period track this, so rates are not evidence of change. Wiemer-Wyss Mc on the mixed combined catalog is unstable (near-tied bins).
+- **Batch 2 DONE 2026-11-24 (user: "do all the work in one go", commit in small atomic subject-only commits, user as sole author, NO Co-Authored-By trailer):**
+  - `bvalue_robustness.py` -> results/robustness/bvalues.csv, bvalue_vs_cutoff.csv/png. mb-only b is HIGHER (USGS excl 1.48 vs 1.34 all types), so mixed scales are NOT what inflates b. With mb only, b rises with cutoff (1.2-1.3 at 4.2 -> 2.1-2.2 at 4.6): not a straight G-R line (mb saturation likely). Quote b only with cutoff + type + bootstrap CI. Shi-Bolt sigma came out smaller than Aki's here.
+  - `mc_through_time.py` -> mc_through_time.csv/png, mc_by_decade.csv. USGS alone Mc ~4.6-4.9 in 1970s-1990s (NOT complete at 4.4 before ~2000), ~4.3-4.5 in 2010s-2020s; USGS+ISC mb-only ~3.6-3.9 from mid-1990s.
+  - `cluster_robustness.py` -> dbscan_grid.csv/png, mc_runs_summary.csv, mc_event_probabilities_<cat>.csv, mc_probability_map.png. Kishtwar band holds at eps 30-45 km, falls apart at 15 km. Monte Carlo (500 runs, seed 0): (a) p_intermediate per event from depthError (looser than the rule); (b) epicentres shifted within horizontalError, band >=50% in one cluster in 99% (USGS) / 100% (combined) of runs. Missing horizontalError -> 8.1 km (median USGS, an ASSUMPTION; ISC rows have none). First MC design (sampled depth >= 40 as intermediate) was too loose and inflated the result; replaced.
+  - Figure 10 baseline now runs: original crashed under matplotlib >= 3.4 (Axes3D(fig) no longer attaches); `reproduce_baseline.py` patches Axes3D in the wrapper (vendored code untouched) and always moves outputs out of Him_ides/. -> results_baseline/Fig_10.png. Figs 5-7 byte-identical to before.
+  - combined catalog now keeps USGS horizontalError. Fig3 legend moved below axes.
+  - Verified: fresh venv from requirements.txt -> 38 tests pass, `run_all.py --baseline` all 24 steps ok; two runs give byte-identical CSVs (66 files).
+- **Still open:** explainer artifact XjbVGyf1u5CjSi39mujjyE (old numbers); writing the report; optional second region.
+
