@@ -7,9 +7,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-from seis_utils import (BOX, CATALOG_END, DEEP_MAX, LONG_CLASS, SOLVED_DEPTH, b_lsq, b_mle, case_label, case_name,
-                        cv, interevent_days, load_catalog, max_curv, max_curv_eqcorrscan, parse_args, results_base,
-                        xy_km)
+from seis_utils import (BOX, CATALOG_END, DEEP_MAX, LONG_CLASS, SOLVED_DEPTH, b_lsq, b_mle, b_reliability, case_label,
+                        case_name, cv, interevent_days, load_catalog, max_curv, max_curv_eqcorrscan, parse_args,
+                        poisson_ci, results_base, xy_km)
 
 ARGS = parse_args(__doc__)
 CATALOG, INCLUDE_FIXED = ARGS.catalog, ARGS.include_fixed
@@ -69,11 +69,11 @@ def time_axis(ax):
 
 fig = plt.figure(figsize=(13, 6.5))
 ax1 = plt.subplot2grid((2, 4), (0, 0), colspan=3, rowspan=2)
-groups = [(unc, C_FIX, "+", f"Uncertain: error bar crosses 40 km (N={len(unc)})"),
+groups = [(unc, C_FIX, "+", f"Uncertain: error bar crosses 40 or 150 km (N={len(unc)})"),
           (shal, C_SHAL, "o", f"Shallow: depth + error < 40 km (N={len(shal)})"),
-          (deep, C_DEEP, "X", f"Intermediate: depth − error ≥ 40 km (N={len(deep)})")]
+          (deep, C_DEEP, "X", f"Intermediate: 40 ≤ depth ± error ≤ 150 km (N={len(deep)})")]
 if len(vdeep):
-    groups.append((vdeep, "k", "D", f"Deeper than {DEEP_MAX:.0f} km (N={len(vdeep)})"))
+    groups.append((vdeep, "k", "D", f"Deep: depth − error > {DEEP_MAX:.0f} km (N={len(vdeep)})"))
 for df, col, mk, lab in groups:
     ax1.vlines(df.time, 0, df.mag, color="gray", lw=0.3, zorder=1)
     ax1.scatter(df.time, df.mag, s=df.mag**2 * 2.2, c=col if mk != "o" else "none",
@@ -116,7 +116,7 @@ ax1.set_ylabel("Frequency"); ax1.set_xlabel(f"Magnitude ({MAG_WORD})")
 ax2 = ax1.twinx()
 res = {}
 for lab, df, col, ls, mk in [(f"All events ({USED})", raw, "k", "-", "+"),
-                             ("Intermediate (depth − error ≥ 40 km)",
+                             ("Intermediate (40 ≤ depth ± error ≤ 150 km)",
                               raw[raw.depth_class.str.startswith("intermediate")], C_DEEP, "--", "o")]:
     m = df.mag.values
     b, steps, cum, fn = b_lsq(m, MC_CUT)
@@ -126,9 +126,11 @@ for lab, df, col, ls, mk in [(f"All events ({USED})", raw, "k", "-", "+"),
     allcum = np.array([(m >= s).sum() for s in allsteps])
     ax2.scatter(allsteps, np.log10(allcum), marker=mk, s=40, c=col if mk == "+" else "none",
                 edgecolors=col, alpha=0.7, lw=1.3)
-    if fn is not None:
+    if fn is not None and n >= 20:
         ax2.plot(steps, fn(steps), ls, c=col, lw=2.4,
-                 label=f"{lab}: b={b:.2f} (fit), {bm:.2f}±{bs:.2f} (MLE)\nM≥{MC_CUT}, N={n}")
+                 label=f"{lab}: b={b:.2f} (fit), {bm:.2f}±{bs:.2f} (MLE)\nM≥{MC_CUT}, N={n}, {b_reliability(n)}")
+    elif n:
+        ax2.plot([], [], ls, c=col, label=f"{lab}: N={n} above M{MC_CUT}, too few for a b-value")
 ax2.axvline(MC_CUT, color="k", lw=0.8, ls=":")
 ax2.set_ylabel("log$_{10}$ cumulative number")
 ax2.legend(loc="upper center", bbox_to_anchor=(0.5, -0.13), fontsize=10, ncol=1, frameon=False)
@@ -137,7 +139,7 @@ plt.tight_layout(); save(fig, "Fig3_magnitude_frequency_bvalue.png"); plt.close(
 print(f"Max-curvature Mc (all used events, {START_YEAR}+): Wiemer-Wyss mode = {mc_curv}; "
       f"authors' eqcorrscan method = {mc_auth} (+0.4 = {mc_auth + 0.4:.1f})")
 for k, v in res.items():
-    print(f"b-value [{k}]: LSQ={v[0]:.2f}  MLE={v[1]:.2f}±{v[2]:.2f}  N={v[3]}")
+    print(f"b-value [{k}]: LSQ={v[0]:.2f}  MLE={v[1]:.2f}±{v[2]:.2f}  N={v[3]} ({b_reliability(v[3])})")
 
 lat0, lon0 = cat.latitude.mean(), cat.longitude.mean()
 x, y = xy_km(cat.longitude, cat.latitude, lon0, lat0)
@@ -151,7 +153,7 @@ sc = ax.scatter(cat.time, cat.along_km, s=cat.mag**2 * 2.5,
                 edgecolors=np.where(cat.depth_class.str.startswith("intermediate"), C_DEEP, "k"),
                 linewidths=np.where(cat.depth_class.str.startswith("intermediate"), 2.0, 0.4),
                 alpha=0.85, zorder=3)
-ax.scatter([], [], s=60, facecolors="none", edgecolors=C_DEEP, lw=2, label="intermediate (depth − error ≥ 40 km)")
+ax.scatter([], [], s=60, facecolors="none", edgecolors=C_DEEP, lw=2, label="intermediate (40 ≤ depth ± error ≤ 150 km)")
 cb = plt.colorbar(sc, ax=ax)
 cb.set_label("Solved depth (km)" if not INCLUDE_FIXED else "Depth as reported, incl. fixed (km)")
 ax.set_xlabel("Time (UTC)"); ax.set_ylabel(f"Distance along arc, azimuth {strike_az:.0f}° (km)")
@@ -161,16 +163,28 @@ plt.tight_layout(); save(fig, "Fig4_migration_along_arc.png"); plt.close(fig)
 print(f"Profile azimuth (PCA of epicentres): {strike_az:.0f} deg; along-arc extent "
       f"{cat.along_km.min():.0f} to {cat.along_km.max():.0f} km")
 
-fig = plt.figure(figsize=(10, 7.5))
+VEX = 2.0
+fig = plt.figure(figsize=(11, 8))
 ax = fig.add_subplot(111, projection="3d")
-p = ax.scatter(cat.longitude, cat.latitude, -cat.depth, c=cat.depth, cmap="viridis_r", vmin=0, vmax=150,
-               s=cat.mag**2 * 2.5, edgecolors="k", linewidths=0.3, alpha=0.9)
-ax.set_xlabel("Longitude (°)"); ax.set_ylabel("Latitude (°)"); ax.set_zlabel("Depth (km)")
-ax.set_title((f"Solved depths only, M≥{MC_CUT} (N={len(cat)}); fixed/unflagged depths not used"
+lat_c, lon_c = np.mean(BOX["lat"]), np.mean(BOX["lon"])
+ex, ny = xy_km(cat.longitude, cat.latitude, lon_c, lat_c)
+bx = xy_km(np.array(BOX["lon"]), np.array(BOX["lat"]), lon_c, lat_c)
+for cls, mk in [("intermediate", "o"), ("shallow", "^"), ("uncertain", "s"), ("deep", "D")]:
+    sel = cat.depth_class.str.startswith(cls).values
+    if sel.any():
+        p = ax.scatter(ex[sel], ny[sel], -cat.depth[sel], c=cat.depth[sel], cmap="viridis_r", vmin=0, vmax=150,
+                       marker=mk, s=cat.mag[sel]**2 * 2.5, edgecolors="k", linewidths=0.3, alpha=0.9, label=cls)
+ax.set_xlim(*bx[0]); ax.set_ylim(*bx[1]); ax.set_zlim(-200, 0)
+ax.set_box_aspect((np.ptp(bx[0]), np.ptp(bx[1]), 200 * VEX))
+ax.set_xlabel("East (km)"); ax.set_ylabel("North (km)"); ax.set_zlabel("Depth (km)", labelpad=12)
+ax.legend(loc="upper left", fontsize=9, title="depth class (marker)")
+ax.set_title((f"Solved depths only, M≥{MC_CUT} (N={len(cat)}); fixed/unflagged depths not used; "
+              f"vertical exaggeration ×{VEX:.0f}"
               if not INCLUDE_FIXED else
-              f"All depths as reported, M≥{MC_CUT} (N={len(cat)}); includes fixed/unflagged depths"),
+              f"All depths as reported, M≥{MC_CUT} (N={len(cat)}); includes fixed/unflagged depths; "
+              f"vertical exaggeration ×{VEX:.0f}"),
              fontsize=11)
-fig.colorbar(p, ax=ax, shrink=0.6, label="Depth (km)"); ax.view_init(elev=22, azim=-65)
+fig.colorbar(p, ax=ax, shrink=0.5, label="Depth (km)"); ax.view_init(elev=22, azim=-65)
 plt.tight_layout(); save(fig, "Fig5_3D_hypocentres.png"); plt.close(fig)
 
 periods = [(1990, 1999), (2000, 2009), (2010, 2019), (2020, 2026)]
@@ -181,16 +195,22 @@ for a, b_ in periods:
     yrs = (stop - pd.Timestamp(f"{a}-01-01")).days / 365.25
     n44 = (seg.mag >= MC_CUT).sum()
     bm, bs, n = b_mle(seg.mag.values, MC_CUT)
+    lo, hi = poisson_ci(n44, yrs)
+    n_int = int(((seg.mag >= MC_CUT) & seg.depth_class.str.startswith("intermediate")).sum())
     rows.append(dict(period=f"{a}-{b_}", Mc_maxcurv=max_curv(seg.mag.values),
                      N_all_used=len(seg), mag_min=seg.mag.min(), N_Mc=n44,
                      share_solved_depth_Mc=(seg[seg.mag >= MC_CUT].depth_type.isin(SOLVED_DEPTH).mean()
                                             if n44 else np.nan),
-                     years=round(yrs, 2), rate_per_yr=n44 / yrs, b_MLE=bm, b_err=bs))
+                     years=round(yrs, 2), rate_per_yr=n44 / yrs, rate_ci95_low=lo, rate_ci95_high=hi,
+                     N_intermediate_Mc=n_int, b_MLE=bm if n >= 20 else np.nan, b_err=bs if n >= 20 else np.nan,
+                     b_N=n, b_reliability=b_reliability(n)))
 tab = pd.DataFrame(rows); tab.to_csv(os.path.join(OUT, "per_period_summary.csv"), index=False)
 print(tab.round(2).to_string(index=False))
 fig, axs = plt.subplots(1, 3, figsize=(14, 4.4))
 xs = np.arange(len(tab))
-axs[0].bar(xs, tab.rate_per_yr, color="#555"); axs[0].set_ylabel(f"Events per year (M≥{MC_CUT})")
+axs[0].bar(xs, tab.rate_per_yr, color="#555",
+           yerr=[tab.rate_per_yr - tab.rate_ci95_low, tab.rate_ci95_high - tab.rate_per_yr], capsize=4)
+axs[0].set_ylabel(f"Events per year (M≥{MC_CUT}, 95 % CI)")
 axs[1].plot(xs, tab.Mc_maxcurv, "o-", c="k"); axs[1].set_ylabel("Mc (max curvature)")
 axs[1].axhline(MC_CUT, ls=":", c="gray")
 axs[2].errorbar(xs, tab.b_MLE, yerr=tab.b_err, fmt="o-", c="k", capsize=4); axs[2].set_ylabel(f"b-value (MLE, M≥{MC_CUT})")

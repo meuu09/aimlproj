@@ -78,10 +78,10 @@ for ax, (g, col) in zip(axs, GROUPS):
                     ha="center", va="center", color="k",
                     bbox=dict(boxstyle="circle,pad=0.15", fc="white", ec="k", lw=0.6))
     nclu = sub.cluster[sub.cluster > 0].nunique()
-    title = {"intermediate": "Intermediate: depth − error ≥ 40 km",
-             "uncertain": "Uncertain: error bar crosses 40 km",
+    title = {"intermediate": "Intermediate: 40 ≤ depth ± error ≤ 150 km",
+             "uncertain": "Uncertain: error bar crosses 40 or 150 km",
              "shallow": "Shallow: depth + error < 40 km",
-             "deep": "Deeper than 150 km"}[g]
+             "deep": "Deep: depth − error > 150 km"}[g]
     ax.set_title(f"{title}\n{len(sub)} events, {nclu} clusters", fontsize=11, color=col)
     ax.set_xlim(BOX["lon"][0] - 0.1, BOX["lon"][1] + 0.1); ax.set_ylim(BOX["lat"][0] - 0.1, BOX["lat"][1] + 0.1)
     ax.set_aspect(1 / np.cos(np.radians(33))); ax.set_xlabel("Longitude (°)"); ax.grid(alpha=0.2)
