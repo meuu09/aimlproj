@@ -1,0 +1,6 @@
+catalog,rows,unique_ids,duplicate_id_rows,first_year,last_year,magnitude_missing,magnitude_min,magnitude_max,magnitude_lt_3,magnitude_ge_3,magnitude_ge_4_4,depth_error_missing,depth_error_zero,depth_error_gt_100_km,depth_error_eq_1000_km,horizontal_error_missing,magnitude_error_missing
+USGS,566,566,0,1970,2026,0,3.1,6.8,0,566,299,286,11,0,0,417,399
+ISC v1,3024,0,0,1970,2026,215,1.2,6.8,1133,1676,268,1778,0,112,48,3024,3024
+combined v1,2839,2839,0,1970,2026,0,1.2,6.8,1133,1706,331,1654,6,87,44,2839,2839
+ISC v2,3024,0,0,1970,2026,215,1.2,6.8,1133,1676,269,1747,31,112,48,3024,2101
+combined v2,2839,2839,0,1970,2026,0,1.2,6.8,1133,1706,331,1559,27,99,44,2690,2200

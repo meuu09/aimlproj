@@ -1,29 +1,14 @@
-"""
-Kishtwar-Chamba intermediate-depth cluster: the paper's cluster analysis applied to
-our region (USGS ComCat, 1990 to now).
+"""Exploratory Kishtwar–Chamba analysis with explicit catalog selections.
 
-Michailos et al. (2021) analyse "Cluster 1" beneath the Everest region with:
-  Fig 3-4  depth cross-sections with depth error bars   -> FigK5 here
-  Fig 5    magnitude vs time + cumulative number        -> FigK1
-  Fig 6    inter-event times                            -> FigK2
-  Fig 7    magnitude-frequency, Mc (max curvature +0.4), b-value  -> FigK3
-  Fig 8-9  migration: along/across-strike distance vs time, plus a
-           systematic search for sequences within 20 days and 20 km
-           of a first event, tested against linear and diffusive
-           migration (r = sqrt(4 pi D t), Shapiro et al. 1997)  -> FigK4
-  Sec 3.2.1  Bath's-law check (largest minus 2nd-largest magnitude)
+Rows below M3 are excluded to match the stored USGS input floor. Magnitude types
+remain native; b-values and Bath's-law summaries are separated by exact type and
+source. The sequence search uses the stated 20-day/20-km window and is a
+descriptive screen, not a migration-rate result.
 
-Our equivalent of Cluster 1 is the band of deep events between Kishtwar and
-Chamba (J&K / Himachal Pradesh). Depth rules (same as him_ides_himachal.py):
-  * only events whose depth USGS solved for ("from location" / "constrained by
-    depth phases") are used at all; fixed and unflagged depths are dropped
-  * intermediate  = depth - depthError >= 40 km (deep even at the top of its error bar)
-  * shallow       = depth + depthError <  40 km
-  * uncertain     = error bar crosses 40 km, or no depthError given
-
-Run:  .venv/bin/python kishtwar_cluster.py                   (results/excluding_fixed/kishtwar/)
-      .venv/bin/python kishtwar_cluster.py --include-fixed   (results/including_fixed/kishtwar/)
-      add --catalog combined for USGS + ISC   (results/combined_usgs_isc/<case>/kishtwar/)
+Run in Windows PowerShell from the repository root:
+    .\\.venv\\Scripts\\python.exe kishtwar_cluster.py
+    .\\.venv\\Scripts\\python.exe kishtwar_cluster.py --catalog combined-v2
+    .\\.venv\\Scripts\\python.exe kishtwar_cluster.py --catalog combined-v2 --include-fixed
 """
 import os
 import sys
@@ -47,15 +32,23 @@ DEPTH_TYPES = os.path.join(HERE, "data", "usgs_depth_type.csv")
 # (USGS + ISC Bulletin, data/combined_usgs_isc_catalog.csv from build_combined_catalog.py).
 CATALOG = sys.argv[sys.argv.index("--catalog") + 1] if "--catalog" in sys.argv else "usgs"
 COMBINED = os.path.join(HERE, "data", "combined_usgs_isc_catalog.csv")
+COMBINED_V2 = os.path.join(HERE, "data", "combined_usgs_isc_catalog_v2.csv")
 INCLUDE_FIXED = "--include-fixed" in sys.argv
 CASE = "including_fixed" if INCLUDE_FIXED else "excluding_fixed"
 USED = "all depths" if INCLUDE_FIXED else "solved depths"   # wording for labels
-CASE_LABEL = (("USGS + ISC | " if CATALOG == "combined" else "USGS | ")
+CATALOG_NAME = {"usgs": "USGS", "combined": "USGS + ISC (legacy)",
+                "combined-v2": "USGS + ISC (provenance-rich v2)"}.get(CATALOG, CATALOG)
+CASE_LABEL = (f"{CATALOG_NAME} | M≥3 input floor; native magnitude types | "
               + ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
                  else "Case: excluding fixed depths (solved only)"))
-OUT = (os.path.join(HERE, "results", CASE, "kishtwar") if CATALOG == "usgs"
-       else os.path.join(HERE, "results", "combined_usgs_isc", CASE, "kishtwar"))
+if CATALOG == "usgs":
+    OUT = os.path.join(HERE, "results", CASE, "kishtwar")
+elif CATALOG == "combined-v2":
+    OUT = os.path.join(HERE, "results", "combined_usgs_isc_v2", CASE, "kishtwar")
+else:
+    OUT = os.path.join(HERE, "results", "combined_usgs_isc", CASE, "kishtwar")
 START_YEAR = 1990
+MIN_MAG = 3.0
 MC_CUT = 4.4                     # regional completeness (authors' method gives 4.0 + 0.4)
 DEEP_MIN, DEEP_MAX = 40, 150     # intermediate depth (km)
 SOLVED_DEPTH = ("from location", "constrained by depth phases")
@@ -78,10 +71,15 @@ C_DEEP, C_SHAL, C_REST, C_FIX = "#d62728", "#1f77b4", "#7f7f7f", "#bdbdbd"
 # ----------------------------- HELPERS ------------------------------------- #
 def max_curv_eqcorrscan(mags, bin_size=0.5):
     """Authors' Mc: eqcorrscan 0.4.2 calc_max_curv (peak |2nd derivative| of 0.5 bins)."""
+    mags = np.asarray(mags, dtype=float)
+    if not len(mags):
+        return np.nan
     min_bin, max_bin = int(min(mags)), int(max(mags) + 1)
     bins = np.arange(min_bin, max_bin + bin_size, bin_size)
     df, bins = np.histogram(mags, bins)
     curvature = np.diff(np.diff(df) / bin_size) / bin_size
+    if not len(curvature):
+        return np.nan
     return float(bins[np.argmax(np.abs(curvature))] + bin_size)
 
 
@@ -115,8 +113,9 @@ def xy_km(lon, lat, lon0, lat0):
 
 
 # ----------------------------- LOAD ---------------------------------------- #
-if CATALOG == "combined":
-    raw = pd.read_csv(COMBINED)                                  # depth_type already included
+if CATALOG in ("combined", "combined-v2"):
+    combined_path = COMBINED_V2 if CATALOG == "combined-v2" else COMBINED
+    raw = pd.read_csv(combined_path)                              # depth_type and origin provenance included
     raw["time"] = pd.to_datetime(raw.time, utc=True, format="ISO8601").dt.tz_localize(None)
     raw = raw[raw.time.dt.year >= START_YEAR].copy()
 else:
@@ -124,8 +123,13 @@ else:
     raw["time"] = raw["time"].dt.tz_localize(None)
     raw = raw[raw.time.dt.year >= START_YEAR].copy()
     raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
+period_rows = len(raw)
+raw = raw[raw.mag >= MIN_MAG].copy()
+below_minimum = period_rows - len(raw)
 if "horizontalError" not in raw:
     raw["horizontalError"] = np.nan
+if "mag_source" not in raw:
+    raw["mag_source"] = "USGS"
 raw["depth_type"] = raw.depth_type.fillna("unknown")
 n_before = len(raw)
 if not INCLUDE_FIXED:
@@ -141,10 +145,12 @@ clu_deep = raw[raw.in_cluster & raw.intermediate]              # our "Cluster 1"
 clu_shal = raw[raw.in_cluster & raw.shallow]
 clu_unc = raw[raw.in_cluster & raw.uncertain]
 rest_deep = raw[~raw.in_cluster & raw.intermediate]            # intermediate elsewhere in box
-print(f"{CASE_LABEL} | {START_YEAR}+: {len(raw)} events used, {n_before - len(raw)} fixed/unflagged dropped")
+print(f"{CASE_LABEL} | {START_YEAR}+: input={period_rows}, below M{MIN_MAG:g}={below_minimum}, "
+      f"selected={len(raw)}, fixed/unflagged dropped={n_before - len(raw)}")
 print(f"Cluster outline: used={len(clu_all)}  intermediate={len(clu_deep)}  shallow={len(clu_shal)}  "
       f"uncertain={len(clu_unc)}  | intermediate outside cluster={len(rest_deep)}")
-summary = {"N_cluster_used_M3": len(clu_all), "N_cluster_intermediate_M3": len(clu_deep),
+summary = {"N_cluster_used_M3plus": len(clu_all), "N_cluster_intermediate_M3plus": len(clu_deep),
+           "N_cluster_ge_3": int((clu_all.mag >= MIN_MAG).sum()),
            "N_cluster_uncertain_M3": len(clu_unc),
            "N_cluster_intermediate_M>=Mc": int((clu_deep.mag >= MC_CUT).sum()),
            "N_cluster_shallow_M3": len(clu_shal), "N_intermediate_outside": len(rest_deep),
@@ -185,7 +191,8 @@ for df, col, mk, lab in [(rest_deep, "k", "x", f"Intermediate, outside cluster (
                 marker=mk, lw=1.4, alpha=0.85, zorder=3, label=lab)
 ax1.axhline(MC_CUT, color="k", ls=":", lw=0.8)
 ax1.text(raw.time.min(), MC_CUT + 0.03, f" Mc = {MC_CUT}", fontsize=9)
-ax1.set_ylim(3, 5.8); ax1.set_ylabel("Magnitude (mostly mb)"); ax1.set_xlabel("Time (UTC)")
+ax1.set_ylim(float(raw.mag.min()) - 0.2, 5.8)
+ax1.set_ylabel("Magnitude (native scale; input floor M≥3)"); ax1.set_xlabel("Time (UTC)")
 time_axis(ax1); ax1.legend(loc="upper left", fontsize=9)
 ax2 = ax1.twinx()
 ax2.plot(clu_deep.time, np.arange(1, len(clu_deep) + 1), "k--", lw=2, label="Cluster, intermediate")
@@ -218,30 +225,38 @@ plt.tight_layout(); save(fig, "FigK2_interevent_times.png"); plt.close(fig)
 
 # ------------- FIG K3 (paper Fig 7): magnitude-frequency + b --------------- #
 fig, ax1 = plt.subplots(figsize=(10, 6.5))
-bins = np.arange(3.05, raw.mag.max() + 0.2, 0.2)
+hist_min = np.floor(float(raw.mag.min()) / 0.2) * 0.2
+bins = np.arange(hist_min, raw.mag.max() + 0.2, 0.2)
 ax1.hist(raw.mag, bins, histtype="step", fill=True, color="gray", alpha=0.25, lw=1.5, ec="k",
-         label=f"Whole region (N={len(raw)})")
-ax1.hist(clu_all.mag, bins, histtype="step", lw=1.8, ls="--", ec="k", label=f"Cluster outline, all (N={len(clu_all)})")
+         label=f"Whole region, native scales (N={len(raw)})")
+ax1.hist(clu_all.mag, bins, histtype="step", lw=1.8, ls="--", ec="k", label=f"Kishtwar outline, N={len(clu_all)}")
 ax1.set_xlabel("Magnitude"); ax1.set_ylabel("Frequency (0.2 bins)"); ax1.legend(loc="center left", fontsize=9)
 ax2 = ax1.twinx()
 bres = []
-for lab, df, col, ls, mk in [("Whole region", raw, "k", "-", "+"),
-                             (f"Cluster outline, all events ({USED})", clu_all, "#555", "--", "o"),
-                             ("Cluster, intermediate", clu_deep, C_DEEP, ":", "X")]:
-    m = df.mag.values
-    mc_auth = max_curv_eqcorrscan(m) + 0.4
-    steps = np.unique(m); cum = np.array([(m >= s).sum() for s in steps])
-    ax2.scatter(steps, np.log10(cum), marker=mk, s=30, c="none" if mk == "o" else col, edgecolors=col, lw=1.2)
-    b, st, fn = b_lsq(m, MC_CUT)
-    bm, bs, n = b_mle(m, MC_CUT)
-    if fn is not None:
-        ax2.plot(st, fn(st), ls, c=col, lw=2.2,
-                 label=f"{lab}: b={b:.2f} (fit), {bm:.2f}±{bs:.2f} (MLE), N={n}")
-    bres.append(dict(group=lab, N_total=len(m), Mc_authors_method=mc_auth, Mc_used=MC_CUT,
-                     N_above_Mc=n, b_lsq=b, b_mle=bm, b_mle_err=bs))
+for lab, df, marker, col in [("Whole region", raw, "+", "k"),
+                             ("Kishtwar outline", clu_all, "o", "#555"),
+                             ("Kishtwar intermediate", clu_deep, "X", C_DEEP)]:
+    vals = df.mag.to_numpy(dtype=float)
+    steps = np.unique(vals)
+    cumulative = np.array([(vals >= value).sum() for value in steps])
+    if len(steps):
+        ax2.scatter(steps, np.log10(cumulative), marker=marker, s=30,
+                    c="none" if marker == "o" else col, edgecolors=col, lw=1.2,
+                    label=f"{lab} cumulative counts")
+    for (mag_type, mag_source), type_df in df.groupby(["magType", "mag_source"], dropna=False):
+        m = type_df.mag.to_numpy(dtype=float)
+        bm, bs, n = b_mle(m, MC_CUT)
+        distinct = np.unique(m[m >= MC_CUT])
+        blsq = b_lsq(m, MC_CUT)[0] if len(distinct) >= 3 else np.nan
+        mc_auth = max_curv_eqcorrscan(m) + 0.4 if len(m) else np.nan
+        bres.append(dict(group=lab, magType=mag_type, mag_source=mag_source,
+                         N_total=len(m), Mc_authors_method=mc_auth, Mc_used=MC_CUT,
+                         N_above_Mc=n, b_lsq=blsq, b_mle=bm, b_mle_err=bs))
 ax2.axvline(MC_CUT, color="k", lw=0.8, ls=":")
-ax2.set_ylabel("log$_{10}$ cumulative number"); ax2.legend(loc="upper right", fontsize=9)
-ax1.set_title(f"b-values above M{MC_CUT}; small N, read the MLE ± error", fontsize=11)
+ax2.set_ylabel("log$_{10}$ cumulative number"); ax2.legend(loc="upper right", fontsize=8)
+ax1.set_title(f"Native scales shown separately; no pooled b-value. M≥{MC_CUT} estimates by type/source", fontsize=10)
+fig.text(0.01, 0.01, "No magnitude conversion. Scale-specific estimates and sample sizes are in kishtwar_bvalues.csv.",
+         fontsize=8, color="0.35")
 plt.tight_layout(); save(fig, "FigK3_magnitude_frequency_bvalue.png"); plt.close(fig)
 btab = pd.DataFrame(bres); btab.to_csv(os.path.join(OUT, "kishtwar_bvalues.csv"), index=False)
 
@@ -284,10 +299,13 @@ for i, ev in search.iterrows():
         seqs.append(dict(start=ev.time, n_events=len(grp), duration_days=t_s.max() / 86400,
                          max_dist_km=r_m.max() / 1000, depths_km=", ".join(f"{z:.0f}" for z in grp.depth),
                          mags=", ".join(f"{m:.1f}" for m in grp.mag),
+                         magTypes=";".join(sorted(grp.magType.fillna("unknown").astype(str).unique())),
+                         magSources=";".join(sorted(grp.mag_source.fillna("unknown").astype(str).unique())),
                          linear_velocity_km_per_day=v, diffusivity_envelope_m2_per_s=D,
                          median_horizontalError_km=grp.horizontalError.median(),
                          median_depthError_km=grp.depthError.median(), ids=";".join(grp.id)))
 seq_tab = pd.DataFrame(seqs, columns=["start", "n_events", "duration_days", "max_dist_km", "depths_km", "mags",
+                                       "magTypes", "magSources",
                                        "linear_velocity_km_per_day", "diffusivity_envelope_m2_per_s",
                                        "median_horizontalError_km", "median_depthError_km", "ids"])
 seq_tab.to_csv(os.path.join(OUT, "kishtwar_sequences.csv"), index=False)
@@ -319,6 +337,7 @@ cax = fig.add_axes([0.45, 0.78, 0.4, 0.025])
 fig.colorbar(sc, cax=cax, orientation="horizontal", label="Along-strike distance (km), intermediate events")
 fig.text(0.45, 0.66, f"Orange bands: sequences with ≥{SEQ_MIN_EVENTS} events within {SEQ_DAYS} days and "
          f"{SEQ_KM} km\n(paper's search window). N sequences = {len(seq_tab)}", fontsize=10)
+fig.text(0.01, 0.01, f"M≥{MIN_MAG:g} input floor; native magnitude types retained.", fontsize=8, color="0.35")
 fig.subplots_adjust(left=0.07, right=0.97, top=0.95, bottom=0.07, hspace=0.35)
 save(fig, "FigK4_migration.png"); plt.close(fig)
 
@@ -327,16 +346,27 @@ fig, (a1, a2) = plt.subplots(1, 2, figsize=(14, 5.5), gridspec_kw=dict(width_rat
 for d, col, lab in [(pts[pts.shallow], C_SHAL, "shallow: depth + error < 40 km"),
                     (pts[pts.uncertain], C_REST, "uncertain: crosses 40 km / no error"),
                     (pts[deep_mask], C_DEEP, "intermediate: depth − error ≥ 40 km")]:
-    a1.errorbar(d.along_km, d.depth, yerr=d.depthError.fillna(0), fmt="o", ms=5, c=col, ecolor=col,
-                alpha=0.8, elinewidth=0.8, capsize=2, label=lab)
-    a2.errorbar(d.time, d.depth, yerr=d.depthError.fillna(0), fmt="o", ms=5, c=col, ecolor=col,
-                alpha=0.8, elinewidth=0.8, capsize=2, label=lab)
+    valid_error = d.depthError.notna()
+    missing_error = ~valid_error
+    a1.errorbar(d.along_km[valid_error], d.depth[valid_error], yerr=d.depthError[valid_error],
+                fmt="o", ms=5, c=col, ecolor=col, alpha=0.8, elinewidth=0.8, capsize=2, label=lab)
+    a2.errorbar(d.time[valid_error], d.depth[valid_error], yerr=d.depthError[valid_error],
+                fmt="o", ms=5, c=col, ecolor=col, alpha=0.8, elinewidth=0.8, capsize=2, label=lab)
+    if missing_error.any():
+        a1.scatter(d.along_km[missing_error], d.depth[missing_error], marker="^", s=26,
+                   color=col, edgecolors="k", linewidths=0.3)
+        a2.scatter(d.time[missing_error], d.depth[missing_error], marker="^", s=26,
+                   color=col, edgecolors="k", linewidths=0.3)
 for a in (a1, a2):
-    a.invert_yaxis(); a.axhline(DEEP_MIN, ls=":", c="k", lw=0.8); a.set_ylabel("Depth (km)"); a.grid(alpha=0.2)
+    a.set_ylim(DEEP_MAX, 0); a.axhline(DEEP_MIN, ls=":", c="k", lw=0.8); a.set_ylabel("Depth (km)"); a.grid(alpha=0.2)
 a1.set_xlabel(f"Along-strike distance, az {az:.0f}° (km)"); a1.legend(fontsize=9, loc="lower left")
 a2.set_xlabel("Time (UTC)"); time_axis(a2)
-a1.set_title("Depth section along the cluster (bars = USGS depthError)", fontsize=10)
+a1.set_title("Depth section along the cluster (bars = source-reported depth error)", fontsize=10)
 a2.set_title("Depth through time", fontsize=10)
+missing_depth_error_count = int(pts.depthError.isna().sum())
+error_bounds_outside = int(((pts.depth - pts.depthError < 0) | (pts.depth + pts.depthError > DEEP_MAX)).fillna(False).sum())
+fig.text(0.01, 0.01, f"Missing errors are triangles (N={missing_depth_error_count}); error bars clipped at 0–{DEEP_MAX} km (N extending outside={error_bounds_outside}).",
+         fontsize=8, color="0.35")
 plt.tight_layout(); save(fig, "FigK5_depth_sections.png"); plt.close(fig)
 
 # ------------- depth vs catalog era (is a depth "trend" real?) -------------- #
@@ -347,14 +377,19 @@ for lab, d in [("before2010", clu_deep[clu_deep.time.dt.year < 2010]),
     summary[f"depth_median_km_{lab}"] = d.depth.median()
     summary[f"depthError_median_km_{lab}"] = d.depthError.median()
 
-# ------------- Bath's law check (paper Sec 3.2.1) ------------------------- #
-top = np.sort(clu_deep.mag.values)[::-1]
-summary["largest_mag"] = top[0]
-summary["largest_minus_second"] = top[0] - top[1] if len(top) > 1 else np.nan
+# ------------- Bath's law check by native magnitude type/source ------------- #
+bath_rows = []
+for (mag_type, mag_source), group in clu_deep.groupby(["magType", "mag_source"], dropna=False):
+    top = np.sort(group.mag.to_numpy(dtype=float))[::-1]
+    bath_rows.append(dict(
+        magType=mag_type, mag_source=mag_source, n_events=len(top),
+        largest_mag=top[0] if len(top) else np.nan,
+        largest_minus_second=top[0] - top[1] if len(top) > 1 else np.nan,
+    ))
+pd.DataFrame(bath_rows).to_csv(os.path.join(OUT, "kishtwar_bath_law_by_magnitude_type.csv"), index=False)
 for _, s_ in seq_tab.iterrows():
-    mm = sorted(map(float, s_.mags.split(", ")), reverse=True)
-    print(f"Sequence {s_.start:%Y-%m-%d}: N={s_.n_events}, mags {s_.mags}, depths {s_.depths_km} km, "
-          f"dM(1st-2nd)={mm[0] - mm[1]:.1f}, v={s_.linear_velocity_km_per_day:.2f} km/d, "
+    print(f"Sequence {s_.start:%Y-%m-%d}: N={s_.n_events}, native magnitudes {s_.mags} ({s_.magTypes}), "
+          f"depths {s_.depths_km} km, v={s_.linear_velocity_km_per_day:.2f} km/d, "
           f"D<={s_.diffusivity_envelope_m2_per_s:.1f} m2/s, median errors h/z = "
           f"{s_.median_horizontalError_km:.1f}/{s_.median_depthError_km:.1f} km")
 

@@ -1,0 +1,2 @@
+rule_time_seconds_max,rule_horizontal_km_max,accepted_matches,review_flagged_matches,matches_over_20_km,matches_over_50_km,time_residual_max_seconds,horizontal_residual_median_km,horizontal_residual_max_km,multiple_candidate_matches
+20,100,536,130,129,12,9.32,12.067040328015532,85.43122691676712,1

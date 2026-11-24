@@ -1,0 +1,113 @@
+catalog,source,depth_type,depth_source,rows,depth_error_missing,depth_error_zero,depth_error_gt_100_km,depth_error_eq_1000_km,depth_error_confidence
+USGS,USGS,from location,,121,0,0,0,0,
+USGS,USGS,unknown,,120,63,11,0,0,
+USGS,USGS,operator assigned,,313,211,0,0,0,
+USGS,USGS,constrained by depth phases,,12,12,0,0,0,
+ISC v1,ISC,operator assigned,ISC,532,532,0,0,0,
+ISC v1,ISC,from location,ISC,323,0,0,0,0,
+ISC v1,ISC,unknown,QUE,52,52,0,0,0,
+ISC v1,ISC,from location,ISC-EHB,34,0,0,0,0,
+ISC v1,ISC,unknown,NDI,49,49,0,0,0,
+ISC v1,ISC,unknown,NEIC,3,3,0,0,0,
+ISC v1,ISC,operator assigned,EIDC,2,2,0,0,0,
+ISC v1,ISC,unknown,EIDC,7,7,0,0,0,
+ISC v1,ISC,unknown,BJI,6,6,0,0,0,
+ISC v1,ISC,from location,EIDC,5,0,0,0,0,
+ISC v1,ISC,operator assigned,NDI,1031,1031,0,0,0,
+ISC v1,ISC,from location,NDI,694,0,0,93,47,
+ISC v1,ISC,from location,NEIC,85,0,0,0,0,
+ISC v1,ISC,operator assigned,IDC,74,74,0,0,0,
+ISC v1,ISC,from location,IDC,18,0,0,3,0,
+ISC v1,ISC,from location,DMN,1,0,0,0,0,
+ISC v1,ISC,unknown,NNC,9,9,0,0,0,
+ISC v1,ISC,from location,NNC,60,0,0,15,0,
+ISC v1,ISC,unknown,HYB,2,2,0,0,0,
+ISC v1,ISC,operator assigned,HYB,1,1,0,0,0,
+ISC v1,ISC,from location,HYB,24,0,0,0,0,
+ISC v1,ISC,operator assigned,GFZ,7,7,0,0,0,
+ISC v1,ISC,operator assigned,NEIC,3,3,0,0,0,
+ISC v1,ISC,from location,TIR,1,0,0,1,1,
+ISC v1,ISC,from location,GFZ,1,0,0,0,0,
+combined v1,ISC,operator assigned,ISC:ISC,258,258,0,0,0,
+combined v1,USGS+ISC,from location,USGS,115,0,0,0,0,
+combined v1,ISC,from location,ISC:ISC,157,0,0,0,0,
+combined v1,ISC,unknown,ISC:QUE,2,2,0,0,0,
+combined v1,USGS+ISC,unknown,USGS,54,49,3,0,0,
+combined v1,USGS+ISC,from location,ISC:ISC-EHB,27,0,0,0,0,
+combined v1,USGS+ISC,operator assigned,USGS,177,133,0,0,0,
+combined v1,USGS+ISC,from location,ISC:ISC,116,0,0,0,0,
+combined v1,USGS,unknown,USGS,7,3,3,0,0,
+combined v1,USGS,from location,USGS,6,0,0,0,0,
+combined v1,USGS,operator assigned,USGS,16,13,0,0,0,
+combined v1,ISC,from location,ISC:ISC-EHB,1,0,0,0,0,
+combined v1,ISC,unknown,ISC:NDI,31,31,0,0,0,
+combined v1,ISC,operator assigned,ISC:EIDC,2,2,0,0,0,
+combined v1,ISC,unknown,ISC:EIDC,9,9,0,0,0,
+combined v1,ISC,unknown,ISC:BJI,6,6,0,0,0,
+combined v1,USGS+ISC,constrained by depth phases,USGS,3,3,0,0,0,
+combined v1,ISC,operator assigned,ISC:NDI,992,992,0,0,0,
+combined v1,ISC,from location,ISC:NDI,656,0,0,86,44,
+combined v1,ISC,from location,ISC:NEIC,7,0,0,0,0,
+combined v1,USGS+ISC,from location,ISC:NDI,14,0,0,1,0,
+combined v1,ISC,operator assigned,ISC:IDC,67,67,0,0,0,
+combined v1,ISC,unknown,ISC:IDC,12,12,0,0,0,
+combined v1,ISC,unknown,ISC:NNC,44,44,0,0,0,
+combined v1,USGS+ISC,from location,ISC:NEIC,30,0,0,0,0,
+combined v1,USGS,constrained by depth phases,USGS,1,1,0,0,0,
+combined v1,ISC,unknown,ISC:HYB,26,26,0,0,0,
+combined v1,ISC,operator assigned,ISC:HYB,1,1,0,0,0,
+combined v1,ISC,operator assigned,ISC:GFZ,2,2,0,0,0,
+ISC v2,ISC,operator assigned,ISC,532,532,0,0,0,90% (ISF)
+ISC v2,ISC,from location,ISC,323,0,0,0,0,90% (ISF)
+ISC v2,ISC,unknown,QUE,52,52,0,0,0,90% (ISF)
+ISC v2,ISC,from location,ISC-EHB,34,0,0,0,0,90% (ISF)
+ISC v2,ISC,unknown,NDI,49,20,29,0,0,90% (ISF)
+ISC v2,ISC,unknown,NEIC,3,3,0,0,0,90% (ISF)
+ISC v2,ISC,operator assigned,EIDC,2,2,0,0,0,90% (ISF)
+ISC v2,ISC,unknown,EIDC,7,7,0,0,0,90% (ISF)
+ISC v2,ISC,unknown,BJI,6,6,0,0,0,90% (ISF)
+ISC v2,ISC,from location,EIDC,5,0,0,0,0,90% (ISF)
+ISC v2,ISC,operator assigned,NDI,1031,1031,0,0,0,90% (ISF)
+ISC v2,ISC,from location,NDI,694,0,0,93,47,90% (ISF)
+ISC v2,ISC,from location,NEIC,85,0,0,0,0,90% (ISF)
+ISC v2,ISC,operator assigned,IDC,74,74,0,0,0,90% (ISF)
+ISC v2,ISC,from location,IDC,18,0,0,3,0,90% (ISF)
+ISC v2,ISC,from location,DMN,1,0,0,0,0,90% (ISF)
+ISC v2,ISC,unknown,NNC,9,9,0,0,0,90% (ISF)
+ISC v2,ISC,from location,NNC,60,0,0,15,0,90% (ISF)
+ISC v2,ISC,unknown,HYB,2,0,2,0,0,90% (ISF)
+ISC v2,ISC,operator assigned,HYB,1,1,0,0,0,90% (ISF)
+ISC v2,ISC,from location,HYB,24,0,0,0,0,90% (ISF)
+ISC v2,ISC,operator assigned,GFZ,7,7,0,0,0,90% (ISF)
+ISC v2,ISC,operator assigned,NEIC,3,3,0,0,0,90% (ISF)
+ISC v2,ISC,from location,TIR,1,0,0,1,1,90% (ISF)
+ISC v2,ISC,from location,GFZ,1,0,0,0,0,90% (ISF)
+combined v2,ISC,operator assigned,ISC:ISC,258,258,0,0,0,90% (ISF)
+combined v2,USGS+ISC,from location,USGS,115,0,0,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,ISC,from location,ISC:ISC,157,0,0,0,0,90% (ISF)
+combined v2,ISC,unknown,ISC:QUE,2,2,0,0,0,90% (ISF)
+combined v2,USGS+ISC,unknown,USGS,54,49,3,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,USGS+ISC,from location,ISC:ISC-EHB,27,0,0,0,0,90% (ISF)
+combined v2,USGS+ISC,operator assigned,USGS,177,133,0,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,USGS+ISC,from location,ISC:ISC,116,0,0,0,0,90% (ISF)
+combined v2,USGS,unknown,USGS,7,3,3,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,USGS,from location,USGS,6,0,0,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,USGS,operator assigned,USGS,16,13,0,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,ISC,from location,ISC:ISC-EHB,1,0,0,0,0,90% (ISF)
+combined v2,ISC,unknown,ISC:NDI,31,12,19,0,0,90% (ISF)
+combined v2,ISC,operator assigned,ISC:EIDC,2,2,0,0,0,90% (ISF)
+combined v2,ISC,unknown,ISC:EIDC,9,7,0,0,0,90% (ISF)
+combined v2,ISC,unknown,ISC:BJI,6,6,0,0,0,90% (ISF)
+combined v2,USGS+ISC,constrained by depth phases,USGS,3,3,0,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,ISC,operator assigned,ISC:NDI,992,992,0,0,0,90% (ISF)
+combined v2,ISC,from location,ISC:NDI,656,0,0,86,44,90% (ISF)
+combined v2,ISC,from location,ISC:NEIC,7,0,0,0,0,90% (ISF)
+combined v2,USGS+ISC,from location,ISC:NDI,14,0,0,1,0,90% (ISF)
+combined v2,ISC,operator assigned,ISC:IDC,67,67,0,0,0,90% (ISF)
+combined v2,ISC,unknown,ISC:IDC,12,0,0,3,0,90% (ISF)
+combined v2,ISC,unknown,ISC:NNC,44,8,0,9,0,90% (ISF)
+combined v2,USGS+ISC,from location,ISC:NEIC,30,0,0,0,0,90% (ISF)
+combined v2,USGS,constrained by depth phases,USGS,1,1,0,0,0,USGS ComCat field; confidence level not recorded in this export
+combined v2,ISC,unknown,ISC:HYB,26,0,2,0,0,90% (ISF)
+combined v2,ISC,operator assigned,ISC:HYB,1,1,0,0,0,90% (ISF)
+combined v2,ISC,operator assigned,ISC:GFZ,2,2,0,0,0,90% (ISF)

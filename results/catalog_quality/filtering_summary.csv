@@ -1,0 +1,71 @@
+catalog,period,depth_case,rows,magnitude_lt_3,magnitude_ge_3,magnitude_ge_4_4,depth_error_missing
+USGS,1970s,all depth categories,102,0,102,84,100
+USGS,1970s,solved type only,3,0,3,3,1
+USGS,1980s,all depth categories,47,0,47,39,39
+USGS,1980s,solved type only,6,0,6,5,1
+USGS,1990+,all depth categories,417,0,417,176,147
+USGS,1990+,solved type only,124,0,124,55,10
+USGS,1990s,all depth categories,69,0,69,31,55
+USGS,1990s,solved type only,15,0,15,5,2
+USGS,2000s,all depth categories,144,0,144,39,79
+USGS,2000s,solved type only,41,0,41,13,7
+USGS,2010s,all depth categories,105,0,105,57,13
+USGS,2010s,solved type only,47,0,47,26,1
+USGS,2020s,all depth categories,99,0,99,49,0
+USGS,2020s,solved type only,21,0,21,11,0
+ISC v1,1970s,all depth categories,224,0,122,103,205
+ISC v1,1970s,solved type only,19,0,19,19,0
+ISC v1,1980s,all depth categories,79,0,51,43,65
+ISC v1,1980s,solved type only,14,0,14,14,0
+ISC v1,1990+,all depth categories,2721,1133,1503,122,1508
+ISC v1,1990+,solved type only,1213,423,766,92,0
+ISC v1,1990s,all depth categories,255,69,141,27,186
+ISC v1,1990s,solved type only,69,24,38,11,0
+ISC v1,2000s,all depth categories,1264,705,521,28,738
+ISC v1,2000s,solved type only,526,254,256,23,0
+ISC v1,2010s,all depth categories,516,96,420,35,255
+ISC v1,2010s,solved type only,261,33,228,33,0
+ISC v1,2020s,all depth categories,686,263,421,32,329
+ISC v1,2020s,solved type only,357,112,244,25,0
+combined v1,1970s,all depth categories,125,0,125,101,105
+combined v1,1970s,solved type only,20,0,20,20,0
+combined v1,1980s,all depth categories,55,0,55,44,36
+combined v1,1980s,solved type only,18,0,18,17,0
+combined v1,1990+,all depth categories,2659,1133,1526,186,1513
+combined v1,1990+,solved type only,1095,419,676,128,4
+combined v1,1990s,all depth categories,217,69,148,34,151
+combined v1,1990s,solved type only,66,24,42,15,1
+combined v1,2000s,all depth categories,1237,705,532,45,760
+combined v1,2000s,solved type only,473,252,221,29,3
+combined v1,2010s,all depth categories,520,96,424,57,287
+combined v1,2010s,solved type only,218,32,186,49,0
+combined v1,2020s,all depth categories,685,263,422,50,315
+combined v1,2020s,solved type only,338,111,227,35,0
+ISC v2,1970s,all depth categories,224,0,122,104,205
+ISC v2,1970s,solved type only,19,0,19,19,0
+ISC v2,1980s,all depth categories,79,0,51,43,65
+ISC v2,1980s,solved type only,14,0,14,14,0
+ISC v2,1990+,all depth categories,2721,1133,1503,122,1477
+ISC v2,1990+,solved type only,1213,423,766,92,0
+ISC v2,1990s,all depth categories,255,69,141,27,180
+ISC v2,1990s,solved type only,69,24,38,11,0
+ISC v2,2000s,all depth categories,1264,705,521,28,721
+ISC v2,2000s,solved type only,526,254,256,23,0
+ISC v2,2010s,all depth categories,516,96,420,35,253
+ISC v2,2010s,solved type only,261,33,228,33,0
+ISC v2,2020s,all depth categories,686,263,421,32,323
+ISC v2,2020s,solved type only,357,112,244,25,0
+combined v2,1970s,all depth categories,125,0,125,101,105
+combined v2,1970s,solved type only,20,0,20,20,0
+combined v2,1980s,all depth categories,55,0,55,44,36
+combined v2,1980s,solved type only,18,0,18,17,0
+combined v2,1990+,all depth categories,2659,1133,1526,186,1418
+combined v2,1990+,solved type only,1095,419,676,128,4
+combined v2,1990s,all depth categories,217,69,148,34,148
+combined v2,1990s,solved type only,66,24,42,15,1
+combined v2,2000s,all depth categories,1237,705,532,45,727
+combined v2,2000s,solved type only,473,252,221,29,3
+combined v2,2010s,all depth categories,520,96,424,57,242
+combined v2,2010s,solved type only,218,32,186,49,0
+combined v2,2020s,all depth categories,685,263,422,50,301
+combined v2,2020s,solved type only,338,111,227,35,0

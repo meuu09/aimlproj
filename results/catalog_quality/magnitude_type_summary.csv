@@ -1,0 +1,65 @@
+catalog,source,magType,rows,magnitude_missing,magnitude_lt_3,magnitude_ge_3,magnitude_ge_4_4,magnitude_min,magnitude_max
+USGS,USGS,mw,4,0,0,4,4,5.11,5.5
+USGS,USGS,mb,543,0,0,543,278,3.1,6.0
+USGS,USGS,ms,2,0,0,2,2,5.6,6.8
+USGS,USGS,md,1,0,0,1,0,3.7,3.7
+USGS,USGS,mwc,3,0,0,3,3,4.9,5.3
+USGS,USGS,mww,10,0,0,10,10,4.8,5.7
+USGS,USGS,mwb,1,0,0,1,1,5.0,5.0
+USGS,USGS,ml,1,0,0,1,0,3.1,3.1
+USGS,USGS,mwr,1,0,0,1,1,4.5,4.5
+ISC v1,ISC,,215,215,0,0,0,,
+ISC v1,ISC,mb,1004,0,10,994,233,1.8,5.9
+ISC v1,ISC,MW,320,0,100,220,28,1.8,6.8
+ISC v1,ISC,mL,10,0,5,5,1,1.5,4.5
+ISC v1,ISC,MS,1,0,0,1,0,4.1,4.1
+ISC v1,ISC,md,1,0,0,1,0,3.2,3.2
+ISC v1,ISC,MD,555,0,461,94,1,1.2,4.9
+ISC v1,ISC,ML,907,0,557,350,0,1.3,4.2
+ISC v1,ISC,mpv,6,0,0,6,0,3.2,3.6
+ISC v1,ISC,Mw,5,0,0,5,5,4.8,5.2
+combined v1,ISC,mb,533,0,10,523,30,1.8,5.2
+combined v1,USGS+ISC,mw,4,0,0,4,4,5.11,5.5
+combined v1,USGS+ISC,mb,514,0,0,514,269,3.1,6.0
+combined v1,USGS+ISC,ms,2,0,0,2,2,5.6,6.8
+combined v1,USGS,mb,29,0,0,29,9,3.2,5.2
+combined v1,ISC,mL,10,0,5,5,1,1.5,4.5
+combined v1,ISC,MS,1,0,0,1,0,4.1,4.1
+combined v1,ISC,md,1,0,0,1,0,3.2,3.2
+combined v1,ISC,MD,555,0,461,94,1,1.2,4.9
+combined v1,ISC,ML,906,0,557,349,0,1.3,4.2
+combined v1,USGS+ISC,md,1,0,0,1,0,3.7,3.7
+combined v1,USGS+ISC,mwc,2,0,0,2,2,4.9,5.3
+combined v1,ISC,mpv,6,0,0,6,0,3.2,3.6
+combined v1,USGS,mwc,1,0,0,1,1,5.1,5.1
+combined v1,USGS+ISC,mww,10,0,0,10,10,4.8,5.7
+combined v1,USGS+ISC,mwb,1,0,0,1,1,5.0,5.0
+combined v1,USGS+ISC,ml,1,0,0,1,0,3.1,3.1
+combined v1,ISC,MW,261,0,100,161,0,1.8,4.2
+combined v1,USGS+ISC,mwr,1,0,0,1,1,4.5,4.5
+ISC v2,ISC,,215,215,0,0,0,,
+ISC v2,ISC,mb,1002,0,10,992,232,1.8,5.9
+ISC v2,ISC,MW,321,0,100,221,29,1.8,6.8
+ISC v2,ISC,MB,2,0,0,2,2,4.5,4.9
+ISC v2,ISC,mL,12,0,5,7,1,1.5,4.5
+ISC v2,ISC,MD,555,0,461,94,1,1.2,4.9
+ISC v2,ISC,ML,907,0,557,350,0,1.3,4.2
+ISC v2,ISC,mpv,6,0,0,6,0,3.2,3.6
+ISC v2,ISC,Mw,4,0,0,4,4,5.0,5.2
+combined v2,ISC,mb,533,0,10,523,30,1.8,5.2
+combined v2,USGS+ISC,mw,4,0,0,4,4,5.11,5.5
+combined v2,USGS+ISC,mb,514,0,0,514,269,3.1,6.0
+combined v2,USGS+ISC,ms,2,0,0,2,2,5.6,6.8
+combined v2,USGS,mb,29,0,0,29,9,3.2,5.2
+combined v2,ISC,mL,12,0,5,7,1,1.5,4.5
+combined v2,ISC,MD,555,0,461,94,1,1.2,4.9
+combined v2,ISC,ML,906,0,557,349,0,1.3,4.2
+combined v2,USGS+ISC,md,1,0,0,1,0,3.7,3.7
+combined v2,USGS+ISC,mwc,2,0,0,2,2,4.9,5.3
+combined v2,ISC,mpv,6,0,0,6,0,3.2,3.6
+combined v2,USGS,mwc,1,0,0,1,1,5.1,5.1
+combined v2,USGS+ISC,mww,10,0,0,10,10,4.8,5.7
+combined v2,USGS+ISC,mwb,1,0,0,1,1,5.0,5.0
+combined v2,USGS+ISC,ml,1,0,0,1,0,3.1,3.1
+combined v2,ISC,MW,261,0,100,161,0,1.8,4.2
+combined v2,USGS+ISC,mwr,1,0,0,1,1,4.5,4.5
