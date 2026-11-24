@@ -61,7 +61,7 @@ def _logged_calc_bvalues(mag, Mc, M_max, mag_steps, cdf):
     """Original calc_bvalues, also recording N, Mc and b for baseline_bvalues.csv."""
     fit_fn, fit = _orig_calc_bvalues(mag, Mc, M_max, mag_steps, cdf)
     used = [m for m in mag if m >= Mc + 0.4]
-    fits.append(dict(N=len(mag), Mc_maxcurv=Mc, Mc_label=min(used), b=abs(fit[0])))
+    fits.append(dict(N=len(mag), Mc_maxcurv=Mc, min_mag_in_fit=min(used), b=abs(fit[0]), mags=list(mag)))
     return fit_fn, fit
 
 
@@ -100,9 +100,13 @@ if os.path.exists(os.path.join(OUT, "Fig_7.png")):
 
 names = ["Full catalog", "Cluster 1", "Cluster 2"]
 paper = {"Full catalog": "Mc 2.4, b 0.91", "Cluster 1": "Mc 2.85, b 0.96", "Cluster 2": "not reported (61 events)"}
-lines = ["group,N,Mc_maxcurv_raw,Mc_plus0.4_label,b_lsq,paper"]
+lines = ["group,N,Mc_maxcurv_raw,Mc_released_code,min_mag_in_fit,b_lsq,paper"]
+mag_rows = ["group,mag"]
 for n, f in zip(names, fits):
-    lines.append(f"{n},{f['N']},{f['Mc_maxcurv']},{f['Mc_label']},{f['b']:.3f},{paper[n]}")
+    lines.append(f"{n},{f['N']},{f['Mc_maxcurv']},{f['Mc_maxcurv'] + 0.4:.2f},{f['min_mag_in_fit']},{f['b']:.3f},"
+                 f'"{paper[n]}"')
+    mag_rows += [f"{n},{m}" for m in f["mags"]]
+open(os.path.join(OUT, "baseline_magnitudes.csv"), "w").write("\n".join(mag_rows) + "\n")
 open(os.path.join(OUT, "baseline_bvalues.csv"), "w").write("\n".join(lines) + "\n")
 print("\n".join(lines))
 print("Outputs in", OUT, ":", sorted(os.listdir(OUT)))
