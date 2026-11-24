@@ -338,3 +338,26 @@ def test_migration_fit_recovers_linear_and_diffusive():
     fit = su.migration_fit(t, r, n_perm=10)
     assert fit["D_fit_m2_s"] == pytest.approx(D) and fit["D_envelope_m2_s"] == pytest.approx(D)
     assert su.migration_fit([0, 1], [0, 1]) == {"n_after_first": 1}
+
+
+def test_edge_cases_return_nan_not_crash():
+    assert np.isnan(su.b_mle([], 4.4)[0]) and su.b_mle([], 4.4)[2] == 0
+    assert su.b_mle([4.5] * 10, 4.5)[0] == pytest.approx(np.log10(np.e) / 0.05)
+    assert np.isnan(su.b_lsq([4.5] * 10, 4.4)[0])
+    assert np.isnan(su.b_bootstrap([4.5, 4.6], 4.4)[0])
+    assert np.isnan(su.cv([])) and np.isnan(su.cv([0.0, 0.0]))
+    t, g = su.interevent_days(pd.Series([], dtype="datetime64[ns]"))
+    assert len(g) == 0
+    assert su.depth_class([np.nan], [5.0])[0] == "uncertain"
+    assert np.isnan(su.max_curv([np.nan]))
+    assert np.isnan(su.mc_mbs([4.0] * 10)) and np.isnan(su.mc_gft([]))
+    assert np.isnan(su._eqcorrscan_or_nan([4.0, 4.1]))
+    d, c = su.candidate_sequences(_seq_cat().iloc[:0], 20, 20, 3)
+    assert c == []
+    fit = su.migration_fit([0, 1, 1, 1], [0, 2, 2, 2], n_perm=10)
+    assert "v_origin_km_day" in fit and np.isfinite(fit["v_origin_km_day"])
+
+
+def test_load_catalog_unknown_catalog_raises():
+    with pytest.raises(ValueError):
+        su.load_catalog("isc", verbose=False)
