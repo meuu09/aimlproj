@@ -68,3 +68,20 @@ def test_isc_parser_reproduces_saved_events_for_one_year():
     assert len(saved) == len(rows)
     assert np.allclose(saved.depth.to_numpy(float), rows.depth.to_numpy(float), equal_nan=True)
     assert (saved.depth_type.to_numpy() == rows.depth_type.to_numpy()).all()
+
+
+def test_usgs_depth_metadata_belongs_to_the_csv_origin():
+    us = pd.read_csv(su.USGS_CSV).merge(pd.read_csv(su.DEPTH_TYPES), on="id")
+    assert len(us) == len(pd.read_csv(su.USGS_CSV))
+    assert (us.depth - pd.to_numeric(us.depth_km)).abs().max() <= 0.5
+    assert (us.origin_source.str.lower() == us.locationSource.str.lower()).all()
+    assert (us.depth_type != "fetch_failed").all()
+
+
+def test_combined_rows_use_one_whole_origin():
+    co = pd.read_csv(su.COMBINED_CSV)
+    from_isc = co.location_source.str.startswith("ISC")
+    assert (co.loc[from_isc, "depth_source"] == co.loc[from_isc, "location_source"]).all()
+    swapped = co.usgs_depth_type.notna()
+    assert (co.loc[swapped, "source"] == "USGS+ISC").all() and from_isc[swapped].all()
+    assert not (co.depthError >= 999).any() and not (co.horizontalError >= 999).any()
