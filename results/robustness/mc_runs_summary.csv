@@ -1,0 +1,3 @@
+catalog,runs,n_intermediate,n_in_outline,clusters_median,clusters_p5,clusters_p95,band_recovered_share,band_share_median
+combined,500,59,19,2.0,2.0,3.0,1.0,1.0
+usgs,500,28,11,1.0,1.0,2.0,0.99,0.7272727272727273
