@@ -4,6 +4,8 @@ N_cluster_intermediate_M3,16.0
 N_cluster_uncertain_M3,52.0
 N_cluster_intermediate_M>=Mc,6.0
 N_cluster_shallow_M3,35.0
+N_cluster_deeper_than_150km,0.0
+lowest_magnitude_used,3.1
 N_intermediate_outside,25.0
 share_of_region_intermediate_in_cluster,0.3902439024390244
 depth_mean_km,56.53062500000001
