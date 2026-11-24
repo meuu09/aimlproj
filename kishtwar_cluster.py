@@ -24,9 +24,10 @@ Chamba (J&K / Himachal Pradesh). Depth rules (same as him_ides_himachal.py):
 Run:  .venv/bin/python kishtwar_cluster.py                   (results/excluding_fixed/kishtwar/)
       .venv/bin/python kishtwar_cluster.py --include-fixed   (results/including_fixed/kishtwar/)
       add --catalog combined for USGS + ISC   (results/combined_usgs_isc/<case>/kishtwar/)
+      add --drop-duplicates (combined only)   (results/combined_usgs_isc_nodup/<case>/kishtwar/)
+Windows (PowerShell): .venv\\Scripts\\python kishtwar_cluster.py [same options]
 """
 import os
-import sys
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -35,34 +36,21 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.path import Path
 
+from seis_utils import (CLUSTER_POLY, DEEP_MAX, DEEP_MIN, b_lsq, b_mle, case_label, case_name, cv, interevent_days,
+                        load_catalog, max_curv_eqcorrscan, parse_args, results_base, xy_km)
+
 # ----------------------------- PARAMETERS ---------------------------------- #
-HERE = os.path.dirname(os.path.abspath(__file__))
-CSV = os.path.join(HERE, "data", "usgs_himachal_kashmir_M3plus_1970-2026.csv")
-DEPTH_TYPES = os.path.join(HERE, "data", "usgs_depth_type.csv")
-# Two cases, chosen on the command line:
-#   (default)          excluding_fixed: only USGS-solved depths; fixed/unflagged events dropped
-#   --include-fixed    including_fixed: every event, depths as USGS reports them
-# Both use the same intermediate rule (depth - depthError >= 40 km).
-# Catalog, chosen on the command line: "--catalog usgs" (default) or "--catalog combined"
-# (USGS + ISC Bulletin, data/combined_usgs_isc_catalog.csv from build_combined_catalog.py).
-CATALOG = sys.argv[sys.argv.index("--catalog") + 1] if "--catalog" in sys.argv else "usgs"
-COMBINED = os.path.join(HERE, "data", "combined_usgs_isc_catalog.csv")
-INCLUDE_FIXED = "--include-fixed" in sys.argv
-CASE = "including_fixed" if INCLUDE_FIXED else "excluding_fixed"
+# Options: --include-fixed, --catalog {usgs,combined}, --drop-duplicates (seis_utils.parse_args)
+ARGS = parse_args("Kishtwar-Chamba intermediate-depth cluster analysis")
+CATALOG, INCLUDE_FIXED = ARGS.catalog, ARGS.include_fixed
+CASE = case_name(ARGS)
 USED = "all depths" if INCLUDE_FIXED else "solved depths"   # wording for labels
-CASE_LABEL = (("USGS + ISC | " if CATALOG == "combined" else "USGS | ")
-              + ("Case: including fixed/unflagged depths" if INCLUDE_FIXED
-                 else "Case: excluding fixed depths (solved only)"))
-OUT = (os.path.join(HERE, "results", CASE, "kishtwar") if CATALOG == "usgs"
-       else os.path.join(HERE, "results", "combined_usgs_isc", CASE, "kishtwar"))
+CASE_LABEL = case_label(ARGS)
+OUT = os.path.join(results_base(ARGS), CASE, "kishtwar")
 START_YEAR = 1990
 MC_CUT = 4.4                     # regional completeness (authors' method gives 4.0 + 0.4)
-DEEP_MIN, DEEP_MAX = 40, 150     # intermediate depth (km)
-SOLVED_DEPTH = ("from location", "constrained by depth phases")
-# Cluster outline (lon, lat), drawn around the NW-SE Kishtwar-Chamba band of solved
-# intermediate-depth events; a few isolated events outside the band are left out.
-CLUSTER_POLY = [(75.50, 33.60), (76.10, 33.60), (76.50, 32.95),
-                (76.50, 32.75), (75.90, 32.75), (75.50, 33.20)]
+MAG_WORD = "mostly mb" if CATALOG == "usgs" else "mixed types: mb, ML, MD, Mw"
+# CLUSTER_POLY (the cluster outline) is defined in seis_utils.py
 SEQ_DAYS, SEQ_KM, SEQ_MIN_EVENTS = 20, 20, 3     # paper's migration-search window
 os.makedirs(OUT, exist_ok=True)
 
@@ -75,65 +63,17 @@ matplotlib.rc("font", size=12)
 C_DEEP, C_SHAL, C_REST, C_FIX = "#d62728", "#1f77b4", "#7f7f7f", "#bdbdbd"
 
 
-# ----------------------------- HELPERS ------------------------------------- #
-def max_curv_eqcorrscan(mags, bin_size=0.5):
-    """Authors' Mc: eqcorrscan 0.4.2 calc_max_curv (peak |2nd derivative| of 0.5 bins)."""
-    min_bin, max_bin = int(min(mags)), int(max(mags) + 1)
-    bins = np.arange(min_bin, max_bin + bin_size, bin_size)
-    df, bins = np.histogram(mags, bins)
-    curvature = np.diff(np.diff(df) / bin_size) / bin_size
-    return float(bins[np.argmax(np.abs(curvature))] + bin_size)
-
-
-def b_lsq(mags, mc):
-    """Paper's b-value: straight-line fit to log10(cumulative number) for M >= mc."""
-    m = np.sort(np.asarray(mags)[np.asarray(mags) >= mc])
-    steps = np.unique(m)
-    if len(steps) < 3:
-        return np.nan, steps, None
-    cum = np.array([(m >= s).sum() for s in steps])
-    fit = np.polyfit(steps, np.log10(cum), 1)
-    return -fit[0], steps, np.poly1d(fit)
-
-
-def b_mle(mags, mc, dm=0.1):
-    """Aki (1965) / Utsu maximum-likelihood b-value, 1-sigma = b/sqrt(N) (Aki 1965)."""
-    m = np.asarray(mags)[np.asarray(mags) >= mc]
-    if len(m) < 5:
-        return np.nan, np.nan, len(m)
-    b = np.log10(np.e) / (m.mean() - (mc - dm / 2))
-    return b, b / np.sqrt(len(m)), len(m)
-
-
-def interevent_days(times):
-    t = np.sort(times.values)
-    return pd.to_datetime(t[1:]), np.diff(t).astype("timedelta64[s]").astype(float) / 86400.0
-
-
-def xy_km(lon, lat, lon0, lat0):
-    return ((lon - lon0) * 111.32 * np.cos(np.radians(lat0)), (lat - lat0) * 110.57)
+# Helpers (max_curv_eqcorrscan, b_lsq, b_mle, interevent_days, xy_km): seis_utils.py
 
 
 # ----------------------------- LOAD ---------------------------------------- #
-if CATALOG == "combined":
-    raw = pd.read_csv(COMBINED)                                  # depth_type already included
-    raw["time"] = pd.to_datetime(raw.time, utc=True, format="ISO8601").dt.tz_localize(None)
-    raw = raw[raw.time.dt.year >= START_YEAR].copy()
-else:
-    raw = pd.read_csv(CSV, parse_dates=["time"])
-    raw["time"] = raw["time"].dt.tz_localize(None)
-    raw = raw[raw.time.dt.year >= START_YEAR].copy()
-    raw = raw.merge(pd.read_csv(DEPTH_TYPES)[["id", "depth_type"]], on="id", how="left")
-if "horizontalError" not in raw:
-    raw["horizontalError"] = np.nan
-raw["depth_type"] = raw.depth_type.fillna("unknown")
-n_before = len(raw)
-if not INCLUDE_FIXED:
-    raw = raw[raw.depth_type.isin(SOLVED_DEPTH)].copy()   # drop fixed and unflagged depths
+raw, load_info = load_catalog(CATALOG, INCLUDE_FIXED, START_YEAR, ARGS.drop_duplicates)
+n_before = load_info["after_duplicates"]
 raw["in_cluster"] = Path(CLUSTER_POLY).contains_points(raw[["longitude", "latitude"]].values)
-raw["intermediate"] = ((raw.depth - raw.depthError) >= DEEP_MIN) & (raw.depth <= DEEP_MAX)
-raw["shallow"] = (raw.depth + raw.depthError) < DEEP_MIN
-raw["uncertain"] = ~raw.intermediate & ~raw.shallow       # crosses 40 km, or no error
+raw["intermediate"] = raw.depth_class == "intermediate"   # depth - error >= 40 km, depth <= 150 km
+raw["shallow"] = raw.depth_class == "shallow"             # depth + error < 40 km
+raw["deep"] = raw.depth_class == "deep"                   # depth > 150 km
+raw["uncertain"] = raw.depth_class == "uncertain"         # crosses 40 km, or no error
 raw = raw.sort_values("time").reset_index(drop=True)
 
 clu_all = raw[raw.in_cluster]                                  # every event used in this case, inside the outline
@@ -147,7 +87,9 @@ print(f"Cluster outline: used={len(clu_all)}  intermediate={len(clu_deep)}  shal
 summary = {"N_cluster_used_M3": len(clu_all), "N_cluster_intermediate_M3": len(clu_deep),
            "N_cluster_uncertain_M3": len(clu_unc),
            "N_cluster_intermediate_M>=Mc": int((clu_deep.mag >= MC_CUT).sum()),
-           "N_cluster_shallow_M3": len(clu_shal), "N_intermediate_outside": len(rest_deep),
+           "N_cluster_shallow_M3": len(clu_shal),
+           "N_cluster_deeper_than_150km": int(raw[raw.in_cluster & raw.deep].shape[0]),
+           "lowest_magnitude_used": raw.mag.min(), "N_intermediate_outside": len(rest_deep),
            "share_of_region_intermediate_in_cluster": len(clu_deep) / max(1, len(clu_deep) + len(rest_deep)),
            "depth_mean_km": clu_deep.depth.mean(), "depth_median_km": clu_deep.depth.median(),
            "depth_min_km": clu_deep.depth.min(), "depth_max_km": clu_deep.depth.max(),
@@ -185,7 +127,8 @@ for df, col, mk, lab in [(rest_deep, "k", "x", f"Intermediate, outside cluster (
                 marker=mk, lw=1.4, alpha=0.85, zorder=3, label=lab)
 ax1.axhline(MC_CUT, color="k", ls=":", lw=0.8)
 ax1.text(raw.time.min(), MC_CUT + 0.03, f" Mc = {MC_CUT}", fontsize=9)
-ax1.set_ylim(3, 5.8); ax1.set_ylabel("Magnitude (mostly mb)"); ax1.set_xlabel("Time (UTC)")
+ax1.set_ylim(min(3.0, np.floor(raw.mag.min() * 10) / 10 - 0.1), max(5.8, raw.mag.max() + 0.2))
+ax1.set_ylabel(f"Magnitude ({MAG_WORD})"); ax1.set_xlabel("Time (UTC)")
 time_axis(ax1); ax1.legend(loc="upper left", fontsize=9)
 ax2 = ax1.twinx()
 ax2.plot(clu_deep.time, np.arange(1, len(clu_deep) + 1), "k--", lw=2, label="Cluster, intermediate")
@@ -209,7 +152,7 @@ for lab, df, col, mk in [("cluster_intermediate_M3", clu_deep, C_DEEP, "X"),
     ax.scatter(t, d, s=55, marker=mk, c=face, edgecolors=col, lw=1.4, alpha=0.85,
                label=f"{lab.replace('_', ' ')} (N={len(df)})")
     summary[f"interevent_median_days_{lab}"] = np.median(d) if len(d) else np.nan
-    summary[f"interevent_CV_{lab}"] = d.std() / d.mean() if len(d) > 1 else np.nan
+    summary[f"interevent_CV_{lab}"] = cv(d)
     summary[f"interevent_min_days_{lab}"] = d.min() if len(d) else np.nan
 ax.set_yscale("log"); ax.set_ylabel("Inter-event time (days)"); ax.set_xlabel("Time (UTC)")
 time_axis(ax); ax.legend(loc="lower left", fontsize=9); ax.grid(alpha=0.2, which="both")
@@ -218,21 +161,23 @@ plt.tight_layout(); save(fig, "FigK2_interevent_times.png"); plt.close(fig)
 
 # ------------- FIG K3 (paper Fig 7): magnitude-frequency + b --------------- #
 fig, ax1 = plt.subplots(figsize=(10, 6.5))
-bins = np.arange(3.05, raw.mag.max() + 0.2, 0.2)
+bins = np.arange(np.floor(raw.mag.min() * 10) / 10 - 0.05, raw.mag.max() + 0.2, 0.2)
 ax1.hist(raw.mag, bins, histtype="step", fill=True, color="gray", alpha=0.25, lw=1.5, ec="k",
          label=f"Whole region (N={len(raw)})")
 ax1.hist(clu_all.mag, bins, histtype="step", lw=1.8, ls="--", ec="k", label=f"Cluster outline, all (N={len(clu_all)})")
-ax1.set_xlabel("Magnitude"); ax1.set_ylabel("Frequency (0.2 bins)"); ax1.legend(loc="center left", fontsize=9)
+ax1.set_xlabel(f"Magnitude ({MAG_WORD})"); ax1.set_ylabel("Frequency (0.2 bins)"); ax1.legend(loc="center left", fontsize=9)
 ax2 = ax1.twinx()
 bres = []
 for lab, df, col, ls, mk in [("Whole region", raw, "k", "-", "+"),
                              (f"Cluster outline, all events ({USED})", clu_all, "#555", "--", "o"),
                              ("Cluster, intermediate", clu_deep, C_DEEP, ":", "X")]:
     m = df.mag.values
+    if len(m) == 0:
+        bres.append(dict(group=lab, N_total=0)); continue
     mc_auth = max_curv_eqcorrscan(m) + 0.4
     steps = np.unique(m); cum = np.array([(m >= s).sum() for s in steps])
     ax2.scatter(steps, np.log10(cum), marker=mk, s=30, c="none" if mk == "o" else col, edgecolors=col, lw=1.2)
-    b, st, fn = b_lsq(m, MC_CUT)
+    b, st, _, fn = b_lsq(m, MC_CUT)
     bm, bs, n = b_mle(m, MC_CUT)
     if fn is not None:
         ax2.plot(st, fn(st), ls, c=col, lw=2.2,
@@ -280,15 +225,16 @@ for i, ev in search.iterrows():
         r_m = hypo_km(grp, ev).values * 1000.0
         ok = t_s > 0
         v = np.polyfit(t_s[ok] / 86400, r_m[ok] / 1000, 1)[0] if ok.sum() >= 2 else np.nan
+        # smallest diffusivity whose envelope r = sqrt(4 pi D t) contains every event
         D = np.max(r_m[ok] ** 2 / (4 * np.pi * t_s[ok])) if ok.any() else np.nan
         seqs.append(dict(start=ev.time, n_events=len(grp), duration_days=t_s.max() / 86400,
                          max_dist_km=r_m.max() / 1000, depths_km=", ".join(f"{z:.0f}" for z in grp.depth),
                          mags=", ".join(f"{m:.1f}" for m in grp.mag),
-                         linear_velocity_km_per_day=v, diffusivity_envelope_m2_per_s=D,
+                         linear_velocity_km_per_day=v, diffusivity_min_envelope_m2_per_s=D,
                          median_horizontalError_km=grp.horizontalError.median(),
                          median_depthError_km=grp.depthError.median(), ids=";".join(grp.id)))
 seq_tab = pd.DataFrame(seqs, columns=["start", "n_events", "duration_days", "max_dist_km", "depths_km", "mags",
-                                       "linear_velocity_km_per_day", "diffusivity_envelope_m2_per_s",
+                                       "linear_velocity_km_per_day", "diffusivity_min_envelope_m2_per_s",
                                        "median_horizontalError_km", "median_depthError_km", "ids"])
 seq_tab.to_csv(os.path.join(OUT, "kishtwar_sequences.csv"), index=False)
 summary["n_sequences_20d_20km"] = len(seq_tab)
@@ -349,13 +295,13 @@ for lab, d in [("before2010", clu_deep[clu_deep.time.dt.year < 2010]),
 
 # ------------- Bath's law check (paper Sec 3.2.1) ------------------------- #
 top = np.sort(clu_deep.mag.values)[::-1]
-summary["largest_mag"] = top[0]
+summary["largest_mag"] = top[0] if len(top) else np.nan
 summary["largest_minus_second"] = top[0] - top[1] if len(top) > 1 else np.nan
 for _, s_ in seq_tab.iterrows():
     mm = sorted(map(float, s_.mags.split(", ")), reverse=True)
     print(f"Sequence {s_.start:%Y-%m-%d}: N={s_.n_events}, mags {s_.mags}, depths {s_.depths_km} km, "
           f"dM(1st-2nd)={mm[0] - mm[1]:.1f}, v={s_.linear_velocity_km_per_day:.2f} km/d, "
-          f"D<={s_.diffusivity_envelope_m2_per_s:.1f} m2/s, median errors h/z = "
+          f"D>={s_.diffusivity_min_envelope_m2_per_s:.1f} m2/s, median errors h/z = "
           f"{s_.median_horizontalError_km:.1f}/{s_.median_depthError_km:.1f} km")
 
 # ------------- outputs ------------------------------------------------------ #
