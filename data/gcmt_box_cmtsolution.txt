@@ -1,0 +1,364 @@
+
+
+  
+    Global CMT Search Results
+    
+  
+
+  
+Global CMT Catalog
+
+
+Search criteria:
+
+Start date: 1976/1/1   End date: 2026/11/15
+31 
+Results
+
+Output in CMTSOLUTION format
+
+ PDE 1977  2 19  6 15 25.00  31.7900   78.4200  40.0 5.4 0.0                                         
+event name:     021977B        
+time shift:      2.1000
+half duration:   1.5000
+latitude:       31.2800
+longitude:      78.1300
+depth:          10.0000
+Mrr:      -3.928000e+23
+Mtt:      -6.650000e+22
+Mpp:       4.593000e+23
+Mrt:       1.327000e+23
+Mrp:       1.565000e+23
+Mtp:       2.890000e+22
+
+ MLI 1980  8 23 21 36 53.30  32.8400   75.5600  39.0 5.2 4.9 KASHMIR-INDIA BORD REG                  
+event name:     082380A        
+time shift:      1.9000
+half duration:   2.0000
+latitude:       32.5900
+longitude:      75.3700
+depth:          15.0000
+Mrr:       6.430000e+23
+Mtt:      -4.250000e+23
+Mpp:      -2.180000e+23
+Mrt:       1.388000e+24
+Mrp:      -1.678000e+24
+Mtp:       4.660000e+23
+
+ MLI 1980  8 23 21 50  4.60  32.8200   75.6000  46.0 5.2 4.8 KASHMIR-INDIA BORD REG                  
+event name:     082380B        
+time shift:      1.1000
+half duration:   2.1000
+latitude:       32.4900
+longitude:      75.4000
+depth:          15.0000
+Mrr:       9.350000e+23
+Mtt:      -7.650000e+23
+Mpp:      -1.700000e+23
+Mrt:       1.931000e+24
+Mrp:      -1.389000e+24
+Mtp:       6.610000e+23
+
+ MLI 1983  2 27 20 33  6.50  32.6100   78.5500  33.0 5.3 4.9 KASHMIR/TIBET BORDER REG                
+event name:     022783B        
+time shift:     -0.2000
+half duration:   2.0000
+latitude:       32.2900
+longitude:      78.1500
+depth:          10.0000
+Mrr:      -1.613000e+23
+Mtt:      -2.694000e+23
+Mpp:       4.306000e+23
+Mrt:       2.705000e+23
+Mrp:      -1.930000e+22
+Mtp:      -7.301000e+23
+
+ PDE 1986  4 26  7 35 16.00  32.0900   76.3100  33.0 5.5 5.3 KASHMIR-INDIA BORDER                    
+event name:     042686B        
+time shift:      4.0000
+half duration:   1.9000
+latitude:       31.5900
+longitude:      76.0600
+depth:          15.0000
+Mrr:       1.041000e+24
+Mtt:      -3.880000e+23
+Mpp:      -6.530000e+23
+Mrt:       8.340000e+23
+Mrp:      -1.711000e+24
+Mtp:       8.930000e+23
+
+ PDE 2001  9 28  4 37 56.30  33.2600   75.7400  33.0 5.1 4.7 EASTERN KASHMIR                         
+event name:     092801A        
+time shift:      2.4000
+half duration:   1.0000
+latitude:       33.0000
+longitude:      75.4600
+depth:          40.5000
+Mrr:       2.169000e+23
+Mtt:      -1.238000e+23
+Mpp:      -9.310000e+22
+Mrt:       1.113000e+23
+Mrp:      -5.490000e+22
+Mtp:       1.377000e+23
+
+ PDE 2002  1 27 22 33 43.60  33.1200   75.9100  40.0 4.9 0.0 EASTERN KASHMIR                         
+event name:     012702D        
+time shift:     -0.2000
+half duration:   1.0000
+latitude:       33.3200
+longitude:      75.9100
+depth:          28.8000
+Mrr:      -2.387000e+23
+Mtt:      -7.030000e+22
+Mpp:       3.089000e+23
+Mrt:       6.354000e+23
+Mrp:      -5.317000e+23
+Mtp:       2.955000e+23
+
+ PDE 2004 10 31  0 18 41.10  35.4100   74.5100  10.0 5.0 0.0 NORTHWESTERN KASHMIR                    
+event name:     103104A        
+time shift:     -2.1900
+half duration:   0.5000
+latitude:       34.9100
+longitude:      74.4400
+depth:          20.2800
+Mrr:      -1.070000e+23
+Mtt:       7.850000e+22
+Mpp:       2.880000e+22
+Mrt:      -9.820000e+22
+Mrp:      -3.520000e+22
+Mtp:       2.410000e+22
+
+ PDEW2013  5  1  6 57 13.50  33.0600   75.8600  15.0 5.6 5.7 EASTERN KASHMIR                         
+event name:     201305010657A  
+time shift:      4.4400
+half duration:   1.6000
+latitude:       33.0200
+longitude:      75.6000
+depth:          20.0700
+Mrr:       2.230000e+24
+Mtt:      -1.080000e+24
+Mpp:      -1.140000e+24
+Mrt:       2.170000e+24
+Mrp:      -1.210000e+24
+Mtp:       1.230000e+24
+
+ PDEW2013  7  9 13 49 18.90  32.7600   78.2000  49.9 5.0 0.0 KASHMIR-XIZANG BORDER RE                
+event name:     201307091349A  
+time shift:     -2.9800
+half duration:   0.7000
+latitude:       32.5100
+longitude:      78.1700
+depth:          25.2200
+Mrr:      -2.380000e+23
+Mtt:      -4.830000e+22
+Mpp:       2.860000e+23
+Mrt:       3.920000e+22
+Mrp:      -1.210000e+23
+Mtp:      -6.430000e+22
+
+ PDEW2013  8  2  2 32 47.80  33.2700   75.9400  14.1 5.4 0.0 EASTERN KASHMIR                         
+event name:     201308020232A  
+time shift:      1.8700
+half duration:   0.9000
+latitude:       33.0900
+longitude:      75.9500
+depth:          22.1500
+Mrr:       5.260000e+23
+Mtt:      -3.620000e+23
+Mpp:      -1.640000e+23
+Mrt:       2.320000e+23
+Mrp:       9.430000e+22
+Mtp:       3.250000e+23
+
+ PDEW2013  8  2 21 37 46.10  33.3000   75.9500  42.4 5.2 0.0 EASTERN KASHMIR                         
+event name:     201308022137A  
+time shift:     -1.0000
+half duration:   0.8000
+latitude:       33.1000
+longitude:      75.7100
+depth:          25.9300
+Mrr:       3.580000e+23
+Mtt:      -2.750000e+23
+Mpp:      -8.230000e+22
+Mrt:       3.380000e+23
+Mrp:       3.170000e+20
+Mtp:       1.800000e+23
+
+ PDEW2018 10 29 14 43 35.80  34.2300   78.1200  10.0 0.0 4.9 KASHMIR-XIZANG BORDER RE                
+event name:     201810291443A  
+time shift:      4.1500
+half duration:   0.8000
+latitude:       34.3000
+longitude:      78.0000
+depth:          17.7100
+Mrr:      -4.280000e+23
+Mtt:       1.520000e+23
+Mpp:       2.760000e+23
+Mrt:       1.380000e+23
+Mrp:       1.090000e+22
+Mtp:       2.430000e+23
+
+ PDEW2019  9  9  6 40 33.50  32.9800   76.1800  43.9 0.0 4.9 KASHMIR-INDIA BORDER REG                
+event name:     201909090640A  
+time shift:     -0.1500
+half duration:   0.7000
+latitude:       32.9200
+longitude:      75.8700
+depth:          30.0900
+Mrr:       2.830000e+23
+Mtt:      -2.150000e+23
+Mpp:      -6.800000e+22
+Mrt:       9.370000e+22
+Mrp:      -4.540000e+22
+Mtp:       1.140000e+23
+
+ PDEW2020  9 25 10 57 13.20  34.2500   78.2100  10.0 0.0 5.3 KASHMIR-XIZANG BORDER RE                
+event name:     202009251057A  
+time shift:      4.0300
+half duration:   1.0000
+latitude:       34.2800
+longitude:      78.0400
+depth:          12.0000
+Mrr:      -2.990000e+23
+Mtt:      -2.490000e+22
+Mpp:       3.230000e+23
+Mrt:       5.390000e+23
+Mrp:      -1.390000e+23
+Mtp:       7.110000e+23
+
+ PDEW2020  9 27 17 27 42.20  34.1600   78.1700  10.0 0.0 4.9 KASHMIR-XIZANG BORDER RE                
+event name:     202009271727A  
+time shift:      5.9600
+half duration:   0.9000
+latitude:       34.3500
+longitude:      78.0300
+depth:          18.0700
+Mrr:      -1.740000e+23
+Mtt:       5.780000e+22
+Mpp:       1.160000e+23
+Mrt:       2.990000e+23
+Mrp:       5.270000e+21
+Mtp:       4.270000e+23
+
+ PDEW2020 10  5 23 43 20.90  34.1800   79.2100  10.0 0.0 5.0 KASHMIR-XIZANG BORDER RE                
+event name:     202010052343A  
+time shift:      2.8900
+half duration:   0.8000
+latitude:       34.1400
+longitude:      79.1200
+depth:          21.0700
+Mrr:      -3.450000e+23
+Mtt:      -8.370000e+22
+Mpp:       4.290000e+23
+Mrt:       9.280000e+22
+Mrp:      -1.200000e+23
+Mtp:       2.500000e+23
+
+ PDEW2021  6 28  0 40 35.30  34.2800   78.2200  10.0 0.0 4.8 KASHMIR-XIZANG BORDER RE                
+event name:     202106280040A  
+time shift:      2.6700
+half duration:   0.5000
+latitude:       34.2800
+longitude:      77.9500
+depth:          12.0000
+Mrr:      -9.560000e+22
+Mtt:       1.720000e+22
+Mpp:       7.850000e+22
+Mrt:      -1.820000e+22
+Mrp:       4.430000e+22
+Mtp:       6.320000e+22
+
+ PDEW2023  6 13  8  3 40.30  33.1200   75.9200  10.0 0.0 5.2 EASTERN KASHMIR                         
+event name:     202306130803A  
+time shift:      3.1800
+half duration:   0.9000
+latitude:       33.0500
+longitude:      75.8900
+depth:          19.1900
+Mrr:       5.200000e+23
+Mtt:      -4.830000e+23
+Mpp:      -3.780000e+22
+Mrt:       4.300000e+23
+Mrp:       5.940000e+22
+Mtp:       2.170000e+23
+
+ PDEW2023  8  9 17 44 20.90  32.5400   78.6000  14.3 0.0 4.7 KASHMIR-XIZANG BORDER RE                
+event name:     202308091744A  
+time shift:      1.7400
+half duration:   0.6000
+latitude:       32.6600
+longitude:      78.5200
+depth:          21.2300
+Mrr:      -1.700000e+23
+Mtt:      -6.980000e+21
+Mpp:       1.770000e+23
+Mrt:       5.580000e+22
+Mrp:      -8.830000e+22
+Mtp:      -7.690000e+22
+
+ PDEW2023 12 18 10 18 53.00  33.1800   76.8400  10.0 0.0 5.1 KASHMIR-INDIA BORDER REG                
+event name:     202312181018A  
+time shift:      1.6400
+half duration:   0.9000
+latitude:       33.2200
+longitude:      76.5800
+depth:          12.0000
+Mrr:       4.990000e+23
+Mtt:      -1.470000e+23
+Mpp:      -3.520000e+23
+Mrt:       9.030000e+22
+Mrp:       4.850000e+22
+Mtp:       3.000000e+23
+
+ PDEW2023 12 18 10 31 29.50  33.1600   76.7000  10.0 0.0 4.8 KASHMIR-INDIA BORDER REG                
+event name:     202312181031A  
+time shift:      2.7100
+half duration:   0.6000
+latitude:       33.2100
+longitude:      76.5900
+depth:          20.6800
+Mrr:       2.240000e+23
+Mtt:      -1.040000e+23
+Mpp:      -1.200000e+23
+Mrt:       2.520000e+22
+Mrp:       1.700000e+22
+Mtp:       9.370000e+22
+
+ PDEW2024  4  4 16  4 29.30  33.1400   76.8000   9.6 0.0 5.0 KASHMIR-INDIA BORDER REG                
+event name:     202404041604A  
+time shift:      1.9300
+half duration:   0.8000
+latitude:       33.1400
+longitude:      76.7300
+depth:          12.0000
+Mrr:       4.470000e+23
+Mtt:      -2.960000e+23
+Mpp:      -1.510000e+23
+Mrt:      -6.090000e+22
+Mrp:       9.090000e+22
+Mtp:       2.390000e+23
+
+ PDEW2025  3 13 21 20  5.30  33.0500   76.6600  10.0 0.0 5.1 KASHMIR-INDIA BORDER REG                
+event name:     202503132120A  
+time shift:      1.1700
+half duration:   0.8000
+latitude:       33.1200
+longitude:      76.7600
+depth:          12.3000
+Mrr:       3.360000e+23
+Mtt:      -2.870000e+23
+Mpp:      -4.870000e+22
+Mrt:       4.510000e+22
+Mrp:       1.520000e+23
+Mtp:       1.570000e+23
+
+End of events found with given criteria.
+See the CMT project web page for more information on CMTs.
+
+ Please ">email comments.
+Last modified: 2011-06-29
+	  
+      
+  
+
