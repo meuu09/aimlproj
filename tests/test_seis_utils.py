@@ -245,3 +245,96 @@ def test_load_catalog_respects_dates_and_box():
     df, _ = su.load_catalog("combined", include_fixed=True, verbose=False)
     assert df.time.min() >= su.CATALOG_START and df.time.max() < su.CATALOG_END
     assert df.latitude.between(*su.BOX["lat"]).all() and df.longitude.between(*su.BOX["lon"]).all()
+
+
+def _synthetic_gr(n=4000, b=1.0, mc=3.0, seed=1):
+    """Synthetic (clearly labelled) Gutenberg-Richter magnitudes, complete above mc, 0.1 binned,
+    with a fading tail below mc."""
+    rng = np.random.default_rng(seed)
+    m = mc - 0.05 + rng.exponential(np.log10(np.e) / b, n)
+    tail = mc - 0.05 - rng.exponential(0.3, n // 3)
+    keep = rng.random(tail.size) < np.exp(-(mc - tail) * 2)
+    return np.round(np.r_[m, tail[keep]], 1)
+
+
+def test_gft_and_mbs_find_synthetic_completeness():
+    m = _synthetic_gr()
+    assert su.mc_gft(m, level=90) == pytest.approx(3.0, abs=0.2)
+    assert su.mc_mbs(m) == pytest.approx(3.0, abs=0.3)
+    assert np.isnan(su.mc_gft([3.0] * 5))
+
+
+def test_b_mle_recovers_synthetic_b():
+    m = _synthetic_gr(n=20000, b=1.0)
+    b, s, n = su.b_mle(m, 3.0)
+    assert b == pytest.approx(1.0, abs=3 * s)
+
+
+def test_poisson_ci_known_values():
+    lo, hi = su.poisson_ci(0, 1.0)
+    assert lo == 0 and hi == pytest.approx(3.689, abs=1e-3)
+    lo, hi = su.poisson_ci(10, 2.0)
+    assert lo == pytest.approx(4.795 / 2, abs=1e-3) and hi == pytest.approx(18.390 / 2, abs=1e-3)
+
+
+def test_cv_poisson_test_regular_series_is_low_and_clustered_is_high():
+    t = pd.date_range("2000-01-01", periods=30, freq="30D")
+    cv, lo, hi, p = su.cv_poisson_test(t, "2000-01-01", t[-1] + pd.Timedelta(days=30), n_sim=500)
+    assert cv < lo and p < 0.05
+    burst = list(pd.date_range("2000-01-01", periods=20, freq="h")) + list(pd.date_range("2005-01-01", periods=5, freq="365D"))
+    cv, lo, hi, p = su.cv_poisson_test(burst, "2000-01-01", "2010-01-01", n_sim=500)
+    assert cv > hi and p < 0.05
+    assert np.isnan(su.cv_poisson_test(t[:3], "2000", "2001")[0])
+
+
+def test_b_reliability_labels():
+    assert su.b_reliability(50).startswith("reliable")
+    assert su.b_reliability(20).startswith("rough")
+    assert su.b_reliability(19).startswith("not reported")
+
+
+def test_dispersion_index_constant_counts_is_zero():
+    t = pd.to_datetime([f"{y}-06-01" for y in range(2000, 2010)])
+    d, p = su.dispersion_index(t, "2000-01-01", "2009-12-31")
+    assert d == 0 and p > 0.99
+
+
+def test_hypo_dist_pythagoras():
+    assert su.hypo_dist_km(33.0, 76.0, 50.0, 33.0, 76.0, 80.0) == pytest.approx(30.0)
+    h = su.haversine_km(33.0, 76.0, 33.1, 76.0)
+    assert su.hypo_dist_km(33.0, 76.0, 50.0, 33.1, 76.0, 60.0) == pytest.approx(np.hypot(h, 10.0))
+
+
+def _seq_cat():
+    return pd.DataFrame({"id": list("abcde"),
+                         "time": pd.to_datetime(["2000-01-01", "2000-01-05", "2000-01-10", "2000-01-25", "2001-01-01"]),
+                         "latitude": [33.0, 33.05, 33.1, 33.1, 33.0], "longitude": [76.0] * 5,
+                         "depth": [60.0, 60.0, 60.0, 60.0, 60.0]})
+
+
+def test_candidate_sequences_keeps_all_and_subset_rule():
+    _, c = su.candidate_sequences(_seq_cat(), 20, 20, 3)
+    assert [x["ids"] for x in c] == [("a", "b", "c"), ("b", "c", "d")]
+    _, c2 = su.candidate_sequences(_seq_cat(), 30, 20, 2)
+    kept = su.resolve_overlaps(c2)
+    assert ("b", "c", "d") not in [x["ids"] for x in kept] and ("a", "b", "c", "d") in [x["ids"] for x in kept]
+
+
+def test_candidate_sequences_window_boundaries_inclusive():
+    c = _seq_cat()
+    _, s = su.candidate_sequences(c.iloc[[0, 1]].reset_index(drop=True), 4, 20, 2)
+    assert s and s[0]["ids"] == ("a", "b")
+    _, s = su.candidate_sequences(c.iloc[[0, 1]].reset_index(drop=True), 3.99, 20, 2)
+    assert not s
+
+
+def test_migration_fit_recovers_linear_and_diffusive():
+    t = np.array([0, 1, 2, 3, 4, 5.0])
+    fit = su.migration_fit(t, 0.5 * t, n_perm=200)
+    assert fit["v_origin_km_day"] == pytest.approx(0.5) and fit["v_free_km_day"] == pytest.approx(0.5)
+    assert fit["trend_perm_p"] < 0.05
+    D = 0.5
+    r = np.sqrt(4 * np.pi * D * t * 86400) / 1000
+    fit = su.migration_fit(t, r, n_perm=10)
+    assert fit["D_fit_m2_s"] == pytest.approx(D) and fit["D_envelope_m2_s"] == pytest.approx(D)
+    assert su.migration_fit([0, 1], [0, 1]) == {"n_after_first": 1}
