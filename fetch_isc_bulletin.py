@@ -53,8 +53,9 @@ def download(year):
 def parse(path):
     """Yield one dict per event: {'id','region','origins':[...],'mags':[...]}."""
     ev, last_origin, mode = None, None, None
-    for line in open(path, encoding="utf-8", errors="replace"):
-        line = line.rstrip("\n")
+    with open(path, encoding="utf-8", errors="replace") as f:
+        lines = f.read().splitlines()
+    for line in lines:
         if line.startswith("Event "):
             if ev:
                 yield ev
