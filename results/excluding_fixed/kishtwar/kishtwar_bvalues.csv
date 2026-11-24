@@ -1,4 +1,4 @@
-group,N_total,Mc_authors_method,Mc_used,N_above_Mc,b_lsq,b_mle,b_mle_err
-Whole region,124,4.4,4.4,55,1.6301494154261178,1.3381622691696846,0.18043776356554025
-"Cluster outline, all events (solved depths)",42,4.4,4.4,20,1.1071554604813096,1.0099871672168654,0.2258399962299358
-"Cluster, intermediate",11,4.4,4.4,3,0.618851164660141,,
+group,N_total,Mc_authors_method,Mc_used,N_above_Mc,b_lsq,b_mle,b_mle_err,b_reliability
+Whole region,124,4.4,4.4,55,1.6301494154261178,1.3381622691696846,0.18043776356554025,reliable (N>=50)
+"Cluster outline, all events (solved depths)",42,4.4,4.4,20,1.1071554604813096,1.0099871672168654,0.2258399962299358,rough (20<=N<50)
+"Cluster, intermediate",11,4.4,4.4,3,,,,not reported (N<20)

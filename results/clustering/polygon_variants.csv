@@ -1,0 +1,16 @@
+catalog,buffer_deg,n_inside,n_in_largest_cluster,depth_median
+usgs,-0.2,5,5,51.1
+usgs,-0.1,7,6,57.4
+usgs,0.0,11,7,58.67
+usgs,0.1,12,7,59.085
+usgs,0.2,13,7,59.5
+combined,-0.2,8,8,54.25
+combined,-0.1,11,11,60.82
+combined,0.0,17,17,59.5
+combined,0.1,19,19,60.82
+combined,0.2,20,20,62.06
+combined_nodup,-0.2,8,8,54.25
+combined_nodup,-0.1,11,11,60.82
+combined_nodup,0.0,17,17,59.5
+combined_nodup,0.1,19,19,60.82
+combined_nodup,0.2,20,20,62.06

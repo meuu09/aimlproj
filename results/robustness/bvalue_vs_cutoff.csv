@@ -111,3 +111,59 @@ combined,including_fixed,intermediate,mb only,4.5,13,1.5055542039312737,1.035931
 combined,including_fixed,intermediate,mb only,4.6,12,2.084613513135603,1.2711058006924438,4.008872140645367
 combined,including_fixed,intermediate,mb only,4.7,7,1.9613299182727493,1.1054768630264606,4.677017497419696
 combined,including_fixed,intermediate,mb only,4.8,3,,,
+combined_nodup,excluding_fixed,whole region,all types,4.2,196,1.1170829193311966,1.0061075589100354,1.2481190389008399
+combined_nodup,excluding_fixed,whole region,all types,4.3,155,1.1477518277068022,1.0332409009210166,1.2834250656816768
+combined_nodup,excluding_fixed,whole region,all types,4.4,128,1.2492065996318287,1.1029701127701639,1.4290409687304952
+combined_nodup,excluding_fixed,whole region,all types,4.5,110,1.4654108285079026,1.277336711480153,1.70023695379326
+combined_nodup,excluding_fixed,whole region,all types,4.6,87,1.6608184582673715,1.4177718546184952,1.9833921220778425
+combined_nodup,excluding_fixed,whole region,all types,4.7,59,1.658470837041546,1.388800782238043,2.042113122565902
+combined_nodup,excluding_fixed,whole region,all types,4.8,44,1.8552385634702,1.5165839050589711,2.3591305189806215
+combined_nodup,excluding_fixed,whole region,mb only,4.2,180,1.2330127246464564,1.1151244337175275,1.3715769854251798
+combined_nodup,excluding_fixed,whole region,mb only,4.3,141,1.2932528394584695,1.1719717119303061,1.4598135872304425
+combined_nodup,excluding_fixed,whole region,mb only,4.4,114,1.430912454825746,1.2694761778710473,1.6233981130406103
+combined_nodup,excluding_fixed,whole region,mb only,4.5,96,1.7299697204444828,1.5050007566004466,2.0044360703226998
+combined_nodup,excluding_fixed,whole region,mb only,4.6,74,2.0601148500538775,1.7276072669155482,2.4917882614941274
+combined_nodup,excluding_fixed,whole region,mb only,4.7,46,2.0809943924530936,1.7222022558232408,2.59448651526619
+combined_nodup,excluding_fixed,whole region,mb only,4.8,31,2.3414137285218786,1.9089959647177077,2.958929437143004
+combined_nodup,excluding_fixed,intermediate,all types,4.2,25,1.199708513544897,0.9085658617222863,1.6582550118236203
+combined_nodup,excluding_fixed,intermediate,all types,4.3,19,1.2046124315564646,0.9018136782690495,1.7371779276130073
+combined_nodup,excluding_fixed,intermediate,all types,4.4,15,1.2649353841842337,0.9369938347507026,1.8882368778402292
+combined_nodup,excluding_fixed,intermediate,all types,4.5,13,1.5055542039312737,1.0359317916958293,2.4024801126562836
+combined_nodup,excluding_fixed,intermediate,all types,4.6,12,2.084613513135603,1.2711058006924438,4.008872140645367
+combined_nodup,excluding_fixed,intermediate,all types,4.7,7,1.9613299182727493,1.1054768630264606,4.677017497419696
+combined_nodup,excluding_fixed,intermediate,all types,4.8,3,,,
+combined_nodup,excluding_fixed,intermediate,mb only,4.2,25,1.199708513544897,0.9085658617222863,1.6582550118236203
+combined_nodup,excluding_fixed,intermediate,mb only,4.3,19,1.2046124315564646,0.9018136782690495,1.7371779276130073
+combined_nodup,excluding_fixed,intermediate,mb only,4.4,15,1.2649353841842337,0.9369938347507026,1.8882368778402292
+combined_nodup,excluding_fixed,intermediate,mb only,4.5,13,1.5055542039312737,1.0359317916958293,2.4024801126562836
+combined_nodup,excluding_fixed,intermediate,mb only,4.6,12,2.084613513135603,1.2711058006924438,4.008872140645367
+combined_nodup,excluding_fixed,intermediate,mb only,4.7,7,1.9613299182727493,1.1054768630264606,4.677017497419696
+combined_nodup,excluding_fixed,intermediate,mb only,4.8,3,,,
+combined_nodup,including_fixed,whole region,all types,4.2,282,1.1878859737799912,1.0876646882479304,1.2973971477018615
+combined_nodup,including_fixed,whole region,all types,4.3,227,1.2696052465169134,1.1591398870316105,1.395397698401111
+combined_nodup,including_fixed,whole region,all types,4.4,185,1.4083169001244829,1.2563640211431064,1.5676971541873521
+combined_nodup,including_fixed,whole region,all types,4.5,150,1.616480701873142,1.4412427496789304,1.8559593243728714
+combined_nodup,including_fixed,whole region,all types,4.6,112,1.7882713960722065,1.5344158351155912,2.1056702152884865
+combined_nodup,including_fixed,whole region,all types,4.7,74,1.7954073553542265,1.5088165098986255,2.1568987691839347
+combined_nodup,including_fixed,whole region,all types,4.8,51,1.9012033113361233,1.5543170931274282,2.3688789921995523
+combined_nodup,including_fixed,whole region,mb only,4.2,262,1.2900811140436743,1.188946550861712,1.4117703220731355
+combined_nodup,including_fixed,whole region,mb only,4.3,210,1.4117932074254333,1.2881161770884664,1.5484841906449165
+combined_nodup,including_fixed,whole region,mb only,4.4,168,1.5965311369747595,1.4390114859186809,1.7883812407525679
+combined_nodup,including_fixed,whole region,mb only,4.5,133,1.8845404924349896,1.6765453282636482,2.175561811417416
+combined_nodup,including_fixed,whole region,mb only,4.6,97,2.1998206132958424,1.8764616812746284,2.641163933831669
+combined_nodup,including_fixed,whole region,mb only,4.7,59,2.2575660292768074,1.8771702880799899,2.801142372953219
+combined_nodup,including_fixed,whole region,mb only,4.8,36,2.3688789921995523,1.9066587010386657,3.0066541054840252
+combined_nodup,including_fixed,intermediate,all types,4.2,25,1.199708513544897,0.9085658617222863,1.6582550118236203
+combined_nodup,including_fixed,intermediate,all types,4.3,19,1.2046124315564646,0.9018136782690495,1.7371779276130073
+combined_nodup,including_fixed,intermediate,all types,4.4,15,1.2649353841842337,0.9369938347507026,1.8882368778402292
+combined_nodup,including_fixed,intermediate,all types,4.5,13,1.5055542039312737,1.0359317916958293,2.4024801126562836
+combined_nodup,including_fixed,intermediate,all types,4.6,12,2.084613513135603,1.2711058006924438,4.008872140645367
+combined_nodup,including_fixed,intermediate,all types,4.7,7,1.9613299182727493,1.1054768630264606,4.677017497419696
+combined_nodup,including_fixed,intermediate,all types,4.8,3,,,
+combined_nodup,including_fixed,intermediate,mb only,4.2,25,1.199708513544897,0.9085658617222863,1.6582550118236203
+combined_nodup,including_fixed,intermediate,mb only,4.3,19,1.2046124315564646,0.9018136782690495,1.7371779276130073
+combined_nodup,including_fixed,intermediate,mb only,4.4,15,1.2649353841842337,0.9369938347507026,1.8882368778402292
+combined_nodup,including_fixed,intermediate,mb only,4.5,13,1.5055542039312737,1.0359317916958293,2.4024801126562836
+combined_nodup,including_fixed,intermediate,mb only,4.6,12,2.084613513135603,1.2711058006924438,4.008872140645367
+combined_nodup,including_fixed,intermediate,mb only,4.7,7,1.9613299182727493,1.1054768630264606,4.677017497419696
+combined_nodup,including_fixed,intermediate,mb only,4.8,3,,,

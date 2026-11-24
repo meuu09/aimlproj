@@ -1,0 +1,361 @@
+catalog,case,population,days,km,n_events,n_candidates,n_after_overlap_rule
+usgs,excluding_fixed,"Kishtwar outline, intermediate",5,10,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",5,20,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",5,30,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",5,50,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",10,10,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",10,20,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",10,30,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",10,50,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",20,10,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",20,20,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",20,30,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",20,50,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",30,10,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",30,20,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",30,30,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",30,50,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",60,10,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",60,20,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",60,30,11,0,0
+usgs,excluding_fixed,"Kishtwar outline, intermediate",60,50,11,0,0
+usgs,excluding_fixed,"region, intermediate",5,10,28,0,0
+usgs,excluding_fixed,"region, intermediate",5,20,28,0,0
+usgs,excluding_fixed,"region, intermediate",5,30,28,0,0
+usgs,excluding_fixed,"region, intermediate",5,50,28,0,0
+usgs,excluding_fixed,"region, intermediate",10,10,28,0,0
+usgs,excluding_fixed,"region, intermediate",10,20,28,0,0
+usgs,excluding_fixed,"region, intermediate",10,30,28,0,0
+usgs,excluding_fixed,"region, intermediate",10,50,28,0,0
+usgs,excluding_fixed,"region, intermediate",20,10,28,0,0
+usgs,excluding_fixed,"region, intermediate",20,20,28,0,0
+usgs,excluding_fixed,"region, intermediate",20,30,28,0,0
+usgs,excluding_fixed,"region, intermediate",20,50,28,0,0
+usgs,excluding_fixed,"region, intermediate",30,10,28,0,0
+usgs,excluding_fixed,"region, intermediate",30,20,28,0,0
+usgs,excluding_fixed,"region, intermediate",30,30,28,0,0
+usgs,excluding_fixed,"region, intermediate",30,50,28,0,0
+usgs,excluding_fixed,"region, intermediate",60,10,28,0,0
+usgs,excluding_fixed,"region, intermediate",60,20,28,0,0
+usgs,excluding_fixed,"region, intermediate",60,30,28,0,0
+usgs,excluding_fixed,"region, intermediate",60,50,28,0,0
+usgs,excluding_fixed,"region, all depth classes",5,10,133,0,0
+usgs,excluding_fixed,"region, all depth classes",5,20,133,1,1
+usgs,excluding_fixed,"region, all depth classes",5,30,133,2,2
+usgs,excluding_fixed,"region, all depth classes",5,50,133,3,2
+usgs,excluding_fixed,"region, all depth classes",10,10,133,0,0
+usgs,excluding_fixed,"region, all depth classes",10,20,133,1,1
+usgs,excluding_fixed,"region, all depth classes",10,30,133,2,2
+usgs,excluding_fixed,"region, all depth classes",10,50,133,3,2
+usgs,excluding_fixed,"region, all depth classes",20,10,133,0,0
+usgs,excluding_fixed,"region, all depth classes",20,20,133,2,2
+usgs,excluding_fixed,"region, all depth classes",20,30,133,4,3
+usgs,excluding_fixed,"region, all depth classes",20,50,133,7,5
+usgs,excluding_fixed,"region, all depth classes",30,10,133,0,0
+usgs,excluding_fixed,"region, all depth classes",30,20,133,3,3
+usgs,excluding_fixed,"region, all depth classes",30,30,133,6,4
+usgs,excluding_fixed,"region, all depth classes",30,50,133,9,6
+usgs,excluding_fixed,"region, all depth classes",60,10,133,1,1
+usgs,excluding_fixed,"region, all depth classes",60,20,133,4,4
+usgs,excluding_fixed,"region, all depth classes",60,30,133,7,5
+usgs,excluding_fixed,"region, all depth classes",60,50,133,10,7
+usgs,including_fixed,"Kishtwar outline, intermediate",5,10,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",5,20,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",5,30,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",5,50,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",10,10,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",10,20,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",10,30,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",10,50,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",20,10,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",20,20,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",20,30,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",20,50,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",30,10,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",30,20,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",30,30,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",30,50,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",60,10,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",60,20,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",60,30,16,0,0
+usgs,including_fixed,"Kishtwar outline, intermediate",60,50,16,0,0
+usgs,including_fixed,"region, intermediate",5,10,47,0,0
+usgs,including_fixed,"region, intermediate",5,20,47,0,0
+usgs,including_fixed,"region, intermediate",5,30,47,0,0
+usgs,including_fixed,"region, intermediate",5,50,47,0,0
+usgs,including_fixed,"region, intermediate",10,10,47,0,0
+usgs,including_fixed,"region, intermediate",10,20,47,0,0
+usgs,including_fixed,"region, intermediate",10,30,47,0,0
+usgs,including_fixed,"region, intermediate",10,50,47,0,0
+usgs,including_fixed,"region, intermediate",20,10,47,0,0
+usgs,including_fixed,"region, intermediate",20,20,47,0,0
+usgs,including_fixed,"region, intermediate",20,30,47,0,0
+usgs,including_fixed,"region, intermediate",20,50,47,0,0
+usgs,including_fixed,"region, intermediate",30,10,47,0,0
+usgs,including_fixed,"region, intermediate",30,20,47,0,0
+usgs,including_fixed,"region, intermediate",30,30,47,0,0
+usgs,including_fixed,"region, intermediate",30,50,47,0,0
+usgs,including_fixed,"region, intermediate",60,10,47,0,0
+usgs,including_fixed,"region, intermediate",60,20,47,0,0
+usgs,including_fixed,"region, intermediate",60,30,47,0,0
+usgs,including_fixed,"region, intermediate",60,50,47,0,0
+usgs,including_fixed,"region, all depth classes",5,10,566,0,0
+usgs,including_fixed,"region, all depth classes",5,20,566,12,9
+usgs,including_fixed,"region, all depth classes",5,30,566,27,21
+usgs,including_fixed,"region, all depth classes",5,50,566,37,27
+usgs,including_fixed,"region, all depth classes",10,10,566,0,0
+usgs,including_fixed,"region, all depth classes",10,20,566,15,12
+usgs,including_fixed,"region, all depth classes",10,30,566,35,28
+usgs,including_fixed,"region, all depth classes",10,50,566,47,33
+usgs,including_fixed,"region, all depth classes",20,10,566,0,0
+usgs,including_fixed,"region, all depth classes",20,20,566,20,16
+usgs,including_fixed,"region, all depth classes",20,30,566,42,29
+usgs,including_fixed,"region, all depth classes",20,50,566,59,38
+usgs,including_fixed,"region, all depth classes",30,10,566,2,2
+usgs,including_fixed,"region, all depth classes",30,20,566,24,18
+usgs,including_fixed,"region, all depth classes",30,30,566,49,31
+usgs,including_fixed,"region, all depth classes",30,50,566,70,39
+usgs,including_fixed,"region, all depth classes",60,10,566,4,4
+usgs,including_fixed,"region, all depth classes",60,20,566,35,25
+usgs,including_fixed,"region, all depth classes",60,30,566,65,38
+usgs,including_fixed,"region, all depth classes",60,50,566,99,52
+combined,excluding_fixed,"Kishtwar outline, intermediate",5,10,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",5,20,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",5,30,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",5,50,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",10,10,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",10,20,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",10,30,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",10,50,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",20,10,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",20,20,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",20,30,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",20,50,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",30,10,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",30,20,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",30,30,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",30,50,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",60,10,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",60,20,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",60,30,17,0,0
+combined,excluding_fixed,"Kishtwar outline, intermediate",60,50,17,0,0
+combined,excluding_fixed,"region, intermediate",5,10,54,0,0
+combined,excluding_fixed,"region, intermediate",5,20,54,0,0
+combined,excluding_fixed,"region, intermediate",5,30,54,0,0
+combined,excluding_fixed,"region, intermediate",5,50,54,0,0
+combined,excluding_fixed,"region, intermediate",10,10,54,0,0
+combined,excluding_fixed,"region, intermediate",10,20,54,0,0
+combined,excluding_fixed,"region, intermediate",10,30,54,0,0
+combined,excluding_fixed,"region, intermediate",10,50,54,0,0
+combined,excluding_fixed,"region, intermediate",20,10,54,0,0
+combined,excluding_fixed,"region, intermediate",20,20,54,0,0
+combined,excluding_fixed,"region, intermediate",20,30,54,0,0
+combined,excluding_fixed,"region, intermediate",20,50,54,0,0
+combined,excluding_fixed,"region, intermediate",30,10,54,0,0
+combined,excluding_fixed,"region, intermediate",30,20,54,0,0
+combined,excluding_fixed,"region, intermediate",30,30,54,0,0
+combined,excluding_fixed,"region, intermediate",30,50,54,0,0
+combined,excluding_fixed,"region, intermediate",60,10,54,0,0
+combined,excluding_fixed,"region, intermediate",60,20,54,0,0
+combined,excluding_fixed,"region, intermediate",60,30,54,0,0
+combined,excluding_fixed,"region, intermediate",60,50,54,0,0
+combined,excluding_fixed,"region, all depth classes",5,10,1123,23,19
+combined,excluding_fixed,"region, all depth classes",5,20,1123,62,38
+combined,excluding_fixed,"region, all depth classes",5,30,1123,93,51
+combined,excluding_fixed,"region, all depth classes",5,50,1123,119,55
+combined,excluding_fixed,"region, all depth classes",10,10,1123,26,22
+combined,excluding_fixed,"region, all depth classes",10,20,1123,80,54
+combined,excluding_fixed,"region, all depth classes",10,30,1123,114,64
+combined,excluding_fixed,"region, all depth classes",10,50,1123,152,79
+combined,excluding_fixed,"region, all depth classes",20,10,1123,39,31
+combined,excluding_fixed,"region, all depth classes",20,20,1123,105,65
+combined,excluding_fixed,"region, all depth classes",20,30,1123,148,73
+combined,excluding_fixed,"region, all depth classes",20,50,1123,212,101
+combined,excluding_fixed,"region, all depth classes",30,10,1123,46,35
+combined,excluding_fixed,"region, all depth classes",30,20,1123,118,70
+combined,excluding_fixed,"region, all depth classes",30,30,1123,173,82
+combined,excluding_fixed,"region, all depth classes",30,50,1123,251,123
+combined,excluding_fixed,"region, all depth classes",60,10,1123,56,42
+combined,excluding_fixed,"region, all depth classes",60,20,1123,149,87
+combined,excluding_fixed,"region, all depth classes",60,30,1123,219,115
+combined,excluding_fixed,"region, all depth classes",60,50,1123,353,191
+combined,including_fixed,"Kishtwar outline, intermediate",5,10,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",5,20,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",5,30,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",5,50,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",10,10,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",10,20,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",10,30,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",10,50,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",20,10,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",20,20,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",20,30,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",20,50,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",30,10,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",30,20,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",30,30,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",30,50,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",60,10,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",60,20,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",60,30,19,0,0
+combined,including_fixed,"Kishtwar outline, intermediate",60,50,19,1,1
+combined,including_fixed,"region, intermediate",5,10,60,0,0
+combined,including_fixed,"region, intermediate",5,20,60,0,0
+combined,including_fixed,"region, intermediate",5,30,60,0,0
+combined,including_fixed,"region, intermediate",5,50,60,0,0
+combined,including_fixed,"region, intermediate",10,10,60,0,0
+combined,including_fixed,"region, intermediate",10,20,60,0,0
+combined,including_fixed,"region, intermediate",10,30,60,0,0
+combined,including_fixed,"region, intermediate",10,50,60,0,0
+combined,including_fixed,"region, intermediate",20,10,60,0,0
+combined,including_fixed,"region, intermediate",20,20,60,0,0
+combined,including_fixed,"region, intermediate",20,30,60,0,0
+combined,including_fixed,"region, intermediate",20,50,60,0,0
+combined,including_fixed,"region, intermediate",30,10,60,0,0
+combined,including_fixed,"region, intermediate",30,20,60,0,0
+combined,including_fixed,"region, intermediate",30,30,60,0,0
+combined,including_fixed,"region, intermediate",30,50,60,0,0
+combined,including_fixed,"region, intermediate",60,10,60,0,0
+combined,including_fixed,"region, intermediate",60,20,60,0,0
+combined,including_fixed,"region, intermediate",60,30,60,0,0
+combined,including_fixed,"region, intermediate",60,50,60,1,1
+combined,including_fixed,"region, all depth classes",5,10,2829,107,68
+combined,including_fixed,"region, all depth classes",5,20,2829,218,117
+combined,including_fixed,"region, all depth classes",5,30,2829,299,160
+combined,including_fixed,"region, all depth classes",5,50,2829,420,196
+combined,including_fixed,"region, all depth classes",10,10,2829,122,76
+combined,including_fixed,"region, all depth classes",10,20,2829,264,146
+combined,including_fixed,"region, all depth classes",10,30,2829,369,192
+combined,including_fixed,"region, all depth classes",10,50,2829,544,271
+combined,including_fixed,"region, all depth classes",20,10,2829,146,93
+combined,including_fixed,"region, all depth classes",20,20,2829,331,187
+combined,including_fixed,"region, all depth classes",20,30,2829,471,250
+combined,including_fixed,"region, all depth classes",20,50,2829,755,403
+combined,including_fixed,"region, all depth classes",30,10,2829,163,104
+combined,including_fixed,"region, all depth classes",30,20,2829,360,196
+combined,including_fixed,"region, all depth classes",30,30,2829,547,284
+combined,including_fixed,"region, all depth classes",30,50,2829,917,493
+combined,including_fixed,"region, all depth classes",60,10,2829,190,120
+combined,including_fixed,"region, all depth classes",60,20,2829,455,268
+combined,including_fixed,"region, all depth classes",60,30,2829,739,433
+combined,including_fixed,"region, all depth classes",60,50,2829,1291,733
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",5,10,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",5,20,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",5,30,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",5,50,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",10,10,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",10,20,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",10,30,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",10,50,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",20,10,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",20,20,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",20,30,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",20,50,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",30,10,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",30,20,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",30,30,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",30,50,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",60,10,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",60,20,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",60,30,17,0,0
+combined_nodup,excluding_fixed,"Kishtwar outline, intermediate",60,50,17,0,0
+combined_nodup,excluding_fixed,"region, intermediate",5,10,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",5,20,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",5,30,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",5,50,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",10,10,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",10,20,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",10,30,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",10,50,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",20,10,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",20,20,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",20,30,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",20,50,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",30,10,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",30,20,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",30,30,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",30,50,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",60,10,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",60,20,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",60,30,54,0,0
+combined_nodup,excluding_fixed,"region, intermediate",60,50,54,0,0
+combined_nodup,excluding_fixed,"region, all depth classes",5,10,1122,23,19
+combined_nodup,excluding_fixed,"region, all depth classes",5,20,1122,62,38
+combined_nodup,excluding_fixed,"region, all depth classes",5,30,1122,93,51
+combined_nodup,excluding_fixed,"region, all depth classes",5,50,1122,119,55
+combined_nodup,excluding_fixed,"region, all depth classes",10,10,1122,26,22
+combined_nodup,excluding_fixed,"region, all depth classes",10,20,1122,80,54
+combined_nodup,excluding_fixed,"region, all depth classes",10,30,1122,114,64
+combined_nodup,excluding_fixed,"region, all depth classes",10,50,1122,152,79
+combined_nodup,excluding_fixed,"region, all depth classes",20,10,1122,39,31
+combined_nodup,excluding_fixed,"region, all depth classes",20,20,1122,105,65
+combined_nodup,excluding_fixed,"region, all depth classes",20,30,1122,148,73
+combined_nodup,excluding_fixed,"region, all depth classes",20,50,1122,212,101
+combined_nodup,excluding_fixed,"region, all depth classes",30,10,1122,46,35
+combined_nodup,excluding_fixed,"region, all depth classes",30,20,1122,118,70
+combined_nodup,excluding_fixed,"region, all depth classes",30,30,1122,173,82
+combined_nodup,excluding_fixed,"region, all depth classes",30,50,1122,251,123
+combined_nodup,excluding_fixed,"region, all depth classes",60,10,1122,56,42
+combined_nodup,excluding_fixed,"region, all depth classes",60,20,1122,149,87
+combined_nodup,excluding_fixed,"region, all depth classes",60,30,1122,219,115
+combined_nodup,excluding_fixed,"region, all depth classes",60,50,1122,353,191
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",5,10,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",5,20,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",5,30,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",5,50,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",10,10,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",10,20,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",10,30,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",10,50,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",20,10,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",20,20,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",20,30,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",20,50,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",30,10,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",30,20,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",30,30,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",30,50,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",60,10,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",60,20,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",60,30,19,0,0
+combined_nodup,including_fixed,"Kishtwar outline, intermediate",60,50,19,1,1
+combined_nodup,including_fixed,"region, intermediate",5,10,60,0,0
+combined_nodup,including_fixed,"region, intermediate",5,20,60,0,0
+combined_nodup,including_fixed,"region, intermediate",5,30,60,0,0
+combined_nodup,including_fixed,"region, intermediate",5,50,60,0,0
+combined_nodup,including_fixed,"region, intermediate",10,10,60,0,0
+combined_nodup,including_fixed,"region, intermediate",10,20,60,0,0
+combined_nodup,including_fixed,"region, intermediate",10,30,60,0,0
+combined_nodup,including_fixed,"region, intermediate",10,50,60,0,0
+combined_nodup,including_fixed,"region, intermediate",20,10,60,0,0
+combined_nodup,including_fixed,"region, intermediate",20,20,60,0,0
+combined_nodup,including_fixed,"region, intermediate",20,30,60,0,0
+combined_nodup,including_fixed,"region, intermediate",20,50,60,0,0
+combined_nodup,including_fixed,"region, intermediate",30,10,60,0,0
+combined_nodup,including_fixed,"region, intermediate",30,20,60,0,0
+combined_nodup,including_fixed,"region, intermediate",30,30,60,0,0
+combined_nodup,including_fixed,"region, intermediate",30,50,60,0,0
+combined_nodup,including_fixed,"region, intermediate",60,10,60,0,0
+combined_nodup,including_fixed,"region, intermediate",60,20,60,0,0
+combined_nodup,including_fixed,"region, intermediate",60,30,60,0,0
+combined_nodup,including_fixed,"region, intermediate",60,50,60,1,1
+combined_nodup,including_fixed,"region, all depth classes",5,10,2822,106,67
+combined_nodup,including_fixed,"region, all depth classes",5,20,2822,215,115
+combined_nodup,including_fixed,"region, all depth classes",5,30,2822,294,157
+combined_nodup,including_fixed,"region, all depth classes",5,50,2822,415,194
+combined_nodup,including_fixed,"region, all depth classes",10,10,2822,121,75
+combined_nodup,including_fixed,"region, all depth classes",10,20,2822,260,144
+combined_nodup,including_fixed,"region, all depth classes",10,30,2822,364,189
+combined_nodup,including_fixed,"region, all depth classes",10,50,2822,539,269
+combined_nodup,including_fixed,"region, all depth classes",20,10,2822,145,92
+combined_nodup,including_fixed,"region, all depth classes",20,20,2822,327,185
+combined_nodup,including_fixed,"region, all depth classes",20,30,2822,466,247
+combined_nodup,including_fixed,"region, all depth classes",20,50,2822,751,402
+combined_nodup,including_fixed,"region, all depth classes",30,10,2822,162,103
+combined_nodup,including_fixed,"region, all depth classes",30,20,2822,356,194
+combined_nodup,including_fixed,"region, all depth classes",30,30,2822,542,282
+combined_nodup,including_fixed,"region, all depth classes",30,50,2822,912,491
+combined_nodup,including_fixed,"region, all depth classes",60,10,2822,189,119
+combined_nodup,including_fixed,"region, all depth classes",60,20,2822,450,265
+combined_nodup,including_fixed,"region, all depth classes",60,30,2822,732,430
+combined_nodup,including_fixed,"region, all depth classes",60,50,2822,1284,730

@@ -1,3 +1,4 @@
-catalog,runs,n_intermediate,n_in_outline,clusters_median,clusters_p5,clusters_p95,band_recovered_share,band_share_median
-combined,500,59,19,2.0,2.0,3.0,1.0,1.0
-usgs,500,28,11,1.0,1.0,2.0,0.99,0.7272727272727273
+catalog,runs,n_band,realised_intermediate_median,clusters_median,clusters_p5,clusters_p95,band_share_median,contamination_median,fragments_median,band_dropped_median,recovered_50_share,recovered_70_share,recovered_80_share,recovered_90_share,band_recovered_share
+combined,500,17,183.0,8.0,6.0,11.0,0.9411764705882353,0.8,1.0,1.0,1.0,1.0,0.974,0.676,1.0
+combined_nodup,500,17,183.0,8.0,5.0,10.0,0.9411764705882353,0.8,1.0,1.0,1.0,1.0,0.984,0.652,1.0
+usgs,500,11,61.0,2.0,1.0,3.0,0.9090909090909091,0.6071428571428571,1.0,1.0,0.998,0.986,0.954,0.786,0.998

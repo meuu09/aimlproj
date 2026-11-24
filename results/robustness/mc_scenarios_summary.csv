@@ -1,0 +1,13 @@
+scenario,catalog,runs,n_band,realised_intermediate_median,clusters_median,clusters_p5,clusters_p95,band_share_median,contamination_median,fragments_median,band_dropped_median,recovered_50_share,recovered_70_share,recovered_80_share,recovered_90_share
+errors as 1 sigma,combined,500,17,183.0,8.0,6.0,11.0,0.9411764705882353,0.8,1.0,1.0,1.0,1.0,0.974,0.676
+errors as 1 sigma,combined_nodup,500,17,183.0,8.0,5.0,10.0,0.9411764705882353,0.8,1.0,1.0,1.0,1.0,0.984,0.652
+errors as 1 sigma,usgs,500,11,61.0,2.0,1.0,3.0,0.9090909090909091,0.6071428571428571,1.0,1.0,0.998,0.986,0.954,0.786
+errors as 90 % bounds,combined,500,17,166.0,7.0,5.0,10.0,1.0,0.7611940298507462,1.0,0.0,1.0,1.0,1.0,0.986
+errors as 90 % bounds,combined_nodup,500,17,165.0,7.0,5.0,10.0,1.0,0.7605633802816901,1.0,0.0,1.0,1.0,1.0,0.968
+errors as 90 % bounds,usgs,500,11,62.0,3.0,2.0,3.0,1.0,0.6035714285714285,1.0,0.0,0.998,0.992,0.99,0.98
+errors understated x2,combined,500,17,224.0,8.0,5.0,11.0,0.7647058823529411,0.8737864077669902,1.0,4.0,0.996,0.814,0.386,0.038
+errors understated x2,combined_nodup,500,17,225.0,8.0,5.0,11.0,0.7647058823529411,0.877275736511089,1.0,4.0,0.992,0.796,0.366,0.046
+errors understated x2,usgs,500,11,58.0,2.0,1.0,3.0,0.7272727272727273,0.65,1.0,2.0,0.928,0.648,0.406,0.154
+missing horizontal error = 2 x median,combined,500,17,183.0,8.0,6.0,10.0,0.9411764705882353,0.8024691358024691,1.0,1.0,1.0,1.0,0.97,0.666
+missing horizontal error = 2 x median,combined_nodup,500,17,183.0,8.0,5.0,10.0,0.9411764705882353,0.8024691358024691,1.0,1.0,1.0,0.998,0.974,0.63
+missing horizontal error = 2 x median,usgs,500,11,61.0,2.0,1.0,3.0,0.9090909090909091,0.6071428571428571,1.0,1.0,0.994,0.962,0.858,0.606
