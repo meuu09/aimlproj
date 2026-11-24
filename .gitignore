@@ -14,3 +14,6 @@ __pycache__/
 
 # pytest
 .pytest_cache/
+
+# Upstream code (no licence; fetched at commit 33acd38 by reproduce_baseline.py, not redistributed)
+Him_ides/

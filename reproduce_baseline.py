@@ -4,6 +4,7 @@ import logging
 import os
 import runpy
 import shutil
+import subprocess
 import sys
 import types
 
@@ -14,9 +15,22 @@ import matplotlib.pyplot as plt
 from seis_utils import max_curv_eqcorrscan
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+UPSTREAM, COMMIT = "https://github.com/kemichai/Him_ides", "33acd38"
 ORIG = os.path.join(HERE, "Him_ides", "python")
 OUT = os.path.join(HERE, "results_baseline")
 os.makedirs(OUT, exist_ok=True)
+
+
+def fetch_upstream():
+    """Clone the original repository at the commit we reproduced (it is not redistributed with this project)."""
+    if os.path.isdir(ORIG):
+        return
+    dest = os.path.dirname(ORIG)
+    subprocess.run(["git", "clone", "--quiet", UPSTREAM, dest], check=True)
+    subprocess.run(["git", "-C", dest, "checkout", "--quiet", COMMIT], check=True)
+
+
+fetch_upstream()
 logging.getLogger("matplotlib.font_manager").setLevel(logging.ERROR)
 
 
