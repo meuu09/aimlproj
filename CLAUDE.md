@@ -15,7 +15,7 @@ Read this first. It is the complete handoff, written so a fresh Claude session c
 ## 2. Repository layout
 | Path | What it is |
 |---|---|
-| `Him_ides/` | Vendored copy of https://github.com/kemichai/Him_ides at commit 33acd38 (its `.git` was deleted on purpose so it uploads as ordinary files). It has no LICENSE file; credit the original author (Michailos et al.) in the README and report. Do not edit it; copy and adapt instead. |
+| `Him_ides/` | Upstream https://github.com/kemichai/Him_ides at commit 33acd38. NO LICENCE: since branch audit/final-scientific-validation it is NOT tracked (in .gitignore); `reproduce_baseline.py` clones it if missing. Do not edit it; credit Michailos et al. |
 | `Him_ides/python/` | `Figures_5-9.py` (main), `temporal_plots.py`, `migration_plots.py`, `Figure_10.py`, `supporting_material/`, `quakeml/` (bundled catalogs), `metadata/` (132 StationXML station files) |
 | `Him_ides/gmt/` | GMT shell scripts for map figures (`Figure_1.sh`, `Figure_2.sh`, `Figure_3AB.sh`, `Figure_3CD.sh`, `gmt5.yml`, `him.cpt`, `files/` with station lists, fault `.gmt` files, `.dat` location files) |
 | `Him_ides/.ua/` | Understand-Anything knowledge graph (see section 9). Optional. |
@@ -34,7 +34,7 @@ Read this first. It is the complete handoff, written so a fresh Claude session c
 | `catalog_qc.py` | Writes `results/qc/` (QC_REPORT.md, magtype/depth-quality/depth-source tables, filter_funnel.csv, match_diagnostics.csv/png, close_pairs.csv). |
 | `run_all.py` | Rebuilds all derived results from data/ (20 steps, ~20 s). `--quick` = USGS only. |
 | `compare_results.py [ref]` | Diffs summary CSVs against a git commit -> `results/qc/old_vs_new.csv`. |
-| `tests/` | pytest (33 tests): unit tests on hand-made fixtures + read-only consistency checks on data/. Run `.venv/bin/python -m pytest -q tests`. |
+| `tests/` | pytest (67 + 2 strict xfail for unreproducible published values): unit tests, genuine-record parser tests, data-consistency checks, baseline checks. Run `.venv/bin/python -m pytest -q tests`. |
 | `README.md`, `requirements.txt` | Setup incl. Windows PowerShell commands; pinned versions. |
 | `results/combined_usgs_isc_nodup/` | Sensitivity run without the 7 rows flagged as possible duplicates. |
 | `.venv/` | Not in git. Recreate: `uv venv --python 3.12 .venv && uv pip install --python .venv/bin/python -r requirements.txt` (old line: `uv pip install --python .venv/bin/python obspy pandas matplotlib scipy numpy shapely pyproj` -- missed scikit-learn) (obspy 1.5.2, matplotlib 3.11.2, pandas 3.1.1). System python is 3.9 and pip resolution there hangs; use uv. eqcorrscan does NOT build on 3.12 (pkg-resources build error), hence the injected function. |
@@ -75,7 +75,7 @@ Functions:
 **Two cases (user, 2026-11-23).** Run each script twice:
 - default -> `results/excluding_fixed/`: only USGS-solved depths; operator-assigned AND unflagged events dropped from everything (all stats, all plots).
 - `--include-fixed` -> `results/including_fixed/`: all 417 events (1990+), depths as reported.
-- Same depth classes in both: **intermediate = depth - depthError >= 40 km** (and depth <= 150); shallow = depth + depthError < 40; uncertain = error bar crosses 40 km or depthError missing.
+- Same depth classes in both (changed 2026-11-24, Task 16): **intermediate = 40 <= depth - depthError AND depth + depthError <= 150**; shallow = depth + depthError < 40; deep = depth - depthError > 150; uncertain = otherwise or depthError missing.
 - `max_curv` is the Wiemer-Wyss mode; `max_curv_eqcorrscan` is the authors' exact method (+0.4 in the paper).
 
 Migration: SVD/PCA of epicentres gives a profile axis (azimuth about 120°); `along_km` is distance along it.
@@ -174,4 +174,15 @@ User asked for a full review, then "Batch 1" safe fixes. User decisions: create 
   - combined catalog now keeps USGS horizontalError. Fig3 legend moved below axes.
   - Verified: fresh venv from requirements.txt -> 38 tests pass, `run_all.py --baseline` all 24 steps ok; two runs give byte-identical CSVs (66 files).
 - **Still open:** explainer artifact XjbVGyf1u5CjSi39mujjyE (old numbers); writing the report; optional second region.
+
+## 13. Final scientific audit 2026-11-24 (branch `audit/final-scientific-validation`, NOT merged, NOT pushed)
+User gave an 85-task audit brief, then said "do all this yourself" (I took the recommended decisions). Read `audit/FINAL_AUDIT.md` first; per-task evidence in `audit/TASK_STATUS.csv`; numbers in `audit/BEFORE_AFTER_RESULTS.csv`.
+- Paper PDF was read (pypdf); published values verified: Mc 2.4, b 0.91+/-0.004 (full); Cluster 1 = 248 events ("box in Figure 2"), Mc 2.85, b 0.96; migration window 20 d / 20 km 3-D from any first event, 4 sequences; Fig 7 bins 0.2.
+- Baseline: released code gives Cluster 1 Mc 2.4 (0.5 bins -> only x.4/x.9; 2.85 impossible), N 254; b at published Mc: LSQ 0.942, MLE 0.976. '2.43' earlier was the smallest fitted magnitude, not Mc. Old baseline CSV had unquoted commas (fixed).
+- Combined catalog now uses ONE WHOLE ORIGIN per row (USGS if USGS-solved, else first trusted ISC agency ISC-EHB>ISC>NEIC>NDI, else USGS); `usgs_*` columns keep replaced origins; sentinel errors (<=0, >=999 km, e.g. NDI 1000 km) -> missing; `magType_norm`.
+- Duplicates: only ISC-only rows can be flagged (no USGS chains); pair-level flags in close_pairs.csv.
+- New scripts: baseline_comparison, temporal_summary, migration_search, clustering_checks, depth_sensitivity, fetch_focal_mechanisms (Global CMT, 24 solutions), write_manifest; run_all is dependency-ordered with skip-on-failure; CI in .github/workflows.
+- KEY SCIENCE: Kishtwar band collapses at a 50 km lower bound (17->5 combined); crust ~44-54 km (Sharma et al. 2018 EGU abstract); all GCMT centroids <=41 km (catalog 'intermediate' 49.9 km event has centroid 25 km) -> depth reliability is the main limitation. Intermediate inter-event times not distinguishable from Poisson. 0 intermediate sequences in any window (5-60 d, 10-50 km). M4.4 is exploratory (USGS Mc 4.9 in 1990s). GFT/MBS mostly undefined: not clean G-R.
+- Final: 69 complete, 13 partial, 2 not applicable (42, 62), 1 blocked (53). Licensing (85) unresolved: copy still in public repo history/main; author permission not obtained.
+- Still open: push/merge only with user approval; explainer artifact still has old numbers; report writing.
 

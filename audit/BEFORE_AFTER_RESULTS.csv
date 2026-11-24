@@ -1,0 +1,444 @@
+metric,catalog,case,value_before,value_after,changed,explanation
+N_b_intermediate_all types,combined_nodup,excluding_fixed,,15.0,True,new metric (added during the audit)
+N_b_intermediate_all types,combined_nodup,including_fixed,,15.0,True,new metric (added during the audit)
+N_b_intermediate_mb only,combined_nodup,excluding_fixed,,15.0,True,new metric (added during the audit)
+N_b_intermediate_mb only,combined_nodup,including_fixed,,15.0,True,new metric (added during the audit)
+N_b_whole region_all types,combined_nodup,excluding_fixed,,128.0,True,new metric (added during the audit)
+N_b_whole region_all types,combined_nodup,including_fixed,,185.0,True,new metric (added during the audit)
+N_b_whole region_mb only,combined_nodup,excluding_fixed,,114.0,True,new metric (added during the audit)
+N_b_whole region_mb only,combined_nodup,including_fixed,,168.0,True,new metric (added during the audit)
+after_depth_filter,combined,excluding_fixed,1095,1086.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+after_depth_filter,combined,including_fixed,2659,2650.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+after_depth_filter,combined_nodup,excluding_fixed,1095,1085.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+after_depth_filter,combined_nodup,including_fixed,2652,2643.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_deep,combined,excluding_fixed,4,2.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_deep,combined,including_fixed,11,2.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_deep,combined_nodup,excluding_fixed,4,2.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_deep,combined_nodup,including_fixed,11,2.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_intermediate,combined,excluding_fixed,55,50.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_intermediate,combined,including_fixed,60,55.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_intermediate,combined_nodup,excluding_fixed,55,50.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_intermediate,combined_nodup,including_fixed,60,55.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_shallow,combined,excluding_fixed,679,678.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_shallow,combined,including_fixed,729,728.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_shallow,combined_nodup,excluding_fixed,679,678.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_shallow,combined_nodup,including_fixed,729,728.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_uncertain,combined,excluding_fixed,357,356.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_uncertain,combined,including_fixed,1859,1865.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_uncertain,combined_nodup,excluding_fixed,357,355.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+all_uncertain,combined_nodup,including_fixed,1852,1858.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+b_MLE_1990-1999,combined,excluding_fixed,1.077,,True,metric renamed or removed (see CHANGELOG.md)
+b_MLE_1990-1999,combined_nodup,excluding_fixed,1.077,,True,metric renamed or removed (see CHANGELOG.md)
+b_MLE_1990-1999,usgs,excluding_fixed,1.114,,True,metric renamed or removed (see CHANGELOG.md)
+b_MLE_2000-2009,usgs,excluding_fixed,1.055,,True,metric renamed or removed (see CHANGELOG.md)
+b_MLE_2020-2026,usgs,excluding_fixed,1.309,,True,metric renamed or removed (see CHANGELOG.md)
+b_mle_intermediate_all types,combined_nodup,excluding_fixed,,1.265,True,new metric (added during the audit)
+b_mle_intermediate_all types,combined_nodup,including_fixed,,1.265,True,new metric (added during the audit)
+b_mle_intermediate_mb only,combined_nodup,excluding_fixed,,1.265,True,new metric (added during the audit)
+b_mle_intermediate_mb only,combined_nodup,including_fixed,,1.265,True,new metric (added during the audit)
+b_mle_whole region_all types,combined_nodup,excluding_fixed,,1.249,True,new metric (added during the audit)
+b_mle_whole region_all types,combined_nodup,including_fixed,,1.408,True,new metric (added during the audit)
+b_mle_whole region_mb only,combined_nodup,excluding_fixed,,1.431,True,new metric (added during the audit)
+b_mle_whole region_mb only,combined_nodup,including_fixed,,1.597,True,new metric (added during the audit)
+baseline_254_Mc_maxcurv_raw,authors,,2.43,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_254_Mc_plus0.4_label,authors,,0.897,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_254_N,authors,,2.0,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_254_b_lsq,authors,,Mc 2.85,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_414_Mc_maxcurv_raw,authors,,2.43,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_414_Mc_plus0.4_label,authors,,0.917,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_414_N,authors,,2.0,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_414_b_lsq,authors,,Mc 2.4,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_61_Mc_maxcurv_raw,authors,,1.91,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_61_Mc_plus0.4_label,authors,,0.753,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_61_N,authors,,1.5,,True,metric renamed or removed (see CHANGELOG.md)
+baseline_61_b_lsq,authors,,not reported (61 events),,True,metric renamed or removed (see CHANGELOG.md)
+baseline_Cluster 1_Mc_maxcurv_raw,authors,,,2.0,True,new metric (added during the audit)
+baseline_Cluster 1_Mc_released_code,authors,,,2.4,True,new metric (added during the audit)
+baseline_Cluster 1_N,authors,,,254.0,True,new metric (added during the audit)
+baseline_Cluster 1_b_lsq,authors,,,0.897,True,new metric (added during the audit)
+baseline_Cluster 2_Mc_maxcurv_raw,authors,,,1.5,True,new metric (added during the audit)
+baseline_Cluster 2_Mc_released_code,authors,,,1.9,True,new metric (added during the audit)
+baseline_Cluster 2_N,authors,,,61.0,True,new metric (added during the audit)
+baseline_Cluster 2_b_lsq,authors,,,0.753,True,new metric (added during the audit)
+baseline_Full catalog_Mc_maxcurv_raw,authors,,,2.0,True,new metric (added during the audit)
+baseline_Full catalog_Mc_released_code,authors,,,2.4,True,new metric (added during the audit)
+baseline_Full catalog_N,authors,,,414.0,True,new metric (added during the audit)
+baseline_Full catalog_b_lsq,authors,,,0.917,True,new metric (added during the audit)
+dbscan_clusters_uncertain,combined,excluding_fixed,8,9.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+dbscan_clusters_uncertain,combined_nodup,excluding_fixed,8,9.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M3,combined,excluding_fixed,19.0,17.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M3,combined,including_fixed,21.0,19.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M3,combined_nodup,excluding_fixed,19.0,17.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M3,combined_nodup,including_fixed,21.0,19.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M>=Mc,combined,excluding_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M>=Mc,combined,including_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M>=Mc,combined_nodup,excluding_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_intermediate_M>=Mc,combined_nodup,including_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_shallow_M3,combined,excluding_fixed,176.0,175.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_shallow_M3,combined,including_fixed,183.0,182.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_shallow_M3,combined_nodup,excluding_fixed,176.0,175.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_shallow_M3,combined_nodup,including_fixed,183.0,182.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_uncertain_M3,combined,excluding_fixed,79.0,78.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_uncertain_M3,combined,including_fixed,356.0,355.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_uncertain_M3,combined_nodup,excluding_fixed,79.0,78.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_uncertain_M3,combined_nodup,including_fixed,354.0,353.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_used_M3,combined,excluding_fixed,274.0,270.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_used_M3,combined,including_fixed,560.0,556.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_used_M3,combined_nodup,excluding_fixed,274.0,270.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_cluster_used_M3,combined_nodup,including_fixed,558.0,554.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_2010on,combined,excluding_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_2010on,combined,including_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_2010on,combined_nodup,excluding_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_2010on,combined_nodup,including_fixed,6.0,5.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_before2010,combined,excluding_fixed,13.0,12.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_before2010,combined,including_fixed,15.0,14.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_before2010,combined_nodup,excluding_fixed,13.0,12.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_before2010,combined_nodup,including_fixed,15.0,14.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_outside,combined,excluding_fixed,36.0,33.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_outside,combined,including_fixed,39.0,36.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_outside,combined_nodup,excluding_fixed,36.0,33.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_N_intermediate_outside,combined_nodup,including_fixed,39.0,36.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_2010on,combined,excluding_fixed,7.75,7.8,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_2010on,combined,including_fixed,7.75,7.8,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_2010on,combined_nodup,excluding_fixed,7.75,7.8,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_2010on,combined_nodup,including_fixed,7.75,7.8,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_before2010,combined,excluding_fixed,15.8,15.2,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_before2010,combined,including_fixed,14.6,14.399999999999999,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_before2010,combined_nodup,excluding_fixed,15.8,15.2,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depthError_median_km_before2010,combined_nodup,including_fixed,14.6,14.399999999999999,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_max_km,combined,excluding_fixed,118.6,100.6,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_max_km,combined,including_fixed,118.6,100.6,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_max_km,combined_nodup,excluding_fixed,118.6,100.6,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_max_km,combined_nodup,including_fixed,118.6,100.6,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_mean_km,combined,excluding_fixed,65.83105263157896,62.722941176470584,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_mean_km,combined,including_fixed,63.84714285714286,60.85736842105263,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_mean_km,combined_nodup,excluding_fixed,65.83105263157896,62.722941176470584,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_mean_km,combined_nodup,including_fixed,63.84714285714286,60.85736842105263,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km,combined,excluding_fixed,60.82,59.5,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km,combined,including_fixed,59.5,58.67,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km,combined_nodup,excluding_fixed,60.82,59.5,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km,combined_nodup,including_fixed,59.5,58.67,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_2010on,combined,excluding_fixed,57.435,56.2,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_2010on,combined,including_fixed,57.435,56.2,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_2010on,combined_nodup,excluding_fixed,57.435,56.2,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_2010on,combined_nodup,including_fixed,57.435,56.2,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_before2010,combined,excluding_fixed,65.2,64.25,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_before2010,combined,including_fixed,63.3,61.4,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_before2010,combined_nodup,excluding_fixed,65.2,64.25,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_depth_median_km_before2010,combined_nodup,including_fixed,63.3,61.4,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M3,combined,excluding_fixed,0.9392414920643647,0.8287153917269526,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M3,combined,including_fixed,1.0434919526778963,0.9462709343901411,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M3,combined_nodup,excluding_fixed,0.9392414920643647,0.8287153917269526,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M3,combined_nodup,including_fixed,1.0434919526778963,0.9462709343901411,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined,excluding_fixed,0.8211021609982685,0.6592607930070716,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined,including_fixed,0.8211021609982685,0.6592607930070716,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined_nodup,excluding_fixed,0.8211021609982685,0.6592607930070716,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined_nodup,including_fixed,0.8211021609982685,0.6592607930070716,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_shallow_M3,combined,excluding_fixed,2.61224334063827,2.6021733720894917,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_shallow_M3,combined,including_fixed,2.5477791483265153,2.5381244148994533,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_shallow_M3,combined_nodup,excluding_fixed,2.61224334063827,2.6021733720894917,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_CV_cluster_shallow_M3,combined_nodup,including_fixed,2.5477791483265153,2.5381244148994533,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined,excluding_fixed,431.5130266203704,456.34187499999996,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined,including_fixed,404.18412037037035,431.5130266203704,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined_nodup,excluding_fixed,431.5130266203704,456.34187499999996,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined_nodup,including_fixed,404.18412037037035,431.5130266203704,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined,excluding_fixed,1920.2972800925927,2086.7493113425926,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined,including_fixed,1920.2972800925927,2086.7493113425926,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined_nodup,excluding_fixed,1920.2972800925927,2086.7493113425926,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined_nodup,including_fixed,1920.2972800925927,2086.7493113425926,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_shallow_M3,combined,excluding_fixed,10.088206018518518,10.06861111111111,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_shallow_M3,combined,including_fixed,11.55400462962963,12.02894675925926,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_shallow_M3,combined_nodup,excluding_fixed,10.088206018518518,10.06861111111111,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_median_days_cluster_shallow_M3,combined_nodup,including_fixed,11.55400462962963,12.02894675925926,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_min_days_cluster_shallow_M3,combined,excluding_fixed,0.0033564814814814816,0.0003587962962962963,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_min_days_cluster_shallow_M3,combined,including_fixed,0.0019675925925925924,0.0003587962962962963,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_min_days_cluster_shallow_M3,combined_nodup,excluding_fixed,0.0033564814814814816,0.0003587962962962963,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_interevent_min_days_cluster_shallow_M3,combined_nodup,including_fixed,0.0019675925925925924,0.0003587962962962963,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_largest_minus_second,combined,excluding_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
+kishtwar_largest_minus_second,combined,including_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
+kishtwar_largest_minus_second,combined_nodup,excluding_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
+kishtwar_largest_minus_second,combined_nodup,including_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
+kishtwar_largest_minus_second,usgs,excluding_fixed,0.5999999999999996,,True,metric renamed or removed (see CHANGELOG.md)
+kishtwar_largest_minus_second,usgs,including_fixed,0.5999999999999996,,True,metric renamed or removed (see CHANGELOG.md)
+kishtwar_largest_minus_second_whole_cluster_paper_style,combined,excluding_fixed,,0.2999999999999998,True,new metric (added during the audit)
+kishtwar_largest_minus_second_whole_cluster_paper_style,combined,including_fixed,,0.2999999999999998,True,new metric (added during the audit)
+kishtwar_largest_minus_second_whole_cluster_paper_style,combined_nodup,excluding_fixed,,0.2999999999999998,True,new metric (added during the audit)
+kishtwar_largest_minus_second_whole_cluster_paper_style,combined_nodup,including_fixed,,0.2999999999999998,True,new metric (added during the audit)
+kishtwar_largest_minus_second_whole_cluster_paper_style,usgs,excluding_fixed,,0.5999999999999996,True,new metric (added during the audit)
+kishtwar_largest_minus_second_whole_cluster_paper_style,usgs,including_fixed,,0.5999999999999996,True,new metric (added during the audit)
+kishtwar_n_sequence_candidates_20d_20km,combined,excluding_fixed,,0.0,True,new metric (added during the audit)
+kishtwar_n_sequence_candidates_20d_20km,combined,including_fixed,,0.0,True,new metric (added during the audit)
+kishtwar_n_sequence_candidates_20d_20km,combined_nodup,excluding_fixed,,0.0,True,new metric (added during the audit)
+kishtwar_n_sequence_candidates_20d_20km,combined_nodup,including_fixed,,0.0,True,new metric (added during the audit)
+kishtwar_n_sequence_candidates_20d_20km,usgs,excluding_fixed,,0.0,True,new metric (added during the audit)
+kishtwar_n_sequence_candidates_20d_20km,usgs,including_fixed,,0.0,True,new metric (added during the audit)
+kishtwar_profile_azimuth_deg,combined,excluding_fixed,134.64603796262247,133.72394807444505,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_profile_azimuth_deg,combined,including_fixed,133.3526201847747,132.94927063287463,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_profile_azimuth_deg,combined_nodup,excluding_fixed,134.64603796262247,133.72394807444505,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_profile_azimuth_deg,combined_nodup,including_fixed,133.33332848245766,132.93044946646285,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_share_of_region_intermediate_in_cluster,combined,excluding_fixed,0.34545454545454546,0.34,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_share_of_region_intermediate_in_cluster,combined,including_fixed,0.35,0.34545454545454546,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_share_of_region_intermediate_in_cluster,combined_nodup,excluding_fixed,0.34545454545454546,0.34,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+kishtwar_share_of_region_intermediate_in_cluster,combined_nodup,including_fixed,0.35,0.34545454545454546,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+mc_band_recovered_share_50pct,combined_nodup,excluding_fixed,,1.0,True,new metric (added during the audit)
+mc_band_recovered_share_50pct,usgs,excluding_fixed,0.99,0.998,True,"joint depth+epicentre Monte Carlo, missing depth errors no longer set to zero (Tasks 18, 39, 40)"
+mc_n_band_events,combined,excluding_fixed,19,17.0,True,"joint depth+epicentre Monte Carlo, missing depth errors no longer set to zero (Tasks 18, 39, 40)"
+mc_n_band_events,combined_nodup,excluding_fixed,,17.0,True,new metric (added during the audit)
+rate_per_yr_M4.4_2020-2026,combined,excluding_fixed,5.095,5.093,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+rate_per_yr_M4.4_2020-2026,combined,including_fixed,7.279,7.276,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+rate_per_yr_M4.4_2020-2026,combined_nodup,excluding_fixed,5.095,5.093,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+rate_per_yr_M4.4_2020-2026,combined_nodup,including_fixed,7.133,7.13,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
+rate_per_yr_M4.4_2020-2026,usgs,including_fixed,7.133,7.13,True,catalog end date applied consistently (Task 13)
+M>=4.4,combined,excluding_fixed,128,128.0,False,
+M>=4.4,combined,including_fixed,186,186.0,False,
+M>=4.4,combined_nodup,excluding_fixed,128,128.0,False,
+M>=4.4,combined_nodup,including_fixed,185,185.0,False,
+M>=4.4,usgs,excluding_fixed,55,55.0,False,
+M>=4.4,usgs,including_fixed,176,176.0,False,
+M>=4.4_deep,combined,excluding_fixed,0,0.0,False,
+M>=4.4_deep,combined,including_fixed,0,0.0,False,
+M>=4.4_deep,combined_nodup,excluding_fixed,0,0.0,False,
+M>=4.4_deep,combined_nodup,including_fixed,0,0.0,False,
+M>=4.4_deep,usgs,excluding_fixed,0,0.0,False,
+M>=4.4_deep,usgs,including_fixed,0,0.0,False,
+M>=4.4_intermediate,combined,excluding_fixed,15,15.0,False,
+M>=4.4_intermediate,combined,including_fixed,15,15.0,False,
+M>=4.4_intermediate,combined_nodup,excluding_fixed,15,15.0,False,
+M>=4.4_intermediate,combined_nodup,including_fixed,15,15.0,False,
+M>=4.4_intermediate,usgs,excluding_fixed,8,8.0,False,
+M>=4.4_intermediate,usgs,including_fixed,14,14.0,False,
+M>=4.4_shallow,combined,excluding_fixed,81,81.0,False,
+M>=4.4_shallow,combined,including_fixed,102,102.0,False,
+M>=4.4_shallow,combined_nodup,excluding_fixed,81,81.0,False,
+M>=4.4_shallow,combined_nodup,including_fixed,102,102.0,False,
+M>=4.4_shallow,usgs,excluding_fixed,17,17.0,False,
+M>=4.4_shallow,usgs,including_fixed,77,77.0,False,
+M>=4.4_uncertain,combined,excluding_fixed,32,32.0,False,
+M>=4.4_uncertain,combined,including_fixed,69,69.0,False,
+M>=4.4_uncertain,combined_nodup,excluding_fixed,32,32.0,False,
+M>=4.4_uncertain,combined_nodup,including_fixed,68,68.0,False,
+M>=4.4_uncertain,usgs,excluding_fixed,30,30.0,False,
+M>=4.4_uncertain,usgs,including_fixed,85,85.0,False,
+N_b_intermediate_all types,combined,excluding_fixed,15,15.0,False,
+N_b_intermediate_all types,combined,including_fixed,15,15.0,False,
+N_b_intermediate_all types,usgs,excluding_fixed,8,8.0,False,
+N_b_intermediate_all types,usgs,including_fixed,14,14.0,False,
+N_b_intermediate_mb only,combined,excluding_fixed,15,15.0,False,
+N_b_intermediate_mb only,combined,including_fixed,15,15.0,False,
+N_b_intermediate_mb only,usgs,excluding_fixed,8,8.0,False,
+N_b_intermediate_mb only,usgs,including_fixed,14,14.0,False,
+N_b_whole region_all types,combined,excluding_fixed,128,128.0,False,
+N_b_whole region_all types,combined,including_fixed,186,186.0,False,
+N_b_whole region_all types,usgs,excluding_fixed,55,55.0,False,
+N_b_whole region_all types,usgs,including_fixed,176,176.0,False,
+N_b_whole region_mb only,combined,excluding_fixed,114,114.0,False,
+N_b_whole region_mb only,combined,including_fixed,169,169.0,False,
+N_b_whole region_mb only,usgs,excluding_fixed,50,50.0,False,
+N_b_whole region_mb only,usgs,including_fixed,161,161.0,False,
+after_depth_filter,usgs,excluding_fixed,124,124.0,False,
+after_depth_filter,usgs,including_fixed,417,417.0,False,
+all_deep,usgs,excluding_fixed,0,0.0,False,
+all_deep,usgs,including_fixed,0,0.0,False,
+all_intermediate,usgs,excluding_fixed,25,25.0,False,
+all_intermediate,usgs,including_fixed,41,41.0,False,
+all_shallow,usgs,excluding_fixed,27,27.0,False,
+all_shallow,usgs,including_fixed,146,146.0,False,
+all_uncertain,usgs,excluding_fixed,72,72.0,False,
+all_uncertain,usgs,including_fixed,230,230.0,False,
+b_MLE_1990-1999,combined,including_fixed,1.434,1.434,False,
+b_MLE_1990-1999,combined_nodup,including_fixed,1.434,1.434,False,
+b_MLE_1990-1999,usgs,including_fixed,1.488,1.488,False,
+b_MLE_2000-2009,combined,excluding_fixed,1.279,1.279,False,
+b_MLE_2000-2009,combined,including_fixed,1.421,1.421,False,
+b_MLE_2000-2009,combined_nodup,excluding_fixed,1.279,1.279,False,
+b_MLE_2000-2009,combined_nodup,including_fixed,1.421,1.421,False,
+b_MLE_2000-2009,usgs,including_fixed,1.36,1.36,False,
+b_MLE_2010-2019,combined,excluding_fixed,1.326,1.326,False,
+b_MLE_2010-2019,combined,including_fixed,1.443,1.443,False,
+b_MLE_2010-2019,combined_nodup,excluding_fixed,1.326,1.326,False,
+b_MLE_2010-2019,combined_nodup,including_fixed,1.443,1.443,False,
+b_MLE_2010-2019,usgs,excluding_fixed,1.636,1.636,False,
+b_MLE_2010-2019,usgs,including_fixed,1.443,1.443,False,
+b_MLE_2020-2026,combined,excluding_fixed,1.211,1.211,False,
+b_MLE_2020-2026,combined,including_fixed,1.316,1.316,False,
+b_MLE_2020-2026,combined_nodup,excluding_fixed,1.211,1.211,False,
+b_MLE_2020-2026,combined_nodup,including_fixed,1.343,1.343,False,
+b_MLE_2020-2026,usgs,including_fixed,1.343,1.343,False,
+b_mle_intermediate_all types,combined,excluding_fixed,1.265,1.265,False,
+b_mle_intermediate_all types,combined,including_fixed,1.265,1.265,False,
+b_mle_intermediate_all types,usgs,excluding_fixed,1.241,1.241,False,
+b_mle_intermediate_all types,usgs,including_fixed,1.322,1.322,False,
+b_mle_intermediate_mb only,combined,excluding_fixed,1.265,1.265,False,
+b_mle_intermediate_mb only,combined,including_fixed,1.265,1.265,False,
+b_mle_intermediate_mb only,usgs,excluding_fixed,1.241,1.241,False,
+b_mle_intermediate_mb only,usgs,including_fixed,1.322,1.322,False,
+b_mle_whole region_all types,combined,excluding_fixed,1.249,1.249,False,
+b_mle_whole region_all types,combined,including_fixed,1.4,1.4,False,
+b_mle_whole region_all types,usgs,excluding_fixed,1.338,1.338,False,
+b_mle_whole region_all types,usgs,including_fixed,1.402,1.402,False,
+b_mle_whole region_mb only,combined,excluding_fixed,1.431,1.431,False,
+b_mle_whole region_mb only,combined,including_fixed,1.584,1.584,False,
+b_mle_whole region_mb only,usgs,excluding_fixed,1.477,1.477,False,
+b_mle_whole region_mb only,usgs,including_fixed,1.595,1.595,False,
+combined_rows,combined,,2839,2839.0,False,
+dbscan_clusters_intermediate,combined,excluding_fixed,2,2.0,False,
+dbscan_clusters_intermediate,combined,including_fixed,2,2.0,False,
+dbscan_clusters_intermediate,combined_nodup,excluding_fixed,2,2.0,False,
+dbscan_clusters_intermediate,combined_nodup,including_fixed,2,2.0,False,
+dbscan_clusters_intermediate,usgs,excluding_fixed,2,2.0,False,
+dbscan_clusters_intermediate,usgs,including_fixed,3,3.0,False,
+dbscan_clusters_shallow,combined,excluding_fixed,4,4.0,False,
+dbscan_clusters_shallow,combined,including_fixed,4,4.0,False,
+dbscan_clusters_shallow,combined_nodup,excluding_fixed,4,4.0,False,
+dbscan_clusters_shallow,combined_nodup,including_fixed,4,4.0,False,
+dbscan_clusters_shallow,usgs,excluding_fixed,3,3.0,False,
+dbscan_clusters_shallow,usgs,including_fixed,6,6.0,False,
+dbscan_clusters_uncertain,combined,including_fixed,1,1.0,False,
+dbscan_clusters_uncertain,combined_nodup,including_fixed,1,1.0,False,
+dbscan_clusters_uncertain,usgs,excluding_fixed,2,2.0,False,
+dbscan_clusters_uncertain,usgs,including_fixed,6,6.0,False,
+kishtwar_N_cluster_deeper_than_150km,combined,excluding_fixed,0.0,0.0,False,
+kishtwar_N_cluster_deeper_than_150km,combined,including_fixed,0.0,0.0,False,
+kishtwar_N_cluster_deeper_than_150km,combined_nodup,excluding_fixed,0.0,0.0,False,
+kishtwar_N_cluster_deeper_than_150km,combined_nodup,including_fixed,0.0,0.0,False,
+kishtwar_N_cluster_deeper_than_150km,usgs,excluding_fixed,0.0,0.0,False,
+kishtwar_N_cluster_deeper_than_150km,usgs,including_fixed,0.0,0.0,False,
+kishtwar_N_cluster_intermediate_M3,usgs,excluding_fixed,11.0,11.0,False,
+kishtwar_N_cluster_intermediate_M3,usgs,including_fixed,16.0,16.0,False,
+kishtwar_N_cluster_intermediate_M>=Mc,usgs,excluding_fixed,3.0,3.0,False,
+kishtwar_N_cluster_intermediate_M>=Mc,usgs,including_fixed,6.0,6.0,False,
+kishtwar_N_cluster_shallow_M3,usgs,excluding_fixed,7.0,7.0,False,
+kishtwar_N_cluster_shallow_M3,usgs,including_fixed,35.0,35.0,False,
+kishtwar_N_cluster_uncertain_M3,usgs,excluding_fixed,24.0,24.0,False,
+kishtwar_N_cluster_uncertain_M3,usgs,including_fixed,52.0,52.0,False,
+kishtwar_N_cluster_used_M3,usgs,excluding_fixed,42.0,42.0,False,
+kishtwar_N_cluster_used_M3,usgs,including_fixed,103.0,103.0,False,
+kishtwar_N_intermediate_2010on,usgs,excluding_fixed,4.0,4.0,False,
+kishtwar_N_intermediate_2010on,usgs,including_fixed,7.0,7.0,False,
+kishtwar_N_intermediate_before2010,usgs,excluding_fixed,7.0,7.0,False,
+kishtwar_N_intermediate_before2010,usgs,including_fixed,9.0,9.0,False,
+kishtwar_N_intermediate_outside,usgs,excluding_fixed,14.0,14.0,False,
+kishtwar_N_intermediate_outside,usgs,including_fixed,25.0,25.0,False,
+kishtwar_bath_dM_median_in_sequences,combined,excluding_fixed,,,False,new metric (added during the audit)
+kishtwar_bath_dM_median_in_sequences,combined,including_fixed,,,False,new metric (added during the audit)
+kishtwar_bath_dM_median_in_sequences,combined_nodup,excluding_fixed,,,False,new metric (added during the audit)
+kishtwar_bath_dM_median_in_sequences,combined_nodup,including_fixed,,,False,new metric (added during the audit)
+kishtwar_bath_dM_median_in_sequences,usgs,excluding_fixed,,,False,new metric (added during the audit)
+kishtwar_bath_dM_median_in_sequences,usgs,including_fixed,,,False,new metric (added during the audit)
+kishtwar_depthError_median_km,combined,excluding_fixed,13.2,13.2,False,
+kishtwar_depthError_median_km,combined,including_fixed,12.4,12.4,False,
+kishtwar_depthError_median_km,combined_nodup,excluding_fixed,13.2,13.2,False,
+kishtwar_depthError_median_km,combined_nodup,including_fixed,12.4,12.4,False,
+kishtwar_depthError_median_km,usgs,excluding_fixed,10.6,10.6,False,
+kishtwar_depthError_median_km,usgs,including_fixed,9.25,9.25,False,
+kishtwar_depthError_median_km_2010on,usgs,excluding_fixed,7.75,7.75,False,
+kishtwar_depthError_median_km_2010on,usgs,including_fixed,7.7,7.7,False,
+kishtwar_depthError_median_km_before2010,usgs,excluding_fixed,16.4,16.4,False,
+kishtwar_depthError_median_km_before2010,usgs,including_fixed,12.4,12.4,False,
+kishtwar_depth_max_km,usgs,excluding_fixed,72.2,72.2,False,
+kishtwar_depth_max_km,usgs,including_fixed,72.2,72.2,False,
+kishtwar_depth_mean_km,usgs,excluding_fixed,58.96272727272728,58.96272727272728,False,
+kishtwar_depth_mean_km,usgs,including_fixed,56.53062500000001,56.53062500000001,False,
+kishtwar_depth_median_km,usgs,excluding_fixed,58.67,58.67,False,
+kishtwar_depth_median_km,usgs,including_fixed,58.0,58.0,False,
+kishtwar_depth_median_km_2010on,usgs,excluding_fixed,54.56,54.56,False,
+kishtwar_depth_median_km_2010on,usgs,including_fixed,56.2,56.2,False,
+kishtwar_depth_median_km_before2010,usgs,excluding_fixed,59.5,59.5,False,
+kishtwar_depth_median_km_before2010,usgs,including_fixed,58.6,58.6,False,
+kishtwar_depth_min_km,combined,excluding_fixed,45.4,45.4,False,
+kishtwar_depth_min_km,combined,including_fixed,45.0,45.0,False,
+kishtwar_depth_min_km,combined_nodup,excluding_fixed,45.4,45.4,False,
+kishtwar_depth_min_km,combined_nodup,including_fixed,45.0,45.0,False,
+kishtwar_depth_min_km,usgs,excluding_fixed,46.75,46.75,False,
+kishtwar_depth_min_km,usgs,including_fixed,45.0,45.0,False,
+kishtwar_interevent_CV_cluster_intermediate_M3,usgs,excluding_fixed,0.8197002890535156,0.8197002890535156,False,
+kishtwar_interevent_CV_cluster_intermediate_M3,usgs,including_fixed,0.9985324555446924,0.9985324555446924,False,
+kishtwar_interevent_CV_cluster_intermediate_M4.4,usgs,excluding_fixed,0.977347680818804,0.977347680818804,False,
+kishtwar_interevent_CV_cluster_intermediate_M4.4,usgs,including_fixed,1.1466022001350997,1.1466022001350997,False,
+kishtwar_interevent_CV_cluster_shallow_M3,usgs,excluding_fixed,1.522619753383713,1.522619753383713,False,
+kishtwar_interevent_CV_cluster_shallow_M3,usgs,including_fixed,1.7804463873773573,1.7804463873773573,False,
+kishtwar_interevent_median_days_cluster_intermediate_M3,usgs,excluding_fixed,959.9073148148148,959.9073148148148,False,
+kishtwar_interevent_median_days_cluster_intermediate_M3,usgs,including_fixed,442.63546296296295,442.63546296296295,False,
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,usgs,excluding_fixed,1876.5375810185187,1876.5375810185187,False,
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,usgs,including_fixed,292.6031134259259,292.6031134259259,False,
+kishtwar_interevent_median_days_cluster_shallow_M3,usgs,excluding_fixed,243.12987847222223,243.12987847222223,False,
+kishtwar_interevent_median_days_cluster_shallow_M3,usgs,including_fixed,53.072673611111114,53.072673611111114,False,
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined,excluding_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined,including_fixed,6.030092592592593,6.030092592592593,False,
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined_nodup,excluding_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined_nodup,including_fixed,6.030092592592593,6.030092592592593,False,
+kishtwar_interevent_min_days_cluster_intermediate_M3,usgs,excluding_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M3,usgs,including_fixed,0.0024074074074074076,0.0024074074074074076,False,
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined,excluding_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined,including_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined_nodup,excluding_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined_nodup,including_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,usgs,excluding_fixed,42.50792824074074,42.50792824074074,False,
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,usgs,including_fixed,0.0024074074074074076,0.0024074074074074076,False,
+kishtwar_interevent_min_days_cluster_shallow_M3,usgs,excluding_fixed,0.0033564814814814816,0.0033564814814814816,False,
+kishtwar_interevent_min_days_cluster_shallow_M3,usgs,including_fixed,0.0019675925925925924,0.0019675925925925924,False,
+kishtwar_largest_mag,combined,excluding_fixed,5.3,5.3,False,
+kishtwar_largest_mag,combined,including_fixed,5.3,5.3,False,
+kishtwar_largest_mag,combined_nodup,excluding_fixed,5.3,5.3,False,
+kishtwar_largest_mag,combined_nodup,including_fixed,5.3,5.3,False,
+kishtwar_largest_mag,usgs,excluding_fixed,5.3,5.3,False,
+kishtwar_largest_mag,usgs,including_fixed,5.3,5.3,False,
+kishtwar_lowest_magnitude_used,combined,excluding_fixed,1.2,1.2,False,
+kishtwar_lowest_magnitude_used,combined,including_fixed,1.2,1.2,False,
+kishtwar_lowest_magnitude_used,combined_nodup,excluding_fixed,1.2,1.2,False,
+kishtwar_lowest_magnitude_used,combined_nodup,including_fixed,1.2,1.2,False,
+kishtwar_lowest_magnitude_used,usgs,excluding_fixed,3.1,3.1,False,
+kishtwar_lowest_magnitude_used,usgs,including_fixed,3.1,3.1,False,
+kishtwar_n_sequences_20d_20km,combined,excluding_fixed,0.0,0.0,False,
+kishtwar_n_sequences_20d_20km,combined,including_fixed,0.0,0.0,False,
+kishtwar_n_sequences_20d_20km,combined_nodup,excluding_fixed,0.0,0.0,False,
+kishtwar_n_sequences_20d_20km,combined_nodup,including_fixed,0.0,0.0,False,
+kishtwar_n_sequences_20d_20km,usgs,excluding_fixed,0.0,0.0,False,
+kishtwar_n_sequences_20d_20km,usgs,including_fixed,0.0,0.0,False,
+kishtwar_profile_azimuth_deg,usgs,excluding_fixed,146.3256416909394,146.3256416909394,False,
+kishtwar_profile_azimuth_deg,usgs,including_fixed,137.58704392936465,137.58704392936465,False,
+kishtwar_share_of_region_intermediate_in_cluster,usgs,excluding_fixed,0.44,0.44,False,
+kishtwar_share_of_region_intermediate_in_cluster,usgs,including_fixed,0.3902439024390244,0.3902439024390244,False,
+matched_usgs_isc,combined,,536,536.0,False,
+matches_over_50km,combined,,12,12.0,False,
+mc_authors_1970s,USGS (mostly mb),,4.9,4.9,False,
+mc_authors_1970s,"USGS + ISC, all types (mixed scales)",,4.9,4.9,False,
+mc_authors_1970s,"USGS + ISC, mb only",,4.9,4.9,False,
+mc_authors_1980s,USGS (mostly mb),,4.9,4.9,False,
+mc_authors_1980s,"USGS + ISC, all types (mixed scales)",,4.9,4.9,False,
+mc_authors_1980s,"USGS + ISC, mb only",,4.9,4.9,False,
+mc_authors_1990s,USGS (mostly mb),,4.9,4.9,False,
+mc_authors_1990s,"USGS + ISC, all types (mixed scales)",,3.9,3.9,False,
+mc_authors_1990s,"USGS + ISC, mb only",,3.9,3.9,False,
+mc_authors_2000s,USGS (mostly mb),,3.9,3.9,False,
+mc_authors_2000s,"USGS + ISC, all types (mixed scales)",,2.9,2.9,False,
+mc_authors_2000s,"USGS + ISC, mb only",,3.9,3.9,False,
+mc_authors_2010s,USGS (mostly mb),,4.4,4.4,False,
+mc_authors_2010s,"USGS + ISC, all types (mixed scales)",,3.9,3.9,False,
+mc_authors_2010s,"USGS + ISC, mb only",,3.9,3.9,False,
+mc_authors_2020s,USGS (mostly mb),,4.4,4.4,False,
+mc_authors_2020s,"USGS + ISC, all types (mixed scales)",,2.9,2.9,False,
+mc_authors_2020s,"USGS + ISC, mb only",,3.9,3.9,False,
+mc_band_recovered_share_50pct,combined,excluding_fixed,1.0,1.0,False,
+mc_n_band_events,usgs,excluding_fixed,11,11.0,False,
+possible_duplicates,combined,,7,7.0,False,
+rate_per_yr_M4.4_1990-1999,combined,excluding_fixed,1.5,1.5,False,
+rate_per_yr_M4.4_1990-1999,combined,including_fixed,3.4,3.4,False,
+rate_per_yr_M4.4_1990-1999,combined_nodup,excluding_fixed,1.5,1.5,False,
+rate_per_yr_M4.4_1990-1999,combined_nodup,including_fixed,3.4,3.4,False,
+rate_per_yr_M4.4_1990-1999,usgs,excluding_fixed,0.5,0.5,False,
+rate_per_yr_M4.4_1990-1999,usgs,including_fixed,3.1,3.1,False,
+rate_per_yr_M4.4_2000-2009,combined,excluding_fixed,2.9,2.9,False,
+rate_per_yr_M4.4_2000-2009,combined,including_fixed,4.499,4.499,False,
+rate_per_yr_M4.4_2000-2009,combined_nodup,excluding_fixed,2.9,2.9,False,
+rate_per_yr_M4.4_2000-2009,combined_nodup,including_fixed,4.499,4.499,False,
+rate_per_yr_M4.4_2000-2009,usgs,excluding_fixed,1.3,1.3,False,
+rate_per_yr_M4.4_2000-2009,usgs,including_fixed,3.899,3.899,False,
+rate_per_yr_M4.4_2010-2019,combined,excluding_fixed,4.901,4.901,False,
+rate_per_yr_M4.4_2010-2019,combined,including_fixed,5.701,5.701,False,
+rate_per_yr_M4.4_2010-2019,combined_nodup,excluding_fixed,4.901,4.901,False,
+rate_per_yr_M4.4_2010-2019,combined_nodup,including_fixed,5.701,5.701,False,
+rate_per_yr_M4.4_2010-2019,usgs,excluding_fixed,2.6,2.6,False,
+rate_per_yr_M4.4_2010-2019,usgs,including_fixed,5.701,5.701,False,
+rate_per_yr_M4.4_2020-2026,usgs,excluding_fixed,1.601,1.601,False,
+solved_depths,combined,,1133,1133.0,False,

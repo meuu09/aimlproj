@@ -1,0 +1,396 @@
+metric,catalog,case,value
+combined_rows,combined,,2839
+matched_usgs_isc,combined,,536
+possible_duplicates,combined,,7
+solved_depths,combined,,1133
+matches_over_50km,combined,,12
+after_depth_filter,usgs,excluding_fixed,124
+M>=4.4,usgs,excluding_fixed,55
+M>=4.4_intermediate,usgs,excluding_fixed,8
+M>=4.4_shallow,usgs,excluding_fixed,17
+M>=4.4_uncertain,usgs,excluding_fixed,30
+M>=4.4_deep,usgs,excluding_fixed,0
+all_intermediate,usgs,excluding_fixed,25
+all_shallow,usgs,excluding_fixed,27
+all_uncertain,usgs,excluding_fixed,72
+all_deep,usgs,excluding_fixed,0
+after_depth_filter,usgs,including_fixed,417
+M>=4.4,usgs,including_fixed,176
+M>=4.4_intermediate,usgs,including_fixed,14
+M>=4.4_shallow,usgs,including_fixed,77
+M>=4.4_uncertain,usgs,including_fixed,85
+M>=4.4_deep,usgs,including_fixed,0
+all_intermediate,usgs,including_fixed,41
+all_shallow,usgs,including_fixed,146
+all_uncertain,usgs,including_fixed,230
+all_deep,usgs,including_fixed,0
+after_depth_filter,combined,excluding_fixed,1095
+M>=4.4,combined,excluding_fixed,128
+M>=4.4_intermediate,combined,excluding_fixed,15
+M>=4.4_shallow,combined,excluding_fixed,81
+M>=4.4_uncertain,combined,excluding_fixed,32
+M>=4.4_deep,combined,excluding_fixed,0
+all_intermediate,combined,excluding_fixed,55
+all_shallow,combined,excluding_fixed,679
+all_uncertain,combined,excluding_fixed,357
+all_deep,combined,excluding_fixed,4
+after_depth_filter,combined,including_fixed,2659
+M>=4.4,combined,including_fixed,186
+M>=4.4_intermediate,combined,including_fixed,15
+M>=4.4_shallow,combined,including_fixed,102
+M>=4.4_uncertain,combined,including_fixed,69
+M>=4.4_deep,combined,including_fixed,0
+all_intermediate,combined,including_fixed,60
+all_shallow,combined,including_fixed,729
+all_uncertain,combined,including_fixed,1859
+all_deep,combined,including_fixed,11
+after_depth_filter,combined_nodup,excluding_fixed,1095
+M>=4.4,combined_nodup,excluding_fixed,128
+M>=4.4_intermediate,combined_nodup,excluding_fixed,15
+M>=4.4_shallow,combined_nodup,excluding_fixed,81
+M>=4.4_uncertain,combined_nodup,excluding_fixed,32
+M>=4.4_deep,combined_nodup,excluding_fixed,0
+all_intermediate,combined_nodup,excluding_fixed,55
+all_shallow,combined_nodup,excluding_fixed,679
+all_uncertain,combined_nodup,excluding_fixed,357
+all_deep,combined_nodup,excluding_fixed,4
+after_depth_filter,combined_nodup,including_fixed,2652
+M>=4.4,combined_nodup,including_fixed,185
+M>=4.4_intermediate,combined_nodup,including_fixed,15
+M>=4.4_shallow,combined_nodup,including_fixed,102
+M>=4.4_uncertain,combined_nodup,including_fixed,68
+M>=4.4_deep,combined_nodup,including_fixed,0
+all_intermediate,combined_nodup,including_fixed,60
+all_shallow,combined_nodup,including_fixed,729
+all_uncertain,combined_nodup,including_fixed,1852
+all_deep,combined_nodup,including_fixed,11
+rate_per_yr_M4.4_1990-1999,usgs,excluding_fixed,0.5
+b_MLE_1990-1999,usgs,excluding_fixed,1.114
+rate_per_yr_M4.4_2000-2009,usgs,excluding_fixed,1.3
+b_MLE_2000-2009,usgs,excluding_fixed,1.055
+rate_per_yr_M4.4_2010-2019,usgs,excluding_fixed,2.6
+b_MLE_2010-2019,usgs,excluding_fixed,1.636
+rate_per_yr_M4.4_2020-2026,usgs,excluding_fixed,1.601
+b_MLE_2020-2026,usgs,excluding_fixed,1.309
+kishtwar_N_cluster_used_M3,usgs,excluding_fixed,42.0
+kishtwar_N_cluster_intermediate_M3,usgs,excluding_fixed,11.0
+kishtwar_N_cluster_uncertain_M3,usgs,excluding_fixed,24.0
+kishtwar_N_cluster_intermediate_M>=Mc,usgs,excluding_fixed,3.0
+kishtwar_N_cluster_shallow_M3,usgs,excluding_fixed,7.0
+kishtwar_N_cluster_deeper_than_150km,usgs,excluding_fixed,0.0
+kishtwar_lowest_magnitude_used,usgs,excluding_fixed,3.1
+kishtwar_N_intermediate_outside,usgs,excluding_fixed,14.0
+kishtwar_share_of_region_intermediate_in_cluster,usgs,excluding_fixed,0.44
+kishtwar_depth_mean_km,usgs,excluding_fixed,58.96272727272728
+kishtwar_depth_median_km,usgs,excluding_fixed,58.67
+kishtwar_depth_min_km,usgs,excluding_fixed,46.75
+kishtwar_depth_max_km,usgs,excluding_fixed,72.2
+kishtwar_depthError_median_km,usgs,excluding_fixed,10.6
+kishtwar_interevent_median_days_cluster_intermediate_M3,usgs,excluding_fixed,959.9073148148148
+kishtwar_interevent_CV_cluster_intermediate_M3,usgs,excluding_fixed,0.8197002890535156
+kishtwar_interevent_min_days_cluster_intermediate_M3,usgs,excluding_fixed,42.50792824074074
+kishtwar_interevent_median_days_cluster_shallow_M3,usgs,excluding_fixed,243.12987847222223
+kishtwar_interevent_CV_cluster_shallow_M3,usgs,excluding_fixed,1.522619753383713
+kishtwar_interevent_min_days_cluster_shallow_M3,usgs,excluding_fixed,0.0033564814814814816
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,usgs,excluding_fixed,1876.5375810185187
+kishtwar_interevent_CV_cluster_intermediate_M4.4,usgs,excluding_fixed,0.977347680818804
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,usgs,excluding_fixed,42.50792824074074
+kishtwar_profile_azimuth_deg,usgs,excluding_fixed,146.3256416909394
+kishtwar_n_sequences_20d_20km,usgs,excluding_fixed,0.0
+kishtwar_N_intermediate_before2010,usgs,excluding_fixed,7.0
+kishtwar_depth_median_km_before2010,usgs,excluding_fixed,59.5
+kishtwar_depthError_median_km_before2010,usgs,excluding_fixed,16.4
+kishtwar_N_intermediate_2010on,usgs,excluding_fixed,4.0
+kishtwar_depth_median_km_2010on,usgs,excluding_fixed,54.56
+kishtwar_depthError_median_km_2010on,usgs,excluding_fixed,7.75
+kishtwar_largest_mag,usgs,excluding_fixed,5.3
+kishtwar_largest_minus_second,usgs,excluding_fixed,0.5999999999999996
+dbscan_clusters_intermediate,usgs,excluding_fixed,2
+dbscan_clusters_shallow,usgs,excluding_fixed,3
+dbscan_clusters_uncertain,usgs,excluding_fixed,2
+rate_per_yr_M4.4_1990-1999,usgs,including_fixed,3.1
+b_MLE_1990-1999,usgs,including_fixed,1.488
+rate_per_yr_M4.4_2000-2009,usgs,including_fixed,3.899
+b_MLE_2000-2009,usgs,including_fixed,1.36
+rate_per_yr_M4.4_2010-2019,usgs,including_fixed,5.701
+b_MLE_2010-2019,usgs,including_fixed,1.443
+rate_per_yr_M4.4_2020-2026,usgs,including_fixed,7.133
+b_MLE_2020-2026,usgs,including_fixed,1.343
+kishtwar_N_cluster_used_M3,usgs,including_fixed,103.0
+kishtwar_N_cluster_intermediate_M3,usgs,including_fixed,16.0
+kishtwar_N_cluster_uncertain_M3,usgs,including_fixed,52.0
+kishtwar_N_cluster_intermediate_M>=Mc,usgs,including_fixed,6.0
+kishtwar_N_cluster_shallow_M3,usgs,including_fixed,35.0
+kishtwar_N_cluster_deeper_than_150km,usgs,including_fixed,0.0
+kishtwar_lowest_magnitude_used,usgs,including_fixed,3.1
+kishtwar_N_intermediate_outside,usgs,including_fixed,25.0
+kishtwar_share_of_region_intermediate_in_cluster,usgs,including_fixed,0.3902439024390244
+kishtwar_depth_mean_km,usgs,including_fixed,56.53062500000001
+kishtwar_depth_median_km,usgs,including_fixed,58.0
+kishtwar_depth_min_km,usgs,including_fixed,45.0
+kishtwar_depth_max_km,usgs,including_fixed,72.2
+kishtwar_depthError_median_km,usgs,including_fixed,9.25
+kishtwar_interevent_median_days_cluster_intermediate_M3,usgs,including_fixed,442.63546296296295
+kishtwar_interevent_CV_cluster_intermediate_M3,usgs,including_fixed,0.9985324555446924
+kishtwar_interevent_min_days_cluster_intermediate_M3,usgs,including_fixed,0.0024074074074074076
+kishtwar_interevent_median_days_cluster_shallow_M3,usgs,including_fixed,53.072673611111114
+kishtwar_interevent_CV_cluster_shallow_M3,usgs,including_fixed,1.7804463873773573
+kishtwar_interevent_min_days_cluster_shallow_M3,usgs,including_fixed,0.0019675925925925924
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,usgs,including_fixed,292.6031134259259
+kishtwar_interevent_CV_cluster_intermediate_M4.4,usgs,including_fixed,1.1466022001350997
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,usgs,including_fixed,0.0024074074074074076
+kishtwar_profile_azimuth_deg,usgs,including_fixed,137.58704392936465
+kishtwar_n_sequences_20d_20km,usgs,including_fixed,0.0
+kishtwar_N_intermediate_before2010,usgs,including_fixed,9.0
+kishtwar_depth_median_km_before2010,usgs,including_fixed,58.6
+kishtwar_depthError_median_km_before2010,usgs,including_fixed,12.4
+kishtwar_N_intermediate_2010on,usgs,including_fixed,7.0
+kishtwar_depth_median_km_2010on,usgs,including_fixed,56.2
+kishtwar_depthError_median_km_2010on,usgs,including_fixed,7.7
+kishtwar_largest_mag,usgs,including_fixed,5.3
+kishtwar_largest_minus_second,usgs,including_fixed,0.5999999999999996
+dbscan_clusters_intermediate,usgs,including_fixed,3
+dbscan_clusters_shallow,usgs,including_fixed,6
+dbscan_clusters_uncertain,usgs,including_fixed,6
+rate_per_yr_M4.4_1990-1999,combined,excluding_fixed,1.5
+b_MLE_1990-1999,combined,excluding_fixed,1.077
+rate_per_yr_M4.4_2000-2009,combined,excluding_fixed,2.9
+b_MLE_2000-2009,combined,excluding_fixed,1.279
+rate_per_yr_M4.4_2010-2019,combined,excluding_fixed,4.901
+b_MLE_2010-2019,combined,excluding_fixed,1.326
+rate_per_yr_M4.4_2020-2026,combined,excluding_fixed,5.095
+b_MLE_2020-2026,combined,excluding_fixed,1.211
+kishtwar_N_cluster_used_M3,combined,excluding_fixed,274.0
+kishtwar_N_cluster_intermediate_M3,combined,excluding_fixed,19.0
+kishtwar_N_cluster_uncertain_M3,combined,excluding_fixed,79.0
+kishtwar_N_cluster_intermediate_M>=Mc,combined,excluding_fixed,6.0
+kishtwar_N_cluster_shallow_M3,combined,excluding_fixed,176.0
+kishtwar_N_cluster_deeper_than_150km,combined,excluding_fixed,0.0
+kishtwar_lowest_magnitude_used,combined,excluding_fixed,1.2
+kishtwar_N_intermediate_outside,combined,excluding_fixed,36.0
+kishtwar_share_of_region_intermediate_in_cluster,combined,excluding_fixed,0.34545454545454546
+kishtwar_depth_mean_km,combined,excluding_fixed,65.83105263157896
+kishtwar_depth_median_km,combined,excluding_fixed,60.82
+kishtwar_depth_min_km,combined,excluding_fixed,45.4
+kishtwar_depth_max_km,combined,excluding_fixed,118.6
+kishtwar_depthError_median_km,combined,excluding_fixed,13.2
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined,excluding_fixed,431.5130266203704
+kishtwar_interevent_CV_cluster_intermediate_M3,combined,excluding_fixed,0.9392414920643647
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined,excluding_fixed,42.50792824074074
+kishtwar_interevent_median_days_cluster_shallow_M3,combined,excluding_fixed,10.088206018518518
+kishtwar_interevent_CV_cluster_shallow_M3,combined,excluding_fixed,2.61224334063827
+kishtwar_interevent_min_days_cluster_shallow_M3,combined,excluding_fixed,0.0033564814814814816
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined,excluding_fixed,1920.2972800925927
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined,excluding_fixed,0.8211021609982685
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined,excluding_fixed,42.50792824074074
+kishtwar_profile_azimuth_deg,combined,excluding_fixed,134.64603796262247
+kishtwar_n_sequences_20d_20km,combined,excluding_fixed,0.0
+kishtwar_N_intermediate_before2010,combined,excluding_fixed,13.0
+kishtwar_depth_median_km_before2010,combined,excluding_fixed,65.2
+kishtwar_depthError_median_km_before2010,combined,excluding_fixed,15.8
+kishtwar_N_intermediate_2010on,combined,excluding_fixed,6.0
+kishtwar_depth_median_km_2010on,combined,excluding_fixed,57.435
+kishtwar_depthError_median_km_2010on,combined,excluding_fixed,7.75
+kishtwar_largest_mag,combined,excluding_fixed,5.3
+kishtwar_largest_minus_second,combined,excluding_fixed,0.2999999999999998
+dbscan_clusters_intermediate,combined,excluding_fixed,2
+dbscan_clusters_shallow,combined,excluding_fixed,4
+dbscan_clusters_uncertain,combined,excluding_fixed,8
+rate_per_yr_M4.4_1990-1999,combined,including_fixed,3.4
+b_MLE_1990-1999,combined,including_fixed,1.434
+rate_per_yr_M4.4_2000-2009,combined,including_fixed,4.499
+b_MLE_2000-2009,combined,including_fixed,1.421
+rate_per_yr_M4.4_2010-2019,combined,including_fixed,5.701
+b_MLE_2010-2019,combined,including_fixed,1.443
+rate_per_yr_M4.4_2020-2026,combined,including_fixed,7.279
+b_MLE_2020-2026,combined,including_fixed,1.316
+kishtwar_N_cluster_used_M3,combined,including_fixed,560.0
+kishtwar_N_cluster_intermediate_M3,combined,including_fixed,21.0
+kishtwar_N_cluster_uncertain_M3,combined,including_fixed,356.0
+kishtwar_N_cluster_intermediate_M>=Mc,combined,including_fixed,6.0
+kishtwar_N_cluster_shallow_M3,combined,including_fixed,183.0
+kishtwar_N_cluster_deeper_than_150km,combined,including_fixed,0.0
+kishtwar_lowest_magnitude_used,combined,including_fixed,1.2
+kishtwar_N_intermediate_outside,combined,including_fixed,39.0
+kishtwar_share_of_region_intermediate_in_cluster,combined,including_fixed,0.35
+kishtwar_depth_mean_km,combined,including_fixed,63.84714285714286
+kishtwar_depth_median_km,combined,including_fixed,59.5
+kishtwar_depth_min_km,combined,including_fixed,45.0
+kishtwar_depth_max_km,combined,including_fixed,118.6
+kishtwar_depthError_median_km,combined,including_fixed,12.4
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined,including_fixed,404.18412037037035
+kishtwar_interevent_CV_cluster_intermediate_M3,combined,including_fixed,1.0434919526778963
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined,including_fixed,6.030092592592593
+kishtwar_interevent_median_days_cluster_shallow_M3,combined,including_fixed,11.55400462962963
+kishtwar_interevent_CV_cluster_shallow_M3,combined,including_fixed,2.5477791483265153
+kishtwar_interevent_min_days_cluster_shallow_M3,combined,including_fixed,0.0019675925925925924
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined,including_fixed,1920.2972800925927
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined,including_fixed,0.8211021609982685
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined,including_fixed,42.50792824074074
+kishtwar_profile_azimuth_deg,combined,including_fixed,133.3526201847747
+kishtwar_n_sequences_20d_20km,combined,including_fixed,0.0
+kishtwar_N_intermediate_before2010,combined,including_fixed,15.0
+kishtwar_depth_median_km_before2010,combined,including_fixed,63.3
+kishtwar_depthError_median_km_before2010,combined,including_fixed,14.6
+kishtwar_N_intermediate_2010on,combined,including_fixed,6.0
+kishtwar_depth_median_km_2010on,combined,including_fixed,57.435
+kishtwar_depthError_median_km_2010on,combined,including_fixed,7.75
+kishtwar_largest_mag,combined,including_fixed,5.3
+kishtwar_largest_minus_second,combined,including_fixed,0.2999999999999998
+dbscan_clusters_intermediate,combined,including_fixed,2
+dbscan_clusters_shallow,combined,including_fixed,4
+dbscan_clusters_uncertain,combined,including_fixed,1
+rate_per_yr_M4.4_1990-1999,combined_nodup,excluding_fixed,1.5
+b_MLE_1990-1999,combined_nodup,excluding_fixed,1.077
+rate_per_yr_M4.4_2000-2009,combined_nodup,excluding_fixed,2.9
+b_MLE_2000-2009,combined_nodup,excluding_fixed,1.279
+rate_per_yr_M4.4_2010-2019,combined_nodup,excluding_fixed,4.901
+b_MLE_2010-2019,combined_nodup,excluding_fixed,1.326
+rate_per_yr_M4.4_2020-2026,combined_nodup,excluding_fixed,5.095
+b_MLE_2020-2026,combined_nodup,excluding_fixed,1.211
+kishtwar_N_cluster_used_M3,combined_nodup,excluding_fixed,274.0
+kishtwar_N_cluster_intermediate_M3,combined_nodup,excluding_fixed,19.0
+kishtwar_N_cluster_uncertain_M3,combined_nodup,excluding_fixed,79.0
+kishtwar_N_cluster_intermediate_M>=Mc,combined_nodup,excluding_fixed,6.0
+kishtwar_N_cluster_shallow_M3,combined_nodup,excluding_fixed,176.0
+kishtwar_N_cluster_deeper_than_150km,combined_nodup,excluding_fixed,0.0
+kishtwar_lowest_magnitude_used,combined_nodup,excluding_fixed,1.2
+kishtwar_N_intermediate_outside,combined_nodup,excluding_fixed,36.0
+kishtwar_share_of_region_intermediate_in_cluster,combined_nodup,excluding_fixed,0.34545454545454546
+kishtwar_depth_mean_km,combined_nodup,excluding_fixed,65.83105263157896
+kishtwar_depth_median_km,combined_nodup,excluding_fixed,60.82
+kishtwar_depth_min_km,combined_nodup,excluding_fixed,45.4
+kishtwar_depth_max_km,combined_nodup,excluding_fixed,118.6
+kishtwar_depthError_median_km,combined_nodup,excluding_fixed,13.2
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined_nodup,excluding_fixed,431.5130266203704
+kishtwar_interevent_CV_cluster_intermediate_M3,combined_nodup,excluding_fixed,0.9392414920643647
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined_nodup,excluding_fixed,42.50792824074074
+kishtwar_interevent_median_days_cluster_shallow_M3,combined_nodup,excluding_fixed,10.088206018518518
+kishtwar_interevent_CV_cluster_shallow_M3,combined_nodup,excluding_fixed,2.61224334063827
+kishtwar_interevent_min_days_cluster_shallow_M3,combined_nodup,excluding_fixed,0.0033564814814814816
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined_nodup,excluding_fixed,1920.2972800925927
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined_nodup,excluding_fixed,0.8211021609982685
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined_nodup,excluding_fixed,42.50792824074074
+kishtwar_profile_azimuth_deg,combined_nodup,excluding_fixed,134.64603796262247
+kishtwar_n_sequences_20d_20km,combined_nodup,excluding_fixed,0.0
+kishtwar_N_intermediate_before2010,combined_nodup,excluding_fixed,13.0
+kishtwar_depth_median_km_before2010,combined_nodup,excluding_fixed,65.2
+kishtwar_depthError_median_km_before2010,combined_nodup,excluding_fixed,15.8
+kishtwar_N_intermediate_2010on,combined_nodup,excluding_fixed,6.0
+kishtwar_depth_median_km_2010on,combined_nodup,excluding_fixed,57.435
+kishtwar_depthError_median_km_2010on,combined_nodup,excluding_fixed,7.75
+kishtwar_largest_mag,combined_nodup,excluding_fixed,5.3
+kishtwar_largest_minus_second,combined_nodup,excluding_fixed,0.2999999999999998
+dbscan_clusters_intermediate,combined_nodup,excluding_fixed,2
+dbscan_clusters_shallow,combined_nodup,excluding_fixed,4
+dbscan_clusters_uncertain,combined_nodup,excluding_fixed,8
+rate_per_yr_M4.4_1990-1999,combined_nodup,including_fixed,3.4
+b_MLE_1990-1999,combined_nodup,including_fixed,1.434
+rate_per_yr_M4.4_2000-2009,combined_nodup,including_fixed,4.499
+b_MLE_2000-2009,combined_nodup,including_fixed,1.421
+rate_per_yr_M4.4_2010-2019,combined_nodup,including_fixed,5.701
+b_MLE_2010-2019,combined_nodup,including_fixed,1.443
+rate_per_yr_M4.4_2020-2026,combined_nodup,including_fixed,7.133
+b_MLE_2020-2026,combined_nodup,including_fixed,1.343
+kishtwar_N_cluster_used_M3,combined_nodup,including_fixed,558.0
+kishtwar_N_cluster_intermediate_M3,combined_nodup,including_fixed,21.0
+kishtwar_N_cluster_uncertain_M3,combined_nodup,including_fixed,354.0
+kishtwar_N_cluster_intermediate_M>=Mc,combined_nodup,including_fixed,6.0
+kishtwar_N_cluster_shallow_M3,combined_nodup,including_fixed,183.0
+kishtwar_N_cluster_deeper_than_150km,combined_nodup,including_fixed,0.0
+kishtwar_lowest_magnitude_used,combined_nodup,including_fixed,1.2
+kishtwar_N_intermediate_outside,combined_nodup,including_fixed,39.0
+kishtwar_share_of_region_intermediate_in_cluster,combined_nodup,including_fixed,0.35
+kishtwar_depth_mean_km,combined_nodup,including_fixed,63.84714285714286
+kishtwar_depth_median_km,combined_nodup,including_fixed,59.5
+kishtwar_depth_min_km,combined_nodup,including_fixed,45.0
+kishtwar_depth_max_km,combined_nodup,including_fixed,118.6
+kishtwar_depthError_median_km,combined_nodup,including_fixed,12.4
+kishtwar_interevent_median_days_cluster_intermediate_M3,combined_nodup,including_fixed,404.18412037037035
+kishtwar_interevent_CV_cluster_intermediate_M3,combined_nodup,including_fixed,1.0434919526778963
+kishtwar_interevent_min_days_cluster_intermediate_M3,combined_nodup,including_fixed,6.030092592592593
+kishtwar_interevent_median_days_cluster_shallow_M3,combined_nodup,including_fixed,11.55400462962963
+kishtwar_interevent_CV_cluster_shallow_M3,combined_nodup,including_fixed,2.5477791483265153
+kishtwar_interevent_min_days_cluster_shallow_M3,combined_nodup,including_fixed,0.0019675925925925924
+kishtwar_interevent_median_days_cluster_intermediate_M4.4,combined_nodup,including_fixed,1920.2972800925927
+kishtwar_interevent_CV_cluster_intermediate_M4.4,combined_nodup,including_fixed,0.8211021609982685
+kishtwar_interevent_min_days_cluster_intermediate_M4.4,combined_nodup,including_fixed,42.50792824074074
+kishtwar_profile_azimuth_deg,combined_nodup,including_fixed,133.33332848245766
+kishtwar_n_sequences_20d_20km,combined_nodup,including_fixed,0.0
+kishtwar_N_intermediate_before2010,combined_nodup,including_fixed,15.0
+kishtwar_depth_median_km_before2010,combined_nodup,including_fixed,63.3
+kishtwar_depthError_median_km_before2010,combined_nodup,including_fixed,14.6
+kishtwar_N_intermediate_2010on,combined_nodup,including_fixed,6.0
+kishtwar_depth_median_km_2010on,combined_nodup,including_fixed,57.435
+kishtwar_depthError_median_km_2010on,combined_nodup,including_fixed,7.75
+kishtwar_largest_mag,combined_nodup,including_fixed,5.3
+kishtwar_largest_minus_second,combined_nodup,including_fixed,0.2999999999999998
+dbscan_clusters_intermediate,combined_nodup,including_fixed,2
+dbscan_clusters_shallow,combined_nodup,including_fixed,4
+dbscan_clusters_uncertain,combined_nodup,including_fixed,1
+b_mle_whole region_all types,usgs,excluding_fixed,1.338
+N_b_whole region_all types,usgs,excluding_fixed,55
+b_mle_whole region_mb only,usgs,excluding_fixed,1.477
+N_b_whole region_mb only,usgs,excluding_fixed,50
+b_mle_intermediate_all types,usgs,excluding_fixed,1.241
+N_b_intermediate_all types,usgs,excluding_fixed,8
+b_mle_intermediate_mb only,usgs,excluding_fixed,1.241
+N_b_intermediate_mb only,usgs,excluding_fixed,8
+b_mle_whole region_all types,usgs,including_fixed,1.402
+N_b_whole region_all types,usgs,including_fixed,176
+b_mle_whole region_mb only,usgs,including_fixed,1.595
+N_b_whole region_mb only,usgs,including_fixed,161
+b_mle_intermediate_all types,usgs,including_fixed,1.322
+N_b_intermediate_all types,usgs,including_fixed,14
+b_mle_intermediate_mb only,usgs,including_fixed,1.322
+N_b_intermediate_mb only,usgs,including_fixed,14
+b_mle_whole region_all types,combined,excluding_fixed,1.249
+N_b_whole region_all types,combined,excluding_fixed,128
+b_mle_whole region_mb only,combined,excluding_fixed,1.431
+N_b_whole region_mb only,combined,excluding_fixed,114
+b_mle_intermediate_all types,combined,excluding_fixed,1.265
+N_b_intermediate_all types,combined,excluding_fixed,15
+b_mle_intermediate_mb only,combined,excluding_fixed,1.265
+N_b_intermediate_mb only,combined,excluding_fixed,15
+b_mle_whole region_all types,combined,including_fixed,1.4
+N_b_whole region_all types,combined,including_fixed,186
+b_mle_whole region_mb only,combined,including_fixed,1.584
+N_b_whole region_mb only,combined,including_fixed,169
+b_mle_intermediate_all types,combined,including_fixed,1.265
+N_b_intermediate_all types,combined,including_fixed,15
+b_mle_intermediate_mb only,combined,including_fixed,1.265
+N_b_intermediate_mb only,combined,including_fixed,15
+mc_authors_1970s,USGS (mostly mb),,4.9
+mc_authors_1980s,USGS (mostly mb),,4.9
+mc_authors_1990s,USGS (mostly mb),,4.9
+mc_authors_2000s,USGS (mostly mb),,3.9
+mc_authors_2010s,USGS (mostly mb),,4.4
+mc_authors_2020s,USGS (mostly mb),,4.4
+mc_authors_1970s,"USGS + ISC, mb only",,4.9
+mc_authors_1980s,"USGS + ISC, mb only",,4.9
+mc_authors_1990s,"USGS + ISC, mb only",,3.9
+mc_authors_2000s,"USGS + ISC, mb only",,3.9
+mc_authors_2010s,"USGS + ISC, mb only",,3.9
+mc_authors_2020s,"USGS + ISC, mb only",,3.9
+mc_authors_1970s,"USGS + ISC, all types (mixed scales)",,4.9
+mc_authors_1980s,"USGS + ISC, all types (mixed scales)",,4.9
+mc_authors_1990s,"USGS + ISC, all types (mixed scales)",,3.9
+mc_authors_2000s,"USGS + ISC, all types (mixed scales)",,2.9
+mc_authors_2010s,"USGS + ISC, all types (mixed scales)",,3.9
+mc_authors_2020s,"USGS + ISC, all types (mixed scales)",,2.9
+mc_band_recovered_share_50pct,combined,excluding_fixed,1.0
+mc_band_recovered_share_50pct,usgs,excluding_fixed,0.99
+baseline_414_N,authors,,2.0
+baseline_414_Mc_maxcurv_raw,authors,,2.43
+baseline_414_Mc_plus0.4_label,authors,,0.917
+baseline_414_b_lsq,authors,,Mc 2.4
+baseline_254_N,authors,,2.0
+baseline_254_Mc_maxcurv_raw,authors,,2.43
+baseline_254_Mc_plus0.4_label,authors,,0.897
+baseline_254_b_lsq,authors,,Mc 2.85
+baseline_61_N,authors,,1.5
+baseline_61_Mc_maxcurv_raw,authors,,1.91
+baseline_61_Mc_plus0.4_label,authors,,0.753
+baseline_61_b_lsq,authors,,not reported (61 events)
+mc_n_band_events,combined,excluding_fixed,19
+mc_n_band_events,usgs,excluding_fixed,11
