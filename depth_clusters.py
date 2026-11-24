@@ -19,9 +19,12 @@ Run (each combination writes its own folder):
   .venv/bin/python depth_clusters.py                          USGS, excluding fixed
   .venv/bin/python depth_clusters.py --include-fixed          USGS, including fixed
   .venv/bin/python depth_clusters.py --catalog combined [...]  USGS + ISC Bulletin
+  add --drop-duplicates (combined only) to leave out rows flagged as possible duplicates
+Windows (PowerShell): .venv\\Scripts\\python depth_clusters.py [same options]
+
+A fourth group, "deep" (depth > 150 km), is kept apart; before it was counted as uncertain.
 """
 import os
-import sys
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -29,55 +32,26 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.cluster import DBSCAN
 
+from seis_utils import (BOX, DEEP_MIN, SOLVED_DEPTH, b_mle, case_label, case_name, load_catalog, parse_args,
+                        results_base)
+from seis_utils import xy_km as km_xy
+
 # ----------------------------- PARAMETERS ---------------------------------- #
-HERE = os.path.dirname(os.path.abspath(__file__))
-INCLUDE_FIXED = "--include-fixed" in sys.argv
-CATALOG = sys.argv[sys.argv.index("--catalog") + 1] if "--catalog" in sys.argv else "usgs"
-CASE = "including_fixed" if INCLUDE_FIXED else "excluding_fixed"
-BASE = os.path.join(HERE, "results") if CATALOG == "usgs" else os.path.join(HERE, "results", "combined_usgs_isc")
-OUT = os.path.join(BASE, CASE, "depth_clusters")
-CASE_LABEL = (f"Catalog: {'USGS' if CATALOG == 'usgs' else 'USGS + ISC Bulletin'} | "
-              f"{'including' if INCLUDE_FIXED else 'excluding'} fixed depths | all years")
-SOLVED_DEPTH = ("from location", "constrained by depth phases")
-DEEP_MIN, DEEP_MAX = 40, 150
+ARGS = parse_args("DBSCAN clusters per depth group")
+INCLUDE_FIXED, CATALOG = ARGS.include_fixed, ARGS.catalog
+OUT = os.path.join(results_base(ARGS), case_name(ARGS), "depth_clusters")
+CASE_LABEL = case_label(ARGS) + " | all years"
 EPS_KM, MIN_EVENTS = 30.0, 4          # DBSCAN neighbourhood radius and minimum cluster size
 MC_CUT = 4.4                          # completeness used for b-values (USGS mb, authors' method)
-BOX = dict(lat=(31.0, 35.0), lon=(74.0, 79.5))
-GROUPS = [("intermediate", "#c62828"), ("uncertain", "#757575"), ("shallow", "#1565c0")]
+PROFILE_AZ = 127.0                    # arc-parallel azimuth (PCA of the USGS M>=4.4 epicentres, him_ides_himachal.py)
+GROUPS = [("intermediate", "#c62828"), ("uncertain", "#757575"), ("shallow", "#1565c0"), ("deep", "#000000")]
 os.makedirs(OUT, exist_ok=True)
 matplotlib.rc("font", size=11)
 
 
 def load():
-    if CATALOG == "usgs":
-        c = pd.read_csv(os.path.join(HERE, "data", "usgs_himachal_kashmir_M3plus_1970-2026.csv"))
-        c = c.merge(pd.read_csv(os.path.join(HERE, "data", "usgs_depth_type.csv"))[["id", "depth_type"]],
-                    on="id", how="left")
-        c["source"] = "USGS"
-    else:
-        c = pd.read_csv(os.path.join(HERE, "data", "combined_usgs_isc_catalog.csv"))
-    c["depth_type"] = c.depth_type.fillna("unknown")
-    c["time"] = pd.to_datetime(c.time, utc=True, format="ISO8601").dt.tz_localize(None)
-    c = c[c.latitude.between(*BOX["lat"]) & c.longitude.between(*BOX["lon"]) & c.mag.notna()]
-    n_all = len(c)
-    if not INCLUDE_FIXED:
-        c = c[c.depth_type.isin(SOLVED_DEPTH)]
-    top, bottom = c.depth - c.depthError, c.depth + c.depthError
-    c = c.assign(group=np.select([(top >= DEEP_MIN) & (c.depth <= DEEP_MAX), bottom < DEEP_MIN],
-                                 ["intermediate", "shallow"], default="uncertain"))
-    return c.sort_values("time").reset_index(drop=True), n_all
-
-
-def b_mle(m, mc, dm=0.1):
-    m = m[m >= mc]
-    if len(m) < 5:
-        return np.nan, np.nan, len(m)
-    b = np.log10(np.e) / (m.mean() - (mc - dm / 2))
-    return b, b / np.sqrt(len(m)), len(m)
-
-
-def km_xy(lon, lat, lon0, lat0):
-    return (lon - lon0) * 111.32 * np.cos(np.radians(lat0)), (lat - lat0) * 110.57
+    c, info = load_catalog(CATALOG, INCLUDE_FIXED, None, ARGS.drop_duplicates)
+    return c.rename(columns={"depth_class": "group"}), info["in_box_with_mag"]
 
 
 cat, n_all = load()
@@ -114,13 +88,14 @@ for g, _ in GROUPS:
                          b_mle=round(bm, 2) if bm == bm else None, b_err=round(bs, 2) if bs == bs else None,
                          interevent_CV=round(gaps.std() / gaps.mean(), 2) if len(gaps) > 2 else None,
                          share_fixed_or_unflagged=round((~cl.depth_type.isin(SOLVED_DEPTH)).mean(), 2),
+                         n_possible_duplicates=int(cl.possible_duplicate_of.notna().sum()),
                          sources=";".join(sorted(cl.source.astype(str).unique()))))
 tab = pd.DataFrame(rows)
 tab.to_csv(os.path.join(OUT, "depth_clusters.csv"), index=False)
 cat.to_csv(os.path.join(OUT, "events_with_clusters.csv"), index=False)
 
 # ----------------------------- MAP FIGURE ---------------------------------- #
-fig, axs = plt.subplots(1, 3, figsize=(17, 6.2), sharex=True, sharey=True)
+fig, axs = plt.subplots(1, 4, figsize=(22, 6.2), sharex=True, sharey=True)
 pal = plt.get_cmap("tab10")
 for ax, (g, col) in zip(axs, GROUPS):
     sub = cat[cat.group == g]
@@ -138,7 +113,8 @@ for ax, (g, col) in zip(axs, GROUPS):
     nclu = sub.cluster[sub.cluster > 0].nunique()
     title = {"intermediate": "Intermediate: depth − error ≥ 40 km",
              "uncertain": "Uncertain: error bar crosses 40 km",
-             "shallow": "Shallow: depth + error < 40 km"}[g]
+             "shallow": "Shallow: depth + error < 40 km",
+             "deep": "Deeper than 150 km"}[g]
     ax.set_title(f"{title}\n{len(sub)} events, {nclu} clusters", fontsize=11, color=col)
     ax.set_xlim(BOX["lon"][0] - 0.1, BOX["lon"][1] + 0.1); ax.set_ylim(BOX["lat"][0] - 0.1, BOX["lat"][1] + 0.1)
     ax.set_aspect(1 / np.cos(np.radians(33))); ax.set_xlabel("Longitude (°)"); ax.grid(alpha=0.2)
@@ -153,7 +129,7 @@ plt.tight_layout(); fig.savefig(os.path.join(OUT, "DepthClusters_map.png"), dpi=
 fig, ax = plt.subplots(figsize=(13, 5.5))
 lat0, lon0 = cat.latitude.mean(), cat.longitude.mean()
 x, y = km_xy(cat.longitude, cat.latitude, lon0, lat0)
-az = np.radians(127.0)                                  # regional arc-parallel profile (see him_ides_himachal.py)
+az = np.radians(PROFILE_AZ)                             # regional arc-parallel profile
 cat["along_km"] = x * np.sin(az) + y * np.cos(az)
 for g, col in GROUPS:
     sub = cat[cat.group == g]
@@ -163,7 +139,7 @@ for g, col in GROUPS:
     ax.scatter(sub.along_km[~inc], sub.depth[~inc], s=12, facecolors="none", edgecolors=col, lw=0.6, alpha=0.6,
                label=f"{g}, not clustered")
 ax.axhline(DEEP_MIN, ls=":", c="k", lw=0.8)
-ax.invert_yaxis(); ax.set_ylabel("Depth (km)"); ax.set_xlabel("Distance along the arc, azimuth 127° (km)")
+ax.invert_yaxis(); ax.set_ylabel("Depth (km)"); ax.set_xlabel(f"Distance along the arc, azimuth {PROFILE_AZ:.0f}° (km)")
 ax.legend(fontsize=8, ncol=3, loc="lower left"); ax.grid(alpha=0.2)
 ax.set_title(f"All events projected onto one arc-parallel line; bars = depth error   ·   {CASE_LABEL}", fontsize=10)
 plt.tight_layout(); fig.savefig(os.path.join(OUT, "DepthClusters_section.png"), dpi=200); plt.close(fig)
