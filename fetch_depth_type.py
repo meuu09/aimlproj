@@ -13,9 +13,9 @@ URL = "https://earthquake.usgs.gov/fdsnws/event/1/query?eventid={}&format=geojso
 
 done = {}
 if os.path.exists(DST):
-    done = {r["id"]: r for r in csv.DictReader(open(DST))}
-rows = list(csv.DictReader(open(SRC)))
-with open(DST, "a", newline="") as f:
+    done = {r["id"]: r for r in csv.DictReader(open(DST, encoding="utf-8"))}
+rows = list(csv.DictReader(open(SRC, encoding="utf-8")))
+with open(DST, "a", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, ["id", "depth_type", "origin_source", "depth_km"])
     if not done:
         w.writeheader()

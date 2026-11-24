@@ -18,6 +18,7 @@ Depth chosen per event (written to data/isc_bulletin_events.csv):
 Magnitude chosen per event: first available in MAG_PRIORITY (type, agency).
 
 Run:  .venv/bin/python fetch_isc_bulletin.py        (resumable; raw files in data/isc_raw/)
+Windows (PowerShell): .venv\\Scripts\\python fetch_isc_bulletin.py
 """
 import csv
 import os
@@ -59,7 +60,7 @@ def download(year):
         try:
             txt = urllib.request.urlopen(URL.format(y=year, **BOX), timeout=600).read().decode("utf-8", "replace")
             if "STOP" in txt or "No events were found" in txt:
-                open(path, "w").write(txt)
+                open(path, "w", encoding="utf-8").write(txt)
                 return path
         except Exception as e:
             print(f"  {year}: attempt {attempt + 1} failed ({type(e).__name__})", flush=True)
@@ -111,7 +112,7 @@ def summarise(ev):
     ors = [o for o in ev["origins"] if o["lat"] is not None]
     if not ors:
         return None
-    prime = next((o for o in ors if o["prime"]), ors[-1] if len(ors) == 1 else ors[-1])
+    prime = next((o for o in ors if o["prime"]), ors[-1])
     free = [o for o in ors if o["depth"] is not None and not o["depth_fixed"] and (o["depth_err"] or 0) > 0]
     rank = lambda o: DEPTH_PRIORITY.index(o["author"]) if o["author"] in DEPTH_PRIORITY else len(DEPTH_PRIORITY)
     best = min(free, key=rank) if free else None
@@ -154,6 +155,6 @@ if __name__ == "__main__":
                 origins.append(dict(isc_id=ev["id"], **o))
     for path, rows in ((OUT_EVENTS, events), (OUT_ORIGINS, origins)):
         if rows:
-            with open(path, "w", newline="") as f:
+            with open(path, "w", newline="", encoding="utf-8") as f:
                 w = csv.DictWriter(f, list(rows[0].keys())); w.writeheader(); w.writerows(rows)
     print(f"events={len(events)} origins={len(origins)} -> {OUT_EVENTS}")
