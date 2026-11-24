@@ -361,3 +361,71 @@ def test_edge_cases_return_nan_not_crash():
 def test_load_catalog_unknown_catalog_raises():
     with pytest.raises(ValueError):
         su.load_catalog("isc", verbose=False)
+
+
+GENUINE_ISF = """Event     8443952 Kashmir-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2005/01/04 21:13:51.50   3.23 1.000  33.9890   76.4380  14.5 25.60  -1  19.7  14.7        15 306                      NDI        7392851
+
+Magnitude  Err Nsta Author      OrigID
+MD     3.8          NDI        7392851
+ML     3.8          NDI        7392851
+
+Event     8500699 Western Xizang-India border region
+   Date       Time        Err   RMS Latitude Longitude  Smaj  Smin  Az Depth   Err Ndef Nsta Gap  mdist  Mdist Qual   Author      OrigID
+2005/02/02 14:48:42.00   3.98 1.300  31.7050   78.5430 10.10 11.30  -1   5.0f             15 215                      NDI        7433615
+"""
+
+
+def test_isf_parser_on_genuine_records(tmp_path):
+    """Genuine ISC Bulletin lines (data/isc_raw/isc_isf_2005.txt), values checked by hand."""
+    import fetch_isc_bulletin as fib
+    p = tmp_path / "isf.txt"
+    p.write_text(GENUINE_ISF)
+    ev = list(fib.parse(str(p)))
+    assert [e["id"] for e in ev] == ["8443952", "8500699"]
+    o = ev[0]["origins"][0]
+    assert o["time"] == "2005-01-04T21:13:51.50" and o["time_err"] == 3.23 and o["rms"] == 1.0
+    assert (o["lat"], o["lon"], o["smaj"], o["smin"]) == (33.989, 76.438, 14.5, 25.6)
+    assert (o["depth"], o["depth_fixed"], o["depth_err"], o["ndef"], o["nsta"], o["gap"]) == (19.7, False, 14.7, None, 15, 306)
+    assert (o["author"], o["origid"]) == ("NDI", "7392851")
+    assert ev[0]["mags"] == [dict(type="MD", mag=3.8, author="NDI"), dict(type="ML", mag=3.8, author="NDI")]
+    f = ev[1]["origins"][0]
+    assert f["depth"] == 5.0 and f["depth_fixed"] and f["depth_err"] is None
+    row = fib.summarise(ev[1])
+    assert row["depth_type"] == "operator assigned" and row["depthError"] is None and row["origin_id"] == "7433615"
+    assert fib.summarise(ev[0])["depth_type"] == "from location"
+
+
+def test_dbscan_haversine_lat_lon_order():
+    import cluster_robustness as cr
+    lat = np.r_[np.full(5, 33.0) + np.arange(5) * 0.01, np.full(5, 33.0)]
+    lon = np.r_[np.full(5, 76.0), np.full(5, 76.0 + 60 / 93.3) + np.arange(5) * 0.01]
+    lab = cr.dbscan(lat, lon, 30, 4)
+    assert len(set(lab[:5])) == 1 and len(set(lab[5:])) == 1 and lab[0] != lab[5] and (lab >= 0).all()
+    assert (cr.dbscan(lat[:3], lon[:3], 30, 4) == -1).all()
+
+
+def test_pca_azimuth_of_a_known_line():
+    import clustering_checks as cc
+    t = np.linspace(-50, 50, 21)
+    az = np.radians(130.0)
+    x, y = t * np.sin(az), t * np.cos(az)
+    lon = cc.LON0 + x / (111.32 * np.cos(np.radians(cc.LAT0)))
+    lat = cc.LAT0 + y / 110.57
+    a, share = cc.pca_azimuth(pd.DataFrame({"longitude": lon, "latitude": lat}))
+    assert a == pytest.approx(130.0, abs=0.5) and share == pytest.approx(1.0)
+
+
+def test_monte_carlo_is_reproducible_and_skips_missing_errors():
+    import cluster_robustness as cr
+    df = pd.DataFrame({"id": [f"e{i}" for i in range(8)], "time": pd.date_range("2000", periods=8, freq="D"),
+                       "latitude": 33.0 + np.arange(8) * 0.02, "longitude": [75.9] * 8,
+                       "depth": [60.0] * 7 + [60.0], "depthError": [5.0] * 7 + [np.nan],
+                       "horizontalError": [5.0] * 8, "mag": [4.5] * 8, "magType": ["mb"] * 8})
+    df["depth_class"] = su.depth_class(df.depth, df.depthError)
+    e1, r1 = cr.monte_carlo("t", df, 8.0, n_runs=20, seed=3)
+    e2, r2 = cr.monte_carlo("t", df, 8.0, n_runs=20, seed=3)
+    pd.testing.assert_frame_equal(r1, r2)
+    assert np.isnan(e1.p_intermediate.iloc[-1]) and e1.depth_error_missing.iloc[-1]
+    assert (e1.p_intermediate.iloc[:-1] == 1.0).all()
