@@ -13,7 +13,8 @@ Why a wrapper instead of running `python Figures_5-9.py` directly:
     inside figure legends, so they can be compared with the paper.
 
 Run:  .venv/bin/python reproduce_baseline.py          (Figures 5-9)
-      .venv/bin/python reproduce_baseline.py --fig10  (also Figure 10, slower)
+      .venv/bin/python reproduce_baseline.py --fig10  (also Figure 10 -> Fig_10.png)
+      Windows: .venv\\Scripts\\python reproduce_baseline.py [--fig10]
 """
 import glob
 import logging
@@ -80,18 +81,35 @@ def _logged_calc_bvalues(mag, Mc, M_max, mag_steps, cdf):
     return fit_fn, fit
 tp.calc_bvalues = _logged_calc_bvalues
 
-print("Running Him_ides/python/Figures_5-9.py ...")
-runpy.run_path(os.path.join(ORIG, "Figures_5-9.py"), run_name="__main__")
-if "--fig10" in sys.argv:
-    print("Running Him_ides/python/Figure_10.py ...")
-    runpy.run_path(os.path.join(ORIG, "Figure_10.py"), run_name="__main__")
+def _axes3d_attached(fig, *args, **kwargs):
+    """Figure_10.py calls Axes3D(fig). Before matplotlib 3.4 that added the axes to the
+    figure; now it does not, so the script's later plt.gca() got a new 2-D axes and
+    crashed on invert_zaxis(). Create the 3-D axes the current way instead."""
+    return fig.add_subplot(111, projection="3d")
 
-# ---- move new outputs out of the vendored folder ----
-for f in sorted(set(os.listdir(ORIG)) - before):
-    if f.lower().endswith((".png", ".jpg", ".pdf")):
-        shutil.move(os.path.join(ORIG, f), os.path.join(OUT, f))
-for f in glob.glob(os.path.join(OUT, "_shown_*.png")):  # figures already saved by the scripts
-    if "--fig10" not in sys.argv:
+
+try:
+    print("Running Him_ides/python/Figures_5-9.py ...")
+    runpy.run_path(os.path.join(ORIG, "Figures_5-9.py"), run_name="__main__")
+    n_shown_59 = _shown[0]
+    if "--fig10" in sys.argv:
+        import mpl_toolkits.mplot3d as _m3d
+        _m3d.Axes3D = _axes3d_attached          # Figure_10.py imports it inside its function
+        print("Running Him_ides/python/Figure_10.py ...")
+        runpy.run_path(os.path.join(ORIG, "Figure_10.py"), run_name="__main__")
+finally:
+    # ---- always move new outputs out of the vendored folder, even after an error ----
+    for f in sorted(set(os.listdir(ORIG)) - before):
+        if f.lower().endswith((".png", ".jpg", ".pdf")):
+            shutil.move(os.path.join(ORIG, f), os.path.join(OUT, f))
+
+# plt.show() snapshots: Figures_5-9 save their own files, so drop theirs; Figure_10 only
+# shows its figure, so keep that one as Fig_10.png
+for f in glob.glob(os.path.join(OUT, "_shown_*.png")):
+    k = int(os.path.basename(f)[7:-4])
+    if k > n_shown_59:
+        os.replace(f, os.path.join(OUT, "Fig_10.png" if k == n_shown_59 + 1 else f"Fig_10_{k - n_shown_59}.png"))
+    else:
         os.remove(f)
 
 # Fig_7 is written as JPEG with a .png name by the original code; keep a correct extension
