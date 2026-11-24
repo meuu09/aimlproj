@@ -1,0 +1,1194 @@
+compared_with,file,row,column,old,new,changed
+18ae9d6,results/combined_usgs_isc/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_events,128,128,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_intermediate,15,15,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_shallow,81,81,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_uncertain,32,32,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_err,0.42,0.42,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_mle,1.11,1.11,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depthError_median_km,13.2,13.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_max_km,118.6,118.6,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_median_km,63.3,63.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_min_km,45.4,45.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,first,1981-12-14,1981-12-14,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,interevent_CV,1.21,1.21,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,last,2020-06-30,2020-06-30,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lat_centre,33.114,33.114,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lon_centre,75.967,75.967,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_max,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_min,2.7,2.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,max_extent_km,124.4,124.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_M_ge_Mc,7,7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_events,23,23,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depthError_median_km,10.5,10.5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_max_km,103.8,103.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_median_km,63.1,63.1,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_min_km,55.3,55.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,first,2007-09-04,2007-09-04,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,interevent_CV,1.17,1.17,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,last,2024-12-27,2024-12-27,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lat_centre,34.455,34.455,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lon_centre,74.126,74.126,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_max,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_min,3.4,3.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,max_extent_km,57.9,57.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_M_ge_Mc,1,1,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_events,7,7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_err,0.09,0.09,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_mle,0.85,0.85,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depthError_median_km,8.9,8.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_max_km,38.0,38.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_median_km,11.0,11.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_min_km,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,first,1970-03-05,1970-03-05,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,interevent_CV,3.5,3.5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,last,2026-10-16,2026-10-16,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lat_centre,32.526,32.526,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lon_centre,76.614,76.614,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_max,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_min,1.7,1.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,max_extent_km,475.2,475.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_M_ge_Mc,84,84,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_events,642,642,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_err,0.19,0.19,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_mle,0.56,0.56,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depthError_median_km,10.0,10.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_max_km,19.9,19.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_median_km,9.7,9.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_min_km,3.9,3.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,first,1972-09-06,1972-09-06,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,interevent_CV,1.6,1.6,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,last,2024-06-09,2024-06-09,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lat_centre,32.529,32.529,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lon_centre,78.607,78.607,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_max,6.8,6.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_min,2.4,2.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,max_extent_km,111.6,111.6,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_M_ge_Mc,9,9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_events,20,20,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_err,0.34,0.34,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_mle,0.76,0.76,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depthError_median_km,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_max_km,34.51,34.51,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_median_km,11.0,11.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_min_km,1.7,1.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,first,2000-05-07,2000-05-07,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,interevent_CV,1.88,1.88,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,last,2024-07-11,2024-07-11,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lat_centre,34.304,34.304,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lon_centre,78.185,78.185,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_max,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_min,3.0,3.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,max_extent_km,64.0,64.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_M_ge_Mc,5,5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_events,11,11,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,b_err,0.55,0.55,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,b_mle,1.24,1.24,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depthError_median_km,3.7,3.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_max_km,25.4,25.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_median_km,13.7,13.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_min_km,9.6,9.6,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,first,1999-02-23,1999-02-23,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,interevent_CV,0.96,0.96,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,last,2024-08-20,2024-08-20,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,lat_centre,34.17,34.17,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,lon_centre,74.284,74.284,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,mag_max,5.1,5.1,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,mag_min,2.9,2.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,max_extent_km,57.1,57.1,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_M_ge_Mc,5,5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_events,7,7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 4,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_err,0.29,0.29,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_mle,1.35,1.35,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depthError_median_km,36.1,36.1,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_max_km,145.6,145.6,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_median_km,25.8,25.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_min_km,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,first,1989-05-10,1989-05-10,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,interevent_CV,3.09,3.09,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,last,2024-10-20,2024-10-20,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lat_centre,32.978,32.978,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lon_centre,76.097,76.097,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_max,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_min,1.9,1.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,max_extent_km,270.5,270.5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_M_ge_Mc,21,21,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_events,205,205,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depthError_median_km,37.3,37.7,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_max_km,169.1,54.1,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_median_km,23.2,21.8,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_min_km,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,first,1987-07-18,1987-07-18,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,interevent_CV,1.83,1.81,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,last,2022-07-15,2022-07-15,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,lat_centre,31.506,31.514,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,lon_centre,77.776,77.79,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,mag_max,4.7,4.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,mag_min,1.2,1.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,max_extent_km,225.1,225.1,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_M_ge_Mc,4,4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_events,53,52,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,sources,ISC;USGS;USGS+ISC,ISC;USGS;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depthError_median_km,32.8,32.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depth_max_km,54.7,54.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depth_median_km,36.3,36.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depth_min_km,9.5,9.5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,first,1998-06-26,1998-06-26,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,interevent_CV,1.05,1.05,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,last,2023-04-05,2023-04-05,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,lat_centre,32.982,32.982,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,lon_centre,78.468,78.468,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,mag_max,4.3,4.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,mag_min,2.4,2.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,max_extent_km,139.7,139.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,n_M_ge_Mc,0,0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,n_events,18,18,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,sources,ISC;USGS;USGS+ISC,ISC;USGS;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depthError_median_km,28.8,28.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depth_max_km,49.4,49.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depth_median_km,35.5,35.5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depth_min_km,9.0,9.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,first,2002-01-04,2002-01-04,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,interevent_CV,1.07,1.07,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,last,2024-02-26,2024-02-26,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,lat_centre,31.454,31.454,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,lon_centre,74.425,74.425,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,mag_max,4.2,4.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,mag_min,2.8,2.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,max_extent_km,117.3,117.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,n_M_ge_Mc,0,0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,n_events,13,13,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depthError_median_km,40.9,40.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depth_max_km,45.27,45.27,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depth_median_km,35.6,35.6,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depth_min_km,10.0,10.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,first,2000-01-08,2000-01-08,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,interevent_CV,1.18,1.18,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,last,2021-11-29,2021-11-29,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,lat_centre,34.275,34.275,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,lon_centre,78.877,78.877,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,mag_max,4.7,4.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,mag_min,3.2,3.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,max_extent_km,83.1,83.1,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,n_M_ge_Mc,2,2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,n_events,9,9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depthError_median_km,24.7,15.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depth_max_km,210.0,47.1,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depth_median_km,48.9,39.7,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depth_min_km,5.5,15.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,first,2000-05-17,1995-06-17,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,interevent_CV,0.97,1.02,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,last,2018-07-21,2023-12-26,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,lat_centre,34.527,34.358,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,lon_centre,74.283,76.31,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,mag_max,4.5,4.6,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,mag_min,3.0,3.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,max_extent_km,82.8,77.3,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,n_M_ge_Mc,1,2,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,n_events,9,8,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,sources,ISC;USGS;USGS+ISC,ISC;USGS+ISC,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,depthError_median_km,15.0,24.5,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,depth_max_km,47.1,61.9,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,depth_median_km,39.7,45.3,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,depth_min_km,15.0,5.5,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,first,1995-06-17,2000-05-17,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,interevent_CV,1.02,0.85,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,last,2023-12-26,2018-07-21,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,lat_centre,34.358,34.478,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,lon_centre,76.31,74.264,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,mag_max,4.6,4.5,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,mag_min,3.0,3.2,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,max_extent_km,77.3,66.4,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,n_M_ge_Mc,2,1,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,n_events,8,8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 7,sources,ISC;USGS+ISC,ISC;USGS;USGS+ISC,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,b_err,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,depthError_median_km,78.8,78.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,depth_max_km,38.2,38.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,depth_median_km,26.5,26.5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,depth_min_km,15.0,15.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,first,2001-02-06,2001-02-06,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,interevent_CV,0.88,0.88,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,last,2021-04-16,2021-04-16,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,lat_centre,32.448,32.448,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,lon_centre,79.098,79.098,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,mag_max,3.4,3.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,mag_min,2.7,2.7,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,max_extent_km,51.8,51.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,n_M_ge_Mc,0,0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,n_events,5,5,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 8,sources,ISC,ISC,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",Mc_authors_method,2.9,2.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",Mc_used,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",N_above_Mc,41.0,41.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",N_total,274.0,274.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",b_lsq,1.303792943599014,1.303792943599014,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",b_mle,1.0204053729532008,1.0204053729532008,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",b_mle_err,0.15936054574544745,0.15936054574544745,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_authors_method,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_used,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_above_Mc,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_total,19.0,19.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_lsq,0.9021090020413223,0.9021090020413223,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle,1.0022180351613519,1.0022180351613519,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle_err,0.4091537995266737,0.4091537995266737,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_authors_method,2.9,2.9,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_used,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_above_Mc,128.0,128.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_total,1095.0,1095.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_lsq,1.7270242754562013,1.7270242754562013,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle,1.2492065996318287,1.2492065996318287,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle_err,0.11041530721283181,0.11041530721283181,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_deeper_than_150km,,0.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M3,19.0,19.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M>=Mc,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_shallow_M3,176.0,176.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_uncertain_M3,79.0,79.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_used_M3,274.0,274.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_2010on,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_before2010,13.0,13.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_outside,36.0,36.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km,13.2,13.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_2010on,7.75,7.75,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_before2010,15.8,15.8,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_max_km,118.6,118.6,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_mean_km,65.83105263157896,65.83105263157896,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km,60.82,60.82,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_2010on,57.435,57.435,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_before2010,65.2,65.2,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_min_km,45.4,45.4,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M3,0.9392414920643647,0.9392414920643647,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M4.4,0.8211021609982685,0.8211021609982685,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_shallow_M3,2.61224334063827,2.61224334063827,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M3,431.5130266203704,431.5130266203704,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M4.4,1920.2972800925927,1920.2972800925927,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_shallow_M3,10.088206018518518,10.088206018518518,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M3,42.50792824074074,42.50792824074074,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M4.4,42.50792824074074,42.50792824074074,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_shallow_M3,0.0033564814814814816,0.0033564814814814816,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,largest_mag,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,largest_minus_second,0.2999999999999998,0.2999999999999998,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,lowest_magnitude_used,,1.2,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,n_sequences_20d_20km,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,profile_azimuth_deg,134.64603796262247,134.64603796262247,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,share_of_region_intermediate_in_cluster,0.34545454545454546,0.34545454545454546,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,Mc_maxcurv,4.5,4.6,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,N_Mc,15.0,15.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,N_all_used,66.0,66.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,b_MLE,1.076763178272525,1.076763178272525,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,b_err,0.2780190571505905,0.2780190571505905,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,mag_min,,1.7,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,rate_per_yr,1.5,1.5002053669222344,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,1990-1999,years,,10.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,Mc_maxcurv,2.7,2.5,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,N_Mc,29.0,29.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,N_all_used,473.0,473.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,b_MLE,1.2786335000197298,1.2786335000197298,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,b_err,0.23743628019067117,0.23743628019067117,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,mag_min,,1.2,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,rate_per_yr,2.9,2.899603065973173,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2000-2009,years,,10.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,Mc_maxcurv,3.7,3.5,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,N_Mc,49.0,49.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,N_all_used,218.0,218.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,b_MLE,1.3258834650005835,1.3258834650005835,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,b_err,0.18941192357151193,0.18941192357151193,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,mag_min,,1.9,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,rate_per_yr,4.9,4.900670865279299,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2010-2019,years,,10.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,Mc_maxcurv,2.7,2.8,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,N_Mc,35.0,35.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,N_all_used,338.0,338.0,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,b_MLE,1.2111798300090688,1.2111798300090688,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,b_err,0.2047267573147052,0.2047267573147052,False
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,mag_min,,1.8,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,rate_per_yr,5.090909090909091,5.095157433240335,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/combined_usgs_isc/excluding_fixed/per_period_summary.csv,2020-2026,years,,6.87,True
+18ae9d6,results/combined_usgs_isc/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_events,186,186,False
+18ae9d6,results/combined_usgs_isc/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_intermediate,15,15,False
+18ae9d6,results/combined_usgs_isc/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_shallow,102,102,False
+18ae9d6,results/combined_usgs_isc/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_uncertain,69,69,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_err,0.42,0.42,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_mle,1.2,1.2,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depthError_median_km,11.5,11.5,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_max_km,118.6,118.6,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_median_km,61.7,61.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_min_km,45.0,45.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,first,1981-07-12,1981-07-12,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,interevent_CV,1.32,1.32,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,last,2020-06-30,2020-06-30,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lat_centre,33.109,33.109,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lon_centre,75.957,75.957,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_max,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_min,2.7,2.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,max_extent_km,124.4,124.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_M_ge_Mc,8,8,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_events,26,26,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,share_fixed_or_unflagged,0.12,0.12,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_err,,,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depthError_median_km,10.4,10.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_max_km,103.8,103.8,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_median_km,62.4,62.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_min_km,45.0,45.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,first,2005-06-22,2005-06-22,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,interevent_CV,1.34,1.34,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,last,2024-12-27,2024-12-27,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lat_centre,34.499,34.499,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lon_centre,74.139,74.139,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_max,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_min,3.4,3.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,max_extent_km,66.9,66.9,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_M_ge_Mc,1,1,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_events,10,10,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,share_fixed_or_unflagged,0.3,0.3,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,sources,ISC;USGS;USGS+ISC,ISC;USGS;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_err,0.09,0.09,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_mle,0.91,0.91,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depthError_median_km,8.7,8.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_max_km,38.0,38.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_median_km,10.9,10.9,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_min_km,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,first,1970-03-05,1970-03-05,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,interevent_CV,3.51,3.51,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,last,2026-11-14,2026-11-14,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lat_centre,32.548,32.548,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lon_centre,76.594,76.594,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_max,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_min,1.7,1.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,max_extent_km,569.3,569.3,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_M_ge_Mc,99,99,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_events,677,677,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,share_fixed_or_unflagged,0.04,0.04,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,sources,ISC;USGS;USGS+ISC,ISC;USGS;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_err,0.41,0.41,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_mle,1.41,1.41,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depthError_median_km,2.0,2.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_max_km,34.51,34.51,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_median_km,10.0,10.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_min_km,1.7,1.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,first,2000-05-07,2000-05-07,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,interevent_CV,2.59,2.59,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,last,2025-05-02,2025-05-02,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lat_centre,34.246,34.246,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lon_centre,78.197,78.197,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_max,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_min,3.0,3.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,max_extent_km,96.7,96.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_M_ge_Mc,12,12,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_events,25,25,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,share_fixed_or_unflagged,0.52,0.52,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_err,0.19,0.19,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_mle,0.56,0.56,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depthError_median_km,10.0,10.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_max_km,19.9,19.9,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_median_km,9.7,9.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_min_km,3.9,3.9,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,first,1972-09-06,1972-09-06,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,interevent_CV,1.6,1.6,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,last,2024-06-09,2024-06-09,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lat_centre,32.529,32.529,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lon_centre,78.607,78.607,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_max,6.8,6.8,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_min,2.4,2.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,max_extent_km,111.6,111.6,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_M_ge_Mc,9,9,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_events,20,20,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,b_err,,,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,b_mle,,,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depthError_median_km,1.6,1.6,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_max_km,35.0,35.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_median_km,11.8,11.8,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_min_km,9.7,9.7,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,first,1984-03-14,1984-03-14,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,interevent_CV,1.09,1.09,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,last,2020-10-06,2020-10-06,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,lat_centre,34.206,34.206,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,lon_centre,79.255,79.255,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,mag_max,5.1,5.1,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,mag_min,4.5,4.5,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,max_extent_km,36.2,36.2,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_M_ge_Mc,4,4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_events,4,4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_possible_duplicates,,0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,share_fixed_or_unflagged,0.5,0.5,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,sources,ISC;USGS+ISC,ISC;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_err,0.09,0.09,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_mle,1.24,1.24,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depthError_median_km,35.2,36.1,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_max_km,353.6,150.0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_median_km,10.0,10.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_min_km,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,first,1970-01-17,1970-01-17,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,interevent_CV,2.74,2.74,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,last,2026-10-29,2026-10-29,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lat_centre,32.847,32.839,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lon_centre,76.616,76.618,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_max,5.5,5.5,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_min,1.2,1.2,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,max_extent_km,644.6,644.6,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_M_ge_Mc,178,177,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_events,2008,1996,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_possible_duplicates,,7,True
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,share_fixed_or_unflagged,0.82,0.82,False
+18ae9d6,results/combined_usgs_isc/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,sources,ISC;USGS;USGS+ISC,ISC;USGS;USGS+ISC,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",Mc_authors_method,2.9,2.9,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",Mc_used,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",N_above_Mc,49.0,49.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",N_total,560.0,560.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",b_lsq,1.3646331834390588,1.3646331834390588,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",b_mle,1.1229778160031323,1.1229778160031323,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",b_mle_err,0.16042540228616176,0.16042540228616176,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_authors_method,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_used,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_above_Mc,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_total,21.0,21.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_lsq,0.9021090020413223,0.9021090020413223,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle,1.0022180351613519,1.0022180351613519,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle_err,0.4091537995266737,0.4091537995266737,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_authors_method,2.9,2.9,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_used,4.4,4.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_above_Mc,186.0,186.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_total,2659.0,2659.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_lsq,1.8493828634740064,1.8493828634740064,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle,1.3999787458233102,1.3999787458233102,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle_err,0.10265142208310045,0.10265142208310045,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_deeper_than_150km,,0.0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M3,21.0,21.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M>=Mc,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_shallow_M3,183.0,183.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_uncertain_M3,356.0,356.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_used_M3,560.0,560.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_2010on,6.0,6.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_before2010,15.0,15.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_outside,39.0,39.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km,12.4,12.4,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_2010on,7.75,7.75,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_before2010,14.6,14.6,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_max_km,118.6,118.6,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_mean_km,63.84714285714286,63.84714285714286,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km,59.5,59.5,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_2010on,57.435,57.435,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_before2010,63.3,63.3,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_min_km,45.0,45.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M3,1.0434919526778963,1.0434919526778963,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M4.4,0.8211021609982685,0.8211021609982685,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_shallow_M3,2.5477791483265153,2.5477791483265153,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M3,404.18412037037035,404.18412037037035,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M4.4,1920.2972800925927,1920.2972800925927,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_shallow_M3,11.55400462962963,11.55400462962963,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M3,6.030092592592593,6.030092592592593,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M4.4,42.50792824074074,42.50792824074074,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_shallow_M3,0.0019675925925925924,0.0019675925925925924,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,largest_mag,5.3,5.3,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,largest_minus_second,0.2999999999999998,0.2999999999999998,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,lowest_magnitude_used,,1.2,True
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,n_sequences_20d_20km,0.0,0.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,profile_azimuth_deg,133.3526201847747,133.3526201847747,False
+18ae9d6,results/combined_usgs_isc/including_fixed/kishtwar/kishtwar_summary.csv,summary,share_of_region_intermediate_in_cluster,0.35,0.35,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,Mc_maxcurv,3.7,3.9,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,N_Mc,34.0,34.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,N_all_used,217.0,217.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,b_MLE,1.4335934354087976,1.4335934354087976,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,b_err,0.2458592458421974,0.2458592458421974,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,mag_min,,1.5,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,rate_per_yr,3.4,3.4004654983570646,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,share_solved_depth_Mc,,0.4411764705882353,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,1990-1999,years,,10.0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,Mc_maxcurv,2.7,2.6,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,N_Mc,45.0,45.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,N_all_used,1237.0,1237.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,b_MLE,1.421327395319734,1.421327395319734,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,b_err,0.2118789782811761,0.2118789782811761,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,mag_min,,1.2,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,rate_per_yr,4.5,4.499384067889406,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,share_solved_depth_Mc,,0.6444444444444445,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2000-2009,years,,10.0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,Mc_maxcurv,3.7,3.5,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,N_Mc,57.0,57.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,N_all_used,520.0,520.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,b_MLE,1.4434277241099398,1.4434277241099398,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,b_err,0.19118667256683702,0.19118667256683702,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,mag_min,,1.8,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,rate_per_yr,5.7,5.70078039430449,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,share_solved_depth_Mc,,0.8596491228070176,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2010-2019,years,,10.0,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,Mc_maxcurv,2.7,2.8,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,N_Mc,50.0,50.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,N_all_used,685.0,685.0,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,b_MLE,1.3160438845553117,1.3160438845553117,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,b_err,0.18611671102162936,0.18611671102162936,False
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,mag_min,,1.5,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,rate_per_yr,7.2727272727272725,7.278796333200479,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,share_solved_depth_Mc,,0.7,True
+18ae9d6,results/combined_usgs_isc/including_fixed/per_period_summary.csv,2020-2026,years,,6.87,True
+18ae9d6,results/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_events,55,55,False
+18ae9d6,results/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_intermediate,8,8,False
+18ae9d6,results/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_shallow,17,17,False
+18ae9d6,results/excluding_fixed/catalog_M4.4_1990plus.csv,catalog,n_uncertain,30,30,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_err,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_mle,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depthError_median_km,10.6,10.6,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_max_km,67.9,67.9,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_median_km,57.4,57.4,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_min_km,46.75,46.75,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,first,1990-11-12,1990-11-12,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,interevent_CV,0.75,0.75,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,last,2020-06-30,2020-06-30,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lat_centre,33.331,33.331,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lon_centre,75.826,75.826,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_max,5.3,5.3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_min,3.5,3.5,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,max_extent_km,42.1,42.1,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_M_ge_Mc,3,3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_events,7,7,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_possible_duplicates,,0,True
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,sources,USGS,USGS,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_err,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_mle,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depthError_median_km,17.0,17.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_max_km,72.2,72.2,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_median_km,60.8,60.8,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_min_km,58.67,58.67,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,first,1996-05-09,1996-05-09,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,interevent_CV,1.37,1.37,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,last,2016-02-04,2016-02-04,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lat_centre,32.789,32.789,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lon_centre,76.166,76.166,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_max,4.3,4.3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_min,3.5,3.5,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,max_extent_km,45.9,45.9,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_M_ge_Mc,0,0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_events,5,5,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_possible_duplicates,,0,True
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,sources,USGS,USGS,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_err,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_mle,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depthError_median_km,5.0,5.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_max_km,27.461,27.461,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_median_km,17.0,17.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_min_km,14.12,14.12,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,first,2013-08-02,2013-08-02,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,interevent_CV,1.52,1.52,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,last,2025-12-05,2025-12-05,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lat_centre,33.116,33.116,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lon_centre,76.045,76.045,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_max,5.0,5.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_min,4.0,4.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,max_extent_km,51.4,51.4,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_M_ge_Mc,3,3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_events,7,7,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_possible_duplicates,,0,True
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 1,sources,USGS,USGS,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_err,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_mle,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depthError_median_km,4.2,4.2,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_max_km,32.436,32.436,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_median_km,23.9,23.9,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_min_km,17.945,17.945,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,first,2017-12-09,2017-12-09,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,interevent_CV,1.24,1.24,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,last,2024-04-05,2024-04-05,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lat_centre,33.305,33.305,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lon_centre,76.834,76.834,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_max,5.0,5.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_min,4.2,4.2,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,max_extent_km,30.6,30.6,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_M_ge_Mc,4,4,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_events,5,5,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_possible_duplicates,,0,True
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 2,sources,USGS,USGS,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_err,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_mle,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depthError_median_km,9.7,9.7,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_max_km,33.51,33.51,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_median_km,18.8,18.8,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_min_km,12.0,12.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,first,1970-03-05,1970-03-05,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,interevent_CV,0.76,0.76,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,last,2021-01-09,2021-01-09,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lat_centre,32.441,32.441,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lon_centre,76.583,76.583,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_max,5.11,5.11,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_min,4.2,4.2,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,max_extent_km,28.7,28.7,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_M_ge_Mc,3,3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_events,4,4,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_possible_duplicates,,0,True
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,shallow / 3,sources,USGS,USGS,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_err,0.24,0.24,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_mle,1.09,1.09,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depthError_median_km,9.0,9.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_max_km,90.3,90.3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_median_km,41.6,41.6,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_min_km,11.5,11.5,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,first,1978-06-14,1978-06-14,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,interevent_CV,1.29,1.29,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,last,2024-07-20,2024-07-20,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lat_centre,33.032,33.032,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lon_centre,76.158,76.158,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_max,5.3,5.3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_min,3.3,3.3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,max_extent_km,139.7,139.7,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_M_ge_Mc,20,20,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_events,37,37,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_possible_duplicates,,0,True
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,sources,USGS,USGS,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,b_err,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,b_mle,,,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depthError_median_km,12.1,12.1,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_max_km,47.1,47.1,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_median_km,39.7,39.7,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_min_km,34.0,34.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,first,1995-06-17,1995-06-17,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,interevent_CV,1.3,1.3,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,last,2014-04-19,2014-04-19,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,lat_centre,34.25,34.25,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,lon_centre,76.278,76.278,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,mag_max,4.6,4.6,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,mag_min,3.9,3.9,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,max_extent_km,29.2,29.2,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_M_ge_Mc,2,2,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_events,6,6,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_possible_duplicates,,0,True
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,share_fixed_or_unflagged,0.0,0.0,False
+18ae9d6,results/excluding_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,sources,USGS,USGS,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",Mc_authors_method,4.4,4.4,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",Mc_used,4.4,4.4,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",N_above_Mc,20.0,20.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",N_total,42.0,42.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",b_lsq,1.1071554604813096,1.1071554604813096,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",b_mle,1.0099871672168654,1.0099871672168654,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (solved depths)",b_mle_err,0.2258399962299358,0.2258399962299358,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_authors_method,4.4,4.4,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_used,4.4,4.4,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_above_Mc,3.0,3.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_total,11.0,11.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_lsq,0.618851164660141,0.618851164660141,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle,,,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle_err,,,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_authors_method,4.4,4.4,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_used,4.4,4.4,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_above_Mc,55.0,55.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_total,124.0,124.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_lsq,1.6301494154261178,1.6301494154261178,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle,1.3381622691696846,1.3381622691696846,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle_err,0.18043776356554025,0.18043776356554025,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_deeper_than_150km,,0.0,True
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M3,11.0,11.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M>=Mc,3.0,3.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_shallow_M3,7.0,7.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_uncertain_M3,24.0,24.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_used_M3,42.0,42.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_2010on,4.0,4.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_before2010,7.0,7.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_outside,14.0,14.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km,10.6,10.6,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_2010on,7.75,7.75,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_before2010,16.4,16.4,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_max_km,72.2,72.2,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_mean_km,58.96272727272728,58.96272727272728,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km,58.67,58.67,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_2010on,54.56,54.56,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_before2010,59.5,59.5,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,depth_min_km,46.75,46.75,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M3,0.8197002890535156,0.8197002890535156,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M4.4,0.977347680818804,0.977347680818804,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_shallow_M3,1.522619753383713,1.522619753383713,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M3,959.9073148148148,959.9073148148148,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M4.4,1876.5375810185187,1876.5375810185187,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_shallow_M3,243.12987847222223,243.12987847222223,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M3,42.50792824074074,42.50792824074074,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M4.4,42.50792824074074,42.50792824074074,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_shallow_M3,0.0033564814814814816,0.0033564814814814816,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,largest_mag,5.3,5.3,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,largest_minus_second,0.5999999999999996,0.5999999999999996,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,lowest_magnitude_used,,3.1,True
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,n_sequences_20d_20km,0.0,0.0,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,profile_azimuth_deg,146.3256416909394,146.3256416909394,False
+18ae9d6,results/excluding_fixed/kishtwar/kishtwar_summary.csv,summary,share_of_region_intermediate_in_cluster,0.44,0.44,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,Mc_maxcurv,4.1,4.2,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,N_Mc,5.0,5.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,N_all_used,15.0,15.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,b_MLE,1.1135755946237236,1.1135755946237236,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,b_err,0.498006145532679,0.498006145532679,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,mag_min,,3.3,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,rate_per_yr,0.5,0.5000684556407448,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,1990-1999,years,,10.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,Mc_maxcurv,3.8,3.9,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,N_Mc,13.0,13.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,N_all_used,41.0,41.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,b_MLE,1.0552950027555665,1.0552950027555665,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,b_err,0.29268617255200824,0.29268617255200824,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,mag_min,,3.2,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,rate_per_yr,1.3,1.2998220640569396,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2000-2009,years,,10.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,Mc_maxcurv,4.4,4.5,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,N_Mc,26.0,26.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,N_all_used,47.0,47.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,b_MLE,1.6364719607948677,1.6364719607948677,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,b_err,0.3209385562130953,0.3209385562130953,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,mag_min,,3.1,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,rate_per_yr,2.6,2.600355969331873,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2010-2019,years,,10.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,Mc_maxcurv,4.1,4.2,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,N_Mc,11.0,11.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,N_all_used,21.0,21.0,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,b_MLE,1.3088326851878849,1.3088326851878849,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,b_err,0.394627902738324,0.394627902738324,False
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,mag_min,,4.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,rate_per_yr,1.6,1.6013351933041053,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,share_solved_depth_Mc,,1.0,True
+18ae9d6,results/excluding_fixed/per_period_summary.csv,2020-2026,years,,6.87,True
+18ae9d6,results/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_events,176,176,False
+18ae9d6,results/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_intermediate,14,14,False
+18ae9d6,results/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_shallow,77,77,False
+18ae9d6,results/including_fixed/catalog_M4.4_1990plus.csv,catalog,n_uncertain,85,85,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_err,0.42,0.42,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,b_mle,1.2,1.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depthError_median_km,8.7,8.7,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_max_km,82.8,82.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_median_km,57.4,57.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,depth_min_km,45.0,45.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,first,1981-08-17,1981-08-17,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,interevent_CV,1.1,1.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,last,2020-06-30,2020-06-30,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lat_centre,33.249,33.249,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,lon_centre,75.768,75.768,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_max,5.3,5.3,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,mag_min,3.5,3.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,max_extent_km,76.9,76.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_M_ge_Mc,8,8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_events,15,15,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,share_fixed_or_unflagged,0.4,0.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 1,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depthError_median_km,9.4,9.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_max_km,73.7,73.7,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_median_km,62.4,62.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,depth_min_km,45.0,45.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,first,2005-06-22,2005-06-22,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,interevent_CV,1.09,1.09,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,last,2024-12-27,2024-12-27,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lat_centre,34.479,34.479,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,lon_centre,74.147,74.147,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_max,4.4,4.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,mag_min,3.4,3.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,max_extent_km,66.9,66.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_M_ge_Mc,1,1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_events,8,8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,share_fixed_or_unflagged,0.62,0.62,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 2,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,depthError_median_km,13.2,13.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,depth_max_km,72.2,72.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,depth_median_km,60.2,60.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,depth_min_km,49.8,49.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,first,1981-07-12,1981-07-12,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,interevent_CV,1.05,1.05,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,last,2016-02-04,2016-02-04,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,lat_centre,32.78,32.78,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,lon_centre,76.138,76.138,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,mag_max,4.5,4.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,mag_min,3.5,3.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,max_extent_km,45.9,45.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,n_M_ge_Mc,1,1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,n_events,6,6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,share_fixed_or_unflagged,0.17,0.17,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,intermediate / 3,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_err,0.19,0.19,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,b_mle,1.17,1.17,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depthError_median_km,1.9,1.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_max_km,35.0,35.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_median_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,first,1970-03-05,1970-03-05,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,interevent_CV,5.15,5.15,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,last,2026-08-18,2026-08-18,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lat_centre,32.996,32.996,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,lon_centre,76.275,76.275,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_max,5.2,5.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,mag_min,3.6,3.6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,max_extent_km,181.5,181.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_M_ge_Mc,38,38,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_events,72,72,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,share_fixed_or_unflagged,0.76,0.76,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 1,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_err,0.41,0.41,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,b_mle,1.41,1.41,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depthError_median_km,1.9,1.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_max_km,34.51,34.51,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_median_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,first,2016-03-17,2016-03-17,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,interevent_CV,1.82,1.82,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,last,2025-05-02,2025-05-02,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lat_centre,34.188,34.188,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,lon_centre,78.219,78.219,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_max,5.3,5.3,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,mag_min,3.8,3.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,max_extent_km,78.7,78.7,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_M_ge_Mc,12,12,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_events,19,19,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,share_fixed_or_unflagged,0.89,0.89,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 2,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depthError_median_km,2.0,2.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_max_km,29.899,29.899,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_median_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,first,2008-10-21,2008-10-21,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,interevent_CV,1.09,1.09,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,last,2026-10-16,2026-10-16,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lat_centre,31.45,31.45,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,lon_centre,77.778,77.778,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_max,5.0,5.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,mag_min,3.2,3.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,max_extent_km,67.6,67.6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_M_ge_Mc,4,4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_events,10,10,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,share_fixed_or_unflagged,0.9,0.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 3,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,b_err,0.63,0.63,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,b_mle,1.53,1.53,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depthError_median_km,2.0,2.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_max_km,35.0,35.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_median_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,first,2017-09-23,2017-09-23,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,interevent_CV,1.05,1.05,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,last,2026-02-02,2026-02-02,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,lat_centre,34.084,34.084,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,lon_centre,74.553,74.553,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,mag_max,5.1,5.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,mag_min,3.6,3.6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,max_extent_km,91.5,91.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_M_ge_Mc,6,6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_events,9,9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,share_fixed_or_unflagged,0.67,0.67,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 4,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,depthError_median_km,2.0,2.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,depth_max_km,14.338,14.338,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,depth_median_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,first,1972-09-06,1972-09-06,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,interevent_CV,1.58,1.58,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,last,2023-08-09,2023-08-09,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,lat_centre,32.473,32.473,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,lon_centre,78.578,78.578,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,mag_max,5.28,5.28,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,mag_min,4.0,4.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,max_extent_km,32.8,32.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,n_M_ge_Mc,4,4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,n_events,5,5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,share_fixed_or_unflagged,0.6,0.6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 5,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,depthError_median_km,1.8,1.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,depth_max_km,30.4,30.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,depth_median_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,first,1995-11-26,1995-11-26,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,interevent_CV,1.31,1.31,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,last,2023-07-07,2023-07-07,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,lat_centre,31.865,31.865,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,lon_centre,78.543,78.543,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,mag_max,4.7,4.7,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,mag_min,4.2,4.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,max_extent_km,71.1,71.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,n_M_ge_Mc,3,3,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,n_events,5,5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,share_fixed_or_unflagged,1.0,1.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,shallow / 6,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_err,0.1,0.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,b_mle,1.0,1.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depthError_median_km,10.5,10.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_max_km,121.0,121.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_median_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,first,1973-01-14,1973-01-14,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,interevent_CV,1.39,1.39,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,last,2024-07-20,2024-07-20,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lat_centre,33.202,33.202,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,lon_centre,75.8,75.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_max,5.7,5.7,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,mag_min,3.1,3.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,max_extent_km,412.0,412.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_M_ge_Mc,103,103,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_events,206,206,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,share_fixed_or_unflagged,0.78,0.78,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 1,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,b_err,0.1,0.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,b_mle,0.9,0.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depthError_median_km,13.0,13.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_max_km,65.0,65.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_median_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,depth_min_km,8.2,8.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,first,1975-01-19,1975-01-19,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,interevent_CV,1.64,1.64,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,last,2016-08-01,2016-08-01,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,lat_centre,31.931,31.931,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,lon_centre,78.216,78.216,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,mag_max,6.8,6.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,mag_min,3.4,3.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,max_extent_km,298.1,298.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_M_ge_Mc,76,76,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_events,111,111,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,share_fixed_or_unflagged,0.87,0.87,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 2,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depthError_median_km,12.1,12.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depth_max_km,47.1,47.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depth_median_km,37.3,37.3,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,depth_min_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,first,1995-06-17,1995-06-17,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,interevent_CV,1.43,1.43,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,last,2014-04-19,2014-04-19,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,lat_centre,34.28,34.28,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,lon_centre,76.35,76.35,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,mag_max,4.6,4.6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,mag_min,3.3,3.3,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,max_extent_km,54.3,54.3,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,n_M_ge_Mc,3,3,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,n_events,10,10,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,share_fixed_or_unflagged,0.4,0.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 3,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depthError_median_km,6.4,6.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depth_max_km,36.66,36.66,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depth_median_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,depth_min_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,first,1981-08-31,1981-08-31,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,interevent_CV,0.79,0.79,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,last,2017-12-10,2017-12-10,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,lat_centre,34.471,34.471,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,lon_centre,78.787,78.787,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,mag_max,4.8,4.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,mag_min,3.5,3.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,max_extent_km,61.4,61.4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,n_M_ge_Mc,4,4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,n_events,7,7,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,share_fixed_or_unflagged,0.57,0.57,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 4,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depthError_median_km,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depth_max_km,90.0,90.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depth_median_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,depth_min_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,first,1979-07-02,1979-07-02,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,interevent_CV,0.7,0.7,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,last,1992-06-19,1992-06-19,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,lat_centre,34.78,34.78,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,lon_centre,75.044,75.044,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,mag_max,4.6,4.6,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,mag_min,4.2,4.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,max_extent_km,23.2,23.2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,n_M_ge_Mc,2,2,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,n_events,4,4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,share_fixed_or_unflagged,1.0,1.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 5,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,b_err,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,b_mle,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depthError_median_km,,,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depth_max_km,33.0,33.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depth_median_km,12.8,12.8,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,depth_min_km,10.0,10.0,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,first,1996-02-29,1996-02-29,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,interevent_CV,1.39,1.39,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,last,2008-02-08,2008-02-08,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,lat_centre,34.882,34.882,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,lon_centre,77.424,77.424,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,mag_max,5.1,5.1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,mag_min,3.5,3.5,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,max_extent_km,44.9,44.9,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,n_M_ge_Mc,1,1,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,n_events,4,4,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,n_possible_duplicates,,0,True
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,share_fixed_or_unflagged,0.75,0.75,False
+18ae9d6,results/including_fixed/depth_clusters/depth_clusters.csv,uncertain / 6,sources,USGS,USGS,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",Mc_authors_method,4.4,4.4,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",Mc_used,4.4,4.4,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",N_above_Mc,46.0,46.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",N_total,103.0,103.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",b_lsq,1.3346867695111064,1.3346867695111064,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",b_mle,1.1098636759749796,1.1098636759749796,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster outline, all events (all depths)",b_mle_err,0.1636404714510159,0.1636404714510159,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_authors_method,4.4,4.4,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",Mc_used,4.4,4.4,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_above_Mc,6.0,6.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",N_total,16.0,16.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_lsq,0.9051143063357235,0.9051143063357235,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle,1.1329421267041366,1.1329421267041366,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,"Cluster, intermediate",b_mle_err,0.46252168642145713,0.46252168642145713,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_authors_method,4.4,4.4,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,Mc_used,4.4,4.4,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_above_Mc,176.0,176.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,N_total,417.0,417.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_lsq,1.82217100691617,1.82217100691617,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle,1.4024922718343589,1.4024922718343589,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_bvalues.csv,Whole region,b_mle_err,0.10571683266017498,0.10571683266017498,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_deeper_than_150km,,0.0,True
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M3,16.0,16.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_intermediate_M>=Mc,6.0,6.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_shallow_M3,35.0,35.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_uncertain_M3,52.0,52.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_cluster_used_M3,103.0,103.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_2010on,7.0,7.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_before2010,9.0,9.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,N_intermediate_outside,25.0,25.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km,9.25,9.25,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_2010on,7.7,7.7,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depthError_median_km_before2010,12.4,12.4,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_max_km,72.2,72.2,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_mean_km,56.53062500000001,56.53062500000001,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km,58.0,58.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_2010on,56.2,56.2,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_median_km_before2010,58.6,58.6,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,depth_min_km,45.0,45.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M3,0.9985324555446924,0.9985324555446924,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_intermediate_M4.4,1.1466022001350997,1.1466022001350997,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_CV_cluster_shallow_M3,1.7804463873773573,1.7804463873773573,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M3,442.63546296296295,442.63546296296295,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_intermediate_M4.4,292.6031134259259,292.6031134259259,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_median_days_cluster_shallow_M3,53.072673611111114,53.072673611111114,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M3,0.0024074074074074076,0.0024074074074074076,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_intermediate_M4.4,0.0024074074074074076,0.0024074074074074076,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,interevent_min_days_cluster_shallow_M3,0.0019675925925925924,0.0019675925925925924,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,largest_mag,5.3,5.3,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,largest_minus_second,0.5999999999999996,0.5999999999999996,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,lowest_magnitude_used,,3.1,True
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,n_sequences_20d_20km,0.0,0.0,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,profile_azimuth_deg,137.58704392936465,137.58704392936465,False
+18ae9d6,results/including_fixed/kishtwar/kishtwar_summary.csv,summary,share_of_region_intermediate_in_cluster,0.3902439024390244,0.3902439024390244,False
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,Mc_maxcurv,4.5,4.6,True
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,N_Mc,31.0,31.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,N_all_used,69.0,69.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,b_MLE,1.487638556795669,1.487638556795669,False
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,b_err,0.26718777229996166,0.26718777229996166,False
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,mag_min,,3.1,True
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,rate_per_yr,3.1,3.1004244249726174,True
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,share_solved_depth_Mc,,0.16129032258064516,True
+18ae9d6,results/including_fixed/per_period_summary.csv,1990-1999,years,,10.0,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,Mc_maxcurv,3.5,3.6,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,N_Mc,39.0,39.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,N_all_used,144.0,144.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,b_MLE,1.360440545721031,1.360440545721031,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,b_err,0.21784483294789392,0.21784483294789392,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,mag_min,,3.2,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,rate_per_yr,3.9,3.8994661921708187,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,share_solved_depth_Mc,,0.3333333333333333,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2000-2009,years,,10.0,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,Mc_maxcurv,4.4,4.5,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,N_Mc,57.0,57.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,N_all_used,105.0,105.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,b_MLE,1.4434277241099398,1.4434277241099398,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,b_err,0.19118667256683702,0.19118667256683702,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,mag_min,,3.1,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,rate_per_yr,5.7,5.70078039430449,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,share_solved_depth_Mc,,0.45614035087719296,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2010-2019,years,,10.0,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,Mc_maxcurv,4.2,4.3,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,N_Mc,49.0,49.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,N_all_used,99.0,99.0,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,b_MLE,1.342613855726145,1.342613855726145,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,b_err,0.19180197938944926,0.19180197938944926,False
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,mag_min,,3.6,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,rate_per_yr,7.127272727272727,7.133220406536469,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,share_solved_depth_Mc,,0.22448979591836735,True
+18ae9d6,results/including_fixed/per_period_summary.csv,2020-2026,years,,6.87,True
