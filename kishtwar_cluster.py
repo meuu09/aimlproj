@@ -8,8 +8,9 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.path import Path
 
-from seis_utils import (CLUSTER_POLY, DEEP_MIN, b_lsq, b_mle, case_label, case_name, cv, interevent_days,
-                        load_catalog, max_curv_eqcorrscan, parse_args, results_base, xy_km)
+from seis_utils import (CLUSTER_POLY, DEEP_MIN, b_lsq, b_mle, b_reliability, candidate_sequences, case_label,
+                        case_name, cv, hypo_dist_km, interevent_days, load_catalog, max_curv_eqcorrscan,
+                        migration_fit, parse_args, resolve_overlaps, results_base, xy_km)
 
 ARGS = parse_args("Kishtwar-Chamba intermediate-depth cluster analysis")
 CATALOG, INCLUDE_FIXED = ARGS.catalog, ARGS.include_fixed
@@ -84,9 +85,9 @@ def time_axis(ax):
 fig = plt.figure(figsize=(13, 6.5))
 ax1 = plt.subplot2grid((2, 4), (0, 0), colspan=3, rowspan=2)
 for df, col, mk, lab in [(rest_deep, "k", "x", f"Intermediate, outside cluster (N={len(rest_deep)})"),
-                         (clu_unc, C_REST, "+", f"Cluster, uncertain: error bar crosses 40 km (N={len(clu_unc)})"),
+                         (clu_unc, C_REST, "+", f"Cluster, uncertain: error bar crosses 40 or 150 km (N={len(clu_unc)})"),
                          (clu_shal, C_SHAL, "o", f"Cluster, shallow: depth + error < 40 km (N={len(clu_shal)})"),
-                         (clu_deep, C_DEEP, "X", f"Cluster, intermediate: depth − error ≥ 40 km (N={len(clu_deep)})")]:
+                         (clu_deep, C_DEEP, "X", f"Cluster, intermediate: 40 ≤ depth ± error ≤ 150 km (N={len(clu_deep)})")]:
     ax1.vlines(df.time, 0, df.mag, color="gray", lw=0.3, zorder=1)
     ax1.scatter(df.time, df.mag, s=df.mag ** 2 * 3, c="none" if mk == "o" else col,
                 edgecolors=None if mk in ("x", "+") else col,
@@ -143,11 +144,14 @@ for lab, df, col, ls, mk in [("Whole region", raw, "k", "-", "+"),
     ax2.scatter(steps, np.log10(cum), marker=mk, s=30, c="none" if mk == "o" else col, edgecolors=col, lw=1.2)
     b, st, _, fn = b_lsq(m, MC_CUT)
     bm, bs, n = b_mle(m, MC_CUT)
-    if fn is not None:
+    if fn is not None and n >= 20:
         ax2.plot(st, fn(st), ls, c=col, lw=2.2,
-                 label=f"{lab}: b={b:.2f} (fit), {bm:.2f}±{bs:.2f} (MLE), N={n}")
+                 label=f"{lab}: b={b:.2f} (fit), {bm:.2f}±{bs:.2f} (MLE), N={n}, {b_reliability(n)}")
+    else:
+        ax2.plot([], [], ls, c=col, label=f"{lab}: N={n} above M{MC_CUT}, too few for a b-value")
     bres.append(dict(group=lab, N_total=len(m), Mc_authors_method=mc_auth, Mc_used=MC_CUT,
-                     N_above_Mc=n, b_lsq=b, b_mle=bm, b_mle_err=bs))
+                     N_above_Mc=n, b_lsq=b if n >= 20 else np.nan, b_mle=bm if n >= 20 else np.nan,
+                     b_mle_err=bs if n >= 20 else np.nan, b_reliability=b_reliability(n)))
 ax2.axvline(MC_CUT, color="k", lw=0.8, ls=":")
 ax2.set_ylabel("log$_{10}$ cumulative number"); ax2.legend(loc="upper right", fontsize=9)
 ax1.set_title(f"b-values above M{MC_CUT}; small N, read the MLE ± error", fontsize=11)
@@ -167,37 +171,38 @@ pts["along_km"] -= pts.along_km.min()
 summary["profile_azimuth_deg"] = az
 
 
-def hypo_km(a, b):
-    """3-D hypocentral distance (km) between events a and b."""
-    xa, ya = xy_km(a.longitude, a.latitude, lon0, lat0)
-    xb, yb = xy_km(b.longitude, b.latitude, lon0, lat0)
-    return np.sqrt((xa - xb) ** 2 + (ya - yb) ** 2 + (a.depth - b.depth) ** 2)
+SEQ_COLS = ["start", "n_events", "kept_after_overlap_rule", "duration_days", "max_dist_km", "depths_km", "mags",
+            "dM_largest_minus_second", "v_free_km_day", "v_free_se", "v_origin_km_day", "D_fit_m2_s",
+            "D_envelope_m2_s", "trend_perm_p", "median_horizontalError_km", "median_depthError_km", "ids"]
 
 
-search = clu_deep.reset_index(drop=True)
-seqs, members_seen = [], set()
-for _, ev in search.iterrows():
-    later = search[(search.time > ev.time) & (search.time <= ev.time + pd.Timedelta(days=SEQ_DAYS))]
-    later = later[hypo_km(later, ev) <= SEQ_KM]
-    ids = tuple([ev.id] + list(later.id))
-    if len(ids) >= SEQ_MIN_EVENTS and not set(ids) <= members_seen:
-        members_seen |= set(ids)
-        grp = search[search.id.isin(ids)].sort_values("time")
-        t_s = (grp.time - ev.time).dt.total_seconds().values
-        r_m = hypo_km(grp, ev).values * 1000.0
-        ok = t_s > 0
-        v = np.polyfit(t_s[ok] / 86400, r_m[ok] / 1000, 1)[0] if ok.sum() >= 2 else np.nan
-        D = np.max(r_m[ok] ** 2 / (4 * np.pi * t_s[ok])) if ok.any() else np.nan
-        seqs.append(dict(start=ev.time, n_events=len(grp), duration_days=t_s.max() / 86400,
-                         max_dist_km=r_m.max() / 1000, depths_km=", ".join(f"{z:.0f}" for z in grp.depth),
-                         mags=", ".join(f"{m:.1f}" for m in grp.mag),
-                         linear_velocity_km_per_day=v, diffusivity_min_envelope_m2_per_s=D,
-                         median_horizontalError_km=grp.horizontalError.median(),
-                         median_depthError_km=grp.depthError.median(), ids=";".join(grp.id)))
-seq_tab = pd.DataFrame(seqs, columns=["start", "n_events", "duration_days", "max_dist_km", "depths_km", "mags",
-                                       "linear_velocity_km_per_day", "diffusivity_min_envelope_m2_per_s",
-                                       "median_horizontalError_km", "median_depthError_km", "ids"])
+def sequence_rows(df):
+    """All candidate sequences of the paper's search, with fits; overlaps marked, not removed."""
+    d, cands = candidate_sequences(df, SEQ_DAYS, SEQ_KM, SEQ_MIN_EVENTS)
+    kept = {c["ids"] for c in resolve_overlaps(cands)}
+    rows = []
+    for c in cands:
+        g = d.loc[c["members"]].sort_values("time")
+        e = d.loc[c["first"]]
+        t = (g.time - e.time).dt.total_seconds().values / 86400
+        r = hypo_dist_km(e.latitude, e.longitude, e.depth, g.latitude.values, g.longitude.values, g.depth.values)
+        mm = np.sort(g.mag.values)[::-1]
+        row = dict(start=e.time, n_events=len(g), kept_after_overlap_rule=c["ids"] in kept, duration_days=t.max(),
+                   max_dist_km=r.max(), depths_km=", ".join(f"{z:.0f}" for z in g.depth),
+                   mags=", ".join(f"{m:.1f}" for m in g.mag), dM_largest_minus_second=mm[0] - mm[1],
+                   median_horizontalError_km=g.horizontalError.median(), median_depthError_km=g.depthError.median(),
+                   ids=";".join(g.id))
+        row.update({k: v for k, v in migration_fit(t, r).items() if k in SEQ_COLS})
+        rows.append(row)
+    return pd.DataFrame(rows, columns=SEQ_COLS)
+
+
+seq_all = sequence_rows(clu_deep)
+seq_all.to_csv(os.path.join(OUT, "kishtwar_sequence_candidates.csv"), index=False)
+seq_tab = seq_all[seq_all.kept_after_overlap_rule].reset_index(drop=True)
+seqs = seq_tab.to_dict("records")
 seq_tab.to_csv(os.path.join(OUT, "kishtwar_sequences.csv"), index=False)
+summary["n_sequence_candidates_20d_20km"] = len(seq_all)
 summary["n_sequences_20d_20km"] = len(seq_tab)
 
 fig = plt.figure(figsize=(13, 9))
@@ -230,17 +235,22 @@ save(fig, "FigK4_migration.png"); plt.close(fig)
 
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(14, 5.5), gridspec_kw=dict(width_ratios=[1, 1.3]))
 for d, col, lab in [(pts[pts.shallow], C_SHAL, "shallow: depth + error < 40 km"),
-                    (pts[pts.uncertain], C_REST, "uncertain: crosses 40 km / no error"),
-                    (pts[deep_mask], C_DEEP, "intermediate: depth − error ≥ 40 km")]:
-    a1.errorbar(d.along_km, d.depth, yerr=d.depthError.fillna(0), fmt="o", ms=5, c=col, ecolor=col,
+                    (pts[pts.uncertain], C_REST, "uncertain: crosses 40 or 150 km / no error"),
+                    (pts[deep_mask], C_DEEP, "intermediate: 40 ≤ depth ± error ≤ 150 km")]:
+    has = d.depthError.notna()
+    a1.errorbar(d.along_km[has], d.depth[has], yerr=d.depthError[has], fmt="o", ms=5, c=col, ecolor=col,
                 alpha=0.8, elinewidth=0.8, capsize=2, label=lab)
-    a2.errorbar(d.time, d.depth, yerr=d.depthError.fillna(0), fmt="o", ms=5, c=col, ecolor=col,
+    a2.errorbar(d.time[has], d.depth[has], yerr=d.depthError[has], fmt="o", ms=5, c=col, ecolor=col,
                 alpha=0.8, elinewidth=0.8, capsize=2, label=lab)
+    a1.scatter(d.along_km[~has], d.depth[~has], marker="x", c=col, s=30)
+    a2.scatter(d.time[~has], d.depth[~has], marker="x", c=col, s=30)
+a1.scatter([], [], marker="x", c="k", s=30, label="no depth error reported (x)")
 for a in (a1, a2):
     a.invert_yaxis(); a.axhline(DEEP_MIN, ls=":", c="k", lw=0.8); a.set_ylabel("Depth (km)"); a.grid(alpha=0.2)
 a1.set_xlabel(f"Along-strike distance, az {az:.0f}° (km)"); a1.legend(fontsize=9, loc="lower left")
 a2.set_xlabel("Time (UTC)"); time_axis(a2)
-a1.set_title("Depth section along the cluster (bars = USGS depthError)", fontsize=10)
+a1.set_title(f"All events inside the outline, projected on the PCA axis (az {az:.0f}°); bars = reported depth error",
+             fontsize=10)
 a2.set_title("Depth through time", fontsize=10)
 plt.tight_layout(); save(fig, "FigK5_depth_sections.png"); plt.close(fig)
 
@@ -252,12 +262,12 @@ for lab, d in [("before2010", clu_deep[clu_deep.time.dt.year < 2010]),
 
 top = np.sort(clu_deep.mag.values)[::-1]
 summary["largest_mag"] = top[0] if len(top) else np.nan
-summary["largest_minus_second"] = top[0] - top[1] if len(top) > 1 else np.nan
+summary["largest_minus_second_whole_cluster_paper_style"] = top[0] - top[1] if len(top) > 1 else np.nan
+summary["bath_dM_median_in_sequences"] = seq_tab.dM_largest_minus_second.median() if len(seq_tab) else np.nan
 for _, s_ in seq_tab.iterrows():
-    mm = sorted(map(float, s_.mags.split(", ")), reverse=True)
     print(f"Sequence {s_.start:%Y-%m-%d}: N={s_.n_events}, mags {s_.mags}, depths {s_.depths_km} km, "
-          f"dM(1st-2nd)={mm[0] - mm[1]:.1f}, v={s_.linear_velocity_km_per_day:.2f} km/d, "
-          f"D>={s_.diffusivity_min_envelope_m2_per_s:.1f} m2/s, median errors h/z = "
+          f"dM(1st-2nd)={s_.dM_largest_minus_second:.1f}, v={s_.v_free_km_day:.2f}±{s_.v_free_se:.2f} km/d, "
+          f"D_fit={s_.D_fit_m2_s:.2f} m2/s, trend p={s_.trend_perm_p:.2f}, median errors h/z = "
           f"{s_.median_horizontalError_km:.1f}/{s_.median_depthError_km:.1f} km")
 
 pts.to_csv(os.path.join(OUT, "kishtwar_catalog.csv"), index=False)
