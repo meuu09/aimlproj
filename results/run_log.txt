@@ -1,14 +1,14 @@
-run_all.py --baseline started 2026-11-25 06:53:54
-          ok    10.7s  -m baseline.reproduce_baseline --fig10
-          ok     0.2s  -m baseline.baseline_comparison
+run_all.py --baseline started 2026-11-25 06:58:53
+          ok     8.8s  -m baseline.reproduce_baseline --fig10
+          ok     0.1s  -m baseline.baseline_comparison
           ok     0.1s  -m fetch.fetch_isc_bulletin --parse-only
           ok     0.3s  -m catalog.build_combined_catalog
-          ok     0.5s  -m catalog.catalog_qc
+          ok     0.4s  -m catalog.catalog_qc
           ok     1.3s  -m robustness.mc_through_time
           ok     0.2s  -m fetch.fetch_focal_mechanisms --parse-only
-          ok     1.4s  -m analysis.him_ides_himachal
+          ok     1.2s  -m analysis.him_ides_himachal
           ok     0.8s  -m analysis.kishtwar_cluster
-          ok     1.1s  -m analysis.depth_clusters
+          ok     1.0s  -m analysis.depth_clusters
           ok     1.2s  -m analysis.him_ides_himachal --include-fixed
           ok     0.9s  -m analysis.kishtwar_cluster --include-fixed
           ok     1.1s  -m analysis.depth_clusters --include-fixed
@@ -25,10 +25,10 @@ run_all.py --baseline started 2026-11-25 06:53:54
           ok     0.9s  -m analysis.kishtwar_cluster --catalog combined --drop-duplicates --include-fixed
           ok     1.2s  -m analysis.depth_clusters --catalog combined --drop-duplicates --include-fixed
           ok     1.5s  -m analysis.temporal_summary
-          ok    17.8s  -m analysis.migration_search
-          ok     1.2s  -m analysis.clustering_checks
+          ok    18.0s  -m analysis.migration_search
+          ok     1.1s  -m analysis.clustering_checks
           ok     0.5s  -m robustness.bvalue_robustness
-          ok     4.5s  -m robustness.cluster_robustness
+          ok     4.4s  -m robustness.cluster_robustness
           ok     0.8s  -m robustness.depth_sensitivity
           ok     1.0s  -m pytest -q tests
           ok     0.1s  -m tools.write_manifest

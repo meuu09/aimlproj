@@ -1,7 +1,7 @@
 {
- "date": "2026-11-25T06:54:54+0530",
- "git_commit": "aeccf5ba678bf173555215faf0b7a15a9442a2c9",
- "git_dirty": true,
+ "date": "2026-11-25T06:59:51+0530",
+ "git_commit": "5092e3866066676c42d04f1674992d6379b516a7",
+ "git_dirty": false,
  "python": "3.12.16",
  "platform": "macOS-27.0-arm64-arm-64bit",
  "packages": {
@@ -26,7 +26,7 @@
   "data/gcmt_box_cmtsolution.txt": "a9fb0692a3515d0cb08bdbafa931f4957fe3e2674fbbdceb8c8fea557ddcaab9",
   "data/gem_active_faults_box.geojson": "945bbfca1ac0134897a34566b98a8e8593b9af1460434258316778bdda4cf5dc",
   "data/isc_bulletin_events.csv": "00550505cda388fac14951574d8fda9fdcf7f0866ad1588ef4a6d65d91d6ba2d",
-  "data/isc_bulletin_origins.csv": "caffda444fb945f5e37ea9f5039c1e7eb237571a1555157caa1d64ff96ff0d05",
+  "data/isc_bulletin_origins.csv": "fee960877a8afe91df98b757432d6add3905fd76380706df4e6666b8ff9d370a",
   "data/isc_raw/isc_isf_1970.txt": "77dfe620b83d6877b94e13f5ac2b61a948c5ec50fee4e4c7b61d1e4811ea9227",
   "data/isc_raw/isc_isf_1971.txt": "711a3023215349b894ddd8ed5d5d3e423ff4996c67d7eb9c4e3469d29b2a75f2",
   "data/isc_raw/isc_isf_1972.txt": "ad2ea862b5373843b671fa0da0d76b17ebac8e6c217530c3d0653a49ac212746",

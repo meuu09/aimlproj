@@ -29,7 +29,7 @@ Run a single script as a module from the repository root, for example `python -m
 | Folder | Contents |
 |---|---|
 | `seis_utils.py` | Shared functions: catalog loading, depth classes, Mc, b-value, Poisson tests, matching, migration search |
-| `fetch/` | Downloads: USGS depth types, ISC Bulletin (ISF), Global CMT focal mechanisms |
+| `fetch/` | Downloads: USGS catalog (new dated snapshot, never overwrites), USGS depth types, ISC Bulletin (ISF), Global CMT focal mechanisms |
 | `catalog/` | USGS + ISC combined catalog, quality-control tables |
 | `baseline/` | Runs the original Him_ides code and compares it with the published values |
 | `analysis/` | Regional analysis, Kishtwar cluster, DBSCAN depth clusters, temporal summary, migration search, clustering checks |
