@@ -34,7 +34,7 @@ MAGTYPE_NORM = {"mb": "mb", "ml": "ML", "md": "MD", "ms": "Ms", "mw": "Mw", "mww
 
 
 def parse_args(description="", argv=None):
-    """Options shared by him_ides_himachal.py, kishtwar_cluster.py, depth_clusters.py."""
+    """Options shared by the analysis scripts him_ides_himachal, kishtwar_cluster and depth_clusters."""
     p = argparse.ArgumentParser(description=description)
     p.add_argument("--catalog", choices=["usgs", "combined"], default="usgs",
                    help="usgs = USGS ComCat only; combined = USGS + ISC Bulletin")
@@ -85,7 +85,7 @@ def load_catalog(catalog="usgs", include_fixed=False, start_year=None, drop_dupl
         df = pd.read_csv(COMBINED_CSV, dtype={"isc_id": str})
         if "possible_duplicate_of" not in df:
             raise RuntimeError("combined catalog has no possible_duplicate_of column: "
-                               "rerun build_combined_catalog.py")
+                               "rerun python -m catalog.build_combined_catalog")
     else:
         raise ValueError(f"unknown catalog {catalog!r}")
     if "horizontalError" not in df:

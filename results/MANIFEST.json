@@ -1,6 +1,6 @@
 {
- "date": "2026-11-24T20:48:15+0530",
- "git_commit": "1b8259e160b0aeda18fdbaba4133df5ea049ed5b",
+ "date": "2026-11-25T06:54:54+0530",
+ "git_commit": "aeccf5ba678bf173555215faf0b7a15a9442a2c9",
  "git_dirty": true,
  "python": "3.12.16",
  "platform": "macOS-27.0-arm64-arm-64bit",
@@ -150,7 +150,6 @@
   "results/including_fixed/per_period_summary.csv": "50ab81366d9afc9a7f6e6f70f83504c6438e082e7e898fc695a75f3964080426",
   "results/migration/sequence_candidates_20d_20km.csv": "d23f9972ff3b2fbdd31891d5abb51ceb607f15f830c78904dfa9b88e83525405",
   "results/migration/window_sensitivity.csv": "c2f11e2208037710dc958ea5a4ba2a83ed3a6be0a03549a480d37f2452c0b183",
-  "results/qc/QC_REPORT.md": "d64558fa0ce0a653e8ae4f94cfb8125322ded77bbc3150afcfc818b4aeb05d59",
   "results/qc/close_pairs.csv": "a4a9e46e6fd60e31ca42c47ba76c590cdec29d853e95d3c4047e8a672b9059e7",
   "results/qc/depth_quality_by_decade.csv": "6765dfab27563a5dfb9f0cebf713c4feb50bfcfec43b7d911a65784a7487c134",
   "results/qc/depth_source_by_decade.csv": "a80a5de12027ca1bef357cf866930dc55ee1ec359fb6af9c45bde876003c324c",
@@ -179,7 +178,6 @@
   "results/temporal/temporal_summary.csv": "b849562f01e4ecbc244405a55c7099578afdf7a29527708d334017aaa6fa5bd7",
   "results_baseline/baseline_bvalues.csv": "ac5624220d0755bd3f974498d6a5fde61302c28e59468592bf05f8027db6490c",
   "results_baseline/baseline_comparison.csv": "4f414991877e4f107848b5353412aa9ec1e6cd55cea070c1baf206c30bb5fa41",
-  "results_baseline/baseline_comparison.md": "369fd5ee2ee6c28622f59aef36a4f0793058c0d1c2130286b5f412b21688761d",
   "results_baseline/baseline_magnitudes.csv": "28558da3aa2a523d7ddfff493737e0aadd42967fb97734775455fbc991905161"
  }
 }

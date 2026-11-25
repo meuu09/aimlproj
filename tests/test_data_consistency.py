@@ -58,7 +58,7 @@ def test_load_catalog_counts_are_consistent():
 
 @need
 def test_isc_parser_reproduces_saved_events_for_one_year():
-    import fetch_isc_bulletin as f
+    from fetch import fetch_isc_bulletin as f
     path = os.path.join(f.RAW, "isc_isf_2013.txt")
     if not os.path.exists(path):
         pytest.skip("raw ISC file missing")

@@ -7,7 +7,7 @@ import subprocess
 import time
 from importlib import metadata
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEEDS = {"seis_utils.b_bootstrap": 0, "seis_utils.mc_sliding": 0, "seis_utils.cv_poisson_test": 0,
          "seis_utils.migration_fit permutation": 0, "cluster_robustness Monte Carlo": 0}
 PACKAGES = ["numpy", "pandas", "scipy", "matplotlib", "scikit-learn", "shapely", "obspy", "pytest"]
@@ -46,7 +46,7 @@ def main():
              git_dirty=bool(git("status", "--porcelain", "--", "*.py")), python=platform.python_version(),
              platform=platform.platform(), packages=versions, seeds=SEEDS,
              inputs=tree("data", (".csv", ".txt", ".geojson")),
-             outputs=tree("results", (".csv", ".md")) | tree("results_baseline", (".csv", ".md")))
+             outputs=tree("results", (".csv",)) | tree("results_baseline", (".csv",)))
     json.dump(m, open(os.path.join(HERE, "results", "MANIFEST.json"), "w"), indent=1)
     print(f"{len(m['inputs'])} inputs, {len(m['outputs'])} outputs -> results/MANIFEST.json")
 

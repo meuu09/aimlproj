@@ -7,7 +7,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = sys.argv[1] if len(sys.argv) > 1 else "HEAD"
 OUT = os.path.join(HERE, "results", "qc", "old_vs_new.csv")
 KEYS = {"per_period_summary.csv": ["period"], "kishtwar_bvalues.csv": ["group"],

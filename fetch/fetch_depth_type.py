@@ -6,7 +6,7 @@ import sys
 import time
 import urllib.request
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(HERE, "data", "usgs_himachal_kashmir_M3plus_1970-2026.csv")
 DST = os.path.join(HERE, "data", "usgs_depth_type.csv")
 LOG = os.path.join(HERE, "data", "usgs_depth_type_failures.log")

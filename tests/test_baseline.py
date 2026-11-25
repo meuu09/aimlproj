@@ -7,7 +7,7 @@ import seis_utils as su
 
 BASE = os.path.join(su.HERE, "results_baseline")
 needs_baseline = pytest.mark.skipif(not os.path.exists(os.path.join(BASE, "baseline_bvalues.csv")),
-                                    reason="run reproduce_baseline.py first")
+                                    reason="run python -m baseline.reproduce_baseline first")
 
 
 @pytest.fixture

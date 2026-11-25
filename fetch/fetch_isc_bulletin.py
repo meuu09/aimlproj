@@ -6,7 +6,7 @@ import sys
 import time
 import urllib.request
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(HERE, "data", "isc_raw")
 OUT_EVENTS = os.path.join(HERE, "data", "isc_bulletin_events.csv")
 OUT_ORIGINS = os.path.join(HERE, "data", "isc_bulletin_origins.csv")

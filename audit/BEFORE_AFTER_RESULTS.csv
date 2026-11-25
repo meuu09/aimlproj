@@ -27,11 +27,11 @@ all_uncertain,combined,excluding_fixed,357,356.0,True,"combined rows now use one
 all_uncertain,combined,including_fixed,1859,1865.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
 all_uncertain,combined_nodup,excluding_fixed,357,355.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
 all_uncertain,combined_nodup,including_fixed,1852,1858.0,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
-b_MLE_1990-1999,combined,excluding_fixed,1.077,,True,metric renamed or removed (see CHANGELOG.md)
-b_MLE_1990-1999,combined_nodup,excluding_fixed,1.077,,True,metric renamed or removed (see CHANGELOG.md)
-b_MLE_1990-1999,usgs,excluding_fixed,1.114,,True,metric renamed or removed (see CHANGELOG.md)
-b_MLE_2000-2009,usgs,excluding_fixed,1.055,,True,metric renamed or removed (see CHANGELOG.md)
-b_MLE_2020-2026,usgs,excluding_fixed,1.309,,True,metric renamed or removed (see CHANGELOG.md)
+b_MLE_1990-1999,combined,excluding_fixed,1.077,,True,metric renamed or removed
+b_MLE_1990-1999,combined_nodup,excluding_fixed,1.077,,True,metric renamed or removed
+b_MLE_1990-1999,usgs,excluding_fixed,1.114,,True,metric renamed or removed
+b_MLE_2000-2009,usgs,excluding_fixed,1.055,,True,metric renamed or removed
+b_MLE_2020-2026,usgs,excluding_fixed,1.309,,True,metric renamed or removed
 b_mle_intermediate_all types,combined_nodup,excluding_fixed,,1.265,True,new metric (added during the audit)
 b_mle_intermediate_all types,combined_nodup,including_fixed,,1.265,True,new metric (added during the audit)
 b_mle_intermediate_mb only,combined_nodup,excluding_fixed,,1.265,True,new metric (added during the audit)
@@ -40,18 +40,18 @@ b_mle_whole region_all types,combined_nodup,excluding_fixed,,1.249,True,new metr
 b_mle_whole region_all types,combined_nodup,including_fixed,,1.408,True,new metric (added during the audit)
 b_mle_whole region_mb only,combined_nodup,excluding_fixed,,1.431,True,new metric (added during the audit)
 b_mle_whole region_mb only,combined_nodup,including_fixed,,1.597,True,new metric (added during the audit)
-baseline_254_Mc_maxcurv_raw,authors,,2.43,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_254_Mc_plus0.4_label,authors,,0.897,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_254_N,authors,,2.0,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_254_b_lsq,authors,,Mc 2.85,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_414_Mc_maxcurv_raw,authors,,2.43,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_414_Mc_plus0.4_label,authors,,0.917,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_414_N,authors,,2.0,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_414_b_lsq,authors,,Mc 2.4,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_61_Mc_maxcurv_raw,authors,,1.91,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_61_Mc_plus0.4_label,authors,,0.753,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_61_N,authors,,1.5,,True,metric renamed or removed (see CHANGELOG.md)
-baseline_61_b_lsq,authors,,not reported (61 events),,True,metric renamed or removed (see CHANGELOG.md)
+baseline_254_Mc_maxcurv_raw,authors,,2.43,,True,metric renamed or removed
+baseline_254_Mc_plus0.4_label,authors,,0.897,,True,metric renamed or removed
+baseline_254_N,authors,,2.0,,True,metric renamed or removed
+baseline_254_b_lsq,authors,,Mc 2.85,,True,metric renamed or removed
+baseline_414_Mc_maxcurv_raw,authors,,2.43,,True,metric renamed or removed
+baseline_414_Mc_plus0.4_label,authors,,0.917,,True,metric renamed or removed
+baseline_414_N,authors,,2.0,,True,metric renamed or removed
+baseline_414_b_lsq,authors,,Mc 2.4,,True,metric renamed or removed
+baseline_61_Mc_maxcurv_raw,authors,,1.91,,True,metric renamed or removed
+baseline_61_Mc_plus0.4_label,authors,,0.753,,True,metric renamed or removed
+baseline_61_N,authors,,1.5,,True,metric renamed or removed
+baseline_61_b_lsq,authors,,not reported (61 events),,True,metric renamed or removed
 baseline_Cluster 1_Mc_maxcurv_raw,authors,,,2.0,True,new metric (added during the audit)
 baseline_Cluster 1_Mc_released_code,authors,,,2.4,True,new metric (added during the audit)
 baseline_Cluster 1_N,authors,,,254.0,True,new metric (added during the audit)
@@ -154,12 +154,12 @@ kishtwar_interevent_min_days_cluster_shallow_M3,combined,excluding_fixed,0.00335
 kishtwar_interevent_min_days_cluster_shallow_M3,combined,including_fixed,0.0019675925925925924,0.0003587962962962963,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
 kishtwar_interevent_min_days_cluster_shallow_M3,combined_nodup,excluding_fixed,0.0033564814814814816,0.0003587962962962963,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
 kishtwar_interevent_min_days_cluster_shallow_M3,combined_nodup,including_fixed,0.0019675925925925924,0.0003587962962962963,True,"combined rows now use one whole origin (Task 8), sentinel errors set missing, and the depth error is applied at both 40 and 150 km (Task 16)"
-kishtwar_largest_minus_second,combined,excluding_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
-kishtwar_largest_minus_second,combined,including_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
-kishtwar_largest_minus_second,combined_nodup,excluding_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
-kishtwar_largest_minus_second,combined_nodup,including_fixed,0.2999999999999998,,True,metric renamed or removed (see CHANGELOG.md)
-kishtwar_largest_minus_second,usgs,excluding_fixed,0.5999999999999996,,True,metric renamed or removed (see CHANGELOG.md)
-kishtwar_largest_minus_second,usgs,including_fixed,0.5999999999999996,,True,metric renamed or removed (see CHANGELOG.md)
+kishtwar_largest_minus_second,combined,excluding_fixed,0.2999999999999998,,True,metric renamed or removed
+kishtwar_largest_minus_second,combined,including_fixed,0.2999999999999998,,True,metric renamed or removed
+kishtwar_largest_minus_second,combined_nodup,excluding_fixed,0.2999999999999998,,True,metric renamed or removed
+kishtwar_largest_minus_second,combined_nodup,including_fixed,0.2999999999999998,,True,metric renamed or removed
+kishtwar_largest_minus_second,usgs,excluding_fixed,0.5999999999999996,,True,metric renamed or removed
+kishtwar_largest_minus_second,usgs,including_fixed,0.5999999999999996,,True,metric renamed or removed
 kishtwar_largest_minus_second_whole_cluster_paper_style,combined,excluding_fixed,,0.2999999999999998,True,new metric (added during the audit)
 kishtwar_largest_minus_second_whole_cluster_paper_style,combined,including_fixed,,0.2999999999999998,True,new metric (added during the audit)
 kishtwar_largest_minus_second_whole_cluster_paper_style,combined_nodup,excluding_fixed,,0.2999999999999998,True,new metric (added during the audit)

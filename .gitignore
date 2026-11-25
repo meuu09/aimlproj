@@ -17,3 +17,6 @@ __pycache__/
 
 # Upstream code (no licence; fetched at commit 33acd38 by reproduce_baseline.py, not redistributed)
 Him_ides/
+
+# Local assistant notes (not part of the project)
+CLAUDE.md

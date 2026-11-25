@@ -4,7 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+AUDIT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "audit")
 
 
 def num(x):
@@ -21,7 +21,7 @@ def why(r):
     if pd.isna(r.value_before):
         return "new metric (added during the audit)"
     if pd.isna(r.value_after):
-        return "metric renamed or removed (see CHANGELOG.md)"
+        return "metric renamed or removed"
     if not r.changed:
         return ""
     if k.startswith("baseline_"):
@@ -41,8 +41,8 @@ def why(r):
 
 def main():
     """Write BEFORE_AFTER_RESULTS.csv."""
-    b = pd.read_csv(os.path.join(HERE, "metrics_before.csv"))
-    a = pd.read_csv(os.path.join(HERE, "metrics_after.csv"))
+    b = pd.read_csv(os.path.join(AUDIT, "metrics_before.csv"))
+    a = pd.read_csv(os.path.join(AUDIT, "metrics_after.csv"))
     for d in (a, b):
         d["case"] = d["case"].fillna("")
     m = b.merge(a, on=["metric", "catalog", "case"], how="outer", suffixes=("_before", "_after"))
@@ -50,7 +50,7 @@ def main():
                     for x, y in zip(m.value_before, m.value_after)]
     m["explanation"] = m.apply(why, axis=1)
     m.sort_values(["changed", "metric", "catalog", "case"], ascending=[False, True, True, True]).to_csv(
-        os.path.join(HERE, "BEFORE_AFTER_RESULTS.csv"), index=False)
+        os.path.join(AUDIT, "BEFORE_AFTER_RESULTS.csv"), index=False)
     print(f"{len(m)} rows, {int(m.changed.sum())} changed")
 
 

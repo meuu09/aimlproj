@@ -379,7 +379,7 @@ Event     8500699 Western Xizang-India border region
 
 def test_isf_parser_on_genuine_records(tmp_path):
     """Genuine ISC Bulletin lines (data/isc_raw/isc_isf_2005.txt), values checked by hand."""
-    import fetch_isc_bulletin as fib
+    from fetch import fetch_isc_bulletin as fib
     p = tmp_path / "isf.txt"
     p.write_text(GENUINE_ISF)
     ev = list(fib.parse(str(p)))
@@ -398,7 +398,7 @@ def test_isf_parser_on_genuine_records(tmp_path):
 
 
 def test_dbscan_haversine_lat_lon_order():
-    import cluster_robustness as cr
+    from robustness import cluster_robustness as cr
     lat = np.r_[np.full(5, 33.0) + np.arange(5) * 0.01, np.full(5, 33.0)]
     lon = np.r_[np.full(5, 76.0), np.full(5, 76.0 + 60 / 93.3) + np.arange(5) * 0.01]
     lab = cr.dbscan(lat, lon, 30, 4)
@@ -407,7 +407,7 @@ def test_dbscan_haversine_lat_lon_order():
 
 
 def test_pca_azimuth_of_a_known_line():
-    import clustering_checks as cc
+    from analysis import clustering_checks as cc
     t = np.linspace(-50, 50, 21)
     az = np.radians(130.0)
     x, y = t * np.sin(az), t * np.cos(az)
@@ -418,7 +418,7 @@ def test_pca_azimuth_of_a_known_line():
 
 
 def test_monte_carlo_is_reproducible_and_skips_missing_errors():
-    import cluster_robustness as cr
+    from robustness import cluster_robustness as cr
     df = pd.DataFrame({"id": [f"e{i}" for i in range(8)], "time": pd.date_range("2000", periods=8, freq="D"),
                        "latitude": 33.0 + np.arange(8) * 0.02, "longitude": [75.9] * 8,
                        "depth": [60.0] * 7 + [60.0], "depthError": [5.0] * 7 + [np.nan],
