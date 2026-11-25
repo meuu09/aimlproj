@@ -397,6 +397,25 @@ def test_isf_parser_on_genuine_records(tmp_path):
     assert fib.summarise(ev[0])["depth_type"] == "from location"
 
 
+def test_isf_depth_phase_flag(tmp_path):
+    """Synthetic edit of a genuine record: ISF depth flag 'd' (depth phases) is kept as such."""
+    from fetch import fetch_isc_bulletin as fib
+    lines = GENUINE_ISF.splitlines()
+    i = next(k for k, l in enumerate(lines) if l.startswith("2005/01/04"))
+    lines[i] = lines[i][:76] + "d" + lines[i][77:]
+    p = tmp_path / "isf.txt"
+    p.write_text("\n".join(lines) + "\n")
+    o = list(fib.parse(str(p)))[0]["origins"][0]
+    assert o["depth_phases"] and not o["depth_fixed"]
+
+
+def test_usgs_query_url():
+    """The USGS download records its exact query parameters in the URL."""
+    from fetch.fetch_usgs_catalog import query_url
+    url = query_url({"format": "csv", "minmagnitude": "3.0", "starttime": "1970-03-05T00:00:00"})
+    assert "format=csv" in url and "minmagnitude=3.0" in url and "starttime=1970-03-05T00%3A00%3A00" in url
+
+
 def test_dbscan_haversine_lat_lon_order():
     from robustness import cluster_robustness as cr
     lat = np.r_[np.full(5, 33.0) + np.arange(5) * 0.01, np.full(5, 33.0)]

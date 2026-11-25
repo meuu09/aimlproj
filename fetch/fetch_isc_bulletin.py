@@ -74,7 +74,7 @@ def parse(path):
                      time_err=fnum(line[24:29]), rms=fnum(line[30:35]),
                      lat=fnum(line[36:44]), lon=fnum(line[45:54]),
                      smaj=fnum(line[55:60]), smin=fnum(line[61:66]),
-                     depth=fnum(line[71:76]), depth_fixed=line[76:77] == "f",
+                     depth=fnum(line[71:76]), depth_fixed=line[76:77] == "f", depth_phases=line[76:77] == "d",
                      depth_err=fnum(line[78:82]), ndef=fnum(line[83:87]), nsta=fnum(line[88:92]),
                      gap=fnum(line[93:96]),
                      author=line[118:127].strip(), origid=line[128:136].strip(), prime=False,
@@ -104,7 +104,10 @@ def summarise(ev):
     trusted = [o for o in free if o["author"] in TRUSTED_DEPTH]
     best = min(trusted, key=lambda o: DEPTH_PRIORITY.index(o["author"])) if trusted else None
     o = best or prime
-    dtype = "from location" if best else ("operator assigned" if prime["depth_fixed"] else "unknown")
+    if best:
+        dtype = "constrained by depth phases" if best["depth_phases"] else "from location"
+    else:
+        dtype = "operator assigned" if prime["depth_fixed"] else "unknown"
     mag = None
     for mt, ma in MAG_PRIORITY:
         mag = next((m for m in ev["mags"] if m["type"] == mt and (ma is None or m["author"] == ma)), None)
